@@ -1,0 +1,10 @@
+[include]
+	path = ~/.gitconfig.local
+[commit]
+	template = ~/.gitmessage
+[core]
+	editor = emacsclient
+[color]
+	ui = true
+[push]
+	default = current
