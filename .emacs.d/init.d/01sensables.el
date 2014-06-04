@@ -43,3 +43,6 @@
     nil))
 (defalias 'yes-or-no-p 'my-y-or-nil-p)
 (setq confirm-kill-emacs 'yes-or-no-p)
+
+;; visual bell
+(setq visible-bell 1)
