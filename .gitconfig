@@ -1,5 +1,7 @@
 [include]
 	path = ~/.gitconfig.local
+[alias]
+	shove = !git remote | xargs -L 1 git push
 [commit]
 	template = ~/.gitmessage
 [core]
