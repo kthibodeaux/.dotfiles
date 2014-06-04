@@ -7,9 +7,8 @@
 (global-set-key (kbd "s-[") 'previous-buffer)
 (global-set-key (kbd "s-]") 'next-buffer)
 
-;; line movement
-(global-set-key (kbd "M-<up>") 'move-line-up)
-(global-set-key (kbd "M-<down>") 'move-line-down)
+;; move-lines
+(move-lines-binding)
 
 ;; rcodetools
 (global-set-key (kbd "C-c C-c") 'xmp)

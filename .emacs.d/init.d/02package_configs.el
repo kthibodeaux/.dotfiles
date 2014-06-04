@@ -28,6 +28,9 @@
 (global-git-gutter-mode +1)
 (setq git-gutter-fr:side 'right-fringe)
 
+;; move-lines
+(require 'move-lines)
+
 ;; projectile
 (projectile-global-mode)
 
