@@ -11,7 +11,8 @@
 (global-set-key (kbd "<f6>") 'magit-status)
 
 ;; move-lines
-(move-lines-binding)
+(global-set-key (kbd "M-<up>") 'move-lines-up)
+(global-set-key (kbd "M-<down>") 'move-lines-down)
 
 ;; rcodetools
 (global-set-key (kbd "C-c C-c") 'xmp)
