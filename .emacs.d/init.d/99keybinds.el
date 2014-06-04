@@ -7,6 +7,12 @@
 (global-set-key (kbd "s-[") 'previous-buffer)
 (global-set-key (kbd "s-]") 'next-buffer)
 
+;; join lines
+(global-set-key (kbd "M-j")
+            (lambda ()
+                  (interactive)
+                  (join-line -1)))
+
 ;; magit
 (global-set-key (kbd "<f6>") 'magit-status)
 
