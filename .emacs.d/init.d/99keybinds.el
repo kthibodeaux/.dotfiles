@@ -7,6 +7,9 @@
 (global-set-key (kbd "s-[") 'previous-buffer)
 (global-set-key (kbd "s-]") 'next-buffer)
 
+;; magit
+(global-set-key (kbd "<f6>") 'magit-status)
+
 ;; move-lines
 (move-lines-binding)
 
