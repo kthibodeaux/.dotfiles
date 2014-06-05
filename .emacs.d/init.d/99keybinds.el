@@ -7,6 +7,9 @@
 (global-set-key (kbd "s-[") 'previous-buffer)
 (global-set-key (kbd "s-]") 'next-buffer)
 
+;; imenu-anywhere
+(global-set-key (kbd "C-x n") 'imenu-anywhere)
+
 ;; join lines
 (global-set-key (kbd "M-j")
             (lambda ()

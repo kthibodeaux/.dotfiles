@@ -11,6 +11,7 @@
         flymake-ruby
         git-gutter-fringe
         highlight
+	imenu-anywhere
         magit
         pallet
         projectile
