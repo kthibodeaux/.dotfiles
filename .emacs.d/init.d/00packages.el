@@ -13,6 +13,7 @@
         highlight
 	imenu-anywhere
         magit
+	multi-term
         pallet
         projectile
         rspec-mode
