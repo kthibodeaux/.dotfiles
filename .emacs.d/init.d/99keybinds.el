@@ -25,3 +25,6 @@
 
 ;; rcodetools
 (global-set-key (kbd "C-c C-c") 'xmp)
+
+;; toggle line/region comment
+(global-set-key (kbd "s-/") 'comment-or-uncomment-region-or-line)
