@@ -7,6 +7,9 @@
 (global-set-key (kbd "s-[") 'previous-buffer)
 (global-set-key (kbd "s-]") 'next-buffer)
 
+;; calculate-region
+(global-set-key (kbd "C-c m") 'fc-calculate-region)
+
 ;; imenu-anywhere
 (global-set-key (kbd "C-x n") 'imenu-anywhere)
 
