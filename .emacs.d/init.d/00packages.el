@@ -12,6 +12,7 @@
         git-gutter-fringe
         highlight
 	imenu-anywhere
+	inf-ruby
         magit
 	multi-term
         pallet
