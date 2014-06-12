@@ -1,5 +1,6 @@
 (setq jpk-packages
       '(
+	ace-jump-buffer
         ace-jump-mode
         ace-window
         auto-complete
