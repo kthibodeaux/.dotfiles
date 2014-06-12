@@ -5,7 +5,6 @@
         ace-window
         auto-complete
         dash
-        edit-server
         emmet-mode
         fill-column-indicator
         floobits
