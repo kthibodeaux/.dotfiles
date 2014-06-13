@@ -1,7 +1,14 @@
 [include]
 	path = ~/.gitconfig.local
 [alias]
-	shove = !git remote | xargs -L 1 git push
+        a = add
+	amend = commit --ammend
+	br = branch
+	co = checkout
+	ir = !git rebase -i origin/master
+        rom = !git fetch origin && git rebase origin/master
+        shove = !git remote | xargs -L 1 git push
+	st = status
 [commit]
 	template = ~/.gitmessage
 [core]
