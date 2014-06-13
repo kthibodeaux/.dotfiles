@@ -1,7 +1,6 @@
 ;; ace
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
 (define-key global-map (kbd "C-x SPC") 'ace-window)
-(define-key global-map (kbd "C-z SPC") 'ace-jump-buffer)
 
 ;; buffer management
 (global-set-key (kbd "C-x C-k C-k") 'kill-other-buffers)
