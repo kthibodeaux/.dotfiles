@@ -41,6 +41,10 @@
 ;; rcodetools
 (require 'rcodetools)
 
+;; ruby-refactor
+(require 'ruby-refactor)
+(add-hook 'ruby-mode-hook 'ruby-refactor-mode-launch)
+
 ;; rvm
 (require 'rvm)
 (rvm-use-default)
