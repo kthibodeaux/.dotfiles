@@ -147,7 +147,7 @@ being altered."
   :type '(choice (const :tag "place top-most" top)
                  (const :tag "place closest" closest)))
 
-(defcustom ruby-refactor-keymap-prefix (kbd "C-c C-r")
+(defcustom ruby-refactor-keymap-prefix (kbd "C-c C-e")
   "ruby-refactor keymap prefix."
   :group 'ruby-refactor
   :type 'sexp)

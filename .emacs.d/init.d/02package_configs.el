@@ -43,6 +43,7 @@
 
 ;; ruby-refactor
 (require 'ruby-refactor)
+(setq ruby-refactor-add-parens t)
 (add-hook 'ruby-mode-hook 'ruby-refactor-mode-launch)
 
 ;; rvm
