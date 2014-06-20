@@ -5,6 +5,7 @@
 	amend = commit --ammend
 	br = branch
 	co = checkout
+	done = !git fetch && git rebase origin/master && git checkout master && git merge @{-1} --ff-only && git push
 	ir = !git rebase -i origin/master
         rom = !git fetch origin && git rebase origin/master
         shove = !git remote | xargs -L 1 git push
