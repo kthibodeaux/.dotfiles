@@ -4,6 +4,7 @@
 (delete-selection-mode 1)
 (scroll-bar-mode -1)
 (global-unset-key (kbd "C-z"))
+(global-unset-key (kbd "C-x C-z"))
 (setq-default major-mode 'org-mode)
 (column-number-mode)
 (put 'dired-find-alternate-file 'disabled nil)
