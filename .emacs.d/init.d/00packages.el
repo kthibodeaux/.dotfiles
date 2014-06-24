@@ -4,6 +4,7 @@
         ace-window
         auto-complete
         dash
+	diminish
         emmet-mode
         fill-column-indicator
         floobits
