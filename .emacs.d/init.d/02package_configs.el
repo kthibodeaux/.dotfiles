@@ -44,6 +44,10 @@
 ;; rcodetools
 (require 'rcodetools)
 
+;; rspec-mode
+(require 'rspec-mode)
+(add-hook 'dired-mode-hook 'rspec-dired-mode)
+
 ;; ruby-refactor
 (require 'ruby-refactor)
 (setq ruby-refactor-add-parens t)
