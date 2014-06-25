@@ -46,6 +46,7 @@
 
 ;; rspec-mode
 (require 'rspec-mode)
+(setq rspec-use-rvm t)
 (add-hook 'dired-mode-hook 'rspec-dired-mode)
 
 ;; ruby-refactor
