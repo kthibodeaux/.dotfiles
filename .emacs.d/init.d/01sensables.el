@@ -27,9 +27,6 @@
 (setq ido-everywhere t)
 (ido-mode 1)
 
-;; line numbers
-(global-linum-mode 1)
-
 ;; highlight current line
 (global-hl-line-mode 1)
 
