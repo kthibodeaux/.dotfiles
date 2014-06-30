@@ -3,6 +3,7 @@ files = [
          '.gitconfig',
          '.gitmessage',
          '.rspec',
+         '.slate',
          '.zshrc'
         ]
 
