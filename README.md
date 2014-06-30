@@ -12,6 +12,10 @@ git
 
 rspec
 
+### 'uninstalled' files
+
+Zenburn.terminal is never sym linked to ~.  it should manually be imported into terminal.app
+
 ### emacs requirements
 
 python (for beautify JSON)
