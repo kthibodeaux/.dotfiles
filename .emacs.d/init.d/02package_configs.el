@@ -38,10 +38,6 @@
 (setq multi-term-program "/bin/bash")
 (setq multi-term-program-switches "--login")
 
-;; nlinum
-(require 'nlinum)
-(global-nlinum-mode)
-
 ;; projectile
 (projectile-global-mode)
 

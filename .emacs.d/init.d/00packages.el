@@ -15,7 +15,6 @@
 	inf-ruby
         magit
 	multi-term
-	nlinum
         pallet
         projectile
         rspec-mode
