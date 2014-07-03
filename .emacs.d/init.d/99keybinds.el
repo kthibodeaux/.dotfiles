@@ -6,6 +6,7 @@
 (global-set-key (kbd "C-x C-k C-k") 'kill-other-buffers)
 (global-set-key (kbd "s-[") 'previous-buffer)
 (global-set-key (kbd "s-]") 'next-buffer)
+(global-set-key (kbd "C-c k") 'bury-buffer)
 
 ;; calculate-region
 (global-set-key (kbd "C-c m") 'fc-calculate-region)
