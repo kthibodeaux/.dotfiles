@@ -18,6 +18,7 @@
         pallet
         projectile
         rspec-mode
+	ruby-tools
         rvm
         shut-up
         smartparens

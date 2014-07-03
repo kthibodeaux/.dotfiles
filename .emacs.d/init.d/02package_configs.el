@@ -54,6 +54,9 @@
 (setq ruby-refactor-add-parens t)
 (add-hook 'ruby-mode-hook 'ruby-refactor-mode-launch)
 
+;; ruby-tools
+(require 'ruby-tools)
+
 ;; rvm
 (require 'rvm)
 (rvm-use-default)
