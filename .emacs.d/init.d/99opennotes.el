@@ -1,1 +1,11 @@
+(let* (
+       (frame-alist '((width . 123)
+		      (height . 22)
+		      (menu-bar-lines . 0)
+		      )
+		    )
+       (frame (make-frame frame-alist)
+	      )
+       )
+  )
 (find-file "~/notes.org")
