@@ -45,5 +45,15 @@
 (defalias 'yes-or-no-p 'my-y-or-nil-p)
 (setq confirm-kill-emacs 'yes-or-no-p)
 
+(defadvice yes-or-no-p (around prevent-dialog activate)
+  "Prevent yes-or-no-p from activating a dialog"
+  (let ((use-dialog-box nil))
+    ad-do-it))
+
+(defadvice y-or-n-p (around prevent-dialog-yorn activate)
+  "Prevent y-or-n-p from activating a dialog"
+  (let ((use-dialog-box nil))
+    ad-do-it))
+
 ;; visual bell
 (setq visible-bell 1)
