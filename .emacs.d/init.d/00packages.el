@@ -4,6 +4,7 @@
         ace-window
         auto-complete
         dash
+	diminish
         emmet-mode
         fill-column-indicator
         floobits
@@ -15,6 +16,7 @@
         magit
 	multi-term
         pallet
+	powerline
         projectile
         rspec-mode
 	ruby-tools
