@@ -14,6 +14,7 @@
 	imenu-anywhere
 	inf-ruby
         magit
+	markdown-mode
 	multi-term
         pallet
 	powerline
