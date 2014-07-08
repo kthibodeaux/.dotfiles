@@ -18,7 +18,7 @@ end
 
 def files
   Dir.entries('./').select { |directory| directory.start_with?('.') &&
-    ! ['.', '..', '.git', '.gitignore', '.DS_Store'].include?(directory) }
+    ! ignore_list.include?(directory) }
 end
 
 def try_create_symlink(filename)
@@ -35,4 +35,10 @@ end
 
 def create_symlink(source, target)
   File.symlink(source, target)
+end
+
+def ignore_list
+  [
+   '.', '..', '.git', '.gitignore', '.DS_Store', '.osx'
+  ]
 end
