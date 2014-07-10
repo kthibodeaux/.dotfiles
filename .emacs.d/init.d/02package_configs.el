@@ -44,6 +44,11 @@
 ;; rcodetools
 (require 'rcodetools)
 
+;; rhtml-mode
+(require 'rhtml-mode)
+(add-to-list 'auto-mode-alist '("\\.erb\\'" . rhtml-mode))
+(add-to-list 'auto-mode-alist '("\\.erubis\\'" . rhtml-mode))
+
 ;; rspec-mode
 (require 'rspec-mode)
 (setq rspec-use-rvm t)

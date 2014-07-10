@@ -19,6 +19,7 @@
         pallet
 	powerline
         projectile
+	rhtml-mode
         rspec-mode
 	ruby-tools
         rvm
