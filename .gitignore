@@ -6,5 +6,6 @@
 .emacs.d/bookmarks
 .emacs.d/tramp
 
+.emacs.d/init.d/95email.el
 .emacs.d/init.d/96jabber.el
 .emacs.d/init.d/99opennotes.el
