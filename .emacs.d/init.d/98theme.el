@@ -108,7 +108,7 @@ Also bind `class' to ((class color) (min-colors 89))."
                                   :background ,zenburn-bg-1
                                   :box nil))))
                                   ;; :box (:line-width -1 :style released-button)))))
-   `(highlight ((t (:background ,zenburn-bg-05))))
+   `(highlight ((t (:background ,zenburn-bg))))
    `(success ((t (:foreground ,zenburn-green :weight bold))))
    `(warning ((t (:foreground ,zenburn-orange :weight bold))))
 ;;;;; compilation
@@ -158,7 +158,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(vertical-border ((t (:foreground ,zenburn-fg))))
 ;;;;; font lock
    `(font-lock-builtin-face ((t (:foreground ,zenburn-fg :weight bold))))
-   `(font-lock-comment-face ((t (:foreground ,zenburn-green))))
+   `(font-lock-comment-face ((t (:foreground ,zenburn-green-1))))
    `(font-lock-comment-delimiter-face ((t (:foreground ,zenburn-green-1))))
    `(font-lock-constant-face ((t (:foreground ,zenburn-green+4))))
    `(font-lock-doc-face ((t (:foreground ,zenburn-green+2))))
@@ -540,9 +540,9 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(helm-mu-contacts-address-face ((t (:foreground ,zenburn-fg-1 :background ,zenburn-bg))))
    `(helm-mu-contacts-name-face ((t (:foreground ,zenburn-fg :background ,zenburn-bg))))
 ;;;;; hl-line-mode
-   `(hl-line-face ((,class (:background ,zenburn-bg-05))
+   `(hl-line-face ((,class (:background ,zenburn-bg-1))
                    (t :weight bold)))
-   `(hl-line ((,class (:background ,zenburn-bg-05)) ; old emacsen
+   `(hl-line ((,class (:background ,zenburn-bg-1)) ; old emacsen
               (t :weight bold)))
 ;;;;; hl-sexp
    `(hl-sexp-face ((,class (:background ,zenburn-bg+1))
