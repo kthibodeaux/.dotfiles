@@ -18,6 +18,7 @@
         pallet
 	powerline
         projectile
+	rainbow-mode
 	rhtml-mode
         rspec-mode
 	ruby-tools
