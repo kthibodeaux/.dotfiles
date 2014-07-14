@@ -47,3 +47,8 @@
                              (powerline-render rhs)))))))
 
 (powerline-my-theme)
+
+(display-time-mode)
+(setq display-time-string-forms
+       '((propertize (concat " " 12-hours ":" minutes " ")
+ 		    'face 'egoge-display-time)))
