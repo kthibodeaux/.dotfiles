@@ -6,6 +6,7 @@
 .emacs.d/bookmarks
 .emacs.d/tramp
 .emacs.d/jabber-avatar-cache
+.emacs.d/.edbi-ds-history
 
 .emacs.d/init.d/95email.el
 .emacs.d/init.d/96jabber.el
