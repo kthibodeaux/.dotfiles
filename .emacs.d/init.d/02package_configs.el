@@ -10,6 +10,10 @@
 (add-to-list 'ac-modes 'ruby-mode)
 (add-to-list 'ac-modes 'web-mode)
 
+;; expand-region
+(require 'expand-region)
+(global-set-key (kbd "C-=") 'er/expand-region)
+
 ;; fill column indicator
 (require 'fill-column-indicator)
 (add-hook 'ruby-mode-hook
@@ -17,9 +21,6 @@
             (set-fill-column 80)))
 (define-globalized-minor-mode global-fci-mode fci-mode (lambda () (fci-mode 1)))
 (global-fci-mode 1)
-
-;; diminish
-;; see 04diminish.el
 
 ;; flymake
 (require 'flymake-ruby)

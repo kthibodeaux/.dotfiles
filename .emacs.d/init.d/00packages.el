@@ -5,6 +5,7 @@
         auto-complete
         dash
         emmet-mode
+	expand-region
         fill-column-indicator
         floobits
         flymake-ruby
