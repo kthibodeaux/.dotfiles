@@ -11,6 +11,9 @@
 ;; calculate-region
 (global-set-key (kbd "C-c m") 'fc-calculate-region)
 
+;; google-this
+(global-set-key (kbd "C-x g") 'google-this-mode-submap)
+
 ;; imenu-anywhere
 (global-set-key (kbd "C-x n") 'imenu-anywhere)
 

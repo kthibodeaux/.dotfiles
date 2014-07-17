@@ -10,6 +10,7 @@
         floobits
         flymake-ruby
         git-gutter-fringe
+	google-this
         highlight
 	imenu-anywhere
 	inf-ruby

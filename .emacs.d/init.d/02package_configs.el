@@ -32,6 +32,10 @@
 (global-git-gutter-mode +1)
 (setq git-gutter-fr:side 'right-fringe)
 
+;; google-this
+(require 'google-this)
+(google-this-mode 1)
+
 ;; move-lines
 (require 'move-lines)
 
