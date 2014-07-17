@@ -24,6 +24,7 @@
 	rainbow-mode
 	rhtml-mode
         rspec-mode
+	ruby-end
 	ruby-tools
         rvm
         shut-up
