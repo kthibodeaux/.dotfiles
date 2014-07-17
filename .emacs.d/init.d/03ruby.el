@@ -1,5 +1,3 @@
-(require 'ruby-end)
-
 (defun senny-ruby-interpolate ()
   "In a double quoted string, interpolate."
   (interactive)

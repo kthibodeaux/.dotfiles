@@ -63,6 +63,10 @@
 (setq rspec-use-rvm t)
 (add-hook 'dired-mode-hook 'rspec-dired-mode)
 
+;; ruby-end
+(require 'ruby-end)
+(setq ruby-end-insert-newline nil)
+
 ;; ruby-refactor
 (require 'ruby-refactor)
 (setq ruby-refactor-add-parens t)
