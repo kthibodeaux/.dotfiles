@@ -3,6 +3,10 @@
 (require 'ace-window)
 (setq aw-keys '(?a ?s ?d ?f ?z ?x ?c ?v))
 
+;; anzu
+(require 'anzu)
+(global-anzu-mode +1)
+
 ;; auto complete
 (require 'auto-complete-config)
 (ac-config-default)

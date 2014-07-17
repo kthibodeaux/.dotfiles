@@ -2,6 +2,7 @@
       '(
         ace-jump-mode
         ace-window
+	anzu
         auto-complete
         dash
         emmet-mode
