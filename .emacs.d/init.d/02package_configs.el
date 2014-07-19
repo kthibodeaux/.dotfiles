@@ -43,10 +43,6 @@
 ;; move-lines
 (require 'move-lines)
 
-;; multi-term
-(setq multi-term-program "/bin/bash")
-(setq multi-term-program-switches "--login")
-
 ;; projectile
 (projectile-global-mode)
 
