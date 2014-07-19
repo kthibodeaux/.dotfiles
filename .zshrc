@@ -2,7 +2,7 @@
 export ZSH=$HOME/.oh-my-zsh
 
 if [ -n "$INSIDE_EMACS" ]; then
-    export ZSH_THEME="mh"
+    export ZSH_THEME="bira"
 else
     export ZSH_THEME="avit"
 fi
