@@ -2,6 +2,7 @@
 (tool-bar-mode -1)
 (setq initial-scratch-message nil)
 (delete-selection-mode 1)
+(menu-bar-mode -1)
 (scroll-bar-mode -1)
 (global-unset-key (kbd "C-z"))
 (global-unset-key (kbd "C-x C-z"))
