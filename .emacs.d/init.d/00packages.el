@@ -11,6 +11,7 @@
         floobits
         flymake-ruby
         git-gutter-fringe
+	git-timemachine
 	google-this
         highlight
 	imenu-anywhere

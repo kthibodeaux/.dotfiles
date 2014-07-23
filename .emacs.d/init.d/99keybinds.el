@@ -24,7 +24,7 @@
                   (join-line -1)))
 
 ;; magit
-(global-set-key (kbd "<f5>") 'magit-file-log)
+(global-set-key (kbd "<f5>") 'git-timemachine)
 (global-set-key (kbd "<f6>") 'magit-status)
 
 ;; move-lines
