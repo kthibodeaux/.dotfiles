@@ -1,4 +1,4 @@
-;;; Slightly customized to remove some odd discolorings
+;;; Heavily customized to remove some odd discolorings
 
 ;;; zenburn-theme.el --- A low contrast color theme for Emacs.
 
@@ -74,7 +74,7 @@
     ("zenburn-blue-3"   . "#5C888B")
     ("zenburn-blue-4"   . "#4C7073")
     ("zenburn-blue-5"   . "#366060")
-    ("zenburn-magenta"  . "#DC8CC3"))
+    ("zenburn-magenta"  . "#DCACCA"))
   "List of Zenburn colors.
 Each element has the form (NAME . HEX).
 
@@ -162,15 +162,15 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(font-lock-comment-delimiter-face ((t (:foreground ,zenburn-green-1))))
    `(font-lock-constant-face ((t (:foreground ,zenburn-green+4))))
    `(font-lock-doc-face ((t (:foreground ,zenburn-green+2))))
-   `(font-lock-function-name-face ((t (:foreground ,zenburn-cyan))))
-   `(font-lock-keyword-face ((t (:foreground ,zenburn-yellow :weight bold))))
+   `(font-lock-function-name-face ((t (:foreground ,zenburn-blue-1))))
+   `(font-lock-keyword-face ((t (:foreground ,zenburn-blue+1 ))))
    `(font-lock-negation-char-face ((t (:foreground ,zenburn-yellow :weight bold))))
    `(font-lock-preprocessor-face ((t (:foreground ,zenburn-blue+1))))
    `(font-lock-regexp-grouping-construct ((t (:foreground ,zenburn-yellow :weight bold))))
    `(font-lock-regexp-grouping-backslash ((t (:foreground ,zenburn-green :weight bold))))
    `(font-lock-string-face ((t (:foreground ,zenburn-red))))
    `(font-lock-type-face ((t (:foreground ,zenburn-blue-1))))
-   `(font-lock-variable-name-face ((t (:foreground ,zenburn-orange))))
+   `(font-lock-variable-name-face ((t (:foreground ,zenburn-magenta))))
    `(font-lock-warning-face ((t (:foreground ,zenburn-yellow-2 :weight bold))))
 
    `(c-annotation-face ((t (:inherit font-lock-constant-face))))
