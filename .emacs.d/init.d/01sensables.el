@@ -1,6 +1,7 @@
 (setq inhibit-startup-message t)
 (tool-bar-mode -1)
 (setq initial-scratch-message nil)
+(setq initial-major-mode 'ruby-mode)
 (delete-selection-mode 1)
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
