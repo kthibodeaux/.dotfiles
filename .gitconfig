@@ -1,20 +1,23 @@
 [include]
-	path = ~/.gitconfig.local
+        path = ~/.gitconfig.local
 [alias]
         a = add
-	amend = commit --ammend
-	br = branch
-	co = checkout
-	done = !git fetch && git rebase origin/master && git checkout master && git merge @{-1} --ff-only && git push
-	ir = !git rebase -i origin/master
+        amend = commit --ammend
+        br = branch
+        co = checkout
+        done = !git fetch && git rebase origin/master && git checkout master && git merge @{-1} --ff-only && git push
+        ir = !git rebase -i origin/master
         rom = !git fetch origin && git rebase origin/master
         shove = !git remote | xargs -L 1 git push
-	st = status
+        st = status
 [commit]
-	template = ~/.gitmessage
+        template = ~/.gitmessage
 [core]
-	editor = emacsclient
+        editor = emacsclient
 [color]
-	ui = true
+        ui = true
 [push]
-	default = current
+        default = current
+[pull]
+        default = current
+        rebase = true
