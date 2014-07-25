@@ -10,6 +10,8 @@ fi
 alias mgn="mg -n"
 alias emacsc="emacsclient -nw -c -a mgn"
 
+alias p="padrino"
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
