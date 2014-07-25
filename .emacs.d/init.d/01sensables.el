@@ -8,7 +8,6 @@
 (global-unset-key (kbd "C-z"))
 (global-unset-key (kbd "C-x C-z"))
 (setq-default major-mode 'org-mode)
-(column-number-mode)
 (put 'dired-find-alternate-file 'disabled nil)
 
 ;; allow 60MB of memory (instead of 0.76MB) before calling GC
