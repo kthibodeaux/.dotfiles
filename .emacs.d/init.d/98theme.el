@@ -151,7 +151,7 @@ Also bind `class' to ((class color) (min-colors 89))."
                       :background ,zenburn-bg-05
                       :box nil))))
                       ;; :box (:line-width -1 :style released-button)))))
-   `(region ((,class (:background ,zenburn-bg-1))
+   `(region ((,class (:background ,zenburn-bg+2))
              (t :inverse-video t)))
    `(secondary-selection ((t (:background ,zenburn-bg+2))))
    `(trailing-whitespace ((t (:background ,zenburn-red))))
@@ -929,7 +929,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(whitespace-tab ((t (:background ,zenburn-red-1))))
    `(whitespace-newline ((t (:foreground ,zenburn-bg+1))))
    `(whitespace-trailing ((t (:background ,zenburn-red))))
-   `(whitespace-line ((t (:background ,zenburn-bg :foreground ,zenburn-magenta))))
+   `(whitespace-line ((t (:background ,zenburn-bg-05 :foreground ,zenburn-red-4))))
    `(whitespace-space-before-tab ((t (:background ,zenburn-orange :foreground ,zenburn-orange))))
    `(whitespace-indentation ((t (:background ,zenburn-yellow :foreground ,zenburn-red))))
    `(whitespace-empty ((t (:background ,zenburn-yellow))))
@@ -977,7 +977,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(ansi-color-names-vector [,zenburn-bg ,zenburn-red ,zenburn-green ,zenburn-yellow
                                           ,zenburn-blue ,zenburn-magenta ,zenburn-cyan ,zenburn-fg])
 ;;;;; fill-column-indicator
-   `(fci-rule-color ,zenburn-bg-05)
+   `(fci-rule-color ,zenburn-bg-1)
 ;;;;; vc-annotate
    `(vc-annotate-color-map
      '(( 20. . ,zenburn-red-1)
