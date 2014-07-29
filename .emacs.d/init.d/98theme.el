@@ -288,7 +288,7 @@ the \"Gen RGB\" column in noctilux-definitions.el to improve them further."
              (font-lock-function-name-face ; Identifier
               ((t (,@fmt-none ,@fg-blue))))
              (font-lock-keyword-face ((t (,@fmt-none ,@fg-green)))) ; Statement
-             (font-lock-string-face ((t (,@fmt-none ,@fg-cyan)))) ; Constant
+             (font-lock-string-face ((t (,@fmt-none ,@fg-orange)))) ; Constant
              (font-lock-type-face ((t (,@fmt-none ,@fg-yellow)))) ; Type
              (font-lock-variable-name-face ; Identifier
               ((t (,@fmt-none ,@fg-blue))))
