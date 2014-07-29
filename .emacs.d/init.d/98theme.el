@@ -70,7 +70,7 @@ the \"Gen RGB\" column in noctilux-definitions.el to improve them further."
     (violet  "#ccaaff" "#ccaaff" "#ccaaff" "brightmagenta" "magenta")
     (blue    "#aaccff" "#aaccff" "#aaccff" "blue"          "blue")
     (cyan    "#aadddd" "#aadddd" "#aadddd" "cyan"          "cyan")
-    (white   "#ffffff" "#ffffff" "#ffffff" "white"          "white")
+    (white   "#ffffff" "#ffffff" "#ffffff" "white"         "white")
     (green   "#aaffaa" "#aaffaa" "#aaffaa" "green"         "green"))
   "This is a table of all the colors used by the Noctilux color theme. Each
    column is a different set, one of which will be chosen based on term
@@ -200,10 +200,10 @@ the \"Gen RGB\" column in noctilux-definitions.el to improve them further."
              (menu ((t (,@fg-base0 ,@bg-base02))))
              (minibuffer-prompt ((t (,@fmt-bold ,@fg-cyan)))) ; Question
              (mode-line  ; StatusLine
-              ((t (,@fg-base0,@bg-base02 ,@fmt-revbb :box nil))))
+              ((t (,@fmt-none ,@fg-base02 ,@bg-base1))))
              (mode-line-inactive ; StatusLineNC
-              ((t (,@fg-base00 ,@bg-base02 ,@fmt-revbb :box nil))))
-             (region ((t (,@fg-base01 ,@bg-base03 ,@fmt-revbb)))) ; Visual
+              ((t (,@fmt-none ,@fg-base00 ,@bg-base03))))
+             (region ((t (,@fg-base01 ,@bg-base02 ,@fmt-revbb)))) ; Visual
              (secondary-selection ((t (,@bg-base02))))
              (shadow ((t (,@fg-base01))))
              (trailing-whitespace ((t (,@fmt-revr ,@fg-red))))
@@ -319,14 +319,14 @@ the \"Gen RGB\" column in noctilux-definitions.el to improve them further."
              (org-hide ((t (,@fg-base03))))
              (org-todo ((t (,@fmt-bold ,@fg-base03 ,@bg-red))))
              (org-done ((t (,@fmt-bold ,@fg-green))))
-             (org-todo-kwd-face ((t (,@fg-red ,@bg-base03))))
-             (org-done-kwd-face ((t (,@fg-green ,@bg-base03))))
-             (org-project-kwd-face ((t (,@fg-violet ,@bg-base03))))
-             (org-waiting-kwd-face ((t (,@fg-orange ,@bg-base03))))
-             (org-someday-kwd-face ((t (,@fg-blue ,@bg-base03))))
-             (org-started-kwd-face ((t (,@fg-yellow ,@bg-base03))))
-             (org-cancelled-kwd-face ((t (,@fg-green ,@bg-base03))))
-             (org-delegated-kwd-face ((t (,@fg-cyan ,@bg-base03))))
+             (org-todo-kwd-face ((t (,@fg-red ,@bg-base02))))
+             (org-done-kwd-face ((t (,@fg-green ,@bg-base02))))
+             (org-project-kwd-face ((t (,@fg-violet ,@bg-base02))))
+             (org-waiting-kwd-face ((t (,@fg-orange ,@bg-base02))))
+             (org-someday-kwd-face ((t (,@fg-blue ,@bg-base02))))
+             (org-started-kwd-face ((t (,@fg-yellow ,@bg-base02))))
+             (org-cancelled-kwd-face ((t (,@fg-green ,@bg-base02))))
+             (org-delegated-kwd-face ((t (,@fg-cyan ,@bg-base02))))
              ;; table
              (table-cell ((t (,@fmt-none ,@fg-base0 ,@bg-back))))
              ;; outline - pandocBlockQuoteLeader*
@@ -475,6 +475,11 @@ the \"Gen RGB\" column in noctilux-definitions.el to improve them further."
              (message-header-to ((t (,@fmt-bold ,@fg-base1))))
              ;; parenface
              (paren-face ((t (,@fg-base01))))
+	     ;; powerline
+	     (powerline-active1 ((t (,@fmt-none ,@fg-base2 ,@bg-base03))))
+	     (powerline-active2 ((t (,@fmt-none ,@fg-base02 ,@bg-base1))))
+	     (powerline-inactive1 ((t (,@fmt-none ,@fg-base2 ,@bg-base03))))
+	     (powerline-inactive2 ((t (,@fmt-none ,@fg-base02 ,@bg-base1))))
              ;; rainbow-delimiters
              (rainbow-delimiters-depth-1-face ((t (,@fg-cyan))))
              (rainbow-delimiters-depth-2-face ((t (,@fg-yellow))))
@@ -502,7 +507,7 @@ the \"Gen RGB\" column in noctilux-definitions.el to improve them further."
              (whitespace-tab ((t (,@fg-base02))))
              (whitespace-trailing ((t (,@fmt-bold ,@fg-red ,@bg-base02))))
              (whitespace-highlight-face ((t (,@fg-red ,@bg-blue))))
-             (whitespace-line ((t (,@fg-magenta ,@bg-base03))))
+             (whitespace-line ((t (,@fg-magenta ,@bg-base02))))
              ;; rcirc
              (rcirc-my-nick ((t (:foreground ,blue))))
              (rcirc-nick-in-message ((t (:foreground ,orange))))
