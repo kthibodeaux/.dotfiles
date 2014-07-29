@@ -65,6 +65,7 @@ the \"Gen RGB\" column in noctilux-definitions.el to improve them further."
     (base3   "#fcf4dc" "#fcf4dc" "#fcf4dc" "brightwhite"   "white")
     (yellow  "#aaeecc" "#aaeecc" "#aaeecc" "yellow"        "yellow")
     (orange  "#ff8888" "#ff8888" "#ff8888" "brightred"     "red")
+    (red01   "#CC9393" "#CC9393" "#CC9393" "brightred"     "red")
     (red     "#ff3333" "#ff3333" "#ff3333" "red"           "red")
     (magenta "#FF1F69" "#FF1F69" "#FF1F69" "magenta"       "magenta")
     (violet  "#ccaaff" "#ccaaff" "#ccaaff" "brightmagenta" "magenta")
@@ -100,6 +101,7 @@ the \"Gen RGB\" column in noctilux-definitions.el to improve them further."
           (base2       (find-color 'base2))
           (base3       (find-color 'base3))
           (yellow      (find-color 'yellow))
+	  (red01       (find-color 'red01))
           (orange      (find-color 'orange))
           (red         (find-color 'red))
           (magenta     (find-color 'magenta))
@@ -137,6 +139,7 @@ the \"Gen RGB\" column in noctilux-definitions.el to improve them further."
               (bg-base3 `(:background ,base3))
               (bg-green `(:background ,green))
               (bg-yellow `(:background ,yellow))
+	      (bg-red01 `(:background ,red01))
               (bg-orange `(:background ,orange))
               (bg-red `(:background ,red))
               (bg-magenta `(:background ,magenta))
@@ -157,6 +160,7 @@ the \"Gen RGB\" column in noctilux-definitions.el to improve them further."
               (fg-base3 `(:foreground ,base3))
               (fg-green `(:foreground ,green))
               (fg-yellow `(:foreground ,yellow))
+	      (fg-red01 `(:foreground ,red01))
               (fg-orange `(:foreground ,orange))
               (fg-red `(:foreground ,red))
               (fg-magenta `(:foreground ,magenta))
@@ -288,7 +292,7 @@ the \"Gen RGB\" column in noctilux-definitions.el to improve them further."
              (font-lock-function-name-face ; Identifier
               ((t (,@fmt-none ,@fg-blue))))
              (font-lock-keyword-face ((t (,@fmt-none ,@fg-green)))) ; Statement
-             (font-lock-string-face ((t (,@fmt-none ,@fg-orange)))) ; Constant
+             (font-lock-string-face ((t (,@fmt-none ,@fg-red01)))) ; Constant
              (font-lock-type-face ((t (,@fmt-none ,@fg-yellow)))) ; Type
              (font-lock-variable-name-face ; Identifier
               ((t (,@fmt-none ,@fg-blue))))
