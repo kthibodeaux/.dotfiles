@@ -364,7 +364,7 @@ the \"Gen RGB\" column in noctilux-definitions.el to improve them further."
              (column-marker-3 ((t (,@bg-violet))))
              ;; jabber
              (jabber-activity-face ((t (,@fmt-bold ,@fg-red))))
-             (jabber-activity-personal-face ((t (,@fmt-bold ,@fg-blue))))
+             (jabber-activity-personal-face ((t (,@fmt-bold ,@fg-base02))))
              (jabber-chat-error ((t (,@fmt-bold ,@fg-red))))
              (jabber-chat-prompt-foreign ((t (,@fmt-bold ,@fg-red))))
              (jabber-chat-prompt-local ((t (,@fmt-bold ,@fg-blue))))
