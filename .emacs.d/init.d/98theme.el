@@ -203,7 +203,7 @@ the \"Gen RGB\" column in noctilux-definitions.el to improve them further."
               ((t (,@fmt-none ,@fg-base02 ,@bg-base1))))
              (mode-line-inactive ; StatusLineNC
               ((t (,@fmt-none ,@fg-base00 ,@bg-base03))))
-             (region ((t (,@fg-base01 ,@bg-base02 ,@fmt-revbb)))) ; Visual
+             (region ((t (,@bg-base02 ,@fmt-revbb)))) ; Visual
              (secondary-selection ((t (,@bg-base02))))
              (shadow ((t (,@fg-base01))))
              (trailing-whitespace ((t (,@fmt-revr ,@fg-red))))
