@@ -12,9 +12,7 @@
   "When pressing space while naming a defined method, insert an underscore"
   (interactive)
   (if (and (looking-back "def .+")
-           (not (and
-                 (looking-at ".*)$")
-                 (looking-back "(.*"))))
+           (not (looking-back ".+(.+")))
       (insert "_")
     (insert " ")))
 
