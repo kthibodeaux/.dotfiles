@@ -1,5 +1,6 @@
 (add-to-list 'auto-mode-alist '("\\.html.erb$" . rhtml-mode))
 (add-to-list 'auto-mode-alist '("\\.erubis$" . rhtml-mode))
+(add-to-list 'auto-mode-alist '("\\.rhtml$" . rhtml-mode))
 
 (add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\Capfile$" . ruby-mode))
