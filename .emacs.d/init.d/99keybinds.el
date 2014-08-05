@@ -34,5 +34,8 @@
 ;; rcodetools
 (global-set-key (kbd "C-c C-c") 'xmp)
 
+;; reset mode line color (guard changes it)
+(global-set-key (kbd "<f13>") 'kdt-reset-mode-line-color)
+
 ;; toggle line/region comment
 (global-set-key (kbd "s-/") 'comment-or-uncomment-region-or-line)

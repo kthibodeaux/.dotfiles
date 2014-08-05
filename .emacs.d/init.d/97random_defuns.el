@@ -31,6 +31,12 @@
     )
   )
 
+;; reset mode line color
+(defun kdt-reset-mode-line-color()
+  (interactive)
+  (set-face-attribute 'mode-line nil :background "#aaaaaa" :foreground "#292929")
+  )
+
 ;; toggle line/region comment
 (defun comment-or-uncomment-region-or-line ()
     "Comments or uncomments the region or the current line if there's no active region."
