@@ -29,6 +29,7 @@
         rvm
         shut-up
         smartparens
+	smex
         yasnippet
         ))
 

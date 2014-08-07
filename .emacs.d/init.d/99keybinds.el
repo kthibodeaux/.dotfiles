@@ -37,5 +37,11 @@
 ;; reset mode line color (guard changes it)
 (global-set-key (kbd "<f13>") 'kdt-reset-mode-line-color)
 
+;; smex
+(global-unset-key (kbd "M-x"))
+(global-set-key (kbd "M-x x") 'smex)
+(global-set-key (kbd "M-x m") 'smex-major-mode-commands)
+(global-set-key (kbd "M-x c") 'execute-extended-command) ;; old M-x
+
 ;; toggle line/region comment
 (global-set-key (kbd "s-/") 'comment-or-uncomment-region-or-line)

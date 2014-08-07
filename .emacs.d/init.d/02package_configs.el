@@ -73,6 +73,10 @@
 (require 'rvm)
 (rvm-use-default)
 
+;; smex
+(require 'smex)
+(smex-initialize)
+
 ;; whitespace
 (require 'whitespace)
 (setq whitespace-style '(face empty tabs lines-tail trailing))
