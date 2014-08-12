@@ -9,6 +9,7 @@ fi
 
 alias mgn="mg -n"
 alias emacsc="emacsclient -nw -c -a mgn"
+alias d_ds="find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch"
 
 alias p="padrino"
 
