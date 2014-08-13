@@ -1,3 +1,29 @@
+;; osx command key
+;; anything in here should also be bound to something using C or X
+(global-unset-key (kbd "s-`"))
+(global-unset-key (kbd "s-q"))
+(global-unset-key (kbd "s-w"))
+
+(global-unset-key (kbd "s-a"))
+(global-unset-key (kbd "s-d"))
+(global-unset-key (kbd "s-f"))
+(global-unset-key (kbd "s-g"))
+(global-unset-key (kbd "s-h"))
+
+(global-unset-key (kbd "s-z"))
+(global-unset-key (kbd "s-x"))
+(global-unset-key (kbd "s-c"))
+(global-unset-key (kbd "s-v"))
+
+(global-set-key (kbd "s-`") 'query-replace)
+
+(global-set-key (kbd "s-a") 'er/expand-region)
+(global-set-key (kbd "s-f") 'projectile-find-file)
+
+(global-set-key (kbd "C-z") 'keyboard-quit)
+(global-set-key (kbd "s-x") 'ace-window)
+(global-set-key (kbd "s-c") 'ace-jump-mode)
+
 ;; ace
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
 (define-key global-map (kbd "C-x SPC") 'ace-window)
