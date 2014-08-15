@@ -3,6 +3,7 @@
 (global-unset-key (kbd "s-`"))
 (global-unset-key (kbd "s-q"))
 (global-unset-key (kbd "s-w"))
+(global-unset-key (kbd "s-o"))
 (global-unset-key (kbd "s-p"))
 
 (global-unset-key (kbd "s-a"))
@@ -17,23 +18,20 @@
 (global-unset-key (kbd "s-v"))
 
 (global-set-key (kbd "s-`") 'query-replace)
+(global-set-key (kbd "s-o") 'projectile-find-file)
 (global-set-key (kbd "s-p") 'projectile-switch-project)
 
 (global-set-key (kbd "s-a") 'er/expand-region)
-(global-set-key (kbd "s-f") 'projectile-find-file)
+(global-set-key (kbd "s-f") 'projectile-multi-occur)
 
 (global-set-key (kbd "C-z") 'keyboard-quit)
-(global-set-key (kbd "s-x") 'ace-window)
-(global-set-key (kbd "s-c") 'ace-jump-mode)
 
 ;; ace
-(define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
-(define-key global-map (kbd "C-x SPC") 'ace-window)
+(global-set-key (kbd "s-[") 'ace-window)
+(global-set-key (kbd "s-]") 'ace-jump-mode)
 
 ;; buffer management
 (global-set-key (kbd "C-x C-k C-k") 'kill-other-buffers)
-(global-set-key (kbd "s-[") 'previous-buffer)
-(global-set-key (kbd "s-]") 'next-buffer)
 (global-set-key (kbd "C-c k") 'bury-buffer)
 
 ;; calculate-region
