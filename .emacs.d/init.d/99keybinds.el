@@ -29,6 +29,7 @@
 ;; ace
 (global-set-key (kbd "s-[") 'ace-window)
 (global-set-key (kbd "s-]") 'ace-jump-mode)
+(global-set-key (kbd "s-\\") 'ace-swap-window)
 
 ;; buffer management
 (global-set-key (kbd "C-c k") 'bury-buffer)
