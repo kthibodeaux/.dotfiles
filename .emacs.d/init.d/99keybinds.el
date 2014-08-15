@@ -3,6 +3,7 @@
 (global-unset-key (kbd "s-`"))
 (global-unset-key (kbd "s-q"))
 (global-unset-key (kbd "s-w"))
+(global-unset-key (kbd "s-p"))
 
 (global-unset-key (kbd "s-a"))
 (global-unset-key (kbd "s-d"))
@@ -16,6 +17,7 @@
 (global-unset-key (kbd "s-v"))
 
 (global-set-key (kbd "s-`") 'query-replace)
+(global-set-key (kbd "s-p") 'projectile-switch-project)
 
 (global-set-key (kbd "s-a") 'er/expand-region)
 (global-set-key (kbd "s-f") 'projectile-find-file)
