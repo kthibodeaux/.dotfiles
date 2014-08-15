@@ -22,20 +22,10 @@
   (interactive)
   (beautify-sql-region (point-min) (point-max)))
 
-;; buffer management
-(defun kill-other-buffers ()
-  "Prompt and kill all other buffers."
-  (interactive)
-  (if (y-or-n-p "Kill all buffers but current?")
-      (mapc 'kill-buffer (delq (current-buffer) (buffer-list)))
-    )
-  )
-
 ;; reset mode line color
 (defun kdt-reset-mode-line-color()
   (interactive)
-  (set-face-attribute 'mode-line nil :background "#aaaaaa" :foreground "#292929")
-  )
+  (set-face-attribute 'mode-line nil :background "#aaaaaa" :foreground "#292929"))
 
 ;; toggle line/region comment
 (defun comment-or-uncomment-region-or-line ()

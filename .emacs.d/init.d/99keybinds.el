@@ -31,7 +31,6 @@
 (global-set-key (kbd "s-]") 'ace-jump-mode)
 
 ;; buffer management
-(global-set-key (kbd "C-x C-k C-k") 'kill-other-buffers)
 (global-set-key (kbd "C-c k") 'bury-buffer)
 
 ;; calculate-region
