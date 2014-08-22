@@ -51,3 +51,5 @@ plugins=(brew bundler gem git git-extras jsontools rvm sudo wd)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.zshrc.local
+
+alias ls="ls -Gp"
