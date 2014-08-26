@@ -4,4 +4,5 @@
 			   "*Completions*"
 			   "*fsm-debug*"
 			   "*-jabber-roster-*"
-			   "^*-jabber-groupchat-\.*"))
+			   "^*-jabber-groupchat-\.*"
+			   "^*epc\.*"))
