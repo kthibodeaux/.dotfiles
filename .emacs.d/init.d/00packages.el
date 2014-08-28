@@ -11,6 +11,7 @@
         fill-column-indicator
         floobits
         flymake-ruby
+	git-messenger
 	git-timemachine
 	google-this
         highlight

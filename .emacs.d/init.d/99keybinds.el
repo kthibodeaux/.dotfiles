@@ -40,6 +40,9 @@
 ;; elfeed
 (global-set-key (kbd "<f15>") 'elfeed)
 
+;; git-messenger
+(global-set-key (kbd "M-<f5>") 'git-messenger:popup-message)
+
 ;; google-this
 (global-set-key (kbd "C-x g") 'google-this-mode-submap)
 

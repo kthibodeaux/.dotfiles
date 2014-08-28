@@ -30,6 +30,9 @@
 (require 'flymake-ruby)
 (add-hook 'ruby-mode-hook 'flymake-ruby-load)
 
+;; git-messenger
+(require 'git-messenger)
+
 ;; google-this
 (require 'google-this)
 (google-this-mode 1)
