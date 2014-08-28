@@ -30,12 +30,6 @@
 (require 'flymake-ruby)
 (add-hook 'ruby-mode-hook 'flymake-ruby-load)
 
-;; git gutter
-(require 'fringe-helper)
-(require 'git-gutter-fringe)
-(global-git-gutter-mode +1)
-(setq git-gutter-fr:side 'right-fringe)
-
 ;; google-this
 (require 'google-this)
 (google-this-mode 1)

@@ -5,12 +5,12 @@
 	anzu
         auto-complete
         dash
+	elfeed
         emmet-mode
 	expand-region
         fill-column-indicator
         floobits
         flymake-ruby
-        git-gutter-fringe
 	git-timemachine
 	google-this
         highlight
