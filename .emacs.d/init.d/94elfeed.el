@@ -9,4 +9,5 @@
 	("http://www.lunaryorn.com/feed.atom" blog emacs)
 	("http://www.masteringemacs.org/feed/" blog emacs)
 	("https://sysadmincasts.com/feed.rss" screencast sysadmin)
-	("http://feeds.feedburner.com/VirtuousCode" blog ruby emacs)))
+	("http://feeds.feedburner.com/VirtuousCode" blog ruby emacs)
+	("http://graysoftinc.com/feed.xml" blog ruby)))
