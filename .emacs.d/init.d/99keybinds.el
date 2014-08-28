@@ -37,6 +37,9 @@
 ;; calculate-region
 (global-set-key (kbd "C-c m") 'fc-calculate-region)
 
+;; elfeed
+(global-set-key (kbd "<f15>") 'elfeed)
+
 ;; google-this
 (global-set-key (kbd "C-x g") 'google-this-mode-submap)
 
