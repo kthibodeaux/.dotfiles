@@ -14,6 +14,8 @@ alias ruby-server="ruby -r webrick -e \"s = WEBrick::HTTPServer.new(:Port => 909
 
 alias p="padrino"
 
+fuck() { ps -e | grep $1 | ruby -e "ARGF.read.to_s.split(/\\n/).each { |l| puts l.split(' ').first }" | xargs -L 1 kill -9 }
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
