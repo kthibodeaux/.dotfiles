@@ -6,6 +6,7 @@
         br = branch
 	cl = clone
         co = checkout
+	dm = !git branch --merged origin/master | grep -v master | xargs git branch -d
         done = !git fetch && git rebase origin/master && git checkout master && git merge @{-1} --ff-only && git push
 	iquit = !git reset --hard && git clean -fd
         ir = !git rebase -i origin/master
