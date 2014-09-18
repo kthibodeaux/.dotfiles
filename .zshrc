@@ -12,6 +12,7 @@ alias emacsc="emacsclient -nw -c -a mgn"
 alias d_ds="find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch"
 alias ruby-server="ruby -r webrick -e \"s = WEBrick::HTTPServer.new(:Port => 9090, :DocumentRoot => Dir.pwd); trap('INT') { s.shutdown }; s.start\""
 alias zc="mg -n ~/.dotfiles/.zshrc"
+alias lines="find . -name '*.*' | xargs wc -l"
 
 alias p="padrino"
 alias r="rails"

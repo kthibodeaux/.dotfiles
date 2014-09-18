@@ -10,6 +10,7 @@
         done = !git fetch && git rebase origin/master && git checkout master && git merge @{-1} --ff-only && git push
 	iquit = !git reset --hard && git clean -fd
         ir = !git rebase -i origin/master
+	loc = !git diff --stat `git hash-object -t tree /dev/null` | tail -1 | cut -d' ' -f5
         rom = !git fetch origin && git rebase origin/master
         shove = !git remote | xargs -L 1 git push
         st = status
