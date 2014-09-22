@@ -17,6 +17,7 @@
         highlight
 	imenu-anywhere
 	inf-ruby
+	linum-relative
         magit
 	markdown-mode
         pallet

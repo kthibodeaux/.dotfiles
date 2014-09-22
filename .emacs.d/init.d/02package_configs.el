@@ -37,6 +37,9 @@
 (require 'google-this)
 (google-this-mode 1)
 
+;; linum-relative
+(require 'linum-relative)
+
 ;; move-lines
 (require 'move-lines)
 
