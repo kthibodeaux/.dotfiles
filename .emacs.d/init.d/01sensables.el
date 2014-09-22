@@ -32,9 +32,6 @@
 ;; highlight current line
 (global-hl-line-mode 1)
 
-;; line numbers
-(global-linum-mode 1)
-
 ;; prompts
 (defun my-y-or-nil-p (prompt)
   "PROMPT user with a yes-or-no question, but only test for y."
