@@ -39,6 +39,8 @@
 
 ;; linum-relative
 (require 'linum-relative)
+(after-load 'linum-relative
+  (setq linum-relative-current-symbol ""))
 
 ;; move-lines
 (require 'move-lines)
