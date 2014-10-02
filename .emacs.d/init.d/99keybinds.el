@@ -63,6 +63,9 @@
 (global-set-key (kbd "M-<up>") 'move-lines-up)
 (global-set-key (kbd "M-<down>") 'move-lines-down)
 
+;; newline below
+(global-set-key (kbd "C-<return>") 'kdt-open-line-below)
+
 ;; rcodetools
 (global-set-key (kbd "C-c C-c") 'xmp)
 

@@ -22,6 +22,14 @@
   (interactive)
   (beautify-sql-region (point-min) (point-max)))
 
+;; new line below current
+(defun kdt-open-line-below()
+  "Insert a new line below the current line and move pointer to it"
+  (interactive)
+  (unless (eolp)
+    (end-of-line))
+  (newline-and-indent))
+
 ;; reset mode line color
 (defun kdt-reset-mode-line-color()
   (interactive)
