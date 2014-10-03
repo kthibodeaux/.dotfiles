@@ -20,6 +20,3 @@
   '(progn
      (define-key ruby-mode-map (kbd "#") 'senny-ruby-interpolate)
      (define-key ruby-mode-map (kbd "SPC") 'kdt-ruby-method-space-replace)))
-
-(add-hook 'ruby-mode-hook 'linum-mode)
-(add-hook 'rhtml-mode-hook 'linum-mode)
