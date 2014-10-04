@@ -1,0 +1,4 @@
+# -*- mode: snippet -*-
+#name : backbone_view
+# --
+class App.Models.${1:name} extends Backbone.View
