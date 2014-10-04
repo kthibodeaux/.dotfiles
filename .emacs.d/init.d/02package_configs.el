@@ -18,6 +18,9 @@
 (require 'expand-region)
 (global-set-key (kbd "C-=") 'er/expand-region)
 
+;; fetch
+(require 'fetch)
+
 ;; fill column indicator
 (require 'fill-column-indicator)
 (add-hook 'ruby-mode-hook

@@ -8,6 +8,7 @@
 	elfeed
         emmet-mode
 	expand-region
+	fetch
         fill-column-indicator
         floobits
         flymake-ruby
