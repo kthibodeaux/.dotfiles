@@ -4,6 +4,7 @@
         ace-window
 	anzu
         auto-complete
+	coffee-mode
         dash
 	elfeed
         emmet-mode
