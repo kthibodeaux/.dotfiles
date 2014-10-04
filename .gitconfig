@@ -2,6 +2,7 @@
         path = ~/.gitconfig.local
 [alias]
         a = add
+        aa = add --all
         amend = commit --ammend
         br = branch
 	cl = clone
