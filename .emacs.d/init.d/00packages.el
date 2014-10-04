@@ -34,6 +34,7 @@
         shut-up
         smartparens
 	smex
+	web-mode
         yasnippet
         ))
 

@@ -81,6 +81,9 @@
 (require 'smex)
 (smex-initialize)
 
+;; web mode
+(require 'web-mode)
+
 ;; whitespace
 (require 'whitespace)
 (setq whitespace-style '(face empty tabs lines-tail trailing))
