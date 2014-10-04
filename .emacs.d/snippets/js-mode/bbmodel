@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+#name : backbone_model
+# --
+Backbone.Model.extend({
+
+});

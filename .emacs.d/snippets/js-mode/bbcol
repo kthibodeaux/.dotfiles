@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+#name : backbone_collection
+# --
+Backbone.Collection.extend({
+  model: ${1:model}$0
+});
