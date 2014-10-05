@@ -14,6 +14,7 @@ alias ruby-server="ruby -r webrick -e \"s = WEBrick::HTTPServer.new(:Port => 909
 alias zc="mg -n ~/.dotfiles/.zshrc"
 alias lines="find . -name '*.*' | xargs wc -l"
 
+alias v="vagrant"
 alias p="padrino"
 alias r="rails"
 
