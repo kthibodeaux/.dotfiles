@@ -3,9 +3,9 @@ export ZSH=$HOME/.oh-my-zsh
 
 if [ -n "$INSIDE_EMACS" ]; then
     export ZSH_THEME="bira"
-    export TERM="xterm-256color"
 else
     export ZSH_THEME="avit"
+    export TERM="xterm-256color"
 fi
 
 alias mgn="mg -n"
