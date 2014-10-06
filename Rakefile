@@ -13,6 +13,8 @@ end
 
 desc "Create symlinks in the user's home directory"
 task :install do
+  # Not 1.8.7 compatible
+  Dir.mkdir(File.join(Dir.home, ".tmp")) unless File.exist?(File.join(Dir.home, ".tmp"))
   files.each { |f| try_create_symlink(f) }
 end
 
