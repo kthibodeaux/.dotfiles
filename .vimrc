@@ -12,3 +12,9 @@ set backupdir=~/.tmp
 set directory=~/.tmp
 set laststatus=2
 set relativenumber
+
+augroup CursorLine
+  au!
+  au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+  au WinLeave * setlocal nocursorline
+augroup END
