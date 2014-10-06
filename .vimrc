@@ -25,3 +25,13 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+" Ruby file types
+autocmd BufNewFile,BufRead Gemfile set filetype=ruby
+autocmd BufNewFile,BufRead Vagrantfile set filetype=ruby
+autocmd BufNewFile,BufRead Guardfile set filetype=ruby
+autocmd BufNewFile,BufRead Capfile set filetype=ruby
+autocmd BufNewFile,BufRead Rakefile set filetype=ruby
+autocmd BufNewFile,BufRead *.gemspec set filetype=ruby
+autocmd BufNewFile,BufRead *.cap set filetype=ruby
+autocmd BufNewFile,BufRead *.rake set filetype=ruby
