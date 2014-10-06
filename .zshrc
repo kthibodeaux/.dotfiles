@@ -20,7 +20,7 @@ alias p="padrino"
 alias r="rails"
 
 alias gti="git"
-alias zc="mg -n ~/.dotfiles/.zshrc"
+alias zc="vim ~/.dotfiles/.zshrc"
 
 fuck() { ps -e | grep $1 | ruby -e "ARGF.read.to_s.split(/\\n/).each { |l| puts l.split(' ').first }" | xargs -L 1 kill -9 }
 
