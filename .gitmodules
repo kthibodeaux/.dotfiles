@@ -1,0 +1,30 @@
+[submodule ".vim/bundle/SkyBison"]
+	path = .vim/bundle/SkyBison
+	url = git@github.com:paradigm/SkyBison.git
+[submodule ".vim/bundle/nerdtree"]
+	path = .vim/bundle/nerdtree
+	url = git@github.com:scrooloose/nerdtree.git
+[submodule "tlib_vim"]
+	path = .vim/bundle/tlib_vim
+	url = git@github.com:tomtom/tlib_vim.git
+[submodule "vim-addon-mw-utils"]
+	path = .vim/bundle/vim-addon-mw-utils
+	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
+[submodule "vim-snipmate"]
+	path = .vim/bundle/vim-snipmate
+	url = https://github.com/garbas/vim-snipmate.git
+[submodule "vim-airline"]
+	path = .vim/bundle/vim-airline
+	url = git@github.com:bling/vim-airline.git
+[submodule "vim-endwise"]
+	path = .vim/bundle/vim-endwise
+	url = git@github.com:tpope/vim-endwise.git
+[submodule "vim-fugitive"]
+	path = .vim/bundle/vim-fugitive
+	url = git@github.com:tpope/vim-fugitive.git
+[submodule "vim-ruby"]
+	path = .vim/bundle/vim-ruby
+	url = git@github.com:vim-ruby/vim-ruby.git
+[submodule "vim-snippets"]
+	path = .vim/bundle/vim-snippets
+	url = git@github.com:honza/vim-snippets.git
