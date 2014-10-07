@@ -24,7 +24,8 @@ set visualbell " Flash the cursor on error instead of beeping
 let mapleader = ","
 
 " Theme
-colorscheme jellybeans
+set background=dark
+colorscheme bubblegum
 
 " Random maps (normal, visual, select, operater pending)
 map <TAB> = " Tab smartly indents current line TODO: WHY DOES IT BEEP!?
