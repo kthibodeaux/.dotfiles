@@ -33,7 +33,8 @@ map <leader>t :NERDTreeToggle<CR>
 map <leader>gs :Gstatus<CR>
 
 " Random maps (insert, command)
-" ...
+map! Q q
+map! W w
 
 " SkyBison
 let g:skybison_fuzz = 1
