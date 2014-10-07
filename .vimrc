@@ -31,6 +31,7 @@ map <TAB> = " Tab smartly indents current line TODO: WHY DOES IT BEEP!?
 map <leader>w :bw<CR>
 map <leader>t :NERDTreeToggle<CR>
 map <leader>gs :Gstatus<CR>
+map <leader>gc :Gcommit<CR>
 
 " Random maps (insert, command)
 map! Q q
