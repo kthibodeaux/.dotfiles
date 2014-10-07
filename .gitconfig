@@ -21,7 +21,7 @@
 [commit]
         template = ~/.gitmessage
 [core]
-        editor = emacsclient
+        editor = vim
 [color]
         ui = true
 [push]
