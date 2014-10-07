@@ -28,6 +28,7 @@ colorscheme hybrid
 
 " Random maps (normal, visual, select, operater pending)
 map <TAB> = " Tab smartly indents current line TODO: WHY DOES IT BEEP!?
+nnoremap <CR> :noh<CR><CR> " Cancel search by pressing return
 map <leader>w :bw<CR>
 map <leader>t :NERDTreeToggle<CR>
 map <leader>gs :Gstatus<CR>
