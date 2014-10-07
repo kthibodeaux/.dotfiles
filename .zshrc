@@ -15,12 +15,15 @@ alias ruby-server="ruby -r webrick -e \"s = WEBrick::HTTPServer.new(:Port => 909
 alias zc="mg -n ~/.dotfiles/.zshrc"
 alias lines="find . -name '*.*' | xargs wc -l"
 
-alias v="vagrant"
+alias v="vim"
+alias vmi="vim"
+alias va="vagrant"
 alias p="padrino"
 alias r="rails"
 
 alias gti="git"
 alias zc="vim ~/.dotfiles/.zshrc"
+alias vrc="vim ~/.dotfiles/.vimrc"
 
 fuck() { ps -e | grep $1 | ruby -e "ARGF.read.to_s.split(/\\n/).each { |l| puts l.split(' ').first }" | xargs -L 1 kill -9 }
 
