@@ -16,6 +16,7 @@ alias lines="find . -name '*.*' | xargs wc -l"
 
 alias v="vim"
 alias vmi="vim"
+alias bim="vim"
 alias va="vagrant"
 alias p="padrino"
 alias r="rails"
