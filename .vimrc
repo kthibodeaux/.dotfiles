@@ -35,6 +35,7 @@ map <leader>ga :Gwrite<CR>
 map <leader>gc :Gcommit<CR>
 map <leader>gp :Gpush<CR>
 map <leader>gd :Gdiff<CR>
+map <leader>gb :Gblame<CR>
 
 " Random maps (insert, command)
 map! Q q
