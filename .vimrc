@@ -19,6 +19,7 @@ set fileencoding=utf-8
 set encoding=utf-8
 set colorcolumn=80
 set scrolloff=1 " Always show at least one line above and below cursor
+set visualbell " Flash the cursor on error instead of beeping
 
 let mapleader = ","
 
