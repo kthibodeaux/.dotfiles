@@ -34,6 +34,7 @@ map <leader>gs :Gstatus<CR>
 map <leader>ga :Gwrite<CR>
 map <leader>gc :Gcommit<CR>
 map <leader>gp :Gpush<CR>
+map <leader>gd :Gdiff<CR>
 
 " Random maps (insert, command)
 map! Q q
