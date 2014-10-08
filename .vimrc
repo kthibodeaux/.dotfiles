@@ -4,27 +4,27 @@ au FileType * setlocal ai sw=2 sts=2 et
 call pathogen#infect()
 
 syntax on
-set ruler " Show cursor position
-set backspace=indent,eol,start
-set nowrap
-set guioptions-=TBe
 set autoindent
-set showmatch " Matches () etc
+set backspace=indent,eol,start
 set backupdir=~/.tmp
+set colorcolumn=80
 set directory=~/.tmp
+set encoding=utf-8
+set fileencoding=utf-8
+set guioptions-=TBe
 set laststatus=2 " Always show last status
+set nowrap
 set number
 set relativenumber " 7.4+ shows both, below just relative
-set showcmd " Show partially typed commands
-set fileencoding=utf-8
-set encoding=utf-8
-set colorcolumn=80
+set ruler " Show cursor position
 set scrolloff=1 " Always show at least one line above and below cursor
+set showcmd " Show partially typed commands
+set showmatch " Matches () etc
 set visualbell " Flash the cursor on error instead of beeping
 set wildmenu " Show menu options for completion
-let g:airline_powerline_fonts = 1
 
 let mapleader = ","
+let g:airline_powerline_fonts = 1
 
 " Theme
 set background=dark
