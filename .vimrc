@@ -13,7 +13,8 @@ set showmatch " Matches () etc
 set backupdir=~/.tmp
 set directory=~/.tmp
 set laststatus=2 " Always show last status
-set relativenumber
+set number
+set relativenumber " 7.4+ shows both, below just relative
 set showcmd " Show partially typed commands
 set fileencoding=utf-8
 set encoding=utf-8
