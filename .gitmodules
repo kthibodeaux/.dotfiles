@@ -31,3 +31,6 @@
 [submodule "HowMuch"]
 	path = .vim/bundle/HowMuch
 	url = git@github.com:sk1418/HowMuch.git
+[submodule "vim-orgmode"]
+	path = .vim/bundle/vim-orgmode
+	url = git@github.com:jceb/vim-orgmode.git
