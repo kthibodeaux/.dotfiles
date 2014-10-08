@@ -34,3 +34,6 @@
 [submodule "ctrlp.vim"]
 	path = .vim/bundle/ctrlp.vim
 	url = git@github.com:kien/ctrlp.vim.git
+[submodule "vim-ruby-xmpfilter"]
+	path = .vim/bundle/vim-ruby-xmpfilter
+	url = git@github.com:t9md/vim-ruby-xmpfilter.git

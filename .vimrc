@@ -52,6 +52,15 @@ nnoremap <leader>o :CtrlP c<cr>
 nnoremap <leader>e :CtrlP<cr>
 nnoremap <leader>b :CtrlPBuffer<cr>
 
+" xmpfilter - Super M and Super R
+autocmd FileType ruby nmap <buffer> <D-m> <Plug>(xmpfilter-mark)
+autocmd FileType ruby xmap <buffer> <D-m> <Plug>(xmpfilter-mark)
+autocmd FileType ruby imap <buffer> <D-m> <Plug>(xmpfilter-mark)
+
+autocmd FileType ruby nmap <buffer> <D-r> <Plug>(xmpfilter-run)
+autocmd FileType ruby xmap <buffer> <D-r> <Plug>(xmpfilter-run)
+autocmd FileType ruby imap <buffer> <D-r> <Plug>(xmpfilter-run)
+
 " Searching
 set hlsearch
 set ignorecase
