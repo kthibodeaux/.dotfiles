@@ -44,10 +44,11 @@ map <leader>gb :Gblame<CR>
 map! Q q
 map! W w
 
-" SkyBison
-let g:skybison_fuzz = 1
-nnoremap <leader>b :<c-u>call SkyBison("b ")<cr>
-nnoremap <leader>e :<c-u>call SkyBison("e ")<cr>
+" ctrlp
+let g:ctrlp_working_path_mode = 'c'
+nnoremap <leader>o :CtrlP c<cr>
+nnoremap <leader>e :CtrlP<cr>
+nnoremap <leader>b :CtrlPBuffer<cr>
 
 " Searching
 set hlsearch
