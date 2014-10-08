@@ -41,6 +41,6 @@ end
 
 def ignore_list
   [
-   '.', '..', '.git', '.gitignore', '.DS_Store', '.osx'
+    '.', '..', '.git', '.gitignore', '.DS_Store', '.osx', '.gitmodules'
   ]
 end
