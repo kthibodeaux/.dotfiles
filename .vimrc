@@ -46,6 +46,7 @@ map! W w
 
 " ctrlp
 let g:ctrlp_working_path_mode = 'c'
+let g:ctrlp_show_hidden = 1
 nnoremap <leader>o :CtrlP c<cr>
 nnoremap <leader>e :CtrlP<cr>
 nnoremap <leader>b :CtrlPBuffer<cr>
