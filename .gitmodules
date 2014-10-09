@@ -40,3 +40,6 @@
 [submodule "vim-ruby-refactoring"]
 	path = .vim/bundle/vim-ruby-refactoring
 	url = git@github.com:ecomba/vim-ruby-refactoring.git
+[submodule "vim-easymotion"]
+	path = .vim/bundle/vim-easymotion
+	url = git@github.com:Lokaltog/vim-easymotion.git
