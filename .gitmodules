@@ -37,3 +37,6 @@
 [submodule "vim-ruby-xmpfilter"]
 	path = .vim/bundle/vim-ruby-xmpfilter
 	url = git@github.com:t9md/vim-ruby-xmpfilter.git
+[submodule "vim-ruby-refactoring"]
+	path = .vim/bundle/vim-ruby-refactoring
+	url = git@github.com:ecomba/vim-ruby-refactoring.git
