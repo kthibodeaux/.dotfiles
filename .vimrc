@@ -42,10 +42,6 @@ map <leader>gp :Gpush<CR>
 map <leader>gd :Gdiff<CR>
 map <leader>gb :Gblame<CR>
 
-" Random maps (insert, command)
-map! Q q
-map! W w
-
 " ctrlp
 let g:ctrlp_working_path_mode = 'c'
 let g:ctrlp_show_hidden = 1
