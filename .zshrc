@@ -21,6 +21,7 @@ alias va="vagrant"
 alias p="padrino"
 alias r="rails"
 alias s="rspec"
+alias t="tmux"
 
 alias gti="git"
 alias zc="vim ~/.dotfiles/.zshrc"
