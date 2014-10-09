@@ -14,12 +14,16 @@ set fileencoding=utf-8
 set guioptions-=TBe
 set laststatus=2 " Always show last status
 set nowrap
+set nrformats-=octal
 set number
 set relativenumber " 7.4+ shows both, below just relative
 set ruler " Show cursor position
 set scrolloff=1 " Always show at least one line above and below cursor
 set showcmd " Show partially typed commands
 set showmatch " Matches () etc
+set timeout
+set timeoutlen=1000
+set ttimeoutlen=100
 set visualbell " Flash the cursor on error instead of beeping
 set wildmenu " Show menu options for completion
 
@@ -83,6 +87,7 @@ augroup CursorLine
 augroup END
 
 " Window management
+set hidden " Allow unsaved buffers to be put in background
 set winwidth=84 " Active window min width
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
