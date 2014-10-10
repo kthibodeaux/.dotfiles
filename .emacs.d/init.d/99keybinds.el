@@ -28,8 +28,8 @@
 (evil-leader/set-key
   "b" 'ido-switch-buffer
   "q" 'delete-window
-  "w" 'kill-this-buffer
-  ",w" 'bury-buffer
+  "k" 'kill-this-buffer
+  "w" 'bury-buffer
   "." 'ace-window
   ",." 'ace-swap-window
   "h" 'split-window-below
