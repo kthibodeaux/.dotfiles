@@ -1,4 +1,6 @@
 (define-key evil-motion-state-map ";" 'smex)
+(define-key evil-normal-state-map (kbd "C-i") 'evil-indent-line)
+(define-key evil-visual-state-map (kbd "C-i") 'evil-indent-line)
 
 ;; osx command key
 ;; anything in here should also be bound to something using C or X
