@@ -31,7 +31,9 @@
   "w" 'kill-buffer
   ",w" 'bury-buffer
   "." 'ace-window
-  ",." 'ace-swap-window)
+  ",." 'ace-swap-window
+  "h" 'split-window-below
+  "v" 'split-window-right)
 
 ;; calculate-region
 (evil-leader/set-key "?" 'fc-calculate-region)
