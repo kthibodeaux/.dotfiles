@@ -28,7 +28,7 @@
 (evil-leader/set-key
   "b" 'ido-switch-buffer
   "q" 'delete-window
-  "w" 'kill-buffer
+  "w" 'kill-this-buffer
   ",w" 'bury-buffer
   "." 'ace-window
   ",." 'ace-swap-window
