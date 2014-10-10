@@ -43,7 +43,10 @@
   (require 'rcodetools))
 
 (defun kdt-setup-rhtml ()
-  (require 'rhtml-mode))
+  (require 'rhtml-mode)
+  (add-to-list 'auto-mode-alist '("\\.html.erb$" . rhtml-mode))
+  (add-to-list 'auto-mode-alist '("\\.erubis$" . rhtml-mode))
+  (add-to-list 'auto-mode-alist '("\\.rhtml$" . rhtml-mode)))
 
 (defun kdt-setup-rspec ()
   (require 'rspec-mode)
