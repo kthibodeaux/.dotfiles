@@ -1,18 +1,20 @@
 (setq init-file (or load-file-name buffer-file-name))
+
 (setq emacs-config-dir
       (file-name-directory init-file))
-(setq elisp-dir
+(setq autoload-dir
+      (expand-file-name "autoload" emacs-config-dir))
+(setq elisp-config-dir
       (expand-file-name "elisp" emacs-config-dir))
-(setq init-dir
-      (expand-file-name "init.d" emacs-config-dir))
+(setq modes-dir
+      (expand-file-name "modes" emacs-config-dir))
+(setq location-specific-dir
+      (expand-file-name "location-specific" emacs-config-dir))
 
-(add-to-list 'load-path elisp-dir)
-
-(if (file-exists-p init-dir)
-    (dolist (file (directory-files init-dir t "\\.el$"))
+(if (file-exists-p autoload-dir)
+    (dolist (file (directory-files autoload-dir t "\\.el$"))
       (load file)))
 
-(server-start)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -26,46 +28,23 @@
  ;; If there is more than one, they won't work right.
  )
 
-(kdt-setup-evil)
-(kdt-setup-defaults)
-(kdt-setup-ace)
-(kdt-setup-anzu)
-(kdt-setup-autocomplete)
-(kdt-setup-column-indicator)
-(kdt-setup-flymake)
-(kdt-setup-linum)
-(kdt-setup-move-lines)
-(kdt-setup-projectile)
-(kdt-setup-rcodetools)
-(kdt-setup-rhtml)
-(kdt-setup-rspec)
-(kdt-setup-ruby-end)
-(kdt-setup-ruby-refactor)
-(kdt-setup-ruby-tools)
-(kdt-setup-rvm)
-(kdt-setup-smex)
-(kdt-setup-web-mode)
-(kdt-setup-whitespace)
-(kdt-setup-yasnippet)
+(setq elisp-config-files
+	'("evil"
+	  "random"
+	  "ido"
+	  "powerline"
+	  "prompts"
+	  "keybinds"
+	))
 
-(setq ido-ignore-buffers '("\\` "
-			   "*Messages*"
-			   "*Help*"
-			   "*Completions*"
-			   "*fsm-debug*"
-			   "*-jabber-roster-*"
-			   "^*-jabber-groupchat-\.*"
-			   "^*epc\.*"))
+(if (file-exists-p elisp-config-dir)
+	(dolist (file (directory-files elisp-config-dir t "\\.el$"))
+      (load file)))
 
-(add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\Capfile$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\.cap$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\Gemfile$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\.gemspec$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\Rakefile$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\.rake$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\Guardfile$" . ruby-mode))
+(if (file-exists-p modes-dir)
+	(dolist (file (directory-files modes-dir t "\\.el$"))
+      (load file)))
 
-(add-to-list 'auto-mode-alist '("\\.hbs$" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.html$" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.htm$" . web-mode))
+(if (file-exists-p location-specific-dir)
+	(dolist (file (directory-files location-specific-dir t "\\.el$"))
+      (load file)))

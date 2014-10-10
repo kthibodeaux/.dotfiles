@@ -2,37 +2,37 @@
       '(
         ace-jump-mode
         ace-window
-	anzu
+        anzu
         auto-complete
-	coffee-mode
+        coffee-mode
         dash
-	elfeed
+        elfeed
         emmet-mode
-	evil
-	evil-leader
-	fetch
+        evil
+        evil-leader
+        fetch
         fill-column-indicator
         flymake-ruby
-	git-timemachine
+        git-timemachine
         highlight
-	imenu-anywhere
-	inf-ruby
-	linum-relative
+        imenu-anywhere
+        inf-ruby
+        linum-relative
         magit
-	markdown-mode
+        markdown-mode
         pallet
-	powerline
+        powerline
         projectile
-	rainbow-mode
-	rhtml-mode
+        rainbow-mode
+        rhtml-mode
         rspec-mode
-	ruby-end
-	ruby-tools
+        ruby-end
+        ruby-tools
         rvm
         shut-up
         smartparens
-	smex
-	web-mode
+        smex
+        web-mode
         yasnippet
         ))
 
