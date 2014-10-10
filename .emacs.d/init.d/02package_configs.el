@@ -19,13 +19,6 @@
 (add-to-list 'ac-modes 'ruby-mode)
 (add-to-list 'ac-modes 'web-mode)
 
-;; expand-region
-(require 'expand-region)
-(global-set-key (kbd "C-=") 'er/expand-region)
-
-;; fetch
-(require 'fetch)
-
 ;; fill column indicator
 (require 'fill-column-indicator)
 (add-hook 'ruby-mode-hook
@@ -37,13 +30,6 @@
 ;; flymake
 (require 'flymake-ruby)
 (add-hook 'ruby-mode-hook 'flymake-ruby-load)
-
-;; git-messenger
-(require 'git-messenger)
-
-;; google-this
-(require 'google-this)
-(google-this-mode 1)
 
 ;; linum-relative
 (require 'linum-relative)
