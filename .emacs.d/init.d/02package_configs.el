@@ -1,7 +1,7 @@
 ;; evil
-(evil-mode 1)
-(global-evil-leader-mode)
 (evil-leader/set-leader ",")
+(global-evil-leader-mode)
+(evil-mode 1)
 
 ;; ace
 (require 'ace-jump-mode)
