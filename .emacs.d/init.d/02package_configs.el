@@ -1,3 +1,8 @@
+;; evil
+(evil-mode 1)
+(global-evil-leader-mode)
+(evil-leader/set-leader ",")
+
 ;; ace
 (require 'ace-jump-mode)
 (require 'ace-window)

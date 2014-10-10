@@ -9,6 +9,8 @@
 	elfeed
         emmet-mode
 	expand-region
+	evil
+	evil-leader
 	fetch
         fill-column-indicator
         floobits
