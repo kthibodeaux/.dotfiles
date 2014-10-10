@@ -19,6 +19,8 @@
 (global-unset-key (kbd "s-c"))
 (global-unset-key (kbd "s-v"))
 
+(evil-leader/set-key "xc" 'save-buffers-kill-terminal)
+
 (evil-leader/set-key "`" 'query-replace)
 
 ;; ace
@@ -28,7 +30,8 @@
 (evil-leader/set-key
   "b" 'ido-switch-buffer
   "q" 'delete-window
-  "k" 'kill-this-buffer
+  ",k" 'kill-this-buffer
+  "k" 'kill-buffer
   "w" 'bury-buffer
   "." 'ace-window
   ",." 'ace-swap-window

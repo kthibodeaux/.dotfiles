@@ -33,10 +33,6 @@
 (require 'flymake-ruby)
 (add-hook 'ruby-mode-hook 'flymake-ruby-load)
 
-;; linum-relative
-(require 'linum-relative)
-(setq linum-relative-current-symbol "")
-
 ;; move-lines
 (require 'move-lines)
 
