@@ -20,7 +20,6 @@
 (global-unset-key (kbd "s-v"))
 
 (evil-leader/set-key "`" 'query-replace)
-(evil-leader/set-key "o" 'projectile-find-file)
 
 ;; ace
 (evil-leader/set-key ",s" 'ace-jump-mode)
@@ -37,8 +36,14 @@
 ;; calculate-region
 (evil-leader/set-key "?" 'fc-calculate-region)
 
+;; file management
+(evil-leader/set-key
+  "f" 'find-file
+  "o" 'projectile-find-file
+  "s" 'save-buffer)
+
 ;; imenu-anywhere
-(global-set-key (kbd "C-x n") 'imenu-anywhere)
+(evil-leader/set-key "n" 'imenu-anywhere)
 
 ;; magit
 (evil-leader/set-key
