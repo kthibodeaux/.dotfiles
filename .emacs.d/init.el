@@ -48,4 +48,4 @@
 (kdt-setup-smex)
 (kdt-setup-web-mode)
 (kdt-setup-whitespace)
-(kdt-setup-whitespace)
+(kdt-setup-yasnippet)
