@@ -8,16 +8,12 @@
         dash
 	elfeed
         emmet-mode
-	expand-region
 	evil
 	evil-leader
 	fetch
         fill-column-indicator
-        floobits
         flymake-ruby
-	git-messenger
 	git-timemachine
-	google-this
         highlight
 	imenu-anywhere
 	inf-ruby

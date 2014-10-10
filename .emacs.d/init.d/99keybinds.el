@@ -1,3 +1,5 @@
+(define-key evil-motion-state-map ";" 'smex)
+
 ;; osx command key
 ;; anything in here should also be bound to something using C or X
 (global-unset-key (kbd "s-`"))
@@ -17,66 +19,41 @@
 (global-unset-key (kbd "s-c"))
 (global-unset-key (kbd "s-v"))
 
-(global-set-key (kbd "s-`") 'query-replace)
-(global-set-key (kbd "s-o") 'projectile-find-file)
-(global-set-key (kbd "s-p") 'projectile-switch-project)
-
-(global-set-key (kbd "s-a") 'er/expand-region)
-(global-set-key (kbd "s-f") 'projectile-multi-occur)
-
-(global-set-key (kbd "C-z") 'keyboard-quit)
+(evil-leader/set-key "`" 'query-replace)
+(evil-leader/set-key "o" 'projectile-find-file)
 
 ;; ace
-(global-set-key (kbd "s-[") 'ace-window)
-(global-set-key (kbd "s-]") 'ace-jump-mode)
-(global-set-key (kbd "s-\\") 'ace-swap-window)
+(evil-leader/set-key ",s" 'ace-jump-mode)
 
 ;; buffer management
-(global-set-key (kbd "C-c k") 'bury-buffer)
+(evil-leader/set-key
+  "b" 'ido-switch-buffer
+  "q" 'delete-window
+  "w" 'kill-buffer
+  ",w" 'bury-buffer
+  "." 'ace-window
+  ",." 'ace-swap-window)
 
 ;; calculate-region
-(global-set-key (kbd "C-c m") 'fc-calculate-region)
-
-;; elfeed
-(global-set-key (kbd "<f15>") 'elfeed)
-
-;; git-messenger
-(global-set-key (kbd "M-<f5>") 'git-messenger:popup-message)
-
-;; google-this
-(global-set-key (kbd "C-x g") 'google-this-mode-submap)
+(evil-leader/set-key "?" 'fc-calculate-region)
 
 ;; imenu-anywhere
 (global-set-key (kbd "C-x n") 'imenu-anywhere)
 
-;; join lines
-(global-set-key (kbd "M-j")
-            (lambda ()
-                  (interactive)
-                  (join-line -1)))
-
 ;; magit
-(global-set-key (kbd "<f5>") 'git-timemachine)
-(global-set-key (kbd "<f6>") 'magit-status)
+(evil-leader/set-key
+  "gt" 'git-timemachine
+  "gs" 'magit-status)
 
 ;; move-lines
 (global-set-key (kbd "M-<up>") 'move-lines-up)
 (global-set-key (kbd "M-<down>") 'move-lines-down)
 
-;; newline below
-(global-set-key (kbd "C-<return>") 'kdt-open-line-below)
-
 ;; rcodetools
-(global-set-key (kbd "C-c C-c") 'xmp)
+(evil-leader/set-key ",c" 'xmp)
 
 ;; reset mode line color (guard changes it)
 (global-set-key (kbd "<f13>") 'kdt-reset-mode-line-color)
 
-;; smex
-(global-unset-key (kbd "M-x"))
-(global-set-key (kbd "M-x") 'smex)
-(global-set-key (kbd "M-s m") 'smex-major-mode-commands)
-(global-set-key (kbd "M-s x") 'execute-extended-command) ;; old M-x
-
 ;; toggle line/region comment
-(global-set-key (kbd "s-/") 'comment-or-uncomment-region-or-line)
+(evil-leader/set-key "/" 'comment-or-uncomment-region-or-line)
