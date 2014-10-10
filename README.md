@@ -1,6 +1,6 @@
 #dotfiles
 
-Currently in the process of trying Vim.  This may lead to a very messy repo for a while :)
+Refactoring Emacs, building Vim config, and configuring Evil-mode.  Things will be messy for a while.
 
-## tmux
+## tmux on OSX
 `brew install reattach-to-user-namespace`
