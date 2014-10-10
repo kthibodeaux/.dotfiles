@@ -49,3 +49,29 @@
 (kdt-setup-web-mode)
 (kdt-setup-whitespace)
 (kdt-setup-yasnippet)
+
+(setq ido-ignore-buffers '("\\` "
+			   "*Messages*"
+			   "*Help*"
+			   "*Completions*"
+			   "*fsm-debug*"
+			   "*-jabber-roster-*"
+			   "^*-jabber-groupchat-\.*"
+			   "^*epc\.*"))
+
+(add-to-list 'auto-mode-alist '("\\.html.erb$" . rhtml-mode))
+(add-to-list 'auto-mode-alist '("\\.erubis$" . rhtml-mode))
+(add-to-list 'auto-mode-alist '("\\.rhtml$" . rhtml-mode))
+
+(add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\Capfile$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.cap$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\Gemfile$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.gemspec$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\Rakefile$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.rake$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\Guardfile$" . ruby-mode))
+
+(add-to-list 'auto-mode-alist '("\\.hbs$" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.html$" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.htm$" . web-mode))
