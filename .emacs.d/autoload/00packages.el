@@ -21,6 +21,7 @@
         markdown-mode
         pallet
         powerline
+	powerline-evil
         projectile
         rainbow-mode
         rhtml-mode
