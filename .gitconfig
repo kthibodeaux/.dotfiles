@@ -15,6 +15,7 @@
         ir = !git rebase -i origin/master
 	l = log --graph --abbrev-commit --date=relative
         loc = !git diff --stat `git hash-object -t tree /dev/null` | tail -1 | cut -d' ' -f5
+        lst = log --graph --abbrev-commit --date=relative --stat
         rom = !git fetch origin && git rebase origin/master
         sa = !git submodule add
         shove = !git remote | xargs -L 1 git push
