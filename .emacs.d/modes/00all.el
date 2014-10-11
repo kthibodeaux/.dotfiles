@@ -16,7 +16,6 @@
 (delete-selection-mode 1)
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
-(setq-default major-mode 'org-mode)
 (put 'dired-find-alternate-file 'disabled nil)
 
 (setq gc-cons-threshold 60000000)
