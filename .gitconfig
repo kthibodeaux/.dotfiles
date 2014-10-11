@@ -5,19 +5,22 @@
         aa = add --all
         amend = commit --ammend
         br = branch
-	cl = clone
+        cl = clone
         co = checkout
         cod = !git clone --depth 1
-	cm = commit -m
-	dm = !git branch --merged origin/master | grep -v master | xargs git branch -d
+        cm = commit -m
+        dm = !git branch --merged origin/master | grep -v master | xargs git branch -d
         done = !git fetch && git rebase origin/master && git checkout master && git merge @{-1} --ff-only && git push
-	iquit = !git reset --hard && git clean -fd
+        iquit = !git reset --hard && git clean -fd
         ir = !git rebase -i origin/master
-	loc = !git diff --stat `git hash-object -t tree /dev/null` | tail -1 | cut -d' ' -f5
+	l = log --graph --abbrev-commit --date=relative
+        loc = !git diff --stat `git hash-object -t tree /dev/null` | tail -1 | cut -d' ' -f5
         rom = !git fetch origin && git rebase origin/master
         sa = !git submodule add
         shove = !git remote | xargs -L 1 git push
         st = status
+[format]
+        pretty=format:%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an %ae>%Creset
 [commit]
         template = ~/.gitmessage
 [core]
