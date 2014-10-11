@@ -10,6 +10,6 @@
 .emacs.d/.cask
 .emacs.d/url
 
-.emacs.d/location_specific
+.emacs.d/location_specific/*.el
 
 .vim/.netrwhist
