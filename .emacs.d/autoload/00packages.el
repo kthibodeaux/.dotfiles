@@ -10,7 +10,6 @@
         emmet-mode
         evil
         evil-leader
-        fetch
         fill-column-indicator
         flymake-ruby
         git-timemachine

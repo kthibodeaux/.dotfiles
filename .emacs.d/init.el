@@ -34,6 +34,7 @@
 	  "ido"
 	  "powerline"
 	  "prompts"
+	  "unkeybinds"
 	  "keybinds"
 	))
 
