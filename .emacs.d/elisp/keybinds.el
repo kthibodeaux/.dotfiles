@@ -15,6 +15,7 @@
   ",k" 'kill-this-buffer
   "k" 'kill-buffer
   "w" 'bury-buffer
+  "l" 'bury-buffer
   "." 'ace-window
   ",." 'ace-swap-window
   "h" 'split-window-below

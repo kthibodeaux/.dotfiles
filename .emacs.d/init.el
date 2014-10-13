@@ -9,7 +9,7 @@
 (setq modes-dir
       (expand-file-name "modes" emacs-config-dir))
 (setq location-specific-dir
-      (expand-file-name "location-specific" emacs-config-dir))
+      (expand-file-name "location_specific" emacs-config-dir))
 
 (if (file-exists-p autoload-dir)
     (dolist (file (directory-files autoload-dir t "\\.el$"))
