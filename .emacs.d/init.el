@@ -37,7 +37,7 @@
 	  "prompts"
 	  "unkeybinds"
 	  "keybinds"
-	))
+	  "notifications"))
 
 (if (file-exists-p elisp-config-dir)
 	(dolist (file (directory-files elisp-config-dir t "\\.el$"))
