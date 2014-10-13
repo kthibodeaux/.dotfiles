@@ -21,10 +21,11 @@
         markdown-mode
         pallet
         powerline
-	powerline-evil
+        powerline-evil
         projectile
         rainbow-mode
         rhtml-mode
+        request
         rspec-mode
         ruby-end
         ruby-tools
