@@ -13,6 +13,7 @@
         fill-column-indicator
         flymake-ruby
         git-timemachine
+        haml-mode
         highlight
         imenu-anywhere
         inf-ruby
