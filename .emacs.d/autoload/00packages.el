@@ -2,6 +2,7 @@
       '(
         ace-jump-mode
         ace-window
+        ag
         anzu
         auto-complete
         coffee-mode
