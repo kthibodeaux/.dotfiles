@@ -43,6 +43,3 @@
 [submodule "vim-easymotion"]
 	path = .vim/bundle/vim-easymotion
 	url = git@github.com:Lokaltog/vim-easymotion.git
-[submodule "tmuxline.vim"]
-	path = .vim/bundle/tmuxline.vim
-	url = git@github.com:edkolev/tmuxline.vim.git
