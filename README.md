@@ -22,8 +22,6 @@ Refactoring Emacs, building Vim config, and configuring Evil-mode.  Things will 
 - unite? needs to be researched, initial look not clear enough on what it is, comparable to helm?
 
 ## misc todo
-* find terminal jabber client comparible to jabber.el
-- this is pretty much the only thing holding me to emacs
 * switch from rvm to rbenv?
 
 ## emacs todo
