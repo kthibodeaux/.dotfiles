@@ -5,6 +5,7 @@ au FileType * setlocal ai sw=2 sts=2 et
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
+Plugin 'matchit.zip'
 Plugin 'sk1418/HowMuch'
 Plugin 'wycats/nerdtree'
 Plugin 'bling/vim-airline'
@@ -17,6 +18,12 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-endwise'
 Plugin 'rking/ag.vim'
 Plugin 'tacahiroy/ctrlp-funky'
+Plugin 'tpope/vim-rails'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'mattn/emmet-vim'
+Plugin 'Townk/vim-autoclose'
+Plugin 'danro/rename.vim'
+Plugin 'tpope/vim-surround'
 call vundle#end()
 
 syntax on
