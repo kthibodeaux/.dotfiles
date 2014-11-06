@@ -72,9 +72,9 @@ vnoremap K :m '<-2<CR>gv=gv
 let g:ctrlp_working_path_mode = 'c'
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_extensions = ['funky']
-nnoremap <leader>oo :CtrlP c<cr>
-nnoremap <leader>oe :CtrlP<cr>
-nnoremap <leader>of :CtrlPFunky<cr>
+nnoremap <leader>o :CtrlP c<cr>
+nnoremap <leader>e :CtrlP<cr>
+nnoremap <leader>f :CtrlPFunky<cr>
 nnoremap <leader>b :CtrlPBuffer<cr>
 
 " xmpfilter - Super M and Super R
