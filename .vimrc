@@ -73,7 +73,7 @@ let g:ctrlp_working_path_mode = 'c'
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_extensions = ['funky']
 nnoremap <leader>oo :CtrlP c<cr>
-nnoremap <leader>ee :CtrlP<cr>
+nnoremap <leader>oe :CtrlP<cr>
 nnoremap <leader>of :CtrlPFunky<cr>
 nnoremap <leader>b :CtrlPBuffer<cr>
 
