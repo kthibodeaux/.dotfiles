@@ -8,10 +8,8 @@ Refactoring Emacs, building Vim config, and configuring Evil-mode.  Things will 
 * plugins from vim awesome
 - vim-rails
 - vim-gitgutter
-- indent guides
 - emmet
 - neocomplcache?
-- ag.vim
 - vim-autoclose
 - rename.vim
 - rvm.vim

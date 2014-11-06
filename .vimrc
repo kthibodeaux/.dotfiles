@@ -15,6 +15,7 @@ Plugin 't9md/vim-ruby-xmpfilter'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-endwise'
+Plugin 'rking/ag.vim'
 call vundle#end()
 
 syntax on
