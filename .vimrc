@@ -15,6 +15,7 @@ Plugin 't9md/vim-ruby-xmpfilter'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-endwise'
+call vundle#end()
 
 syntax on
 set autoindent
@@ -58,6 +59,10 @@ map <leader>gc :Gcommit<CR>
 map <leader>gp :Gpush<CR>
 map <leader>gd :Gdiff<CR>
 map <leader>gb :Gblame<CR>
+
+" Move visual block
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
 
 " ctrlp
 let g:ctrlp_working_path_mode = 'c'
