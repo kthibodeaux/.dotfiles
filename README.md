@@ -4,9 +4,7 @@ Refactoring Emacs, building Vim config, and configuring Evil-mode.  Things will 
 
 ## vim todo
 * better keymaps
-- bind moving line(s) up/down (maybe ,mj and ,mk ?)
 * better vimrc organization
-* auto open all .md files as markdown
 * plugins from vim awesome
 - vim-rails
 - vim-gitgutter

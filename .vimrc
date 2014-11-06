@@ -124,6 +124,9 @@ augroup RubyFileTypes
   au BufNewFile,BufRead *.ru set filetype=ruby
 augroup END
 
+" By default only README.md opens as markdown
+au BufNewFile,BufRead *.md set ft=markdown
+
 " Highlight whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
 au ColorScheme * highlight ExtraWhitespace guibg=red
