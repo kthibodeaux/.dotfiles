@@ -13,9 +13,7 @@ Refactoring Emacs, building Vim config, and configuring Evil-mode.  Things will 
 - vim-autoclose
 - rename.vim
 - rvm.vim
-- ctrlp-funky
 - bundler.vim
-- blockle.vim
 - vim-ruby-runner?
 - rubocop?
 - ruby-lint?

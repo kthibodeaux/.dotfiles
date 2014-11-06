@@ -16,6 +16,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-endwise'
 Plugin 'rking/ag.vim'
+Plugin 'tacahiroy/ctrlp-funky'
 call vundle#end()
 
 syntax on
@@ -52,8 +53,10 @@ colorscheme bubblegum
 " Random maps (normal, visual, select, operater pending)
 map <TAB> = " Tab smartly indents current line TODO: WHY DOES IT BEEP!?
 nnoremap <CR> :noh<CR><CR> " Cancel search by pressing return
-map <leader>w :bw<CR>
+map <leader><leader>k :bw<CR>
 map <leader>t :NERDTreeToggle<CR>
+
+" Fugitive
 map <leader>gs :Gstatus<CR>
 map <leader>ga :Gwrite<CR>
 map <leader>gc :Gcommit<CR>
@@ -68,8 +71,10 @@ vnoremap K :m '<-2<CR>gv=gv
 " ctrlp
 let g:ctrlp_working_path_mode = 'c'
 let g:ctrlp_show_hidden = 1
-nnoremap <leader>o :CtrlP c<cr>
-nnoremap <leader>e :CtrlP<cr>
+let g:ctrlp_extensions = ['funky']
+nnoremap <leader>oo :CtrlP c<cr>
+nnoremap <leader>ee :CtrlP<cr>
+nnoremap <leader>of :CtrlPFunky<cr>
 nnoremap <leader>b :CtrlPBuffer<cr>
 
 " xmpfilter - Super M and Super R
@@ -87,16 +92,6 @@ set ignorecase
 set smartcase " Only search upcase if provided with capital letter
 set gdefault " Assume /g flag on :%s to replace all matches on line
 set incsearch " Search as typing
-
-" Show syntax highlighting groups for word under cursor
-" Only really useful when changing colors in a theme, which I do a lot...
-nmap <leader>syn :call <SID>SynStack()<CR>
-function! <SID>SynStack()
-  if !exists("*synstack")
-    return
-  endif
-  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
-endfunc
 
 " Highlight current line in active pane only
 augroup CursorLine
