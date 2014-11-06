@@ -3,8 +3,6 @@
 Refactoring Emacs, building Vim config, and configuring Evil-mode.  Things will be messy for a while.
 
 ## vim todo
-* better keymaps
-* better vimrc organization
 * plugins from vim awesome
 - vim-rails
 - vim-gitgutter
