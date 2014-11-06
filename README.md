@@ -35,5 +35,9 @@ Refactoring Emacs, building Vim config, and configuring Evil-mode.  Things will 
 ## emacs todo
 * goodbye :)
 
+## vim
+1. Install (Vundle)[https://github.com/gmarik/Vundle.vim]
+2. In vim `:PluginInstall`
+
 ## tmux on OSX
 `brew install reattach-to-user-namespace`
