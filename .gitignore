@@ -13,3 +13,4 @@
 .emacs.d/location_specific/*.el
 
 .vim/.netrwhist
+.vim/bundle/
