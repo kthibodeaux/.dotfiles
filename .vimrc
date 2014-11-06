@@ -1,7 +1,20 @@
 set nocompatible
 filetype plugin indent on
 au FileType * setlocal ai sw=2 sts=2 et
-call pathogen#infect()
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
+Plugin 'sk1418/HowMuch'
+Plugin 'wycats/nerdtree'
+Plugin 'bling/vim-airline'
+Plugin 'tpope/vim-fugitive'
+Plugin 'ecomba/vim-ruby-refactoring'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 't9md/vim-ruby-xmpfilter'
+Plugin 'kien/ctrlp.vim'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-endwise'
 
 syntax on
 set autoindent

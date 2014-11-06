@@ -7,7 +7,6 @@ Refactoring Emacs, building Vim config, and configuring Evil-mode.  Things will 
 - bind moving line(s) up/down (maybe ,mj and ,mk ?)
 * better vimrc organization
 * auto open all .md files as markdown
-* move from pathogen to bundle (goodbye nasty submodules!)
 * plugins from vim awesome
 - vim-rails
 - vim-gitgutter
