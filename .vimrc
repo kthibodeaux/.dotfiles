@@ -79,10 +79,15 @@ vnoremap K :m '<-2<CR>gv=gv
 let g:ctrlp_working_path_mode = 'c'
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_extensions = ['funky']
-nnoremap <leader>o :CtrlP c<cr>
+nnoremap <leader>oo :CtrlP c<cr>
 nnoremap <leader>e :CtrlP<cr>
 nnoremap <leader>f :CtrlPFunky<cr>
 nnoremap <leader>b :CtrlPBuffer<cr>
+
+" rails
+nnoremap <leader>oc :Econtroller<space>
+nnoremap <leader>om :Emodel<space>
+nnoremap <leader>ov :Eview<space>
 
 " xmpfilter - Super M and Super R
 nmap <buffer> <F5> <Plug>(xmpfilter-mark)
