@@ -1,6 +1,0 @@
-# -*- mode: snippet -*-
-#name : bb_window_template_function
-# --
-window.template = function(id) {
-  return _.template( $('#' + id).html() );
-}$0

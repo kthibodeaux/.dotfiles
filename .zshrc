@@ -1,15 +1,10 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-if [ -n "$INSIDE_EMACS" ]; then
-    export ZSH_THEME="bira"
-else
-    export ZSH_THEME="avit"
-    export TERM="xterm-256color"
-fi
+export ZSH_THEME="avit"
+export TERM="xterm-256color"
 
-alias mgn="mg -n"
-alias emacsc="emacsclient -nw -c -a mgn"
+alias ls="ls -Gp"
 alias d_ds="find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch"
 alias ruby-server="ruby -r webrick -e \"s = WEBrick::HTTPServer.new(:Port => 9090, :DocumentRoot => Dir.pwd); trap('INT') { s.shutdown }; s.start\""
 alias lines="find . -name '*.*' | xargs wc -l"
@@ -17,18 +12,21 @@ alias lines="find . -name '*.*' | xargs wc -l"
 alias v="vim"
 alias vmi="vim"
 alias bim="vim"
+
 alias va="vagrant"
+alias t="tmux"
+alias gti="git"
+
 alias p="padrino"
 alias r="rails"
 alias ber="bundle exec rails"
+
 alias s="rspec"
 alias bes="bundle exec rspec"
 alias c="cucumber"
 alias bec="bundle exec cucumber"
-alias t="tmux"
 
-alias gti="git"
-alias zc="vim ~/.dotfiles/.zshrc"
+alias zrc="vim ~/.dotfiles/.zshrc"
 alias vrc="vim ~/.dotfiles/.vimrc"
 
 fuck() { ps -e | grep $1 | ruby -e "ARGF.read.to_s.split(/\\n/).each { |l| puts l.split(' ').first }" | xargs -L 1 kill -9 }
@@ -71,5 +69,3 @@ plugins=(brew bundler gem git git-extras jsontools rvm sudo wd)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.zshrc.local
-
-alias ls="ls -Gp"

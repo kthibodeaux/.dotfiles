@@ -1,6 +1,0 @@
-# -*- mode: snippet -*-
-# name: responds_to_method
-# --
-it "responds to #${1:method}" do
-  expect(${2:subject}).to respond_to(:$1)
-end

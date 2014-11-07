@@ -1,4 +1,0 @@
-# -*- mode: snippet -*-
-#name : backbone_model
-# --
-class App.Models.${1:name} extends Backbone.Model
