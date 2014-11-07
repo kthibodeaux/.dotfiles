@@ -3,7 +3,7 @@
 [alias]
         a = add
         aa = add --all
-        amend = commit --ammend
+        amend = commit --amend
         br = branch
         cl = clone
         co = checkout
