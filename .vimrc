@@ -24,6 +24,7 @@ Plugin 'mattn/emmet-vim'
 Plugin 'Townk/vim-autoclose'
 Plugin 'danro/rename.vim'
 Plugin 'tpope/vim-surround'
+Plugin 'thoughtbot/vim-rspec'
 call vundle#end()
 
 syntax on
