@@ -90,6 +90,10 @@ nnoremap <leader>oc :Econtroller<space>
 nnoremap <leader>om :Emodel<space>
 nnoremap <leader>ov :Eview<space>
 
+" rspec
+nnoremap <Leader>rr :call RunCurrentSpecFile()<CR>
+nnoremap <Leader>ra :call RunAllSpecs()<CR>
+
 " xmpfilter - Super M and Super R
 nmap <buffer> <F5> <Plug>(xmpfilter-mark)
 xmap <buffer> <F5> <Plug>(xmpfilter-mark)
