@@ -2,29 +2,33 @@ set nocompatible
 filetype plugin indent on
 au FileType * setlocal ai sw=2 sts=2 et
 
+" ultisnips
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
-Plugin 'matchit.zip'
-Plugin 'sk1418/HowMuch'
-Plugin 'wycats/nerdtree'
-Plugin 'bling/vim-airline'
-Plugin 'tpope/vim-fugitive'
-Plugin 'ecomba/vim-ruby-refactoring'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'garbas/vim-snipmate'
+Plugin 'tomtom/tlib_vim'
 Plugin 'Lokaltog/vim-easymotion'
-Plugin 't9md/vim-ruby-xmpfilter'
-Plugin 'kien/ctrlp.vim'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'tpope/vim-endwise'
-Plugin 'rking/ag.vim'
-Plugin 'tacahiroy/ctrlp-funky'
-Plugin 'tpope/vim-rails'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'mattn/emmet-vim'
 Plugin 'Townk/vim-autoclose'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'bling/vim-airline'
 Plugin 'danro/rename.vim'
-Plugin 'tpope/vim-surround'
+Plugin 'ecomba/vim-ruby-refactoring'
+Plugin 'kien/ctrlp.vim'
+Plugin 'matchit.zip'
+Plugin 'mattn/emmet-vim'
+Plugin 'rking/ag.vim'
+Plugin 'sk1418/HowMuch'
+Plugin 't9md/vim-ruby-xmpfilter'
+Plugin 'tacahiroy/ctrlp-funky'
 Plugin 'thoughtbot/vim-rspec'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-surround'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'wycats/nerdtree'
 call vundle#end()
 
 syntax on
@@ -59,7 +63,6 @@ set background=dark
 colorscheme bubblegum
 
 " Random maps (normal, visual, select, operater pending)
-map <TAB> = " Tab smartly indents current line TODO: WHY DOES IT BEEP!?
 nnoremap <CR> :noh<CR><CR> " Cancel search by pressing return
 map <leader><leader>k :bw<CR>
 map <leader>t :NERDTreeToggle<CR>
