@@ -20,6 +20,7 @@ alias gti="git"
 alias p="padrino"
 alias r="rails"
 alias ber="bundle exec rails"
+alias rpca="RAILS_ENV=production bundle exec rake assets:precompile"
 
 alias s="rspec"
 alias bes="bundle exec rspec"
