@@ -31,6 +31,9 @@ alias zrc="vim ~/.dotfiles/.zshrc"
 alias vrc="vim ~/.dotfiles/.vimrc"
 
 fuck() { ps -e | grep $1 | ruby -e "ARGF.read.to_s.split(/\\n/).each { |l| puts l.split(' ').first }" | xargs -L 1 kill -9 }
+187() { if [ "$#" -eq 1 ]; then rvm use 1.8.7@$1; else rvm use 1.8.7; fi }
+210() { if [ "$#" -eq 1 ]; then rvm use 2.1.0@$1; else rvm use 2.1.0; fi }
+212() { if [ "$#" -eq 1 ]; then rvm use 2.1.2@$1; else rvm use 2.1.2; fi }
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
