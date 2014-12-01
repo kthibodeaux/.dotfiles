@@ -2,7 +2,6 @@ set nocompatible
 filetype plugin indent on
 au FileType * setlocal ai sw=2 sts=2 et
 
-" ultisnips
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
