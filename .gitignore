@@ -1,16 +1,4 @@
 .DS_Store
-.emacs.d/ac-comphist.dat
-.emacs.d/auto-save-list/
-.emacs.d/elpa/
-.emacs.d/projectile-bookmarks.eld
-.emacs.d/bookmarks
-.emacs.d/tramp
-.emacs.d/jabber-avatar-cache
-.emacs.d/.edbi-ds-history
-.emacs.d/.cask
-.emacs.d/url
-
-.emacs.d/location_specific/*.el
 
 .vim/.netrwhist
 .vim/bundle/
