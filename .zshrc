@@ -9,7 +9,7 @@ alias d_ds="find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch"
 alias ruby-server="ruby -r webrick -e \"s = WEBrick::HTTPServer.new(:Port => 9090, :DocumentRoot => Dir.pwd); trap('INT') { s.shutdown }; s.start\""
 alias lines="find . -name '*.*' | xargs wc -l"
 
-alias v="vim"
+alias v="fg || vim"
 alias vmi="vim"
 alias bim="vim"
 
