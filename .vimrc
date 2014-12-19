@@ -29,6 +29,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'vimoutliner/vimoutliner'
 Plugin 'wycats/nerdtree'
+Plugin 'christoomey/vim-tmux-navigator'
 call vundle#end()
 
 syntax on
@@ -57,6 +58,7 @@ set wildmenu " Show menu options for completion
 
 let mapleader = ","
 let g:airline_powerline_fonts = 1
+let g:tmux_navigator_no_mappings = 1
 
 " Theme
 set background=dark
@@ -125,10 +127,11 @@ augroup END
 " Window management
 set hidden " Allow unsaved buffers to be put in background
 set winwidth=84 " Active window min width
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
+nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
+nnoremap <silent> <c-\> :TmuxNavigatePrevious<cr>
 
 augroup RubyFileTypes
   au BufNewFile,BufRead Gemfile set filetype=ruby
