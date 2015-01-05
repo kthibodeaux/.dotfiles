@@ -16,6 +16,8 @@ alias vmi="vim"
 alias bim="vim"
 alias vu="vim +PluginInstall +qall"
 
+alias :q="exit"
+
 alias va="vagrant"
 alias t="tmux"
 alias gti="git"
@@ -40,6 +42,27 @@ fuck() { ps -e | grep $1 | ruby -e "ARGF.read.to_s.split(/\\n/).each { |l| puts 
 187() { if [ "$#" -eq 1 ]; then rvm use 1.8.7-p374@$1; else rvm use 1.8.7-p374; fi }
 210() { if [ "$#" -eq 1 ]; then rvm use 2.1.0@$1; else rvm use 2.1.0; fi }
 212() { if [ "$#" -eq 1 ]; then rvm use 2.1.2@$1; else rvm use 2.1.2; fi }
+
+# from aarobc/dotfiles #
+extract() {
+  if [ -f $1 ] ; then
+    case $1 in
+      *.tar.bz2)   tar xvjf $1    ;;
+      *.tar.gz)    tar xvzf $1    ;;
+      *.bz2)       bunzip2 $1     ;;
+      *.rar)       rar x $1       ;;
+      *.gz)        gunzip $1      ;;
+      *.tar)       tar xvf $1     ;;
+      *.tbz2)      tar xvjf $1    ;;
+      *.tgz)       tar xvzf $1    ;;
+      *.zip)       unzip $1       ;;
+      *.Z)         uncompress $1  ;;
+      *)           echo "don't know how to extract '$1'" ;;
+    esac
+  else
+    echo "'$1' is not a valid file"
+  fi
+}
 
 plugins=(brew bundler gem git git-extras jsontools rvm sudo wd)
 
