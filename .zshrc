@@ -37,6 +37,8 @@ alias vrc="vim ~/.dotfiles/.vimrc"
 
 alias chat="profanity -d"
 
+alias rzsh="source ~/.zshrc && source ~/.zshrc.local"
+
 timed_command () { perl -e 'alarm shift; exec @ARGV' "$@"; }
 fuck() { ps -e | grep $1 | ruby -e "ARGF.read.to_s.split(/\\n/).each { |l| puts l.split(' ').first }" | xargs -L 1 kill -9 }
 187() { if [ "$#" -eq 1 ]; then rvm use 1.8.7-p374@$1; else rvm use 1.8.7-p374; fi }
