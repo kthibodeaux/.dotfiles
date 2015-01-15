@@ -69,8 +69,10 @@ extract() {
 
 plugins=(brew bundler gem git git-extras jsontools rvm wd rand-quote vi-mode
          vagrant gitignore)
-bindkey "^R" history-incremental-search-backward
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.zshrc.local
+
+bindkey "^R" history-incremental-search-backward
+
 quote
