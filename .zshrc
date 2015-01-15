@@ -67,8 +67,8 @@ extract() {
   fi
 }
 
-plugins=(brew bundler gem git git-extras jsontools rvm wd rand-quote vi-mode
-         vagrant gitignore)
+plugins=(brew bundler gem git git-extras jsontools rvm wd rand-quote vagrant
+         gitignore)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.zshrc.local
