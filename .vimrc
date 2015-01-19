@@ -30,6 +30,7 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'vimoutliner/vimoutliner'
 Plugin 'wycats/nerdtree'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'chrisbra/Recover.vim'
 call vundle#end()
 
 syntax on
