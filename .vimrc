@@ -61,6 +61,16 @@ let mapleader = ","
 let g:airline_powerline_fonts = 1
 let g:tmux_navigator_no_mappings = 1
 
+" Hastebin
+function Haste() range
+  echo system('echo '.shellescape(join(getline(a:firstline, a:lastline), "\n")).' | haste | pbcopy')
+endfunction
+
+" Local Hastebin
+function LHaste() range
+  echo system('echo '.shellescape(join(getline(a:firstline, a:lastline), "\n")).' | lhaste | pbcopy')
+endfunction
+
 " Theme
 set background=dark
 colorscheme bubblegum
@@ -71,6 +81,9 @@ nnoremap <CR> :noh<CR><CR> " Cancel search by pressing return
 nnoremap <leader><tab> mtgg=G`t
 map <leader><leader>k :bw<CR>
 map <leader>t :NERDTreeToggle<CR>
+
+cnoreabbrev hastebin call Haste()
+cnoreabbrev lhaste call LHaste()
 
 " Fugitive
 map <leader>gs :Gstatus<CR>

@@ -1,0 +1,8 @@
+#!/bin/sh
+if [ $# -eq 0 ]; then
+  content=$(cat)
+else
+  content=$(cat $1)
+fi
+curl -X POST -s -d "$content" http://hastebin.com/documents | awk -F '"' '{print "http://hastebin.com/"$4}';
+
