@@ -31,6 +31,7 @@ Plugin 'vimoutliner/vimoutliner'
 Plugin 'wycats/nerdtree'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'chrisbra/Recover.vim'
+Plugin 'derekwyatt/vim-scala'
 call vundle#end()
 
 syntax on
