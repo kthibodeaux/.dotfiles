@@ -160,6 +160,10 @@ augroup RubyFileTypes
   au BufNewFile,BufRead *.ru set filetype=ruby
 augroup END
 
+augroup ScalaFileTypes
+  au BufNewFile,BufRead *.scala set filetype=scala
+augroup END
+
 au BufRead,BufNewFile *.otl set filetype=votl
 
 " By default only README.md opens as markdown
