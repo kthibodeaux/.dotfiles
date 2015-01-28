@@ -29,6 +29,7 @@ alias rpca="RAILS_ENV=production bundle exec rake assets:precompile"
 
 alias s="rspec"
 alias bes="bundle exec rspec"
+alias besr="bundle exec rspec --order rand"
 alias c="cucumber"
 alias bec="bundle exec cucumber"
 
