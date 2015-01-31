@@ -54,7 +54,7 @@ extract() {
       *.tar.bz2)   tar xvjf $1    ;;
       *.tar.gz)    tar xvzf $1    ;;
       *.bz2)       bunzip2 $1     ;;
-      *.rar)       unrar x $1       ;;
+      *.rar)       unrar x $1     ;;
       *.gz)        gunzip $1      ;;
       *.tar)       tar xvf $1     ;;
       *.tbz2)      tar xvjf $1    ;;
@@ -66,6 +66,11 @@ extract() {
   else
     echo "'$1' is not a valid file"
   fi
+}
+
+function zurl() {
+  [[ -z ${1} ]] && print "please provide url to shrink." && return 1
+  curl -s http://tinyurl.com/api-create.php?url=${1} | pbcopy
 }
 
 plugins=(brew bundler gem git git-extras jsontools rvm wd rand-quote vagrant
