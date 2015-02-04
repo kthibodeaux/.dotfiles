@@ -113,7 +113,7 @@ nnoremap <leader>om :Emodel<space>
 nnoremap <leader>ov :Eview<space>
 
 " rspec
-let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
+let g:rspec_command = 'call Send_to_Tmux("bundle exec rspec {spec}\n")'
 map <Leader>rr :call RunNearestSpec()<CR>
 map <Leader>rf :call RunCurrentSpecFile()<CR>
 map <Leader>rl :call RunLastSpec()<CR>
