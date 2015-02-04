@@ -30,6 +30,7 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'vimoutliner/vimoutliner'
 Plugin 'wycats/nerdtree'
 Plugin 'christoomey/vim-tmux-navigator'
+Bundle 'jgdavey/tslime.vim'
 Plugin 'chrisbra/Recover.vim'
 Plugin 'derekwyatt/vim-scala'
 call vundle#end()
@@ -80,7 +81,6 @@ colorscheme bubblegum
 map ; :
 nnoremap <CR> :noh<CR><CR> " Cancel search by pressing return
 nnoremap <leader><tab> mtgg=G`t
-map <leader><leader>k :bw<CR>
 map <leader>t :NERDTreeToggle<CR>
 
 cnoreabbrev hastebin call Haste()
@@ -113,8 +113,11 @@ nnoremap <leader>om :Emodel<space>
 nnoremap <leader>ov :Eview<space>
 
 " rspec
-nnoremap <Leader>rr :call RunCurrentSpecFile()<CR>
-nnoremap <Leader>ra :call RunAllSpecs()<CR>
+let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
+map <Leader>rr :call RunNearestSpec()<CR>
+map <Leader>rf :call RunCurrentSpecFile()<CR>
+map <Leader>rl :call RunLastSpec()<CR>
+map <Leader>ra :call RunAllSpecs()<CR>
 
 " xmpfilter - Super M and Super R
 nmap <buffer> <F5> <Plug>(xmpfilter-mark)
