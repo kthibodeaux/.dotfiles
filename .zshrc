@@ -73,6 +73,11 @@ function zurl() {
   curl -s http://tinyurl.com/api-create.php?url=${1} | pbcopy
 }
 
+function factory() {
+  [[ -z ${1} ]] && print "please provide a factory name." && return 1
+  echo -e "FactoryGirl.define do\n  factory :${1} do\n\n  end\nend" >> spec/factories/${1}_factory.rb
+}
+
 plugins=(brew bundler gem git git-extras jsontools rvm wd rand-quote vagrant
          gitignore)
 
