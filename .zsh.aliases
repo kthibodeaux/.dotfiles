@@ -4,8 +4,6 @@ alias lines="find . -name '*.*' | xargs wc -l"
 alias :q="exit"
 
 alias v="vim"
-alias vmi="vim"
-alias bim="vim"
 alias vu="vim +PluginInstall +qall"
 alias vrc="vim ~/.dotfiles/.vimrc"
 
@@ -25,6 +23,5 @@ alias bec="bundle exec cucumber"
 
 alias chat="profanity -d"
 
-alias gti="git"
 alias churn="git log --all --name-only --format='format:' | grep -v '^$' | sort | uniq -c | sort | tail"
 alias d_ds="find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch"
