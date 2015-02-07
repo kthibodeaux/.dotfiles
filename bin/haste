@@ -1,8 +1,8 @@
 #!/bin/sh
 if [ $# -eq 0 ]; then
-  print "No factory name given.  Pass a name camel_cased."
+  content=$(cat)
 else
   content=$(cat $1)
 fi
-curl -X POST -s -d "$content" http://hastebin.com/documents | awk -F '"' '{print "http://hastebin.com/"$4}';
 
+curl -X POST -s -d "$content" http://hastebin.com/documents | echo "http://hastebin.com/"`ruby -e "puts ARGF.read.to_s.match(/{\"key\":\"(.+)\"}/).captures.first"` | pbcopy
