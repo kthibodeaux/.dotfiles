@@ -33,6 +33,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 Bundle 'jgdavey/tslime.vim'
 Plugin 'chrisbra/Recover.vim'
 Plugin 'derekwyatt/vim-scala'
+Plugin 'chriskempson/base16-vim'
 call vundle#end()
 
 syntax on
@@ -75,7 +76,8 @@ endfunction
 
 " Theme
 set background=dark
-colorscheme bubblegum
+let base16colorspace=256
+colorscheme base16-eighties
 
 " Random maps (normal, visual, select, operater pending)
 map ; :

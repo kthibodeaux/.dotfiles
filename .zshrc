@@ -20,6 +20,9 @@ for function in ~/.zsh/functions/*; do
   source $function
 done
 
+# use colors
+source ~/.zsh/colors.sh
+
 # syntax highlighting
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
