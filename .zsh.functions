@@ -1,0 +1,39 @@
+timed_command () { perl -e 'alarm shift; exec @ARGV' "$@"; }
+
+fuck() { ps -e | grep $1 | ruby -e "ARGF.read.to_s.split(/\\n/).each { |l| puts l.split(' ').first }" | xargs -L 1 kill -9 }
+
+187() { if [ "$#" -eq 1 ]; then rvm use 1.8.7-p374@$1; else rvm use 1.8.7-p374; fi }
+210() { if [ "$#" -eq 1 ]; then rvm use 2.1.0@$1; else rvm use 2.1.0; fi }
+212() { if [ "$#" -eq 1 ]; then rvm use 2.1.2@$1; else rvm use 2.1.2; fi }
+220() { if [ "$#" -eq 1 ]; then rvm use 2.2.0@$1; else rvm use 2.2.0; fi }
+
+# from aarobc/dotfiles #
+extract() {
+  if [ -f $1 ] ; then
+    case $1 in
+      *.tar.bz2)   tar xvjf $1    ;;
+      *.tar.gz)    tar xvzf $1    ;;
+      *.bz2)       bunzip2 $1     ;;
+      *.rar)       unrar x $1     ;;
+      *.gz)        gunzip $1      ;;
+      *.tar)       tar xvf $1     ;;
+      *.tbz2)      tar xvjf $1    ;;
+      *.tgz)       tar xvzf $1    ;;
+      *.zip)       unzip $1       ;;
+      *.Z)         uncompress $1  ;;
+      *)           echo "don't know how to extract '$1'" ;;
+    esac
+  else
+    echo "'$1' is not a valid file"
+  fi
+}
+
+function zurl() {
+  [[ -z ${1} ]] && print "please provide url to shrink." && return 1
+  curl -s http://tinyurl.com/api-create.php?url=${1} | pbcopy
+}
+
+function factory() {
+  [[ -z ${1} ]] && print "please provide a factory name." && return 1
+  echo -e "FactoryGirl.define do\n  factory :${1} do\n\n  end\nend" >> spec/factories/${1}_factory.rb
+}
