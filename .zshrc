@@ -1,4 +1,6 @@
 unsetopt nomatch
+setopt extendedglob
+setopt promptsubst
 
 export ZSH_THEME="avit"
 export TERM="xterm-256color"
