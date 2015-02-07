@@ -38,6 +38,8 @@ alias vrc="vim ~/.dotfiles/.vimrc"
 
 alias chat="profanity -d"
 
+alias churn="git log --all --name-only --format='format:' | grep -v '^$' | sort | uniq -c | sort | tail"
+
 alias rzsh="source ~/.zshrc && source ~/.zshrc.local"
 
 timed_command () { perl -e 'alarm shift; exec @ARGV' "$@"; }
