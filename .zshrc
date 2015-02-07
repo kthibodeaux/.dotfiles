@@ -6,7 +6,7 @@ source $ZSH/oh-my-zsh.sh
 export ZSH_THEME="avit"
 export TERM="xterm-256color"
 
-plugins=(brew gem git git-extras jsontools wd rand-quote vagrant)
+plugins=(git git-extras wd rand-quote)
 
 bindkey "^R" history-incremental-search-backward
 

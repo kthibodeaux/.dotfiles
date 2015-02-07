@@ -27,6 +27,9 @@ alias bes="bundle exec rspec"
 alias besr="bundle exec rspec --order rand"
 alias bec="bundle exec cucumber"
 
+alias gemb="gem build *.gemspec"
+alias box="gem inabox *.gem"
+
 alias chat="profanity -d"
 
 alias churn="git log --all --name-only --format='format:' | grep -v '^$' | sort | uniq -c | sort | tail"
