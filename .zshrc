@@ -6,14 +6,19 @@ source $ZSH/oh-my-zsh.sh
 export ZSH_THEME="avit"
 export TERM="xterm-256color"
 
-[[ -f ~/.zsh.aliases ]] && source ~/.zsh.aliases
-[[ -f ~/.zsh.functions ]] && source ~/.zsh.functions
+export DOTFILES=$HOME/.dotfiles
+
+export VISUAL=vim
+export EDITOR=$VISUAL
+export PATH="$DOTFILES/bin:$PATH"
 
 plugins=(brew bundler gem git git-extras jsontools rvm wd rand-quote vagrant
          gitignore)
 
 bindkey "^R" history-incremental-search-backward
 
-source $HOME/.zshrc.local
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local ]]
+[[ -f ~/.zsh.aliases ]] && source ~/.zsh.aliases
+[[ -f ~/.zsh.functions ]] && source ~/.zsh.functions
 
 quote
