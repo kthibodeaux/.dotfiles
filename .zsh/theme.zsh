@@ -71,7 +71,7 @@ prompt_pure_precmd() {
         # git info
         vcs_info
 
-        local prompt_pure_preprompt="\n%F{blue}%~ %{$fg[red]%}‹$(~/.rvm/bin/rvm-prompt i v)› %{$reset_color%}%F{green}$vcs_info_msg_0_ `prompt_pure_git_dirty` $prompt_pure_username%f %F{yellow}`prompt_pure_cmd_exec_time`%f"
+        local prompt_pure_preprompt="\n%F{blue}%~ %{$fg[red]%}‹ $(~/.rvm/bin/rvm-prompt v g) › %{$reset_color%}%F{green}‹$vcs_info_msg_0_ `prompt_pure_git_dirty`› $prompt_pure_username%f %F{yellow}`prompt_pure_cmd_exec_time`%f"
         print -P $prompt_pure_preprompt
 
         # check async if there is anything to pull
