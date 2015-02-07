@@ -77,7 +77,7 @@ endfunction
 " Theme
 set background=dark
 let base16colorspace=256
-colorscheme base16-eighties
+colorscheme base16-twilight
 
 " Random maps (normal, visual, select, operater pending)
 map ; :

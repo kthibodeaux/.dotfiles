@@ -9,11 +9,9 @@ fpath=(~/.zsh/completion $fpath)
 autoload -U compinit
 compinit
 
-# case insensitive completion
-zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}'
-
-# fuzzy completion
-zstyle ':completion:*' matcher-list 'r:[[:ascii:]]||[[:ascii:]]=** r:|=* m:{a-z\-}={A-Z\_}'
+# completion
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+zstyle ':completion:*' list-colors ''
 
 # load custom functions
 for function in ~/.zsh/functions/*; do
