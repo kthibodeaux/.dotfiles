@@ -16,6 +16,9 @@ for function in ~/.zsh/functions/*; do
   source $function
 done
 
+# syntax highlighting
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 # makes color constants available
 autoload -U colors
 colors
