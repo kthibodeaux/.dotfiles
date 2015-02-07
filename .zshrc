@@ -6,12 +6,6 @@ source $ZSH/oh-my-zsh.sh
 export ZSH_THEME="avit"
 export TERM="xterm-256color"
 
-export DOTFILES=$HOME/.dotfiles
-
-export VISUAL=vim
-export EDITOR=$VISUAL
-export PATH="$DOTFILES/bin:$PATH"
-
 plugins=(brew bundler gem git git-extras jsontools rvm wd rand-quote vagrant
          gitignore)
 
