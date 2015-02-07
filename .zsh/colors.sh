@@ -33,22 +33,24 @@ color_foreground="a7/a7/a7" # Base 05
 color_background="1e/1e/1e" # Base 00
 color_cursor="a7/a7/a7" # Base 05
 
-if [ -n "$TMUX" ]; then
+# Commented out because it works in tmux without the special case
+# and it makes tmux make a system beep on every new pane or window
+# if [ -n "$TMUX" ]; then
   # tell tmux to pass the escape sequences through
   # (Source: http://permalink.gmane.org/gmane.comp.terminal-emulators.tmux.user/1324)
-  printf_template="\033Ptmux;\033\033]4;%d;rgb:%s\007\033\\"
-  printf_template_var="\033Ptmux;\033\033]%d;rgb:%s\007\033\\"
-  printf_template_custom="\033Ptmux;\033\033]%s%s\007\033\\"
-elif [ "${TERM%%-*}" = "screen" ]; then
-  # GNU screen (screen, screen-256color, screen-256color-bce)
-  printf_template="\033P\033]4;%d;rgb:%s\007\033\\"
-  printf_template_var="\033P\033]%d;rgb:%s\007\033\\"
-  printf_template_custom="\033P\033]%s%s\007\033\\"
-else
+  # printf_template="\033Ptmux;\033\033]4;%d;rgb:%s\007\033\\"
+  # printf_template_var="\033Ptmux;\033\033]%d;rgb:%s\007\033\\"
+  # printf_template_custom="\033Ptmux;\033\033]%s%s\007\033\\"
+# elif [ "${TERM%%-*}" = "screen" ]; then
+#   # GNU screen (screen, screen-256color, screen-256color-bce)
+#   printf_template="\033P\033]4;%d;rgb:%s\007\033\\"
+#   printf_template_var="\033P\033]%d;rgb:%s\007\033\\"
+#   printf_template_custom="\033P\033]%s%s\007\033\\"
+# else
   printf_template="\033]4;%d;rgb:%s\033\\"
   printf_template_var="\033]%d;rgb:%s\033\\"
   printf_template_custom="\033]%s%s\033\\"
-fi
+# fi
 
 # 16 color space
 printf $printf_template 0  $color00

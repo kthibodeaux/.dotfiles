@@ -34,6 +34,7 @@ Bundle 'jgdavey/tslime.vim'
 Plugin 'chrisbra/Recover.vim'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'chriskempson/base16-vim'
+Plugin 'tpope/vim-commentary'
 call vundle#end()
 
 syntax on
