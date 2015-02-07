@@ -6,3 +6,7 @@ fuck() { ps -e | grep $1 | ruby -e "ARGF.read.to_s.split(/\\n/).each { |l| puts 
 210() { if [ "$#" -eq 1 ]; then rvm use 2.1.0@$1; else rvm use 2.1.0; fi }
 212() { if [ "$#" -eq 1 ]; then rvm use 2.1.2@$1; else rvm use 2.1.2; fi }
 220() { if [ "$#" -eq 1 ]; then rvm use 2.2.0@$1; else rvm use 2.2.0; fi }
+
+wd() {
+  . ~/.dotfiles/bin/wd
+}
