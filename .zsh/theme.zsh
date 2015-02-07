@@ -124,7 +124,22 @@ prompt_pure_setup() {
         [[ $UID -eq 0 ]] && prompt_pure_username='%F{white}%n%F{242}@%m '
 
         # prompt turns red if the previous command didn't exit with 0
-        PROMPT="%(?.%F{magenta}.%F{red})${PURE_PROMPT_SYMBOL:-❯}%f "
+        PROMPT="%(?.%F{green}.%F{red})${PURE_PROMPT_SYMBOL:-❯}%f "
 }
+
+precmd() {
+  RPROMPT=""
+}
+zle-keymap-select() {
+  RPROMPT=""
+  [[ $KEYMAP = vicmd ]] && RPROMPT="(CMD)"
+  () { return $__prompt_status }
+  zle reset-prompt
+}
+zle-line-init() {
+  typeset -g __prompt_status="$?"
+}
+zle -N zle-keymap-select
+zle -N zle-line-init
 
 prompt_pure_setup "$@"
