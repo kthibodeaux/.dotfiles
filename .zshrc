@@ -31,6 +31,12 @@ colors
 # enable colored output from ls, etc
 export CLICOLOR=1
 
+# history settings
+setopt hist_ignore_all_dups inc_append_history
+HISTFILE=~/.zhistory
+HISTSIZE=4096
+SAVEHIST=4096
+
 # vi mode
 bindkey -v
 bindkey "^F" vi-cmd-mode
