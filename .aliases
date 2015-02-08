@@ -1,3 +1,5 @@
+# vi: set ft=sh :
+
 alias ls="ls -Gp"
 alias ll="ls -Gpl"
 alias ruby-server="ruby -r webrick -e \"s = WEBrick::HTTPServer.new(:Port => 9090, :DocumentRoot => Dir.pwd); trap('INT') { s.shutdown }; s.start\""

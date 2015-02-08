@@ -1,3 +1,5 @@
+# vi: set ft=sh :
+
 # Get a random quote fron the site http://www.quotationspage.com/random.php3
 # Created by Eduardo San Martin Morote aka Posva
 # http://posva.github.io

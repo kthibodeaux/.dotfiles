@@ -1,3 +1,5 @@
+# vi: set ft=sh :
+
 # Make directory and change into it.
 
 function mcd() {
