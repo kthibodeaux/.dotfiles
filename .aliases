@@ -29,13 +29,15 @@ alias besr="bundle exec rspec --order rand"
 alias bec="bundle exec cucumber"
 
 alias gco="git co"
+alias gd="git diff"
+alias gds="git diff --stat"
 
 alias gemb="gem build *.gemspec"
 alias box="gem inabox *.gem"
 
 alias chat="profanity -d"
 
-alias churn="git log --all --name-only --format='format:' | grep -v '^$' | sort | uniq -c | sort | tail"
+alias churn="git log --all --name-only --format='format:' | grep -v '^$' | sort | uniq -c | sort -n | tail"
 alias d_ds="find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch"
 
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local ]]
