@@ -1,7 +1,6 @@
 unsetopt nomatch
 setopt extendedglob
 
-export ZSH_THEME="avit"
 export TERM="xterm-256color"
 
 # completion
