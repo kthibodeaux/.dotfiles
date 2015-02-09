@@ -89,6 +89,12 @@ map <leader>t :NERDTreeToggle<CR>
 cnoreabbrev hastebin call Haste()
 cnoreabbrev lhaste call LHaste()
 
+" Stop using the arrow keys
+noremap <up>    :echom 'USE K TO GO UP'<CR>
+noremap <down>  :echom 'USE J TO GO DOWN'<CR>
+noremap <left>  :echom 'USE H TO GO LEFT'<CR>
+noremap <right> :echom 'USE L TO GO RIGHT'<CR>
+
 " Fugitive
 map <leader>gs :Gstatus<CR>
 map <leader>ga :Gwrite<CR>
