@@ -2,6 +2,8 @@ set nocompatible
 filetype plugin indent on
 au FileType * setlocal ai sw=2 sts=2 et
 
+set shell=/bin/zsh
+
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
@@ -65,16 +67,6 @@ let mapleader = ","
 let g:airline_powerline_fonts = 1
 let g:tmux_navigator_no_mappings = 1
 
-" Hastebin
-function Haste() range
-  echo system('echo '.shellescape(join(getline(a:firstline, a:lastline), "\n")).' | haste | pbcopy')
-endfunction
-
-" Local Hastebin
-function LHaste() range
-  echo system('echo '.shellescape(join(getline(a:firstline, a:lastline), "\n")).' | lhaste | pbcopy')
-endfunction
-
 " Theme
 set background=dark
 let base16colorspace=256
@@ -86,8 +78,8 @@ nnoremap <CR> :noh<CR><CR> " Cancel search by pressing return
 nnoremap <leader><tab> mtgg=G`t
 map <leader>t :NERDTreeToggle<CR>
 
-cnoreabbrev hastebin call Haste()
-cnoreabbrev lhaste call LHaste()
+cnoreabbrev hastebin w !haste
+cnoreabbrev lhaste w !lhaste
 
 " Stop using the arrow keys
 noremap <up>    :echom 'USE K TO GO UP'<CR>

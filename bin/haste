@@ -5,4 +5,4 @@ else
   content=$(cat $1)
 fi
 
-curl -X POST -s -d "$content" http://hastebin.com/documents | echo "http://hastebin.com/"`ruby -e "puts ARGF.read.to_s.match(/{\"key\":\"(.+)\"}/).captures.first"` | pbcopy
+curl -X POST -s -d "$content" http://hastebin.com/documents | echo "http://hastebin.com/"`ruby -e "puts ARGF.read.to_s.match(/\{\"key\":\"(.+)\"\}/).captures.first"` | pbcopy
