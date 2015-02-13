@@ -111,7 +111,7 @@ map <Leader>rf :call RunCurrentSpecFile()<CR>
 map <Leader>rl :call RunLastSpec()<CR>
 map <Leader>ra :call RunAllSpecs()<CR>
 
-" xmpfilter - Super M and Super R
+" xmpfilter
 nmap <buffer> <F5> <Plug>(xmpfilter-mark)
 xmap <buffer> <F5> <Plug>(xmpfilter-mark)
 imap <buffer> <F5> <Plug>(xmpfilter-mark)
