@@ -36,6 +36,7 @@ Plugin 'chrisbra/Recover.vim'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'chriskempson/base16-vim'
 Plugin 'tpope/vim-commentary'
+Plugin 'rizzatti/dash.vim'
 call vundle#end()
 
 syntax on
@@ -79,6 +80,9 @@ map <leader>t :NERDTreeToggle<CR>
 
 cnoreabbrev hastebin w !haste
 cnoreabbrev lhaste w !lhaste
+
+" Dash
+nmap <silent> <leader>d <Plug>DashSearch
 
 " Stop using the arrow keys
 noremap <up>    :echom 'USE K TO GO UP'<CR>
