@@ -86,14 +86,6 @@ noremap <down>  :echom 'USE J TO GO DOWN'<CR>
 noremap <left>  :echom 'USE H TO GO LEFT'<CR>
 noremap <right> :echom 'USE L TO GO RIGHT'<CR>
 
-" Fugitive
-map <leader>gs :Gstatus<CR>
-map <leader>ga :Gwrite<CR>
-map <leader>gc :Gcommit<CR>
-map <leader>gp :Gpush<CR>
-map <leader>gd :Gdiff<CR>
-map <leader>gb :Gblame<CR>
-
 " Move visual block
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
