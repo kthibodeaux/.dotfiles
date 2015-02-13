@@ -4,4 +4,4 @@ if [ $# -eq 0 ]; then
   exit
 fi
 
-echo -e "FactoryGirl.define do\n  factory :${1} do\n\n  end\nend" >> spec/factories/${1}_factory.rb
+echo "FactoryGirl.define do\n  factory :${1} do\n\n  end\nend" >> spec/factories/${1}_factory.rb
