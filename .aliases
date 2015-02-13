@@ -31,7 +31,10 @@ alias besr="bundle exec rspec --order rand"
 alias bec="bundle exec cucumber"
 
 alias gp="git push"
-alias gco="git co"
+alias gb="git branch"
+alias gco="git checkout"
+alias gnew="git checkout -b"
+alias gcm="git commit -m"
 alias gd="git diff"
 alias gds="git diff --stat"
 

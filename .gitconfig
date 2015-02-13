@@ -7,7 +7,6 @@
         br = branch
         cl = clone
         co = checkout
-        cod = !git clone --depth 1
         cm = commit -m
         dm = !git branch --merged origin/master | grep -v master | xargs git branch -d
         done = !git fetch && git rebase origin/master && git checkout master && git merge @{-1} --ff-only && git push
@@ -17,9 +16,7 @@
         loc = !git diff --stat `git hash-object -t tree /dev/null` | tail -1 | cut -d' ' -f5
         lst = log --graph --abbrev-commit --date=relative --stat
         rom = !git fetch origin && git rebase origin/master
-        sa = !git submodule add
         shove = !git remote | xargs -L 1 git push
-        st = status
         wip = !git add --all && git commit -m 'WIP' && git push
 [format]
         pretty=format:%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an %ae>%Creset
