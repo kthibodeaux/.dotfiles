@@ -6,6 +6,8 @@ alias ruby-server="ruby -r webrick -e \"s = WEBrick::HTTPServer.new(:Port => 909
 alias lines="find . -name '*.*' | xargs wc -l"
 alias :q="exit"
 
+alias retag="rm -f TAGS; ctags -a -e -f TAGS --tag-relative -R --exclude=.git --exclude=log --exclude=tmp ."
+
 alias v="vim"
 alias vu="vim +PluginInstall +qall"
 alias vrc="vim ~/.dotfiles/.vimrc"

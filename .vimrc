@@ -67,6 +67,8 @@ let mapleader = ","
 let g:airline_powerline_fonts = 1
 let g:tmux_navigator_no_mappings = 1
 
+set tags+=gems.tags
+
 " Theme
 set background=dark
 let base16colorspace=256
@@ -102,6 +104,7 @@ nnoremap <leader>oo :CtrlP c<cr>
 nnoremap <leader>e :CtrlP<cr>
 nnoremap <leader>f :CtrlPFunky<cr>
 nnoremap <leader>b :CtrlPBuffer<cr>
+nnoremap <leader>' :CtrlPTag<cr>
 
 " rails
 nnoremap <leader>oc :Econtroller<space>
