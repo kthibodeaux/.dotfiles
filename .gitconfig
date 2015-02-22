@@ -1,33 +1,33 @@
 [include]
-        path = ~/.gitconfig.local
+  path = ~/.gitconfig.local
 [alias]
-        a = add
-        aa = add --all
-        amend = commit --amend
-        br = branch
-        cl = clone
-        co = checkout
-        cm = commit -m
-        dm = !git branch --merged origin/master | grep -v master | xargs git branch -d
-        done = !git fetch && git rebase origin/master && git checkout master && git merge @{-1} --ff-only && git push
-        iquit = !git reset --hard && git clean -fd
-        ir = !git rebase -i origin/master
-	l = log --graph --abbrev-commit --date=relative
-        loc = !git diff --stat `git hash-object -t tree /dev/null` | tail -1 | cut -d' ' -f5
-        lst = log --graph --abbrev-commit --date=relative --stat
-        rom = !git fetch origin && git rebase origin/master
-        shove = !git remote | xargs -L 1 git push
-        wip = !git add --all && git commit -m 'WIP' && git push
+  a = add
+  aa = add --all
+  amend = commit --amend
+  br = branch
+  cl = clone
+  co = checkout
+  cm = commit -m
+  dm = !git branch --merged origin/master | grep -v master | xargs git branch -d
+  done = !git fetch && git rebase origin/master && git checkout master && git merge @{-1} --ff-only && git push
+  iquit = !git reset --hard && git clean -fd
+  ir = !git rebase -i origin/master
+  l = log --graph --abbrev-commit --date=relative
+  loc = !git diff --stat `git hash-object -t tree /dev/null` | tail -1 | cut -d' ' -f5
+  lst = log --graph --abbrev-commit --date=relative --stat
+  rom = !git fetch origin && git rebase origin/master
+  shove = !git remote | xargs -L 1 git push
+  wip = !git add --all && git commit -m 'WIP' && git push
 [format]
-        pretty=format:%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an %ae>%Creset
+  pretty=format:%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an %ae>%Creset
 [commit]
-        template = ~/.gitmessage
+  template = ~/.gitmessage
 [core]
-        editor = vim
+  editor = vim
 [color]
-        ui = true
+  ui = true
 [push]
-        default = current
+  default = current
 [pull]
-        default = current
-        rebase = true
+  default = current
+  rebase = true
