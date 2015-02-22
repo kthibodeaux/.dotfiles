@@ -15,6 +15,7 @@
   l = log --graph --abbrev-commit --date=relative
   loc = !git diff --stat `git hash-object -t tree /dev/null` | tail -1 | cut -d' ' -f5
   lst = log --graph --abbrev-commit --date=relative --stat
+  rename-branch = !sh -c 'old=$(git current-branch) && git branch -m $old $1 && git push origin --set-upstream $1 && git push origin --delete $old'
   rom = !git fetch origin && git rebase origin/master
   shove = !git remote | xargs -L 1 git push
   wip = !git add --all && git commit -m 'WIP' && git push
@@ -24,10 +25,13 @@
   template = ~/.gitmessage
 [core]
   editor = vim
+  excludesfile = ~/.gitignore
 [color]
   ui = true
 [push]
   default = current
+[fetch]
+  prune = true
 [pull]
   default = current
   rebase = true
