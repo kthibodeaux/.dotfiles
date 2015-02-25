@@ -14,6 +14,7 @@ case $1 in
   *.tbz2)      tar xvjf $1    ;;
   *.tgz)       tar xvzf $1    ;;
   *.zip)       unzip $1       ;;
+  *.7z)        7za x $1       ;;
   *.Z)         uncompress $1  ;;
   *)           echo "don't know how to extract '$1'" ;;
 esac
