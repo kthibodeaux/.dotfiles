@@ -37,6 +37,7 @@ Plugin 'derekwyatt/vim-scala'
 Plugin 'chriskempson/base16-vim'
 Plugin 'tpope/vim-commentary'
 Plugin 'rizzatti/dash.vim'
+Plugin 'junegunn/vim-easy-align'
 call vundle#end()
 
 syntax on
@@ -82,6 +83,12 @@ map <leader>t :NERDTreeToggle<CR>
 
 cnoreabbrev hastebin w !haste
 cnoreabbrev lhaste w !lhaste
+
+" Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
+vmap <Enter> <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
 
 " Dash
 nmap <silent> <leader>d <Plug>DashSearch
