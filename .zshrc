@@ -53,5 +53,3 @@ bindkey "^R" history-incremental-search-backward
 source ~/.zsh/theme.zsh
 [[ -f ~/.aliases ]] && source ~/.aliases
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local ]]
-
-quote
