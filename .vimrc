@@ -169,6 +169,8 @@ augroup RubyFileTypes
   au BufNewFile,BufRead *.ru set filetype=ruby
 augroup END
 
+au BufRead,BufNewFile *.rs set filetype=rust
+
 au BufRead,BufNewFile *.otl set filetype=votl
 
 " By default only README.md opens as markdown
