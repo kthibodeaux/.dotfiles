@@ -37,6 +37,7 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'tpope/vim-commentary'
 Plugin 'rizzatti/dash.vim'
 Plugin 'junegunn/vim-easy-align'
+Plugin 'rust-lang/rust.vim'
 call vundle#end()
 
 syntax on
