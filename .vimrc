@@ -33,7 +33,6 @@ Plugin 'wycats/nerdtree'
 Plugin 'christoomey/vim-tmux-navigator'
 Bundle 'jgdavey/tslime.vim'
 Plugin 'chrisbra/Recover.vim'
-Plugin 'derekwyatt/vim-scala'
 Plugin 'chriskempson/base16-vim'
 Plugin 'tpope/vim-commentary'
 Plugin 'rizzatti/dash.vim'
@@ -167,10 +166,6 @@ augroup RubyFileTypes
   au BufNewFile,BufRead *.cap set filetype=ruby
   au BufNewFile,BufRead *.rake set filetype=ruby
   au BufNewFile,BufRead *.ru set filetype=ruby
-augroup END
-
-augroup ScalaFileTypes
-  au BufNewFile,BufRead *.scala set filetype=scala
 augroup END
 
 au BufRead,BufNewFile *.otl set filetype=votl
