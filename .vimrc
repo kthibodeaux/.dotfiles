@@ -38,11 +38,8 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'tpope/vim-commentary'
 Plugin 'rizzatti/dash.vim'
 Plugin 'junegunn/vim-easy-align'
-<<<<<<< Updated upstream
 Plugin 'rust-lang/rust.vim'
-=======
 Plugin 'jaxbot/browserlink.vim'
->>>>>>> Stashed changes
 call vundle#end()
 
 syntax on
