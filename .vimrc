@@ -7,6 +7,7 @@ set shell=/bin/zsh
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'garbas/vim-snipmate'
 Plugin 'tomtom/tlib_vim'
@@ -31,13 +32,17 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'vimoutliner/vimoutliner'
 Plugin 'wycats/nerdtree'
 Plugin 'christoomey/vim-tmux-navigator'
-Bundle 'jgdavey/tslime.vim'
+Plugin 'jgdavey/tslime.vim'
 Plugin 'chrisbra/Recover.vim'
 Plugin 'chriskempson/base16-vim'
 Plugin 'tpope/vim-commentary'
 Plugin 'rizzatti/dash.vim'
 Plugin 'junegunn/vim-easy-align'
+<<<<<<< Updated upstream
 Plugin 'rust-lang/rust.vim'
+=======
+Plugin 'jaxbot/browserlink.vim'
+>>>>>>> Stashed changes
 call vundle#end()
 
 syntax on
