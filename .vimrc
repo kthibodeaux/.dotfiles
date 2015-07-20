@@ -150,6 +150,13 @@ augroup CursorLine
   au WinLeave * setlocal nocursorline
 augroup END
 
+" Highlight current column in active pane only
+augroup CursorColumn
+  au!
+  au VimEnter,WinEnter,BufWinEnter * setlocal cursorcolumn
+  au WinLeave * setlocal nocursorcolumn
+augroup END
+
 " Window management
 set hidden " Allow unsaved buffers to be put in background
 set winwidth=84 " Active window min width
