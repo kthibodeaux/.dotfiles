@@ -17,19 +17,15 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'bling/vim-airline'
 Plugin 'danro/rename.vim'
 Plugin 'ecomba/vim-ruby-refactoring'
-Plugin 'kien/ctrlp.vim'
 Plugin 'matchit.zip'
 Plugin 'mattn/emmet-vim'
 Plugin 'rking/ag.vim'
 Plugin 'sk1418/HowMuch'
-Plugin 't9md/vim-ruby-xmpfilter'
-Plugin 'tacahiroy/ctrlp-funky'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-ruby/vim-ruby'
-Plugin 'vimoutliner/vimoutliner'
 Plugin 'wycats/nerdtree'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'jgdavey/tslime.vim'
@@ -40,6 +36,8 @@ Plugin 'rizzatti/dash.vim'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'rust-lang/rust.vim'
 Plugin 'jaxbot/browserlink.vim'
+Plugin 'shougo/unite.vim'
+Plugin 'dbakker/vim-projectroot'
 call vundle#end()
 
 syntax on
@@ -105,36 +103,12 @@ noremap <right> :echom 'USE L TO GO RIGHT'<CR>
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
-" ctrlp
-let g:ctrlp_working_path_mode = 'c'
-let g:ctrlp_show_hidden = 1
-let g:ctrlp_extensions = ['funky']
-nnoremap <leader>oo :CtrlP c<cr>
-nnoremap <leader>e :CtrlP<cr>
-nnoremap <leader>f :CtrlPFunky<cr>
-nnoremap <leader>b :CtrlPBuffer<cr>
-nnoremap <leader>' :CtrlPTag<cr>
-
-" rails
-nnoremap <leader>oc :Econtroller<space>
-nnoremap <leader>om :Emodel<space>
-nnoremap <leader>ov :Eview<space>
-
 " rspec
 let g:rspec_command = 'call Send_to_Tmux("bundle exec rspec {spec}\n")'
 map <Leader>rr :call RunNearestSpec()<CR>
 map <Leader>rf :call RunCurrentSpecFile()<CR>
 map <Leader>rl :call RunLastSpec()<CR>
 map <Leader>ra :call RunAllSpecs()<CR>
-
-" xmpfilter
-nmap <buffer> <F5> <Plug>(xmpfilter-mark)
-xmap <buffer> <F5> <Plug>(xmpfilter-mark)
-imap <buffer> <F5> <Plug>(xmpfilter-mark)
-
-nmap <buffer> <F6> <Plug>(xmpfilter-run)
-xmap <buffer> <F6> <Plug>(xmpfilter-run)
-imap <buffer> <F6> <Plug>(xmpfilter-run)
 
 " Searching
 set hlsearch
@@ -203,3 +177,6 @@ endfun
 if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
   runtime! macros/matchit.vim
 endif
+
+" Load other files
+source ~/.vim/config/*
