@@ -10,6 +10,7 @@
   cm = commit -m
   dm = !git branch --merged origin/master | grep -v master | xargs git branch -d
   done = !git fetch && git rebase origin/master && git checkout master && git merge @{-1} --no-ff && git push
+  e = !vim `git ls-files -m` -p -O
   iquit = !git reset --hard && git clean -fd
   ir = !git rebase -i origin/master
   l = log --graph --abbrev-commit --date=relative
