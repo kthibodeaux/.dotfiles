@@ -37,6 +37,7 @@ Plugin 'junegunn/vim-easy-align'
 Plugin 'rust-lang/rust.vim'
 Plugin 'jaxbot/browserlink.vim'
 Plugin 'shougo/unite.vim'
+Plugin 'yuku-t/unite-git'
 Plugin 'dbakker/vim-projectroot'
 call vundle#end()
 
