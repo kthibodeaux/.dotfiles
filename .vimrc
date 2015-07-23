@@ -64,6 +64,9 @@ set ttimeoutlen=100
 set visualbell " Flash the cursor on error instead of beeping
 set wildmenu " Show menu options for completion
 
+set undofile
+set undodir=~/.vim/undodir
+
 let mapleader = ","
 let g:airline_powerline_fonts = 1
 let g:tmux_navigator_no_mappings = 1
