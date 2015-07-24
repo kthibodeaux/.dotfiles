@@ -51,4 +51,6 @@ alias d_ds="find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch"
 
 alias winbox="wine ~/opt/winbox.exe"
 
+alias mine="wget -e robots=off -r -nc -np"
+
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local ]]
