@@ -39,6 +39,7 @@ Plugin 'jaxbot/browserlink.vim'
 Plugin 'shougo/unite.vim'
 Plugin 'yuku-t/unite-git'
 Plugin 'dbakker/vim-projectroot'
+Plugin 'unblevable/quick-scope'
 call vundle#end()
 
 syntax on
