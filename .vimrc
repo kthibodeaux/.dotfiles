@@ -80,6 +80,9 @@ set background=dark
 let base16colorspace=256
 colorscheme base16-twilight
 
+let g:qs_first_occurrence_highlight_color = 117
+let g:qs_second_occurrence_highlight_color = 219
+
 " Random maps (normal, visual, select, operater pending)
 map ; :
 nnoremap <CR> :noh<CR><CR> " Cancel search by pressing return
