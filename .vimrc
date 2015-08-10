@@ -89,6 +89,7 @@ nnoremap <CR> :noh<CR><CR> " Cancel search by pressing return
 nnoremap <leader><tab> mtgg=G`t
 map <leader>t :NERDTreeToggle<CR>
 inoremap jj <Esc>
+nnoremap S i<cr><esc>^mwgk:silent! s/\v +$//<cr>:noh<cr>$
 
 cnoreabbrev hastebin w !haste
 cnoreabbrev lhaste w !lhaste
