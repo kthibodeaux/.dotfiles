@@ -45,10 +45,14 @@ bindkey -v
 bindkey "^F" vi-cmd-mode
 bindkey jj vi-cmd-mode
 
+autoload -z edit-command-line
+zle -N edit-command-line
+
 # bind useful keys
 bindkey "^A" beginning-of-line
 bindkey "^E" end-of-line
 bindkey "^R" history-incremental-search-backward
+bindkey "^v" edit-command-line
 
 source ~/.zsh/theme.zsh
 [[ -f ~/.aliases ]] && source ~/.aliases
