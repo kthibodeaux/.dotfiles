@@ -1,25 +1,7 @@
 config defaultToCurrentScreen true
 config windowHintsShowIcons true
-config windowHintsIgnoreHiddenWindows false
+config windowHintsIgnoreHiddenWindows true
 config windowHintsSpread true
-config nudgePercentOf screenSize
-config resizePercentOf screenSize
-
-# Resize Bindings
-bind right:cmd;alt       resize +10% +0
-bind left:cmd;alt        resize -10% +0
-bind up:cmd;alt          resize +0   -10%
-bind down:cmd;alt        resize +0   +10%
-bind right:ctrl;alt  resize -10% +0 bottom-right
-bind left:ctrl;alt   resize +10% +0 bottom-right
-bind up:ctrl;alt     resize +0   +10% bottom-right
-bind down:ctrl;alt   resize +0   -10% bottom-right
-
-# Focus Bindings
-bind right:cmd    focus right
-bind left:cmd     focus left
-bind up:cmd       focus up
-bind down:cmd     focus down
 
 # Window Hints
 bind e:cmd hint ASDFGHJKLQWERTYUIOPCVBN
