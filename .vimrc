@@ -28,7 +28,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'wycats/nerdtree'
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'jgdavey/tslime.vim'
+Plugin 'benmills/vimux'
 Plugin 'chrisbra/Recover.vim'
 Plugin 'chriskempson/base16-vim'
 Plugin 'tpope/vim-commentary'
@@ -114,7 +114,7 @@ vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
 " rspec
-let g:rspec_command = 'call Send_to_Tmux("bundle exec rspec {spec}\n")'
+let g:rspec_command = 'call VimuxRunCommand("bundle exec rspec {spec}\n")'
 map <Leader>rr :call RunNearestSpec()<CR>
 map <Leader>rf :call RunCurrentSpecFile()<CR>
 map <Leader>rl :call RunLastSpec()<CR>
