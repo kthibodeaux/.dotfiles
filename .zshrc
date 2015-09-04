@@ -36,7 +36,9 @@ export CLICOLOR=1
 
 # history settings
 setopt hist_ignore_all_dups inc_append_history
-HISTFILE="${HOME}/.history/$(date -u +%Y/%m/%d.%H.%M.%S)_${HOSTNAME_SHORT}_$$"
+mkdir -p "$HOME/.history"
+HISTFILE="$HOME/.history/$(date -u +%Y%m)"
+touch $HISTFILE
 HISTSIZE=10000
 SAVEHIST=10000
 
