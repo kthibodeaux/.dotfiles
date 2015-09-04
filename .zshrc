@@ -36,9 +36,9 @@ export CLICOLOR=1
 
 # history settings
 setopt hist_ignore_all_dups inc_append_history
-HISTFILE=~/.zhistory
-HISTSIZE=4096
-SAVEHIST=4096
+HISTFILE="${HOME}/.history/$(date -u +%Y/%m/%d.%H.%M.%S)_${HOSTNAME_SHORT}_$$"
+HISTSIZE=10000
+SAVEHIST=10000
 
 # vi mode
 bindkey -v
