@@ -40,6 +40,7 @@ Plugin 'shougo/unite.vim'
 Plugin 'yuku-t/unite-git'
 Plugin 'dbakker/vim-projectroot'
 Plugin 'unblevable/quick-scope'
+Plugin 't9md/vim-choosewin'
 call vundle#end()
 
 syntax on
@@ -90,6 +91,11 @@ nnoremap <leader><tab> mtgg=G`t
 map <leader>t :NERDTreeToggle<CR>
 inoremap jj <Esc>
 nnoremap S i<cr><esc>^mwgk:silent! s/\v +$//<cr>:noh<cr>$
+
+" window chooser
+nmap - <Plug>(choosewin)
+let g:choosewin_overlay_enable = 1
+let g:choosewin_statusline_replace = 0
 
 cnoreabbrev hastebin w !haste
 cnoreabbrev lhaste w !lhaste
