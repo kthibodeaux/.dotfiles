@@ -41,6 +41,7 @@ Plugin 'yuku-t/unite-git'
 Plugin 'dbakker/vim-projectroot'
 Plugin 'unblevable/quick-scope'
 Plugin 't9md/vim-choosewin'
+Plugin 'chrisbra/csv.vim'
 call vundle#end()
 
 syntax on
@@ -69,6 +70,15 @@ set wildmenu " Show menu options for completion
 
 set undofile
 set undodir=~/.vim/undodir
+
+if exists("did_load_csvfiletype")
+  finish
+endif
+let did_load_csvfiletype=1
+
+augroup filetypedetect
+  au! BufRead,BufNewFile *.csv,*.dat	setfiletype csv
+augroup END
 
 let mapleader = ","
 let g:airline_powerline_fonts = 1
