@@ -1,0 +1,8 @@
+#!/bin/tcsh
+
+while($#argv != 0)
+  mplayer "$argv[1]" -ao pcm
+  mv audiodump.wav "${argv[1]}.wav"
+  mv "${argv[1]}" ~/.Trash/
+  shift
+end
