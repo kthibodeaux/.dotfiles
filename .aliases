@@ -50,6 +50,8 @@ alias churn="git log --all --name-only --format='format:' | grep -v '^$' | sort 
 alias d_ds="find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch"
 alias d_indexhtml="find . -name "index.html*" -print0 | xargs -0 rm"
 
+alias password="openssl rand -base64 24"
+
 alias winbox="wine ~/opt/winbox.exe"
 
 alias mine="wget -e robots=off -r -nc -np"
