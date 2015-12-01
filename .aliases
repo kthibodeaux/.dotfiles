@@ -6,6 +6,7 @@ alias ruby-server="ruby -r webrick -e \"s = WEBrick::HTTPServer.new(:Port => 909
 alias lines="find . -name '*.*' | xargs wc -l"
 alias :q="exit"
 alias tree="tree -C"
+alias c="cd ~; clear"
 
 alias retag="rm -f TAGS; ctags -a -e -f TAGS --tag-relative -R --exclude=.git --exclude=log --exclude=tmp ."
 
