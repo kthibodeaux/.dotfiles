@@ -38,6 +38,7 @@ Plugin 'shougo/unite.vim'
 Plugin 'unblevable/quick-scope'
 Plugin 't9md/vim-choosewin'
 Plugin 'shime/vim-livedown'
+Plugin 'dbakker/vim-projectroot'
 call vundle#end()
 
 syntax on
@@ -147,25 +148,6 @@ nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 nnoremap <silent> <c-\> :TmuxNavigatePrevious<cr>
 
-augroup RubyFileTypes
-  au BufNewFile,BufRead Gemfile set filetype=ruby
-  au BufNewFile,BufRead Vagrantfile set filetype=ruby
-  au BufNewFile,BufRead Guardfile set filetype=ruby
-  au BufNewFile,BufRead Capfile set filetype=ruby
-  au BufNewFile,BufRead Rakefile set filetype=ruby
-  au BufNewFile,BufRead *.gemspec set filetype=ruby
-  au BufNewFile,BufRead *.cap set filetype=ruby
-  au BufNewFile,BufRead *.rake set filetype=ruby
-  au BufNewFile,BufRead *.ru set filetype=ruby
-augroup END
-
-au BufRead,BufNewFile *.rs set filetype=rust
-
-au BufRead,BufNewFile *.otl set filetype=votl
-
-" By default only README.md opens as markdown
-au BufNewFile,BufRead *.md set ft=markdown
-
 " Highlight whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
 au ColorScheme * highlight ExtraWhitespace guibg=red
@@ -186,4 +168,5 @@ if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
 endif
 
 " Load other files
-source ~/.vim/config/*
+source ~/.vim/config/unite.vim
+source ~/.vim/config/filetypes.vim
