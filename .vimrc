@@ -9,7 +9,6 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'garbas/vim-snipmate'
 Plugin 'tomtom/tlib_vim'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'Townk/vim-autoclose'
@@ -34,14 +33,11 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'tpope/vim-commentary'
 Plugin 'rizzatti/dash.vim'
 Plugin 'junegunn/vim-easy-align'
-Plugin 'rust-lang/rust.vim'
 Plugin 'jaxbot/browserlink.vim'
 Plugin 'shougo/unite.vim'
-Plugin 'yuku-t/unite-git'
-Plugin 'dbakker/vim-projectroot'
 Plugin 'unblevable/quick-scope'
 Plugin 't9md/vim-choosewin'
-Plugin 'chrisbra/csv.vim'
+Plugin 'shime/vim-livedown'
 call vundle#end()
 
 syntax on
@@ -70,15 +66,6 @@ set wildmenu " Show menu options for completion
 
 set undofile
 set undodir=~/.vim/undodir
-
-if exists("did_load_csvfiletype")
-  finish
-endif
-let did_load_csvfiletype=1
-
-augroup filetypedetect
-  au! BufRead,BufNewFile *.csv,*.dat	setfiletype csv
-augroup END
 
 let mapleader = ","
 let g:airline_powerline_fonts = 1
@@ -118,12 +105,6 @@ nmap ga <Plug>(EasyAlign)
 
 " Dash
 nmap <silent> <leader>d <Plug>DashSearch
-
-" Stop using the arrow keys
-noremap <up>    :echom 'USE K TO GO UP'<CR>
-noremap <down>  :echom 'USE J TO GO DOWN'<CR>
-noremap <left>  :echom 'USE H TO GO LEFT'<CR>
-noremap <right> :echom 'USE L TO GO RIGHT'<CR>
 
 " Move visual block
 vnoremap J :m '>+1<CR>gv=gv

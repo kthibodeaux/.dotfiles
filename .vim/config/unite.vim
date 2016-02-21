@@ -11,6 +11,5 @@ function! s:unite_settings()
 endfunction
 
 nnoremap <leader><space> :call Unite_common()<CR>
-nnoremap <leader>g :Unite -silent -start-insert git_modified<CR>
 
 autocmd FileType unite call s:unite_settings()
