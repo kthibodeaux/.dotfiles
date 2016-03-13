@@ -14,8 +14,8 @@ end
 desc "Create symlinks in the user's home directory"
 task :install do
   Dir.mkdir(File.join(Dir.home, ".tmp")) unless File.exist?(File.join(Dir.home, ".tmp"))
-  Dir.mkdir(File.join(Dir.home, ".vim/undodir")) unless File.exist?(File.join(Dir.home, ".vim/undodir"))
   files.each { |f| try_create_symlink(f) }
+  Dir.mkdir(File.join(Dir.home, ".vim/undodir")) unless File.exist?(File.join(Dir.home, ".vim/undodir"))
 end
 
 desc "Install vundle to ~/.vim"
