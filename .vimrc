@@ -33,11 +33,11 @@ Plugin 'tpope/vim-commentary'
 Plugin 'rizzatti/dash.vim'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'jaxbot/browserlink.vim'
-Plugin 'shougo/unite.vim'
 Plugin 'unblevable/quick-scope'
 Plugin 'shime/vim-livedown'
 Plugin 'dbakker/vim-projectroot'
 Plugin 'tpope/vim-vinegar'
+Plugin 'junegunn/fzf'
 call vundle#end()
 
 syntax on
@@ -90,6 +90,9 @@ nnoremap S i<cr><esc>^mwgk:silent! s/\v +$//<cr>:noh<cr>$
 
 cnoreabbrev hastebin w !haste
 cnoreabbrev lhaste w !lhaste
+
+set rtp+=~/.fzf
+nnoremap <leader><space> :FZF<cr>
 
 " Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
 vmap <Enter> <Plug>(EasyAlign)
@@ -161,5 +164,4 @@ if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
 endif
 
 " Load other files
-source ~/.vim/config/unite.vim
 source ~/.vim/config/filetypes.vim

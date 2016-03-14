@@ -56,6 +56,11 @@ bindkey "^E" end-of-line
 bindkey "^R" history-incremental-search-backward
 bindkey "^v" edit-command-line
 
+# fzf to use ag
+export FZF_DEFAULT_COMMAND='ag -g ""'
+
 source ~/.zsh/theme.zsh
 [[ -f ~/.aliases ]] && source ~/.aliases
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local ]]
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
