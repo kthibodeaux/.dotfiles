@@ -58,6 +58,7 @@ bindkey "^v" edit-command-line
 
 # fzf to use ag
 export FZF_DEFAULT_COMMAND='ag -g "" --hidden --ignore .git'
+export FZF_COMPLETION_TRIGGER=',,'
 
 source ~/.zsh/theme.zsh
 [[ -f ~/.aliases ]] && source ~/.aliases
