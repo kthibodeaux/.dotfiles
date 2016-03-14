@@ -6,6 +6,7 @@
 
 ## fzf
 1. Install [FZF](https://github.com/junegunn/fzf#using-git-recommended)
+2. If installed via Homebrew, symlink the install folder to ~/.fzf
 
 ## tmux on OSX
 1. install brew (shame on you if you haven't already)
