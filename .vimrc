@@ -38,6 +38,7 @@ Plugin 'shime/vim-livedown'
 Plugin 'dbakker/vim-projectroot'
 Plugin 'tpope/vim-vinegar'
 Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
 call vundle#end()
 
 syntax on
@@ -90,9 +91,6 @@ nnoremap S i<cr><esc>^mwgk:silent! s/\v +$//<cr>:noh<cr>$
 
 cnoreabbrev hastebin w !haste
 cnoreabbrev lhaste w !lhaste
-
-set rtp+=~/.fzf
-nnoremap <leader><space> :FZF<cr>
 
 " Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
 vmap <Enter> <Plug>(EasyAlign)
@@ -165,3 +163,4 @@ endif
 
 " Load other files
 source ~/.vim/config/filetypes.vim
+source ~/.vim/config/fzf.vim

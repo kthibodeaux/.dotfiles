@@ -57,7 +57,7 @@ bindkey "^R" history-incremental-search-backward
 bindkey "^v" edit-command-line
 
 # fzf to use ag
-export FZF_DEFAULT_COMMAND='ag -g ""'
+export FZF_DEFAULT_COMMAND='ag -g "" --hidden --ignore .git'
 
 source ~/.zsh/theme.zsh
 [[ -f ~/.aliases ]] && source ~/.aliases
