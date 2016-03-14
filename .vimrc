@@ -25,7 +25,6 @@ Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-ruby/vim-ruby'
-Plugin 'wycats/nerdtree'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'benmills/vimux'
 Plugin 'chrisbra/Recover.vim'
@@ -36,9 +35,9 @@ Plugin 'junegunn/vim-easy-align'
 Plugin 'jaxbot/browserlink.vim'
 Plugin 'shougo/unite.vim'
 Plugin 'unblevable/quick-scope'
-Plugin 't9md/vim-choosewin'
 Plugin 'shime/vim-livedown'
 Plugin 'dbakker/vim-projectroot'
+Plugin 'tpope/vim-vinegar'
 call vundle#end()
 
 syntax on
@@ -86,14 +85,8 @@ let g:qs_second_occurrence_highlight_color = 219
 map ; :
 nnoremap <CR> :noh<CR><CR> " Cancel search by pressing return
 nnoremap <leader><tab> mtgg=G`t
-map <leader>t :NERDTreeToggle<CR>
 inoremap jj <Esc>
 nnoremap S i<cr><esc>^mwgk:silent! s/\v +$//<cr>:noh<cr>$
-
-" window chooser
-nmap - <Plug>(choosewin)
-let g:choosewin_overlay_enable = 1
-let g:choosewin_statusline_replace = 0
 
 cnoreabbrev hastebin w !haste
 cnoreabbrev lhaste w !lhaste
