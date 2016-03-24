@@ -133,15 +133,6 @@ augroup CursorColumn
   au WinLeave * setlocal nocursorcolumn
 augroup END
 
-" Window management
-set hidden " Allow unsaved buffers to be put in background
-set winwidth=84 " Active window min width
-nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
-nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
-nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
-nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
-nnoremap <silent> <c-\> :TmuxNavigatePrevious<cr>
-
 " Highlight whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
 au ColorScheme * highlight ExtraWhitespace guibg=red
@@ -163,4 +154,5 @@ endif
 
 " Load other files
 source ~/.vim/config/filetypes.vim
+source ~/.vim/config/window_management.vim
 source ~/.vim/config/fzf.vim
