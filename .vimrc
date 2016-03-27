@@ -39,6 +39,7 @@ Plugin 'dbakker/vim-projectroot'
 Plugin 'tpope/vim-vinegar'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
+Plugin 'rust-lang/rust.vim'
 call vundle#end()
 
 syntax on
