@@ -30,7 +30,6 @@ Plugin 'benmills/vimux'
 Plugin 'chrisbra/Recover.vim'
 Plugin 'chriskempson/base16-vim'
 Plugin 'tpope/vim-commentary'
-Plugin 'rizzatti/dash.vim'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'jaxbot/browserlink.vim'
 Plugin 'unblevable/quick-scope'
@@ -98,9 +97,6 @@ vmap <Enter> <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
-
-" Dash
-nmap <silent> <leader>d <Plug>DashSearch
 
 " Move visual block
 vnoremap J :m '>+1<CR>gv=gv
