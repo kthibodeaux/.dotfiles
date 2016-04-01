@@ -11,6 +11,7 @@ alias c="cd ~; clear"
 alias retag="rm -f TAGS; ctags -a -e -f TAGS --tag-relative -R --exclude=.git --exclude=log --exclude=tmp ."
 
 alias da="dasht"
+alias ra="ranger"
 
 alias v="vim"
 alias vu="vim +PluginInstall +qall"
