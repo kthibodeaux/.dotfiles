@@ -64,6 +64,7 @@ set timeoutlen=1000
 set ttimeoutlen=100
 set visualbell " Flash the cursor on error instead of beeping
 set wildmenu " Show menu options for completion
+let g:netrw_liststyle=3
 
 set undofile
 set undodir=~/.vim/undodir
