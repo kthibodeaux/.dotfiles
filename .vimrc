@@ -40,6 +40,7 @@ Plugin 'tpope/vim-vinegar'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'rust-lang/rust.vim'
+Plugin 'AndrewRadev/linediff.vim'
 call vundle#end()
 
 syntax on
