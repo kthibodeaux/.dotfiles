@@ -44,6 +44,7 @@ alias gnew="git checkout -b"
 alias gcm="git commit -m"
 alias gd="git diff"
 alias gds="git diff --stat"
+alias gcp="git cherry-pick"
 
 alias gemb="gem build *.gemspec"
 alias box="gem inabox *.gem"
