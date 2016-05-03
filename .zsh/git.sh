@@ -10,18 +10,24 @@ g() {
   fi
 }
 
-feature() {
-  git checkout -b kdt/$@
+cm() {
+  if [[ $# > 0 ]]; then
+    git commit -m $@
+  else
+    git commit -v
+  fi
 }
+
+feature() { git checkout -b kdt/$@ }
 
 # Complete g like git
 compdef g=git
 
+alias co="git checkout"
+alias cl="git clone"
+
 alias gp="git push"
 alias gb="git branch"
-alias gco="git checkout"
-alias gnew="git checkout -b"
-alias gcm="git commit -m"
 alias gd="git diff"
 alias gds="git diff --stat"
 alias gcp="git cherry-pick"
