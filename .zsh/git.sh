@@ -10,6 +10,10 @@ g() {
   fi
 }
 
+feature() {
+  git checkout -b kdt/$@
+}
+
 # Complete g like git
 compdef g=git
 
