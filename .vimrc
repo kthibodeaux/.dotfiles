@@ -41,6 +41,7 @@ Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'AndrewRadev/linediff.vim'
+Plugin 'cyphactor/vim-open-alternate'
 call vundle#end()
 
 syntax on
