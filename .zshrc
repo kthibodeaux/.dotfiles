@@ -22,7 +22,7 @@ for function in ~/.zsh/functions/*; do
 done
 
 # use colors
-source ~/.zsh/colors.sh
+source ~/.zsh/base16-ocean.dark.sh
 
 # syntax highlighting
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

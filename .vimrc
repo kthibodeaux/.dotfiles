@@ -81,7 +81,7 @@ set tags+=gems.tags
 " Theme
 set background=dark
 let base16colorspace=256
-colorscheme base16-twilight
+colorscheme base16-ocean
 
 let g:qs_first_occurrence_highlight_color = 117
 let g:qs_second_occurrence_highlight_color = 219
