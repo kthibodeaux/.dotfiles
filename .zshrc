@@ -54,7 +54,6 @@ bindkey "^R" history-incremental-search-backward
 bindkey "^v" edit-command-line
 
 # prompt
-source ~/.zsh/filthy.zsh
 
 # fzf to use ag
 export FZF_DEFAULT_COMMAND='ag -g "" --hidden --ignore .git'
