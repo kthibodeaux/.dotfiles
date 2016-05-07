@@ -54,6 +54,9 @@ bindkey "^R" history-incremental-search-backward
 bindkey "^v" edit-command-line
 
 # prompt
+autoload -U promptinit && promptinit
+export FILTHY_SHOW_EXIT_CODE=1
+prompt filthy
 
 # fzf to use ag
 export FZF_DEFAULT_COMMAND='ag -g "" --hidden --ignore .git'

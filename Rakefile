@@ -31,7 +31,12 @@ end
 
 desc "Install common packages from Homebrew"
 task :brews do
-  `brew install htop-osx openssl p7zip reattach-to-user-namespace sqlite ssh-copy-id the_silver_searcher tmux tree unrar vim wget`
+  `brew install htop-osx npm openssl p7zip reattach-to-user-namespace sqlite ssh-copy-id the_silver_searcher tmux tree unrar vim wget`
+end
+
+desc "Install filthy command prompt"
+task :prompt do
+  `npm install --global filthy-prompt`
 end
 
 def files
