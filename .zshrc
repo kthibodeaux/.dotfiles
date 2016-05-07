@@ -8,7 +8,7 @@ else
 fi
 
 # completion
-fpath=(~/.zsh/completion $fpath)
+fpath=(~/.zsh/completion ~/.zsh/filthy $fpath)
 autoload -U compinit
 compinit
 
@@ -54,8 +54,8 @@ bindkey "^R" history-incremental-search-backward
 bindkey "^v" edit-command-line
 
 # prompt
-autoload -U promptinit && promptinit
 export FILTHY_SHOW_EXIT_CODE=1
+autoload -U promptinit && promptinit
 prompt filthy
 
 # fzf to use ag
