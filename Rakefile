@@ -23,6 +23,17 @@ task :vundle do
   `git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
 end
 
+desc "Install FZF to ~/.fzf"
+task :fzf do
+  `git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf`
+  `~/.fzf/install`
+end
+
+desc "Install common packages from Homebrew"
+task :brews do
+  `brew install htop-osx openssl p7zip reattach-to-user-namespace sqlite ssh-copy-id the_silver_searcher tmux tree unrar vim wget`
+end
+
 def files
   Dir.entries('./').select { |directory| directory.start_with?('.') &&
     ! ignore_list.include?(directory) }

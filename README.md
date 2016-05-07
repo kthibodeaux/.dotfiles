@@ -1,13 +1,9 @@
 # dotfiles
 
-## vim
-1. Install [Vundle](https://github.com/gmarik/Vundle.vim) via `rake vundle`
-2. Run `vu` to install Vim plugins
+1. `rake install` to symlink all files
+2. `rake vundle` to install [Vundle](https://github.com/gmarik/Vundle.vim)
+3. `rake fzf` to install [FZF](https://github.com/junegunn/fzf#using-git-recommended)
+4. `vu` to install Vim plugins using Vundle
 
-## fzf
-1. Install [FZF](https://github.com/junegunn/fzf#using-git-recommended)
-2. If installed via Homebrew, symlink the install folder to ~/.fzf
-
-## tmux on OSX
-1. install brew (shame on you if you haven't already)
-2. `brew install reattach-to-user-namespace`
+1. Install [Homebrew](http://brew.sh)
+2. `rake brews` to install common packages
