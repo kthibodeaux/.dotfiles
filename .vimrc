@@ -14,7 +14,6 @@ Plugin 'tomtom/tlib_vim'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'Townk/vim-autoclose'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'bling/vim-airline'
 Plugin 'danro/rename.vim'
 Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'matchit.zip'
@@ -42,6 +41,7 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'AndrewRadev/linediff.vim'
 Plugin 'cyphactor/vim-open-alternate'
+Plugin 'itchyny/lightline.vim'
 call vundle#end()
 
 syntax on
@@ -73,7 +73,7 @@ set undofile
 set undodir=~/.vim/undodir
 
 let mapleader = ","
-let g:airline_powerline_fonts = 1
+let g:lightline = {'colorscheme': 'wombat'}
 let g:tmux_navigator_no_mappings = 1
 
 set tags+=gems.tags
