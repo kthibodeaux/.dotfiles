@@ -35,9 +35,9 @@ colors
 export CLICOLOR=1
 
 # history settings
-setopt hist_ignore_all_dups inc_append_history
-HISTSIZE=10000
-SAVEHIST=10000
+HISTFILE=~/.zsh_history
+HISTSIZE=20000
+SAVEHIST=20000
 
 # vi mode
 bindkey -v
