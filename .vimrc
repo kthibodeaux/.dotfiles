@@ -73,7 +73,7 @@ set undofile
 set undodir=~/.vim/undodir
 
 let mapleader = ","
-let g:lightline = {'colorscheme': 'wombat'}
+let g:lightline = {'colorscheme': 'Tomorrow_Night'}
 let g:tmux_navigator_no_mappings = 1
 
 set tags+=gems.tags
