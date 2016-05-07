@@ -36,7 +36,6 @@ export CLICOLOR=1
 
 # history settings
 setopt hist_ignore_all_dups inc_append_history
-mkdir -p "$HOME/.history"
 HISTFILE="$HOME/.history/$(date -u +%Y%m)"
 touch $HISTFILE
 HISTSIZE=10000
@@ -56,11 +55,13 @@ bindkey "^E" end-of-line
 bindkey "^R" history-incremental-search-backward
 bindkey "^v" edit-command-line
 
+# prompt
+source ~/.zsh/filthy.zsh
+
 # fzf to use ag
 export FZF_DEFAULT_COMMAND='ag -g "" --hidden --ignore .git'
 export FZF_COMPLETION_TRIGGER=',,'
 
-source ~/.zsh/theme.zsh
 [[ -f ~/.aliases ]] && source ~/.aliases
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local ]]
 
