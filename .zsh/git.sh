@@ -18,6 +18,15 @@ cm() {
   fi
 }
 
+git-nuke() {
+  if [[ $# == 1 ]]; then
+    confirm && git branch -D $1 && git push origin :$1
+  else
+    echo "No single branch name given"
+    return 1;
+  fi
+}
+
 feature() { git checkout -b kdt/$@ }
 
 # Complete g like git
