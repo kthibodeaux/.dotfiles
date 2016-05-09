@@ -146,8 +146,13 @@ prompt_filthy_rprompt() {
 		# Print the repository status
 		branch=$(prompt_filthy_git_branch)
 		repo_status=$(prompt_filthy_git_repo_status)
-		print "${repo_status} ${branch}"
+                ruby_version=$(prompt_filthy_ruby_version)
+		print "${repo_status} ${branch} ${ruby_version}"
 	fi
+}
+
+prompt_filthy_ruby_version() {
+  print "%F{242}< $(~/.rvm/bin/rvm-prompt v g) >%f"
 }
 
 prompt_filthy_git_repo_status() {
