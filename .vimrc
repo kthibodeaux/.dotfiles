@@ -95,6 +95,7 @@ nnoremap <leader><tab> mtgg=G`t
 inoremap jj <Esc>
 nnoremap S i<cr><esc>^mwgk:silent! s/\v +$//<cr>:noh<cr>$
 nnoremap <s-tab> za
+nnoremap <leader>. :vs<CR>:OpenAlternate<CR>
 
 cnoreabbrev hastebin w !haste
 cnoreabbrev lhaste w !lhaste
