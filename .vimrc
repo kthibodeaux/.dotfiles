@@ -67,6 +67,8 @@ set timeoutlen=1000
 set ttimeoutlen=100
 set visualbell " Flash the cursor on error instead of beeping
 set wildmenu " Show menu options for completion
+set foldmethod=indent
+set foldlevelstart=3
 let g:netrw_liststyle=3
 
 set undofile
@@ -92,6 +94,7 @@ nnoremap <CR> :noh<CR><CR> " Cancel search by pressing return
 nnoremap <leader><tab> mtgg=G`t
 inoremap jj <Esc>
 nnoremap S i<cr><esc>^mwgk:silent! s/\v +$//<cr>:noh<cr>$
+nnoremap <s-tab> za
 
 cnoreabbrev hastebin w !haste
 cnoreabbrev lhaste w !lhaste
