@@ -69,6 +69,7 @@ set visualbell " Flash the cursor on error instead of beeping
 set wildmenu " Show menu options for completion
 set foldmethod=indent
 set foldlevelstart=3
+set splitright
 let g:netrw_liststyle=3
 
 set undofile
