@@ -42,6 +42,7 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'AndrewRadev/linediff.vim'
 Plugin 'cyphactor/vim-open-alternate'
 Plugin 'itchyny/lightline.vim'
+Plugin 'FooSoft/vim-argwrap'
 call vundle#end()
 
 syntax on
@@ -165,3 +166,4 @@ endif
 source ~/.vim/config/filetypes.vim
 source ~/.vim/config/window_management.vim
 source ~/.vim/config/fzf.vim
+source ~/.vim/config/argwrap.vim
