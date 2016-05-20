@@ -40,6 +40,5 @@ alias gb="git branch"
 alias gd="git diff"
 alias gds="git diff --stat"
 alias gcp="git cherry-pick"
-alias gup="git fetch && git rebase --autostash"
 
 alias churn="git log --all --name-only --format='format:' | grep -v '^$' | sort | uniq -c | sort -n | tail"
