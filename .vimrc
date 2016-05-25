@@ -76,7 +76,7 @@ let g:netrw_liststyle=3
 set undofile
 set undodir=~/.vim/undodir
 
-let mapleader = ","
+let mapleader = "\<Space>"
 let g:lightline = {'colorscheme': 'Tomorrow_Night'}
 let g:tmux_navigator_no_mappings = 1
 

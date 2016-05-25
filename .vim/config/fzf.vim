@@ -10,4 +10,4 @@ nnoremap <leader>t :BTags<cr>
 nnoremap <leader>p :Tags<cr>
 
 " Project dir files
-nnoremap <leader><space> :Files<cr>
+nnoremap <leader>/ :Files<cr>
