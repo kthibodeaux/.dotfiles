@@ -35,10 +35,11 @@ compdef g=git
 alias co="git checkout"
 alias cl="git clone"
 
+alias d="git diff"
+alias ds="git diff --staged"
+
 alias gp="git push"
 alias gb="git branch"
-alias gd="git diff"
-alias gds="git diff --stat"
 alias gcp="git cherry-pick"
 
 alias churn="git log --all --name-only --format='format:' | grep -v '^$' | sort | uniq -c | sort -n | tail"
