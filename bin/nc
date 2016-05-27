@@ -1,0 +1,37 @@
+#!/usr/bin/ruby
+# vi: set ft=ruby :
+
+target = ARGV.first
+
+spec_target = ARGV.first.sub('lib', 'spec').rpartition('.')
+spec_target = "#{ spec_target.first }_spec.#{ spec_target.last }"
+
+path, _, filename = target.rpartition('/')
+snake_name, extension = filename.split('.')
+
+modules = path.partition('/').last.split('/').map { |mod| mod.gsub('_', ' ').split(/(\W)/).map(&:capitalize).join.delete(' ') }
+camel_name = snake_name.gsub('_', ' ').split(/(\W)/).map(&:capitalize).join.delete(' ')
+
+class_contents = ''
+modules.each_with_index do |mod, index|
+  class_contents << "#{ ' ' * 2 * index }module #{ mod }\n"
+end
+
+class_contents << "#{ ' ' * modules.size * 2 }class #{ camel_name }\n"
+class_contents << "\n"
+class_contents << "#{ ' ' * modules.size * 2 }end\n"
+
+class_contents << [].tap do |ends|
+  modules.size.times do |i|
+    ends << "#{ ' ' * 2 * i }end\n"
+  end
+end.reverse.join('')
+
+spec_contents = ''
+spec_contents << "require 'spec_helper'\n"
+spec_contents << "\n"
+spec_contents << "describe #{ modules.join('::') }::#{ camel_name } do\n"
+spec_contents << "end"
+
+`echo "#{ class_contents }" > #{ target }`
+`echo "#{ spec_contents }" > #{ spec_target }`
