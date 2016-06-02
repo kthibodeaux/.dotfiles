@@ -14,8 +14,6 @@ alias da="dasht"
 alias ra="ranger"
 
 alias v="nvim"
-alias vi="nvim"
-alias vim="nvim"
 alias vu="nvim +PluginInstall +qall"
 alias vrc="nvim ~/.dotfiles/.nvimrc"
 
