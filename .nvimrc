@@ -169,4 +169,5 @@ source ~/.vim/config/filetypes.vim
 source ~/.vim/config/window_management.vim
 source ~/.vim/config/fzf.vim
 source ~/.vim/config/argwrap.vim
+source ~/.vim/config/neomake.vim
 source ~/.vim/config/quickfix.vim
