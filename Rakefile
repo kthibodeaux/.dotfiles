@@ -31,7 +31,7 @@ end
 
 desc "Install common packages from Homebrew"
 task :brews do
-  `brew install htop-osx npm nvim openssl p7zip reattach-to-user-namespace sqlite ssh-copy-id the_silver_searcher tmux tree unrar vim wget`
+  `brew install htop-osx npm neovim openssl p7zip reattach-to-user-namespace sqlite ssh-copy-id the_silver_searcher tmux tree unrar vim wget`
 end
 
 def files

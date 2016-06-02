@@ -43,6 +43,7 @@ Plugin 'AndrewRadev/linediff.vim'
 Plugin 'cyphactor/vim-open-alternate'
 Plugin 'itchyny/lightline.vim'
 Plugin 'FooSoft/vim-argwrap'
+Plugin 'neomake/neomake'
 call vundle#end()
 
 syntax on
