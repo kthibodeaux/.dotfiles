@@ -13,9 +13,11 @@ alias retag="rm -f TAGS; ctags -a -e -f TAGS --tag-relative -R --exclude=.git --
 alias da="dasht"
 alias ra="ranger"
 
-alias v="vim"
-alias vu="vim +PluginInstall +qall"
-alias vrc="vim ~/.dotfiles/.vimrc"
+alias v="nvim"
+alias vi="nvim"
+alias vim="nvim"
+alias vu="nvim +PluginInstall +qall"
+alias vrc="nvim ~/.dotfiles/.nvimrc"
 
 alias va="vagrant"
 alias t="tmux"
