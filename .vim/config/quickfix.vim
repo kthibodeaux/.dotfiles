@@ -12,4 +12,4 @@ function! ToggleQuickFix()
   endif
 endfunction
 
-nmap <script> <silent> <Leader>l :call ToggleQuickFix()<CR>
+nmap <script> <silent> <Leader><Leader>l :call ToggleQuickFix()<CR>
