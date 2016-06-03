@@ -1,11 +1,6 @@
 set hidden " Allow unsaved buffers to be put in background
 set winwidth=84 " Active window min width
 
-" Hack to get C-h working in neovim
-if has('nvim')
-  nnoremap <silent> <BS> :TmuxNavigateLeft<cr>
-endif
-
 nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
 nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
 nnoremap <silent> <c-k> :TmuxNavigateUp<cr>

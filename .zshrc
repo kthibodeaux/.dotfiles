@@ -66,3 +66,7 @@ export FZF_COMPLETION_TRIGGER=',,'
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local ]]
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# https://github.com/neovim/neovim/issues/2048#issuecomment-78045837
+[[ -f ~/.$TERM.ti ]] || infocmp $TERM | sed 's/kbs=^[hH]/kbs=\\177/' > ~/.$TERM.ti
+tic ~/.$TERM.ti
