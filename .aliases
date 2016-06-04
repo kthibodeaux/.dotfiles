@@ -20,7 +20,7 @@ alias vrc="nvim ~/.dotfiles/.nvimrc"
 alias va="vagrant"
 alias t="tmux"
 
-alias zrc="vim ~/.dotfiles/.zshrc"
+alias zrc="nvim ~/.dotfiles/.zshrc"
 alias rzsh="source ~/.zshrc && source ~/.zshrc.local"
 
 alias p="padrino"
