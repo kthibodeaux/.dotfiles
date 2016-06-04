@@ -5,9 +5,9 @@ au FileType * setlocal ai sw=2 sts=2 et
 syntax on
 set autoindent
 set backspace=indent,eol,start
-set backupdir=~/.tmp
+set backupdir=~/.vim/tmp
 set colorcolumn=80
-set directory=~/.tmp
+set directory=~/.vim/tmp
 set encoding=utf-8
 set fileencoding=utf-8
 set laststatus=2 " Always show last status

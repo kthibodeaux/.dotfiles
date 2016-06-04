@@ -1,8 +1,11 @@
-.DS_Store
+DS_Store
 TAGS
 
-.vim/.netrwhist
-.vim/bundle/
-.vim/eclim/
-.vim/plugin/eclim.vim
-.vim/undodir/
+vim/.vim/tmp/*
+
+neovim/.config/nvim/tmp
+neovim/.config/nvim/undodir
+neovim/.config/nvim/plugged
+neovim/.config/nvim/.init.vim-rplugin~
+
+!.gitkeep

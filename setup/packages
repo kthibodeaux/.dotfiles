@@ -1,0 +1,15 @@
+brew install \
+       htop-osx\
+       npm\
+       neovim\
+       openssl\
+       p7zip\
+       reattach-to-user-namespace\
+       sqlite\
+       ssh-copy-id\
+       the_silver_searcher\
+       tmux\
+       tree\
+       unrar\
+       vim\
+       wget

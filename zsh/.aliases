@@ -1,5 +1,6 @@
 # vi: set ft=sh :
 
+alias la="ls -Gpa"
 alias ls="ls -Gp"
 alias ll="ls -Gplh"
 alias ruby-server="ruby -r webrick -e \"s = WEBrick::HTTPServer.new(:Port => 9090, :DocumentRoot => Dir.pwd); trap('INT') { s.shutdown }; s.start\""
@@ -14,8 +15,8 @@ alias da="dasht"
 alias ra="ranger"
 
 alias v="nvim"
-alias vu="nvim +PluginInstall +qall"
-alias vrc="nvim ~/.dotfiles/.nvimrc"
+alias vu="nvim +PlugInstall"
+alias vrc="nvim ~/.dotfiles/neovim/.config/nvim/init.vim"
 
 alias va="vagrant"
 alias t="tmux"
