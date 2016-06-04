@@ -157,8 +157,6 @@ fun! <SID>StripWhite()
   %s!^\( \+\)\t!\=StrRepeat("\t", 1 + strlen(submatch(1)) / 8)!ge
 endfun
 
-au BufWritePre *.rb :call jobstart('rm -f TAGS; /usr/local/bin/ctags -a -e -f TAGS --tag-relative -R --exclude=.git --exclude=log --exclude=tmp .')
-
 " Always assume paste mode when pasting from system clipboard
 noremap <silent> <C-r>* <C-o>:setl paste<CR><C-r>*<C-o>:setl nopaste<CR>
 
