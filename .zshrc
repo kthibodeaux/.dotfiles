@@ -60,3 +60,23 @@ export FZF_COMPLETION_TRIGGER=',,'
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local ]]
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# <3 tmux
+if [ "$TMUX" = "" ]; then
+  if [[ $(tmux ls) ]]; then
+    tmux ls
+    echo ""
+    echo "Enter a session number, press q to not launch tmux, or n for a new session"
+    read "response?[#/N/q] "
+    case $response in
+      [qQ])
+        return 1
+        ;;
+      *)
+        tmux attach -t $response || tmux new
+        ;;
+    esac
+  else
+    tmux new
+  fi
+fi
