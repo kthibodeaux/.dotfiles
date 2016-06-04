@@ -171,3 +171,4 @@ source ~/.vim/config/fzf.vim
 source ~/.vim/config/argwrap.vim
 source ~/.vim/config/neomake.vim
 source ~/.vim/config/quickfix.vim
+source ~/.vim/config/tags.vim
