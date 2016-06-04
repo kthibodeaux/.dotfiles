@@ -1,4 +1,3 @@
-set nocompatible
 filetype plugin indent on
 au FileType * setlocal ai sw=2 sts=2 et
 
