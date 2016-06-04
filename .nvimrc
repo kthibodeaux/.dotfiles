@@ -83,8 +83,6 @@ let mapleader = "\<Space>"
 let g:lightline = {'colorscheme': 'Tomorrow_Night'}
 let g:tmux_navigator_no_mappings = 1
 
-set tags+=gems.tags
-
 " Theme
 set background=dark
 let base16colorspace=256
