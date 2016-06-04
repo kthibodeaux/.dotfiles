@@ -7,6 +7,7 @@ brew install \
        reattach-to-user-namespace\
        sqlite\
        ssh-copy-id\
+       stow\
        the_silver_searcher\
        tmux\
        tree\
