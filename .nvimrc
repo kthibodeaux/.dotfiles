@@ -141,20 +141,6 @@ augroup CursorColumn
   au WinLeave * setlocal nocursorcolumn
 augroup END
 
-" Highlight whitespace
-highlight ExtraWhitespace ctermbg=red guibg=red
-au ColorScheme * highlight ExtraWhitespace guibg=red
-au BufEnter * match ExtraWhitespace /\s\+$/
-au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-au InsertLeave * match ExtraWhiteSpace /\s\+$/
-
-" Strip trailing whitespace before saving
-au BufWritePre * :call <SID>StripWhite()
-fun! <SID>StripWhite()
-  %s/[ \t]\+$//ge
-  %s!^\( \+\)\t!\=StrRepeat("\t", 1 + strlen(submatch(1)) / 8)!ge
-endfun
-
 " Always assume paste mode when pasting from system clipboard
 noremap <silent> <C-r>* <C-o>:setl paste<CR><C-r>*<C-o>:setl nopaste<CR>
 
@@ -171,4 +157,5 @@ source ~/.vim/config/argwrap.vim
 source ~/.vim/config/neomake.vim
 source ~/.vim/config/quickfix.vim
 source ~/.vim/config/tags.vim
+source ~/.vim/config/whitespace.vim
 let g:deoplete#enable_at_startup = 1
