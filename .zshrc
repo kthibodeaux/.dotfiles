@@ -25,9 +25,6 @@ source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 autoload -U colors
 colors
 
-# enable colored output from ls, etc
-export CLICOLOR=1
-
 # history settings
 HISTFILE=~/.zsh_history
 HISTSIZE=20000
@@ -48,13 +45,8 @@ bindkey "^R" history-incremental-search-backward
 bindkey "^v" edit-command-line
 
 # prompt
-export FILTHY_SHOW_EXIT_CODE=1
 autoload -U promptinit && promptinit
 prompt filthy
-
-# fzf to use ag
-export FZF_DEFAULT_COMMAND='ag -g "" --hidden --ignore .git'
-export FZF_COMPLETION_TRIGGER=',,'
 
 [[ -f ~/.aliases ]] && source ~/.aliases
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local ]]
