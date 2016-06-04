@@ -44,6 +44,7 @@ Plugin 'cyphactor/vim-open-alternate'
 Plugin 'itchyny/lightline.vim'
 Plugin 'FooSoft/vim-argwrap'
 Plugin 'neomake/neomake'
+Plugin 'Shougo/deoplete.nvim'
 call vundle#end()
 
 syntax on
@@ -172,3 +173,4 @@ source ~/.vim/config/argwrap.vim
 source ~/.vim/config/neomake.vim
 source ~/.vim/config/quickfix.vim
 source ~/.vim/config/tags.vim
+let g:deoplete#enable_at_startup = 1
