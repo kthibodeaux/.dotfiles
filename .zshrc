@@ -1,12 +1,6 @@
 unsetopt nomatch
 setopt extendedglob
 
-if [[ -z $TMUX ]]; then
-  export TERM='xterm-256color'
-else
-  export TERM='screen-256color'
-fi
-
 # completion
 fpath=(~/.zsh/completion ~/.zsh/filthy $fpath)
 autoload -U compinit
