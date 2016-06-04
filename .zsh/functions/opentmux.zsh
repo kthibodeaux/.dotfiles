@@ -14,7 +14,10 @@ function opentmux() {
           ;;
       esac
     else
-      tmux new
+      # Initial opening of iTerm2 will not load colors if tmux opens too quickly
+      # We sleep here to give colors time to load
+      # Since this is only ever going to execute if there are no other tmux sessions open it should be at most a once a day sleep
+      sleep 1; tmux new
     fi
   fi
 }
