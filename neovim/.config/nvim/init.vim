@@ -2,14 +2,14 @@ filetype plugin indent on
 au FileType * setlocal ai sw=2 sts=2 et
 
 set shell=/bin/zsh
-source ~/.vim/config/plugins.vim
+source ~/.config/nvim/config/plugins.vim
 
 syntax on
 set autoindent
 set backspace=indent,eol,start
-set backupdir=~/.tmp
+set backupdir=~/.config/nvim/tmp
 set colorcolumn=80
-set directory=~/.tmp
+set directory=~/.config/nvim/tmp
 set encoding=utf-8
 set fileencoding=utf-8
 set guioptions-=TBe
@@ -34,7 +34,7 @@ set splitright
 let g:netrw_liststyle=3
 
 set undofile
-set undodir=~/.vim/undodir
+set undodir=~/.config/nvim/undodir
 
 let mapleader = "\<Space>"
 let g:lightline = {'colorscheme': 'Tomorrow_Night'}
@@ -92,13 +92,13 @@ if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
 endif
 
 " Load other files
-source ~/.vim/config/filetypes.vim
-source ~/.vim/config/window_management.vim
-source ~/.vim/config/fzf.vim
-source ~/.vim/config/argwrap.vim
-source ~/.vim/config/neomake.vim
-source ~/.vim/config/quickfix.vim
-source ~/.vim/config/tags.vim
-source ~/.vim/config/whitespace.vim
-source ~/.vim/config/crosshair.vim
+source ~/.config/nvim/config/filetypes.vim
+source ~/.config/nvim/config/window_management.vim
+source ~/.config/nvim/config/fzf.vim
+source ~/.config/nvim/config/argwrap.vim
+source ~/.config/nvim/config/neomake.vim
+source ~/.config/nvim/config/quickfix.vim
+source ~/.config/nvim/config/tags.vim
+source ~/.config/nvim/config/whitespace.vim
+source ~/.config/nvim/config/crosshair.vim
 let g:deoplete#enable_at_startup = 1
