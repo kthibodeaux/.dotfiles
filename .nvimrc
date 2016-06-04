@@ -57,9 +57,6 @@ nnoremap S i<cr><esc>^mwgk:silent! s/\v +$//<cr>:noh<cr>$
 nnoremap <s-tab> za
 nnoremap <leader>. :vs<CR>:OpenAlternate<CR>
 
-cnoreabbrev hastebin w !haste
-cnoreabbrev lhaste w !lhaste
-
 " Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
 vmap <Enter> <Plug>(EasyAlign)
 
