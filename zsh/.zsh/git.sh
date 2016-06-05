@@ -32,6 +32,7 @@ feature() { git checkout -b kdt/$@ }
 # Complete g like git
 compdef g=git
 
+alias cfu="git commit --fixup"
 alias co="git checkout"
 alias cl="git clone"
 

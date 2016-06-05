@@ -37,3 +37,6 @@
 [pull]
   default = current
   rebase = true
+[rebase]
+  autostash = true
+  autosquash = true
