@@ -19,6 +19,7 @@
   rename-branch = !sh -c 'old=$(git current-branch) && git branch -m $old $1 && git push origin --set-upstream $1 && git push origin --delete $old'
   rom = !git fetch origin && git rebase origin/master
   shove = !git remote | xargs -L 1 git push
+  unstage = reset HEAD
   wip = !git add --all && git commit -m 'WIP' && git push
 [format]
   pretty=format:%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an %ae>%Creset

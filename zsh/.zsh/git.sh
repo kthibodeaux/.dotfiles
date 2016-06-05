@@ -41,5 +41,6 @@ alias ds="git diff --staged"
 alias gp="git push"
 alias gb="git branch"
 alias gcp="git cherry-pick"
+alias gun="git reset HEAD"
 
 alias churn="git log --all --name-only --format='format:' | grep -v '^$' | sort | uniq -c | sort -n | tail"
