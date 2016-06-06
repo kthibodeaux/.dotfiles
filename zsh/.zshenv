@@ -3,7 +3,7 @@ export PATH="$DOTFILES/bin:$PATH"
 
 export VISUAL=nvim
 export EDITOR=$VISUAL
-export CTAGS_COMMAND="/usr/local/bin/ctags -a -e -f TAGS --tag-relative -R --exclude=.git --exclude=log --exclude=tmp ."
+export CTAGS_COMMAND="/usr/local/bin/ctags --extra=+f -R --exclude=.git --exclude=log --exclude=tmp *"
 
 export FILTHY_SHOW_EXIT_CODE=1
 
