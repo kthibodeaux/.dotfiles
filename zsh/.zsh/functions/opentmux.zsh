@@ -1,6 +1,6 @@
 function opentmux() {
   if [ "$TMUX" = "" ]; then
-    if [[ $(tmux ls) ]]; then
+    if [[ $(tmux ls) != 0 ]]; then
       tmux ls
       echo ""
       echo "Enter a session number, press q to not launch tmux, or n for a new session"
