@@ -37,6 +37,7 @@ set undofile
 set undodir=~/.config/nvim/undodir
 
 let mapleader = "\<Space>"
+let maplocalleader = ","
 let g:lightline = {'colorscheme': 'Tomorrow_Night'}
 let g:tmux_navigator_no_mappings = 1
 
