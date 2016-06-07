@@ -1,3 +1,5 @@
+au BufWritePre * :call jobstart($CTAGS_COMMAND)
+
 nnoremap <localleader>c :Econtroller<CR>
 nnoremap <localleader>m :Emodel<CR>
 nnoremap <localleader>v :Eview<CR>
