@@ -38,4 +38,5 @@ Plug 'itchyny/lightline.vim'
 Plug 'FooSoft/vim-argwrap'
 Plug 'neomake/neomake'
 Plug 'Shougo/deoplete.nvim'
+Plug 'bogado/file-line'
 call plug#end()
