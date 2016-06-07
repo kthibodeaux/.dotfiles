@@ -27,7 +27,7 @@
   template = ~/.gitmessage
 [core]
   editor = nvim
-  excludesfile = ~/dotfiles/git/.gitignore
+  excludesfile = ~/.dotfiles/git/.gitignore
 [color]
   ui = true
 [push]
