@@ -24,7 +24,6 @@ alias t="tmux"
 alias zrc="nvim ~/.dotfiles/.zshrc"
 alias rzsh="source ~/.zshrc && source ~/.zshrc.local"
 
-alias p="padrino"
 alias ber="bundle exec rails"
 alias rpca="RAILS_ENV=production bundle exec rake assets:precompile"
 
