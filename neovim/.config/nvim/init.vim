@@ -70,6 +70,9 @@ nmap ga <Plug>(EasyAlign)
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
+" Undotree
+nnoremap <F5> :UndotreeToggle<cr>
+
 " rspec
 let g:rspec_command = 'call VimuxRunCommand("bundle exec rspec {spec}\n")'
 map <Leader>rr :call RunNearestSpec()<CR>

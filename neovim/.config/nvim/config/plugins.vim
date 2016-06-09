@@ -39,4 +39,5 @@ Plug 'FooSoft/vim-argwrap'
 Plug 'neomake/neomake'
 Plug 'Shougo/deoplete.nvim'
 Plug 'bogado/file-line'
+Plug 'mbbill/undotree'
 call plug#end()
