@@ -1,5 +1,5 @@
 set hidden " Allow unsaved buffers to be put in background
-set winwidth=84 " Active window min width
+set winwidth=90 " Active window min width
 
 nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
 nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
