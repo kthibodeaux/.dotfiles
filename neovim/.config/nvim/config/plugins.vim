@@ -40,4 +40,5 @@ Plug 'neomake/neomake'
 Plug 'Shougo/deoplete.nvim'
 Plug 'bogado/file-line'
 Plug 'mbbill/undotree'
+Plug 'jelera/vim-javascript-syntax'
 call plug#end()
