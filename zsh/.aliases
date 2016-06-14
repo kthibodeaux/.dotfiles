@@ -21,6 +21,8 @@ alias vrc="nvim ~/.dotfiles/neovim/.config/nvim/init.vim"
 alias va="vagrant"
 alias t="tmux"
 
+alias agh="ag --hidden"
+
 alias zrc="nvim ~/.dotfiles/zsh/.zshrc"
 alias rzsh="source ~/.zshrc && source ~/.zshrc.local"
 
