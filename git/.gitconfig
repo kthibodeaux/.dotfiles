@@ -30,6 +30,8 @@
   excludesfile = ~/.dotfiles/git/.gitignore
 [color]
   ui = true
+[diff]
+  compactionHeuristic = true
 [push]
   default = current
 [fetch]
