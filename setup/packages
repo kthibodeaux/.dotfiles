@@ -4,6 +4,7 @@ brew install \
        neovim\
        openssl\
        p7zip\
+       pgcli\
        reattach-to-user-namespace\
        sqlite\
        ssh-copy-id\
