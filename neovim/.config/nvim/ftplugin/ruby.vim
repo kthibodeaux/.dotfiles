@@ -1,5 +1,5 @@
-au BufWritePre * :call jobstart($CTAGS_COMMAND)
 au BufWritePre * :call <SID>DefSpaceToUnderscore()
+au BufWritePost * :call jobstart($CTAGS_COMMAND)
 
 fun! <SID>DefSpaceToUnderscore()
   norm md
