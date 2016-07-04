@@ -2,8 +2,9 @@ au BufWritePre * :call jobstart($CTAGS_COMMAND)
 au BufWritePre * :call <SID>DefSpaceToUnderscore()
 
 fun! <SID>DefSpaceToUnderscore()
-  mark d
-  %s/\s*\(def [0-9a-zA-Z _]*\)\@<= /_/ge|norm!`d
+  norm md
+  %s/\s*\(def [0-9a-zA-Z _]*\)\@<= /_/e
+  norm `d
 endfun
 
 nnoremap <localleader>c :Econtroller<CR>
