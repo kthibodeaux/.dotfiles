@@ -1,4 +1,10 @@
 au BufWritePre * :call jobstart($CTAGS_COMMAND)
+au BufWritePre * :call <SID>DefSpaceToUnderscore()
+
+fun! <SID>DefSpaceToUnderscore()
+  mark d
+  %s/\s*\(def [\a-zA-z ]*\)\@<= /_/ge|norm!`d
+endfun
 
 nnoremap <localleader>c :Econtroller<CR>
 nnoremap <localleader>m :Emodel<CR>
