@@ -27,7 +27,7 @@ git-nuke() {
   fi
 }
 
-feature() { git checkout -b kdt/$@ }
+feature() { git checkout -b feature/$@ }
 
 # Complete g like git
 compdef g=git
