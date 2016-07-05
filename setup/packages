@@ -1,4 +1,5 @@
 brew install \
+       ctags\
        gpg\
        htop-osx\
        npm\
