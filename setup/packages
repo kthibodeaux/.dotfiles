@@ -18,5 +18,6 @@ brew install \
        tree\
        unrar\
        vim\
+       w3m\
        wget\
        zsh
