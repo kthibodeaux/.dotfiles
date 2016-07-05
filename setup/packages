@@ -8,6 +8,7 @@ brew install \
        openssl\
        p7zip\
        pgcli\
+       python3\
        reattach-to-user-namespace\
        sqlite\
        ssh-copy-id\
