@@ -54,3 +54,5 @@ prompt filthy
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 opentmux
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
