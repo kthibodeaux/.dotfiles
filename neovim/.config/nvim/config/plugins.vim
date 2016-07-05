@@ -40,4 +40,5 @@ Plug 'Shougo/deoplete.nvim'
 Plug 'bogado/file-line'
 Plug 'mbbill/undotree'
 Plug 'jelera/vim-javascript-syntax'
+Plug 'slim-template/vim-slim'
 call plug#end()
