@@ -1,4 +1,5 @@
 brew install \
+       gpg\
        htop-osx\
        npm\
        neovim\
@@ -14,4 +15,5 @@ brew install \
        tree\
        unrar\
        vim\
-       wget
+       wget\
+       zsh
