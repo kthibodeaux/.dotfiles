@@ -51,5 +51,8 @@ alias winbox="wine ~/opt/winbox.exe"
 
 alias mine="wget -e robots=off -r -nc -np"
 
+alias start_pg="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
+alias stop_pg="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
+
 [[ -f ~/.zsh/git.sh ]] && source ~/.zsh/git.sh ]]
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local ]]
