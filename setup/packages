@@ -9,6 +9,7 @@ brew install \
        p7zip\
        pgcli\
        python3\
+       ranger\
        reattach-to-user-namespace\
        sqlite\
        ssh-copy-id\
