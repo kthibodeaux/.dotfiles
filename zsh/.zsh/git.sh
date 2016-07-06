@@ -44,6 +44,6 @@ alias gb="git branch"
 alias gcp="git cherry-pick"
 alias gun="git reset HEAD"
 
-alias releases="git log | grep -i 'feature\|hotfix'"
+alias releases="git log | grep -v 'tag: ' | grep -i 'feature\|hotfix'"
 
 alias churn="git log --all --name-only --format='format:' | grep -v '^$' | sort | uniq -c | sort -n | tail"
