@@ -1,0 +1,4 @@
+2016-07-07 08:53:40,628 (2286/MainThread) pgcli.main INFO - No default pager found in environment. Using os default pager
+2016-07-07 08:53:40,636 (2286/MainThread) pgcli.main ERROR - traceback: 'Traceback (most recent call last):\n  File "/usr/local/Cellar/pgcli/1.0.0/libexec/lib/python2.7/site-packages/pgcli/main.py", line 310, in connect\n    raise e\nOperationalError: FATAL:  database "kthibodeaux" does not exist\n\n'
+2016-07-07 08:53:53,352 (2319/MainThread) pgcli.main INFO - No default pager found in environment. Using os default pager
+2016-07-07 08:53:53,356 (2319/MainThread) pgcli.main ERROR - traceback: 'Traceback (most recent call last):\n  File "/usr/local/Cellar/pgcli/1.0.0/libexec/lib/python2.7/site-packages/pgcli/main.py", line 310, in connect\n    raise e\nOperationalError: FATAL:  database "kthibodeaux" does not exist\n\n'

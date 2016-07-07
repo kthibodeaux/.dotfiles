@@ -20,5 +20,6 @@ brew install \
        unrar\
        vim\
        w3m\
+       watch\
        wget\
        zsh
