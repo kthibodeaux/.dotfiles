@@ -1,5 +1,5 @@
 export DOTFILES=$HOME/.dotfiles
-export PATH="$DOTFILES/bin:$PATH"
+export PATH="$DOTFILES/bin:$HOME/opt/bin:$PATH"
 
 export VISUAL=nvim
 export EDITOR=$VISUAL
