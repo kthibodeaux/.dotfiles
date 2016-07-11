@@ -41,4 +41,5 @@ Plug 'bogado/file-line'
 Plug 'mbbill/undotree'
 Plug 'jelera/vim-javascript-syntax'
 Plug 'slim-template/vim-slim'
+Plug 'kchmck/vim-coffee-script'
 call plug#end()
