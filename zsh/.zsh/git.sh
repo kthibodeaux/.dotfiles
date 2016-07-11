@@ -27,8 +27,6 @@ git-nuke() {
   fi
 }
 
-feature() { git checkout -b feature/$@ }
-
 # Complete g like git
 compdef g=git
 
@@ -47,3 +45,9 @@ alias gun="git reset HEAD"
 alias releases="git log | grep -v 'tag: ' | grep -i 'feature\|hotfix'"
 
 alias churn="git log --all --name-only --format='format:' | grep -v '^$' | sort | uniq -c | sort -n | tail"
+
+alias gf="git flow"
+alias gff="git flow feature"
+alias gfr="git flow release"
+alias gfh="git flow hotfix"
+alias gfs="git flow support"
