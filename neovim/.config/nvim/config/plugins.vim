@@ -42,4 +42,5 @@ Plug 'mbbill/undotree'
 Plug 'jelera/vim-javascript-syntax'
 Plug 'slim-template/vim-slim'
 Plug 'kchmck/vim-coffee-script'
+Plug 'ap/vim-buftabline'
 call plug#end()

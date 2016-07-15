@@ -97,6 +97,7 @@ endif
 
 " Load other files
 source ~/.config/nvim/config/filetypes.vim
+source ~/.config/nvim/config/buffer_management.vim
 source ~/.config/nvim/config/window_management.vim
 source ~/.config/nvim/config/fzf.vim
 source ~/.config/nvim/config/argwrap.vim
