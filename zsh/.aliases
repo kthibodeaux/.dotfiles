@@ -54,6 +54,8 @@ alias mine="wget -e robots=off -r -nc -np"
 alias start_pg="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias stop_pg="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 
+alias gg="googler"
+
 alias clean_testdb="RAILS_ENV=test bundle exec rake db:drop && RAILS_ENV=test bundle exec rake db:create && RAILS_ENV=test bundle exec rake db:migrate && RAILS_ENV=test bundle exec rake db:seed"
 
 [[ -f ~/.zsh/git.sh ]] && source ~/.zsh/git.sh ]]
