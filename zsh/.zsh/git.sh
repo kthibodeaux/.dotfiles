@@ -46,6 +46,15 @@ support() {
   dev && git checkout -b "support/$branch"
 }
 
+ir() {
+  git rev-parse --verify develop
+  if [[ $? == 0 ]]; then
+    git rebase -i develop
+  else
+    git rebase -i master
+  fi
+}
+
 # Complete g like git
 compdef g=git
 
