@@ -33,7 +33,7 @@ dev() {
 
 hotfix() {
   branch=$(echo "$@" | tr ' ' '-')
-  dev && git checkout -b "hotfix/$branch"
+  git checkout master && git up && git checkout -b "hotfix/$branch"
 }
 
 feature() {
