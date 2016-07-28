@@ -100,6 +100,11 @@ source ~/.config/nvim/config/tags.vim
 source ~/.config/nvim/config/whitespace.vim
 source ~/.config/nvim/config/crosshair.vim
 source ~/.config/nvim/config/common_keymaps.vim
-source ~/.config/nvim/config/qwerty_keymaps.vim
+
+if $USE_COLEMAK == '1'
+  source ~/.config/nvim/config/colemak_keymaps.vim
+else
+  source ~/.config/nvim/config/qwerty_keymaps.vim
+endif
 
 let g:deoplete#enable_at_startup = 1
