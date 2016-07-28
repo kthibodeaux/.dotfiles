@@ -52,7 +52,6 @@ let g:qs_second_occurrence_highlight_color = 219
 " Random maps (normal, visual, select, operater pending)
 nnoremap <CR> :noh<CR><CR> " Cancel search by pressing return
 nnoremap <leader><tab> mtgg=G`t
-inoremap jj <Esc>
 nnoremap S i<cr><esc>^mwgk:silent! s/\v +$//<cr>:noh<cr>$
 nnoremap <s-tab> za
 nnoremap <leader>. :vs<CR>:OpenAlternate<CR>
@@ -64,10 +63,6 @@ vmap <Enter> <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
-
-" Move visual block
-vnoremap J :m '>+1<CR>gv=gv
-vnoremap K :m '<-2<CR>gv=gv
 
 " Undotree
 nnoremap <F5> :UndotreeToggle<cr>
@@ -96,7 +91,6 @@ endif
 
 " Load other files
 source ~/.config/nvim/config/filetypes.vim
-source ~/.config/nvim/config/buffer_management.vim
 source ~/.config/nvim/config/window_management.vim
 source ~/.config/nvim/config/fzf.vim
 source ~/.config/nvim/config/argwrap.vim
@@ -105,4 +99,7 @@ source ~/.config/nvim/config/quickfix.vim
 source ~/.config/nvim/config/tags.vim
 source ~/.config/nvim/config/whitespace.vim
 source ~/.config/nvim/config/crosshair.vim
+source ~/.config/nvim/config/common_keymaps.vim
+source ~/.config/nvim/config/qwerty_keymaps.vim
+
 let g:deoplete#enable_at_startup = 1
