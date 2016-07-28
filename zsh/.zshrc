@@ -33,7 +33,12 @@ SAVEHIST=20000
 # vi mode
 bindkey -v
 bindkey "^F" vi-cmd-mode
-bindkey jj vi-cmd-mode
+
+if [ "$USE_COLEMAK" == "1" ]; then
+  bindkey nn vi-cmd-mode
+else
+  bindkey jj vi-cmd-mode
+fi
 
 autoload -z edit-command-line
 zle -N edit-command-line
