@@ -8,6 +8,8 @@ brew install \
        htop-osx\
        npm\
        neovim\
+       mutt\
+       offlineimap\
        openssl\
        p7zip\
        pgcli\
