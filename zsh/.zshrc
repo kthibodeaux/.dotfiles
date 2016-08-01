@@ -35,7 +35,7 @@ bindkey -v
 bindkey "^F" vi-cmd-mode
 
 if [ "$USE_COLEMAK" == "1" ]; then
-  bindkey nn vi-cmd-mode
+  bindkey ii vi-cmd-mode
 else
   bindkey jj vi-cmd-mode
 fi

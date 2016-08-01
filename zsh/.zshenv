@@ -11,7 +11,7 @@ export FILTHY_SHOW_EXIT_CODE=1
 export CLICOLOR=1
 
 # uncomment to use colemak layout in zsh, tmux, and vim
-# export USE_COLEMAK=1
+export USE_COLEMAK=1
 
 # fzf to use ag
 export FZF_DEFAULT_COMMAND='ag -g "" --hidden --ignore .git'
