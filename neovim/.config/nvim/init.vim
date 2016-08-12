@@ -101,6 +101,9 @@ source ~/.config/nvim/config/whitespace.vim
 source ~/.config/nvim/config/crosshair.vim
 source ~/.config/nvim/config/common_keymaps.vim
 
+" https://github.com/vim-ruby/vim-ruby/blob/master/doc/vim-ruby.txt#L133
+let g:ruby_indent_block_style = 'do'
+
 if $USE_COLEMAK == '1'
   source ~/.config/nvim/config/colemak_keymaps.vim
 else
