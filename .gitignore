@@ -5,6 +5,9 @@ TAGS
 
 vim/.vim/tmp/*
 
+neovim/.config/pgcli
+neovim/.config/ranger
+
 neovim/.config/nvim/tmp/*
 neovim/.config/nvim/undodir/*
 neovim/.config/nvim/plugged
