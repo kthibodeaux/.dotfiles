@@ -65,7 +65,7 @@ br() {
     fi
 
     if [[ $target != '' ]]; then
-      git checkout $target
+      git checkout $(echo $target)
     fi
   fi
 }
