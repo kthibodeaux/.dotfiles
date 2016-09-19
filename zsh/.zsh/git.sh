@@ -55,6 +55,21 @@ ir() {
   fi
 }
 
+br() {
+  if [[ $# == 0 ]]; then
+    branches=$(git branch)
+    if [ "$TMUX" = "" ]; then
+      target=$(echo $branches | fzf)
+    else
+      target=$(echo $branches | fzf-tmux)
+    fi
+
+    if [[ $target != '' ]]; then
+      git checkout $target
+    fi
+  fi
+}
+
 # Complete g like git
 compdef g=git
 
