@@ -1,7 +1,9 @@
 brew tap neovim/neovim
 brew tap universal-ctags/universal-ctags
+brew tap codebreakdown/homebrew-oss
 
 brew install \
+       codebreakdown/oss/alt\
        git\
        googler\
        gpg\
