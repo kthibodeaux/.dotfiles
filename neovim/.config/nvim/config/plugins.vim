@@ -31,7 +31,7 @@ Plug 'cyphactor/vim-open-alternate'
 Plug 'itchyny/lightline.vim'
 Plug 'FooSoft/vim-argwrap'
 Plug 'neomake/neomake'
-Plug 'Shougo/deoplete.nvim'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'bogado/file-line'
 Plug 'mbbill/undotree'
 Plug 'jelera/vim-javascript-syntax'
