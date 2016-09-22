@@ -39,4 +39,5 @@ Plug 'slim-template/vim-slim'
 Plug 'kchmck/vim-coffee-script'
 Plug 'ap/vim-buftabline'
 Plug 'junegunn/vim-peekaboo'
+Plug 'fishbullet/deoplete-ruby'
 call plug#end()
