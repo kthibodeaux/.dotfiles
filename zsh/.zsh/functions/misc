@@ -3,5 +3,6 @@
 timed_command () { perl -e 'alarm shift; exec @ARGV' "$@"; }
 
 fuck() { ps -e | grep $1 | ruby -e "ARGF.read.to_s.split(/\\n/).each { |l| puts l.split(' ').first }" | xargs -L 1 kill -9 }
+..() { local x='';for i in $(seq ${1:-1});do x="$x../"; done;cd $x; }
 
 22() { if [ "$#" -eq 1 ]; then rvm use 2.2.2@$1; else rvm use 2.2.2; fi }
