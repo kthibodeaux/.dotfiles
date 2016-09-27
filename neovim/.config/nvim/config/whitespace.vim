@@ -6,7 +6,7 @@ au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 au InsertLeave * match ExtraWhiteSpace /\s\+$/
 
 " Strip trailing whitespace before saving
-" au BufWritePre * :call <SID>StripWhite()
+au BufWritePre * :call <SID>StripWhite()
 fun! <SID>StripWhite()
   norm md
   %s/[ \t]\+$//ge
