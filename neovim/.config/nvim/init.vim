@@ -89,6 +89,7 @@ endif
 " Load other files
 source ~/.config/nvim/config/filetypes.vim
 source ~/.config/nvim/config/window_management.vim
+source ~/.config/nvim/config/auto_make_dirs.vim
 source ~/.config/nvim/config/fzf.vim
 source ~/.config/nvim/config/argwrap.vim
 source ~/.config/nvim/config/neomake.vim
