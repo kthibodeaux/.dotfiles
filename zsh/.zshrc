@@ -29,6 +29,9 @@ colors
 HISTFILE=~/.zsh_history
 HISTSIZE=20000
 SAVEHIST=20000
+setopt share_history
+setopt inc_append_history
+setopt extended_history
 
 # vi mode
 bindkey -v
