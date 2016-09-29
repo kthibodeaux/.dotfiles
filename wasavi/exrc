@@ -1,0 +1,7 @@
+map! ii <ESC>
+
+map [noremap] j h
+map [noremap] h k
+map [noremap] k j
+
+set theme=charcoal
