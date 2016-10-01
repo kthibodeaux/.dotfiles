@@ -27,8 +27,6 @@ set timeoutlen=1000
 set ttimeoutlen=100
 set visualbell " Flash the cursor on error instead of beeping
 set wildmenu " Show menu options for completion
-set foldmethod=indent
-set foldlevelstart=3
 set mouse-=a
 set splitright
 let g:netrw_liststyle=3
@@ -39,6 +37,10 @@ set ignorecase
 set smartcase " Only search upcase if provided with capital letter
 set gdefault " Assume /g flag on :%s to replace all matches on line
 set incsearch " Search as typing
+" }}}
+" Folding {{{
+set foldmethod=syntax
+set foldlevelstart=3
 " }}}
 " }}}
 " Window managment {{{
