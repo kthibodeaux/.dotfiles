@@ -39,6 +39,9 @@ alias bes="bundle exec rspec"
 alias besr="bundle exec rspec --order rand"
 alias bec="bundle exec cucumber"
 
+alias mi="bundle exec rake db:migrate"
+alias mit="RAILS_ENV=test bundle exec rake db:migrate"
+
 alias gemb="gem build *.gemspec"
 alias box="gem inabox *.gem"
 
