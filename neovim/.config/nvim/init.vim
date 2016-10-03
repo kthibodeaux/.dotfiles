@@ -41,6 +41,7 @@ set incsearch " Search as typing
 " Folding {{{
 set foldmethod=syntax
 set foldlevelstart=3
+au BufRead *_spec.rb setlocal foldlevel=2
 " }}}
 " }}}
 " Window managment {{{
