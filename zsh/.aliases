@@ -12,7 +12,7 @@ alias c="cd ~; clear"
 alias da="dasht"
 alias ra="ranger"
 
-alias rt="ripper-tags -R"
+alias rt=$RUBY_TAG_COMMAND
 
 alias v="nvim"
 alias vu="nvim +PlugInstall"

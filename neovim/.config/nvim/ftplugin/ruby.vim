@@ -1,4 +1,5 @@
 au BufWritePre * :call <SID>DefSpaceToUnderscore()
+au BufWritePost * :call jobstart($RUBY_TAG_COMMAND)
 
 fun! <SID>DefSpaceToUnderscore()
   norm md
