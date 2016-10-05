@@ -12,6 +12,8 @@ alias c="cd ~; clear"
 alias da="dasht"
 alias ra="ranger"
 
+alias rt="ripper-tags -R"
+
 alias v="nvim"
 alias vu="nvim +PlugInstall"
 alias vrc="nvim ~/.dotfiles/neovim/.config/nvim/init.vim"
