@@ -1,5 +1,4 @@
 brew tap neovim/neovim
-brew tap universal-ctags/universal-ctags
 brew tap codebreakdown/homebrew-oss
 
 brew install \
@@ -24,7 +23,6 @@ brew install \
        the_silver_searcher\
        tmux\
        tree\
-       universal-ctags\
        unrar\
        vim\
        w3m\

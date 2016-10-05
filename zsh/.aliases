@@ -9,8 +9,6 @@ alias :q="exit"
 alias tree="tree -C"
 alias c="cd ~; clear"
 
-alias retag=$CTAGS_COMMAND
-
 alias da="dasht"
 alias ra="ranger"
 
