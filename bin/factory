@@ -1,7 +1,0 @@
-#!/bin/sh
-if [ $# -eq 0 ]; then
-  echo "No factory name given.  Pass a name snake_cased."
-  exit
-fi
-
-echo "FactoryGirl.define do\n  factory :${1} do\n\n  end\nend" >> spec/factories/${1}_factory.rb
