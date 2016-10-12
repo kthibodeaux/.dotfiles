@@ -31,6 +31,7 @@ set mouse-=a
 set splitright
 let g:netrw_liststyle=3
 set tags+=TAGS,gems.tags
+set list
 " Searching {{{
 set hlsearch
 set ignorecase
