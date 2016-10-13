@@ -213,7 +213,6 @@ endif
 call plug#begin('~/.config/nvim/plugged')
 Plug 'tpope/vim-fugitive'
 Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'garbas/vim-snipmate'
 Plug 'tomtom/tlib_vim'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'Townk/vim-autoclose'
