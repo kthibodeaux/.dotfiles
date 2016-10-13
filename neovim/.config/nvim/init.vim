@@ -250,6 +250,7 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'junegunn/vim-peekaboo'
 Plug 'fishbullet/deoplete-ruby'
 Plug 'Konfekt/FastFold'
+Plug 'SirVer/ultisnips'
 call plug#end()
 " }}}
 " Theme {{{
@@ -303,5 +304,15 @@ let g:ruby_indent_block_style = 'do'
 " }}}
 " Deoplete {{{
 let g:deoplete#enable_at_startup = 1
+" }}}
+" UltiSnips {{{
+let g:UltiSnipsSnippetsDir = '~/.config/.nvim/UltiSnips'
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<c-b>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
 " }}}
 " }}}
