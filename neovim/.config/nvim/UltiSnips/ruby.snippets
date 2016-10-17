@@ -16,7 +16,7 @@ def ${1:function_name}${2:(${3:*args})}
 end
 endsnippet
 
-snippet defi "def initialize ..."
+snippet defi "def initialize_..."
 def initialize${1:(${2:*args})}
 	$0
 end
@@ -330,7 +330,7 @@ snippet alias "alias :<new_name> :<old_name>"
 alias :${1:new_name} :${2:old_name}
 endsnippet
 
-snippet class "class <class_name> def initialize ... end end"
+snippet class "class <class_name> def initialize_... end end"
 class ${1:class_name}
 	def initialize(${2:*args})
 		$0
@@ -348,6 +348,20 @@ snippet ###
 =begin
 	$0
 =end
+endsnippet
+
+snippet itr "it 'renders...'"
+it 'renders the $1 template' do
+  get :$1 tenant: subdomain
+  expect(response).to render_template :$1
+end
+endsnippet
+
+snippet itrjs "it 'renders...'"
+it 'renders the $1 template' do
+  xhr :$2 :$1, tenant: subdomain
+  expect(response).to render_template :$1
+end
 endsnippet
 
 # vim: set ts=2 sw=2 expandtab:
