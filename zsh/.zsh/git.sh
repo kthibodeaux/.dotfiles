@@ -88,10 +88,21 @@ br() {
   fi
 }
 
+cfu() {
+  if [ "$TMUX" = "" ]; then
+    target=$(git log --pretty=oneline develop..$(git current-branch) | fzf | awk '{ print $1 }')
+  else
+    target=$(git log --pretty=oneline develop..$(git current-branch) | fzf-tmux | awk '{ print $1 }')
+  fi
+
+  if [[ $target != '' ]]; then
+    git commit --fixup $(echo $target)
+  fi
+}
+
 # Complete g like git
 compdef g=git
 
-alias cfu="git commit --fixup"
 alias co="git checkout"
 alias cl="git clone"
 
