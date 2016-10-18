@@ -1,7 +1,6 @@
 [include]
   path = ~/.gitconfig.local
 [alias]
-  a = add
   aa = add --all
   amend = commit --amend
   br = branch
