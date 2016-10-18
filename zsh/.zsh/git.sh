@@ -11,20 +11,18 @@ g() {
 
 a() {
   if [ "$TMUX" = "" ]; then
-    targets=$(git status -s | awk '{ print $2 }' | fzf -x -m)
+    git add $(git status -s | awk '{ print $2 }' | fzf -m)
   else
-    targets=$(git status -s | awk '{ print $2 }' | fzf-tmux -x -m)
+    git add $(git status -s | awk '{ print $2 }' | fzf-tmux -m)
   fi
-  git add --all $targets
 }
 
 ap() {
   if [ "$TMUX" = "" ]; then
-    targets=$(git status -s | awk '{ print $2 }' | fzf -x -m)
+    git add -p $(git status -s | awk '{ print $2 }' | fzf -m)
   else
-    targets=$(git status -s | awk '{ print $2 }' | fzf-tmux -x -m)
+    git add -p $(git status -s | awk '{ print $2 }' | fzf-tmux -m)
   fi
-  git add -p --all $targets
 }
 
 cm() {
