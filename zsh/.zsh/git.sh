@@ -1,7 +1,6 @@
 # vi: set ft=sh :
+# vim:foldmethod=indent:foldlevel=0
 
-# No arguments: `git status`
-# With arguments: acts like `git`
 g() {
   if [[ $# > 0 ]]; then
     git $@
