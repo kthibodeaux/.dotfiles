@@ -19,6 +19,15 @@ a() {
   git add --all $targets
 }
 
+ap() {
+  if [ "$TMUX" = "" ]; then
+    targets=$(git status -s | awk '{ print $2 }' | fzf -x -m)
+  else
+    targets=$(git status -s | awk '{ print $2 }' | fzf-tmux -x -m)
+  fi
+  git add -p --all $targets
+}
+
 cm() {
   if [[ $# > 0 ]]; then
     git commit -m $@
