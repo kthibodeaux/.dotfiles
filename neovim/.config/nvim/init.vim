@@ -296,7 +296,7 @@ let g:argwrap_padded_braces = '[{'
 nnoremap <silent> <leader>a :ArgWrap<CR>
 " }}}
 " Neomake {{{
-autocmd! BufWritePost,BufEnter * Neomake
+autocmd! BufWritePost,BufRead * Neomake
 " }}}
 " vim-ruby {{{
 " https://github.com/vim-ruby/vim-ruby/blob/master/doc/vim-ruby.txt#L133
