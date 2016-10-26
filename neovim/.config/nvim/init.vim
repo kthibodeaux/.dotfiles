@@ -239,6 +239,7 @@ Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'AndrewRadev/linediff.vim'
 Plug 'cyphactor/vim-open-alternate'
+Plug 'itchyny/lightline.vim'
 Plug 'FooSoft/vim-argwrap'
 Plug 'neomake/neomake'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
