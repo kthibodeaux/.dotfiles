@@ -1,5 +1,6 @@
 stow -vv gem
 stow -vv git
+stow -vv kwm
 stow -vv neovim
 stow -vv readline
 stow -vv reek
