@@ -33,6 +33,18 @@ cm() {
   fi
 }
 
+co() {
+  if [[ $# > 0 ]]; then
+    git co $@
+  else
+    if [ "$TMUX" = "" ]; then
+      git co $(git status -s | awk '{ print $2 }' | fzf -m)
+    else
+      git co $(git status -s | awk '{ print $2 }' | fzf-tmux -m)
+    fi
+  fi
+}
+
 git-nuke() {
   if [[ $# == 1 ]]; then
     confirm && git branch -D $1 && git push origin :$1
@@ -100,7 +112,6 @@ cfu() {
 # Complete g like git
 compdef g=git
 
-alias co="git checkout"
 alias cl="git clone"
 
 alias d="git diff"
