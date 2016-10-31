@@ -109,6 +109,10 @@ cfu() {
   fi
 }
 
+migrations() {
+  git diff --name-only develop..master | grep migrate
+}
+
 # Complete g like git
 compdef g=git
 
