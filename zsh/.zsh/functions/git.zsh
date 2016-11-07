@@ -99,9 +99,9 @@ br() {
 
 cfu() {
   if [ "$TMUX" = "" ]; then
-    target=$($(git log --pretty=oneline develop..) | fzf | awk '{ print $1 }')
+    target=$(git log --pretty=oneline develop.. | fzf | awk '{ print $1 }')
   else
-    target=$($(git log --pretty=oneline develop..) | fzf-tmux | awk '{ print $1 }')
+    target=$(git log --pretty=oneline develop.. | fzf-tmux | awk '{ print $1 }')
   fi
 
   if [[ $target != '' ]]; then
