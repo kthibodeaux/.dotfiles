@@ -29,4 +29,5 @@ brew install \
        w3m\
        watch\
        wget\
+       yank\
        zsh
