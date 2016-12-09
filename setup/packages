@@ -6,9 +6,9 @@ brew install \
        git\
        googler\
        gpg\
+       homebrew/dupes/less\
        htop-osx\
        koekeishiya/kwm/kwm\
-       less\
        npm\
        neovim\
        mutt\
