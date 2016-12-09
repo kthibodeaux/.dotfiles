@@ -73,13 +73,18 @@ support() {
   dev && git checkout -b "support/$branch"
 }
 
-ir() {
+set_base_branch() {
   git rev-parse --verify develop
   if [[ $? == 0 ]]; then
-    git rebase -i develop
+    BASE_BRANCH="develop"
   else
-    git rebase -i master
+    BASE_BRANCH="master"
   fi
+}
+
+ir() {
+  set_base_branch
+  git rebase -i $BASE_BRANCH
 }
 
 br() {
@@ -98,10 +103,11 @@ br() {
 }
 
 cfu() {
+  set_base_branch
   if [ "$TMUX" = "" ]; then
-    target=$(git log --pretty=oneline develop.. | fzf | awk '{ print $1 }')
+    target=$(git log --pretty=oneline $BASE_BRANCH.. | fzf | awk '{ print $1 }')
   else
-    target=$(git log --pretty=oneline develop.. | fzf-tmux | awk '{ print $1 }')
+    target=$(git log --pretty=oneline $BASE_BRANCH.. | fzf-tmux | awk '{ print $1 }')
   fi
 
   if [[ $target != '' ]]; then
