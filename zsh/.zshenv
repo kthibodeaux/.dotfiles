@@ -3,6 +3,7 @@ export PATH="$DOTFILES/bin:$HOME/opt/bin:$PATH"
 
 export VISUAL=nvim
 export EDITOR=$VISUAL
+export PAGER=less
 
 export RUBY_TAG_COMMAND="ripper-tags -R --exclude spec/ --exclude db/"
 

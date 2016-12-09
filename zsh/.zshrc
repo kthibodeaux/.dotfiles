@@ -25,6 +25,7 @@ source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 autoload -U colors
 colors
 
+
 # history settings
 HISTFILE=~/.zsh_history
 HISTSIZE=20000
