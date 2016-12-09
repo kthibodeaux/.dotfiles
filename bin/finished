@@ -17,7 +17,7 @@ pull_request_properties = {
   'head' => current_branch_name,
   'base' => 'develop'
 }
-pull_request = JSON.parse(`curl --silent -H "Authorization: token #{ ENV['ITHUB_PR_CREATE_TOKEN'] }" -H "Content-Type: application/json" -d '#{ pull_request_properties.to_json }' "https://api.github.com/repos/developertown/baldwin-web/pulls"`)
+pull_request = JSON.parse(`curl --silent -H "Authorization: token #{ ENV['GITHUB_PR_CREATE_TOKEN'] }" -H "Content-Type: application/json" -d '#{ pull_request_properties.to_json }' "https://api.github.com/repos/developertown/baldwin-web/pulls"`)
 
 new_story_properties = {
   'current_state' => 'finished'
