@@ -1,0 +1,26 @@
+#!/usr/bin/env ruby
+require 'json'
+
+STORY_ID = ARGV.first
+ARGV.clear
+
+story_properties = JSON.parse(`curl --silent -X PUT -H "X-TrackerToken: #{ ENV['PIVOTAL_TOKEN'] }" "https://www.pivotaltracker.com/services/v5/projects/#{ ENV['PIVOTAL_PROJECT_ID'] }/stories/#{ STORY_ID }"`)
+
+if story_properties['estimate'].nil?
+  raise 'Story is not estimated'
+end
+
+new_story_properties = {
+  'current_state' => 'started'
+}
+
+unless story_properties['owner_ids'].include?(ENV['PIVOTAL_USER_ID'].to_i)
+  new_story_properties['owner_ids'] = story_properties['owner_ids']
+  new_story_properties['owner_ids'] << ENV['PIVOTAL_USER_ID'].to_i
+end
+
+`curl --silent -X PUT -H "X-TrackerToken: #{ ENV['PIVOTAL_TOKEN'] }" -H "Content-Type: application/json" -d '#{ new_story_properties.to_json }' "https://www.pivotaltracker.com/services/v5/projects/#{ ENV['PIVOTAL_PROJECT_ID'] }/stories/#{ STORY_ID }"`
+
+puts 'Branch name:'
+branch_name = gets.chomp
+`git checkout -b "feature/#{ STORY_ID }-#{ branch_name.tr(' ', '-') }"`
