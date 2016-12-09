@@ -25,7 +25,6 @@ source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 autoload -U colors
 colors
 
-
 # history settings
 HISTFILE=~/.zsh_history
 HISTSIZE=20000
@@ -40,12 +39,15 @@ bindkey "^F" vi-cmd-mode
 
 if [ "$USE_COLEMAK" == "1" ]; then
   bindkey ii vi-cmd-mode
+  bindkey -M vicmd j vi-backward-char
+  bindkey -M vicmd h up-line-or-history
+  bindkey -M vicmd k down-line-or-history
 else
   bindkey jj vi-cmd-mode
 fi
 
 autoload -z edit-command-line
-zle -N edit-command-line
+zle -N edit-comnand-line
 
 # bind useful keys
 bindkey "^A" beginning-of-line
