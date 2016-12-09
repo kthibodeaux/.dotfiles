@@ -45,25 +45,34 @@ IO.popen('less', 'w') do |io|
   io.puts story.name
   io.puts ''
 
-  io.puts story.description
-  io.puts ''
+  unless story.description.to_s == ''
+    io.puts story.description
+    io.puts ''
+  end
 
   io.puts "Requested by: #{ story.requested_by }"
   io.puts ''
 
-  io.puts "Labels: #{ story.labels.map { |label| "[ #{ label } ]" }.join(' ') }"
-  io.puts ''
-
-  io.puts 'Tasks:'
-  tasks.each do |task|
-    prefix = task.complete? ? '[X]' : '[ ]'
-    io.puts [ prefix, task.description ].join(' ')
+  unless story.labels.empty?
+    io.puts "Labels: #{ story.labels.map { |label| "[ #{ label } ]" }.join(' ') }"
+    io.puts ''
   end
-  io.puts ''
 
-  comments.each do |comment|
-    io.puts "#{ comment.person } @ #{ comment.time }"
-    io.puts comment.text
-    io.puts '-'*20
+  unless tasks.empty?
+    io.puts 'Tasks:'
+    tasks.each do |task|
+      prefix = task.complete? ? '[X]' : '[ ]'
+      io.puts [ prefix, task.description ].join(' ')
+    end
+    io.puts ''
+  end
+
+  unless comments.empty?
+    io.puts 'Comments'
+    comments.each do |comment|
+      io.puts "#{ comment.person } @ #{ comment.time }"
+      io.puts comment.text
+      io.puts '-'*20
+    end
   end
 end
