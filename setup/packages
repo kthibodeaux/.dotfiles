@@ -8,6 +8,7 @@ brew install \
        gpg\
        htop-osx\
        koekeishiya/kwm/kwm\
+       less\
        npm\
        neovim\
        mutt\
