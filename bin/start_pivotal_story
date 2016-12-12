@@ -24,6 +24,6 @@ end
 puts 'Branch name:'
 branch_name = gets.chomp
 `set_base_branch`
-`git checkout $BASE_BRANCH`
+`git checkout #{ ENV['BASE_BRANCH'] }`
 `git up`
 `git checkout -b "feature/#{ STORY_ID }-#{ branch_name.tr(' ', '-') }"`
