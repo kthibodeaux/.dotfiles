@@ -9,7 +9,6 @@ CURRENT_BRANCH_NAME = `git rev-parse --abbrev-ref HEAD`.chomp
 CURRENT_STORY_ID = CURRENT_BRANCH_NAME.match(/\/([0-9]*)/)[1]
 
 PERSON = Struct.new(:id, :name)
-STORY = Struct.new(:name, :description, :requested_by, :labels, :url)
 COMMENT = Struct.new(:person, :text, :time)
 TASK = Struct.new(:description, :is_complete) do
   def complete?
