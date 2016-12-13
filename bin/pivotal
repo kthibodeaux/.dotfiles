@@ -108,7 +108,7 @@ class Story
   end
 end
 
-if ARGV.first == '--show_current_story'
+if ARGV.first == '--show-current-story'
   require_story_id
   story = Story.new(CURRENT_STORY_ID).eager_load
 
