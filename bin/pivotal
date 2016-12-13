@@ -7,7 +7,8 @@ require 'singleton'
 PROJECT_ID = ENV['PIVOTAL_PROJECT_ID']
 TOKEN = ENV['PIVOTAL_TOKEN']
 CURRENT_BRANCH_NAME = `git rev-parse --abbrev-ref HEAD`.chomp
-CURRENT_STORY_ID = CURRENT_BRANCH_NAME.match(/\/([0-9]*)/)[1]
+current_branch_name_match = CURRENT_BRANCH_NAME.match(/\/([0-9]*)/)
+CURRENT_STORY_ID = current_branch_name_match ? current_branch_name_match[1] : ''
 
 PERSON = Struct.new(:id, :name)
 COMMENT = Struct.new(:person, :text, :time)
@@ -148,4 +149,8 @@ if ARGV.first == '--show-current-story'
       end
     end
   end
+elsif ARGV.first == '--unstarted-stories'
+  puts GetRequest.new("projects/#{ PROJECT_ID }/stories?filter=state%3Aunstarted").json
+    .reject { |story| story['story_type'] == 'release' }
+    .map { |story| "#{ story['id'] } #{ story['story_type'].upcase } (#{ story['estimate'] }): #{ story['name'] }" }
 end
