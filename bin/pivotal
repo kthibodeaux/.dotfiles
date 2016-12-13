@@ -2,6 +2,7 @@
 require 'json'
 require 'net/http'
 require 'uri'
+require 'singleton'
 
 PROJECT_ID = ENV['PIVOTAL_PROJECT_ID']
 TOKEN = ENV['PIVOTAL_TOKEN']
@@ -37,25 +38,28 @@ class GetRequest
   end
 end
 
+class Project
+  include Singleton
+
+  def members
+    @members ||=
+      GetRequest.new("/projects/#{ PROJECT_ID }/memberships").json.map do |person|
+        PERSON.new(person['person']['id'], person['person']['name'])
+      end
+  end
+end
+
 class Story
   def initialize(story_id)
     @story_id = story_id
   end
 
   def eager_load
-    people
     story_data
     labels
     comments
     tasks
     self
-  end
-
-  def people
-    @people ||=
-      GetRequest.new("/projects/#{ PROJECT_ID }/memberships").json.map do |person|
-        PERSON.new(person['person']['id'], person['person']['name'])
-      end
   end
 
   def name
@@ -67,7 +71,7 @@ class Story
   end
 
   def requested_by
-    people.detect { |person| person.id == story_data['requested_by_id'] }.name
+    Project.instance.members.detect { |person| person.id == story_data['requested_by_id'] }.name
   end
 
   def labels
@@ -82,7 +86,7 @@ class Story
     @comments ||=
       GetRequest.new("projects/#{ PROJECT_ID }/stories/#{ story_id }/comments").json.map do |comment|
         COMMENT.new(
-          people.detect { |person| person.id == comment['person_id'] }.name,
+          Project.instance.members.detect { |person| person.id == comment['person_id'] }.name,
           comment['text'],
           comment['created_at']
         )
