@@ -81,7 +81,7 @@ class Story
 
   def comments
     @comments ||=
-      GetRequest.new("projects/#{ ENV['PIVOTAL_PROJECT_ID'] }/stories/#{ story_id }/comments").json.map do |comment|
+      GetRequest.new("projects/#{ PROJECT_ID }/stories/#{ story_id }/comments").json.map do |comment|
         COMMENT.new(
           people.detect { |person| person.id == comment['person_id'] }.name,
           comment['text'],
@@ -92,7 +92,7 @@ class Story
 
   def tasks
     @tasks ||=
-      GetRequest.new("projects/#{ ENV['PIVOTAL_PROJECT_ID'] }/stories/#{ story_id }/tasks").json.map do |task|
+      GetRequest.new("projects/#{ PROJECT_ID }/stories/#{ story_id }/tasks").json.map do |task|
         TASK.new(task['description'], task['complete'])
       end
   end
