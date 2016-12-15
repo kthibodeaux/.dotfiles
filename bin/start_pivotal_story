@@ -7,6 +7,7 @@ ARGV.clear
 story_properties = JSON.parse(`curl --silent -X PUT -H "X-TrackerToken: #{ ENV['PIVOTAL_TOKEN'] }" "https://www.pivotaltracker.com/services/v5/projects/#{ ENV['PIVOTAL_PROJECT_ID'] }/stories/#{ STORY_ID }"`)
 
 if story_properties['estimate'].nil?
+  return if story_properties['story_type'] == 'bug'
   raise 'Story is not estimated'
 end
 
