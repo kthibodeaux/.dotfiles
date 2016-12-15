@@ -35,16 +35,11 @@ setopt extended_history
 
 # vi mode
 bindkey -v
-bindkey "^F" vi-cmd-mode
 
-if [ "$USE_COLEMAK" == "1" ]; then
-  bindkey ii vi-cmd-mode
-  bindkey -M vicmd j vi-backward-char
-  bindkey -M vicmd h up-line-or-history
-  bindkey -M vicmd k down-line-or-history
-else
-  bindkey jj vi-cmd-mode
-fi
+bindkey ii vi-cmd-mode
+bindkey -M vicmd j vi-backward-char
+bindkey -M vicmd h up-line-or-history
+bindkey -M vicmd k down-line-or-history
 
 autoload -z edit-command-line
 zle -N edit-comnand-line
