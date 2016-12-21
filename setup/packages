@@ -3,6 +3,7 @@ brew tap codebreakdown/homebrew-oss
 
 brew install \
        codebreakdown/oss/alt\
+       diff-so-fancy\
        git\
        googler\
        gpg\
