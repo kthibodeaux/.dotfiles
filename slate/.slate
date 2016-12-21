@@ -8,3 +8,4 @@ bind e:cmd hint ASDFGHJKLQWERTYUIOPCVBN
 
 bind s:ctrl,shift,alt focus 'Safari'
 bind t:ctrl,shift,alt focus 'iTerm2'
+bind r:ctrl,shift,alt focus 'Slack'
