@@ -5,3 +5,6 @@ config windowHintsSpread true
 
 # Window Hints
 bind e:cmd hint ASDFGHJKLQWERTYUIOPCVBN
+
+bind s:ctrl,shift,alt focus 'Safari'
+bind t:ctrl,shift,alt focus 'iTerm2'
