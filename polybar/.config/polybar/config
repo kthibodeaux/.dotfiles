@@ -51,7 +51,7 @@ font-2 = siji:pixelsize=14;0
 
 modules-left = i3
 modules-center = date
-modules-right = backlight volume xkeyboard memory cpu wlan eth battery temperature powermenu
+modules-right = backlight volume xkeyboard memory cpu wlan eth battery temperature
 
 tray-position = right
 tray-padding = 2
@@ -87,7 +87,7 @@ font-2 = siji:pixelsize=14;0
 
 modules-left = i3
 modules-center = date
-modules-right = backlight volume xkeyboard memory cpu wlan eth battery temperature powermenu
+modules-right = backlight volume xkeyboard memory cpu wlan eth battery temperature
 
 tray-position = right
 tray-padding = 2
