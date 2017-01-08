@@ -1,0 +1,8 @@
+[options]
+font = Meslo LG S 14
+cursor_blink = off
+cursor_shape = block
+
+[colors]
+cursor = #dfe1e8
+cursor_foreground = #2b303b
