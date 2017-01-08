@@ -4,6 +4,7 @@ stow -vv kwm
 stow -vv less
 stow -vv neovim
 stow -vv readline
+stow -vv redshift
 stow -vv reek
 stow -vv rspec
 stow -vv slate
