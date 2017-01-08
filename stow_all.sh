@@ -8,6 +8,7 @@ stow -vv polybar
 stow -vv readline
 stow -vv redshift
 stow -vv reek
+stow -vv rofi
 stow -vv rspec
 stow -vv tmux
 stow -vv vim

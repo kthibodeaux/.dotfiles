@@ -1,0 +1,17 @@
+rofi.color-enabled:    true
+rofi.color-window:     argb:dd343d46, argb:00000000, argb:00000000
+rofi.color-normal:     argb:00000000, base04, argb:00000000, argb:00000000, base07
+rofi.color-active:     argb:00000000, base0D, argb:00000000, argb:00000000, base0C
+rofi.color-urgent:     argb:00000000, base08, argb:00000000, argb:00000000, base09
+rofi.lines:             10
+rofi.fullscreen:        false
+rofi.font:              Roboto 35
+rofi.separator-style:   solid
+rofi.bw:                0
+rofi.eh:                1
+rofi.line-margin:       10
+rofi.hide-scrollbar:    true
+rofi.width:             100
+rofi.height:            100
+rofi.padding:           1000
+rofi.fake-transparency: true
