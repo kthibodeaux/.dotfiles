@@ -13,5 +13,5 @@ rofi.line-margin:       10
 rofi.hide-scrollbar:    true
 rofi.width:             100
 rofi.height:            100
-rofi.padding:           1000
+rofi.padding:           500
 rofi.fake-transparency: true
