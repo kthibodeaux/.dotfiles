@@ -36,6 +36,8 @@ These instructions will turn an Antergor MATE install into a configured i3 syste
 
 `sh ~/.dotfiles/setup/rvm`
 
+`rvm use 2.2.2 && gem install bundler neovim`
+
 # fix crappy audio
 
 See: https://lampjs.wordpress.com/2015/10/13/enhance-audio-with-equalizer-on-arch-linux/
