@@ -33,3 +33,9 @@ These instructions will turn an Antergor MATE install into a configured i3 syste
 `sh ~/.dotfiles/setup/fzf`
 
 `sh ~/.dotfiles/setup/rvm`
+
+# fix crappy audio
+
+See: https://lampjs.wordpress.com/2015/10/13/enhance-audio-with-equalizer-on-arch-linux/
+
+Still need to find out how that can apply to bluetooth headphones.
