@@ -38,6 +38,7 @@ bindsym $mod+Return exec termite
 bindsym $mod+q kill
 
 bindsym $mod+d exec rofi -show drun -font "Meslo LG S 18"
+bindsym --release $mod+z exec scrot -s
 
 # change focus
 bindsym $mod+j focus left
