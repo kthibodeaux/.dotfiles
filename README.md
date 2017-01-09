@@ -16,7 +16,7 @@ These instructions will turn an Antergor MATE install into a configured i3 syste
 
 `sudo pacman -S i3lock i3status tmux zsh neovim python3 the_silver_searcher termite feh redshift scrot htop blueman pavucontrol redis ruby tree pgadmin3`
 
-`yaourt -S skype google-talkplugin yakyak-git slack-desktop rofi`
+`yaourt -S thunderbird skype google-talkplugin yakyak-git slack-desktop rofi`
 
 `yaourt -S teensy-loader-cli dfu-programmer avr-gcc`
 
