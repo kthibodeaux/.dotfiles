@@ -2,6 +2,7 @@
 font = Meslo LG S 14
 cursor_blink = off
 cursor_shape = block
+mouse_autohide = true
 
 [colors]
 cursor = #dfe1e8
