@@ -43,3 +43,9 @@ These instructions will turn an Antergor MATE install into a configured i3 syste
 See: https://lampjs.wordpress.com/2015/10/13/enhance-audio-with-equalizer-on-arch-linux/
 
 Still need to find out how that can apply to bluetooth headphones.
+
+# imac / macbook temp
+
+`yaourt -S mbpfan-git && sudo systemctl enable mbpfan.service && sudo systemctl start mbpfan.service`
+
+Source: https://loicpefferkorn.net/2015/01/arch-linux-on-macbook-pro-retina-2014-with-dm-crypt-lvm-and-suspend-to-disk/#fan-control
