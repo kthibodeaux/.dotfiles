@@ -43,6 +43,8 @@ set incsearch " Search as typing
 set foldmethod=syntax
 set foldlevelstart=3
 au BufRead *_spec.rb setlocal foldlevel=2
+au BufRead *.slim setlocal foldmethod=indent
+au BufRead *.slim setlocal foldlevel=4
 " }}}
 " }}}
 " Window managment {{{
