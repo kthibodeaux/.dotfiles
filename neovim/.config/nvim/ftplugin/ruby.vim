@@ -1,5 +1,5 @@
 au BufWritePre * :call <SID>DefSpaceToUnderscore()
-au BufWritePost * :call jobstart("ctags .")
+au BufWritePost * :call jobstart("ctags --languages=ruby .")
 
 fun! <SID>DefSpaceToUnderscore()
   norm md
