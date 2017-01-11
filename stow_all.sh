@@ -1,6 +1,7 @@
 stow -vv compton
 stow -vv gem
 stow -vv git
+stow -vv gtk2
 stow -vv gtk3
 stow -vv less
 stow -vv neovim
