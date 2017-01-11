@@ -254,6 +254,7 @@ Plug 'junegunn/vim-peekaboo'
 Plug 'fishbullet/deoplete-ruby'
 Plug 'Konfekt/FastFold'
 Plug 'SirVer/ultisnips'
+Plug 'vim-scripts/rainbow-end'
 call plug#end()
 " }}}
 " Theme {{{
@@ -317,5 +318,8 @@ let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
+" }}}
+" Rainbow-End {{{
+nnoremap <leader>re :call ToggleRainbow()<CR>
 " }}}
 " }}}
