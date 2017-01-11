@@ -1,3 +1,4 @@
+stow -vv ctags
 stow -vv compton
 stow -vv gem
 stow -vv git
