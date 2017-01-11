@@ -6,8 +6,6 @@ export VISUAL=nvim
 export EDITOR=$VISUAL
 export PAGER=less
 
-export RUBY_TAG_COMMAND="ripper-tags -R --exclude spec/ --exclude db/"
-
 export FILTHY_SHOW_EXIT_CODE=1
 
 # enable colored output from ls, etc

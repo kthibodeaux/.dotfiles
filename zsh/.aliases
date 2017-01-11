@@ -19,8 +19,6 @@ alias c="cd ~; clear"
 alias da="dasht"
 alias ra="ranger"
 
-alias rt=$RUBY_TAG_COMMAND
-
 alias v="nvim"
 alias vu="nvim +PlugInstall"
 alias vrc="nvim ~/.dotfiles/neovim/.config/nvim/init.vim"
