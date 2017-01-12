@@ -20,7 +20,7 @@ These instructions will turn an Antergor MATE install into a configured i3 syste
 
 `yaourt -S teensy-loader-cli dfu-programmer avr-gcc`
 
-`yaourt -S light ttf-meslo polybar compton flatplat-theme archdroid-icon-theme`
+`yaourt -S light ttf-meslo compton flatplat-theme archdroid-icon-theme`
 
 `yaourt -S universal-ctags-git pgcli-git`
 

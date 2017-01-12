@@ -6,7 +6,6 @@ stow -vv gtk2
 stow -vv gtk3
 stow -vv less
 stow -vv neovim
-stow -vv polybar
 stow -vv readline
 stow -vv redshift
 stow -vv reek
