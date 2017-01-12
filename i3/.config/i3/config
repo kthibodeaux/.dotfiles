@@ -50,7 +50,8 @@ bindsym $mod+Control+k move down
 bindsym $mod+Control+h move up
 bindsym $mod+Control+l move right
 
-bindsym $mod+Control+t split horizontal
+bindsym $mod+Control+s split horizontal
+bindsym $mod+Control+Shift+s split vertical
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -68,6 +69,9 @@ bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
+
+# focus the parent container
+bindsym $mod+c focus child
 
 # switch to workspace
 bindsym $mod+1 workspace 1
