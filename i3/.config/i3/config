@@ -23,8 +23,6 @@ exec --no-startup-id redshift-gtk
 exec --no-startup-id blueman-applet
 exec --no-startup-id nm-applet
 exec --no-startup-id compton
-exec --no-startup-id polybar left
-exec --no-startup-id polybar right
 
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%; exec pactl set-sink-mute @DEFAULT_SINK@ 0
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%; exec pactl set-sink-mute @DEFAULT_SINK@ 0
@@ -104,20 +102,20 @@ bindsym $mod+Control+e exec "i3-nagbar -t warning -m 'You pressed the exit short
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
+# These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym h resize grow height 10 px or 10 ppt
-        bindsym k resize shrink height 10 px or 10 ppt
-        bindsym l resize grow width 10 px or 10 ppt
+# Pressing left will shrink the window’s width.
+# Pressing right will grow the window’s width.
+# Pressing up will shrink the window’s height.
+# Pressing down will grow the window’s height.
+  bindsym j resize shrink width 10 px or 10 ppt
+    bindsym h resize grow height 10 px or 10 ppt
+    bindsym k resize shrink height 10 px or 10 ppt
+    bindsym l resize grow width 10 px or 10 ppt
 
-        # back to normal: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+# back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 
 bindsym $mod+r mode "resize"
@@ -134,3 +132,19 @@ client.unfocused	$back	$back	$back	$back	$back
 client.urgent		$wesh	$wesh	$wesh	$wesh	$wesh
 client.placeholder	$back	$back	$back	$back	$back
 client.background	$back
+
+bar {
+  position top
+  status_command i3status
+  colors {
+    background #181b20
+      statusline #9b9081
+      separator #252525
+
+      # Colors           border  backgr. text
+      focused_workspace  #141414 #CCCCCC #333333
+      active_workspace   #141414 #181b20 #746C48
+      inactive_workspace #141414 #181b20 #444444
+      urgent_workspace   #141414 #181b20 #8c644c
+  }
+}
