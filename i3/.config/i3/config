@@ -146,7 +146,7 @@ set $base0f #ab7967
 client.focused          $base0d     $base0d     $base00     $base01
 client.focused_inactive $base02     $base02     $base03     $base01
 client.unfocused        $base01     $base01     $base03     $base01
-client.urgent           $base02     $base08     $base07     $base08
+client.urgent           $base04     $base08     $base07     $base08
 
 bar {
   position top
