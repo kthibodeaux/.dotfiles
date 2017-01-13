@@ -124,31 +124,42 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Define colors
-set $pimp	#ffd787
-set $wesh	#d75f87
-set $back	#626262
+# base-16 ocean colors
+set $base00 #2b303b
+set $base01 #343d46
+set $base02 #4f5b66
+set $base03 #65737e
+set $base04 #a7adba
+set $base05 #c0c5ce
+set $base06 #dfe1e8
+set $base07 #eff1f5
+set $base08 #bf616a
+set $base09 #d08770
+set $base0a #ebcb8b
+set $base0b #a3be8c
+set $base0c #96b5b4
+set $base0d #8fa1b3
+set $base0e #b48ead
+set $base0f #ab7967
 
-# Colors
-client.focused		$pimp	$pimp	$pimp	$pimp	$pimp
-client.focused_inactive $back	$back	$back	$back	$back
-client.unfocused	$back	$back	$back	$back	$back
-client.urgent		$wesh	$wesh	$wesh	$wesh	$wesh
-client.placeholder	$back	$back	$back	$back	$back
-client.background	$back
+#                       border      background  text        indicator
+client.focused          $base0d     $base0d     $base00     $base01
+client.focused_inactive $base02     $base02     $base03     $base01
+client.unfocused        $base01     $base01     $base03     $base01
+client.urgent           $base02     $base08     $base07     $base08
 
 bar {
   position top
   status_command i3status
   colors {
-    background #181b20
-      statusline #9b9081
-      separator #252525
+    background $base01
+    statusline $base07
+    separator  $base07
 
-      # Colors           border  backgr. text
-      focused_workspace  #141414 #CCCCCC #333333
-      active_workspace   #141414 #181b20 #746C48
-      inactive_workspace #141414 #181b20 #444444
-      urgent_workspace   #141414 #181b20 #8c644c
+    # Colors           border  backgr. text
+    focused_workspace  $base04 $base0d $base00
+    active_workspace   $base04 $base05 $base00
+    inactive_workspace $base04 $base03 $base0c
+    urgent_workspace   $base04 $base08 $base00
   }
 }
