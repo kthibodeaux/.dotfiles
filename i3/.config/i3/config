@@ -1,3 +1,4 @@
+# vim:foldmethod=marker:foldlevel=0
 # Gaps
 for_window [class="^.*"] border pixel 3
 gaps inner 10
@@ -9,70 +10,37 @@ set $mod Mod1
 # is used in the bar {} block below.
 font pango:Meslo LG S 8
 
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
-
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# set background
+# {{{ startup
 exec --no-startup-id feh --bg-scale /home/kthibodeaux/Pictures/background.jpg
-
 exec --no-startup-id redshift-gtk
 exec --no-startup-id blueman-applet
 exec --no-startup-id nm-applet
 exec --no-startup-id compton
+# }}}
+# {{{ keybinds
+# {{{ applications
+# application launcher
+bindsym $mod+d exec rofi -show drun -font "Meslo LG S 18"
 
+# terminal
+bindsym $mod+Return exec termite
+
+# take a screenshot of selected region
+bindsym --release $mod+z exec scrot -s
+
+# kill focused window
+bindsym $mod+q kill
+# }}}
+# {{{ volume
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%; exec pactl set-sink-mute @DEFAULT_SINK@ 0
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%; exec pactl set-sink-mute @DEFAULT_SINK@ 0
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym $mod+XF86AudioMute exec pavucontrol
-
-# start a terminal
-bindsym $mod+Return exec termite
-
-# kill focused window
-bindsym $mod+q kill
-
-bindsym $mod+d exec rofi -show drun -font "Meslo LG S 18"
-bindsym --release $mod+z exec scrot -s
-
-# change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+h focus up
-bindsym $mod+l focus right
-
-# move focused window
-bindsym $mod+Control+j move left
-bindsym $mod+Control+k move down
-bindsym $mod+Control+h move up
-bindsym $mod+Control+l move right
-
-bindsym $mod+Control+s split horizontal
-bindsym $mod+Control+Shift+s split vertical
-
-# enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
-
-# change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
-
-# toggle tiling / floating
-bindsym $mod+Control+space floating toggle
-
-# change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
-
-# focus the parent container
-bindsym $mod+a focus parent
-
-# focus the parent container
-bindsym $mod+c focus child
-
+# }}}
+# {{{ workspaces
 # switch to workspace
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
@@ -96,35 +64,59 @@ bindsym $mod+Control+7 move container to workspace 7
 bindsym $mod+Control+8 move container to workspace 8
 bindsym $mod+Control+9 move container to workspace 9
 bindsym $mod+Control+0 move container to workspace 10
-
+# }}}
+# {{{ i3 control
 # reload the configuration file
 bindsym $mod+Control+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Control+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Control+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-
-# resize window (you can also use the mouse for that)
+# }}}
+# {{{ resizing
 mode "resize" {
-# These bindings trigger as soon as you enter the resize mode
-
-# Pressing left will shrink the window’s width.
-# Pressing right will grow the window’s width.
-# Pressing up will shrink the window’s height.
-# Pressing down will grow the window’s height.
   bindsym j resize shrink width 10 px or 10 ppt
-    bindsym h resize grow height 10 px or 10 ppt
-    bindsym k resize shrink height 10 px or 10 ppt
-    bindsym l resize grow width 10 px or 10 ppt
+  bindsym h resize grow height 10 px or 10 ppt
+  bindsym k resize shrink height 10 px or 10 ppt
+  bindsym l resize grow width 10 px or 10 ppt
 
-# back to normal: Enter or Escape
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
 }
 
 bindsym $mod+r mode "resize"
+# }}}
+# {{{ focus
+bindsym $mod+a focus parent
+bindsym $mod+c focus child
 
-# base-16 ocean colors
+# change focus
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+h focus up
+bindsym $mod+l focus right
+
+# move focused window
+bindsym $mod+Control+j move left
+bindsym $mod+Control+k move down
+bindsym $mod+Control+h move up
+bindsym $mod+Control+l move right
+# }}}
+# {{{ containers
+bindsym $mod+f fullscreen toggle
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+bindsym $mod+Control+s split horizontal
+bindsym $mod+Control+Shift+s split vertical
+# }}}
+# {{{ floating
+bindsym $mod+Control+space floating toggle
+bindsym $mod+space focus mode_toggle
+# }}}
+# }}}
+# {{{ colors
 set $base00 #2b303b
 set $base01 #343d46
 set $base02 #4f5b66
@@ -147,7 +139,8 @@ client.focused          $base0d     $base0d     $base00     $base01
 client.focused_inactive $base02     $base02     $base03     $base01
 client.unfocused        $base01     $base01     $base03     $base01
 client.urgent           $base04     $base08     $base07     $base08
-
+# }}}
+# {{{ bar
 bar {
   position top
   status_command i3status
@@ -163,3 +156,4 @@ bar {
     urgent_workspace   $base04 $base08 $base00
   }
 }
+# }}}
