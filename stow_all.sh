@@ -1,9 +1,10 @@
-stow -vv ctags
 stow -vv compton
+stow -vv ctags
 stow -vv gem
 stow -vv git
 stow -vv gtk2
 stow -vv gtk3
+stow -vv i3
 stow -vv less
 stow -vv neovim
 stow -vv readline
@@ -11,6 +12,7 @@ stow -vv redshift
 stow -vv reek
 stow -vv rofi
 stow -vv rspec
+stow -vv termite
 stow -vv tmux
 stow -vv vim
 stow -vv xmodmap
