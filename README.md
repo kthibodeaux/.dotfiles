@@ -6,37 +6,15 @@ Uses [GNU Stow](https://www.gnu.org/software/stow/) for management.
 
 # setup
 
-These instructions will turn an Antergor MATE install into a configured i3 system
+These instructions will turn an Antergos MATE install into a configured i3 system
 
-`sudo pacman -S stow`
-
-`# get and stow dotfiles`
-
-`yaourt -S i3-gaps`
-
-`sudo pacman -S i3lock i3blocks tmux zsh neovim python3 the_silver_searcher termite feh redshift scrot htop blueman pavucontrol redis ruby tree pgadmin3`
-
-`yaourt -S thunderbird skype google-talkplugin yakyak-git slack-desktop rofi`
-
-`yaourt -S teensy-loader-cli dfu-programmer avr-gcc`
-
-`yaourt -S light ttf-meslo compton flatplat-theme archdroid-icon-theme`
-
-`yaourt -S universal-ctags-git pgcli-git ranger`
-
-`wget https://bootstrap.pypa.io/get-pip.py`
-
-`sudo python get-pip.py`
-
-`rm get-pip.py`
-
-`sudo pip3 install neovim`
-
-`sh ~/.dotfiles/setup/fzf`
-
-`sh ~/.dotfiles/setup/rvm`
-
-`rvm use 2.2.2 && gem install bundler neovim`
+```
+sudo pacman -S stow
+git clone git@github.com:kthibodeaux/.dotfiles.git
+cd .dotfiles
+sh stow_all
+sh setup
+```
 
 # fix crappy audio
 
