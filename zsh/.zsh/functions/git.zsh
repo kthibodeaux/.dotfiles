@@ -74,8 +74,7 @@ support() {
 }
 
 set_base_branch() {
-  git rev-parse --verify develop
-  if [[ $? == 0 ]]; then
+  if git rev-parse -q --verify develop; then
     BASE_BRANCH="develop"
   else
     BASE_BRANCH="master"
