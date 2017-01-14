@@ -25,7 +25,7 @@ exec --no-startup-id compton
 # {{{ keybinds
 # {{{ applications
 # application launcher
-bindsym $mod+d exec rofi -show drun -font "Meslo LG S 18"
+bindsym $mod+d exec rofi -show drun
 
 # terminal
 bindsym $mod+Return exec termite
