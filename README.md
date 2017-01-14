@@ -49,3 +49,15 @@ Still need to find out how that can apply to bluetooth headphones.
 `yaourt -S mbpfan-git && sudo systemctl enable mbpfan.service && sudo systemctl start mbpfan.service`
 
 Source: https://loicpefferkorn.net/2015/01/arch-linux-on-macbook-pro-retina-2014-with-dm-crypt-lvm-and-suspend-to-disk/#fan-control
+
+# fonts
+
+This setup depents on the following fonts
+
+. fontawesome-webfont.ttf
+. Meslo LG S Regular for Powerline.otf
+. MesloLGS-Regular.ttf
+. System San Francisco Display Bold.ttf
+. System San Francisco Display Regular.ttf
+. System San Francisco Display Thin.ttf
+. System San Francisco Display Ultralight.ttf
