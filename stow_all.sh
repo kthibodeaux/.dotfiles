@@ -7,6 +7,7 @@ stow -vv gtk3
 stow -vv i3
 stow -vv less
 stow -vv neovim
+stow -vv ranger
 stow -vv readline
 stow -vv redshift
 stow -vv reek
