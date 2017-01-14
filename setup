@@ -57,6 +57,13 @@ yaourt_install "ttf-meslo"
 yaourt_install "universal-ctags-git"
 yaourt_install "yakyak-git"
 
+if [ $(getent passwd $LOGNAME | cut -d: -f7) == "/usr/bin/zsh" ]; then
+  echo "skipping change shell: shell is already zsh"
+else
+  echo "setting shell to /usr/bin/zsh"
+  chsh -s /usr/bin/zsh
+fi
+
 if [ -d ~/.rvm ]; then
   echo "skipping rvm: already installed"
 else
