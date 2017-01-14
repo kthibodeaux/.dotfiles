@@ -84,6 +84,8 @@ else
   rvm use $RUBY_VERSION
   gem install bundler
   gem install neovim
+  gem install reek
+  gem install rubocop
 fi
 
 if [ -d ~/.fzf ]; then
