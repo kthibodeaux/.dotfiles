@@ -1,3 +1,5 @@
+# vi: set ft=sh :
+
 stow -vv compton
 stow -vv ctags
 stow -vv gem
