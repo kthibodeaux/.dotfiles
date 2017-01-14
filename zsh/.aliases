@@ -1,17 +1,9 @@
 # vi: set ft=sh :
 
-if [[ $(uname) == Darwin ]]; then
-  alias la="ls -Gpa"
-  alias ls="ls -Gp"
-  alias ll="ls -Gplh"
-else
-  alias la="ls --color -pa"
-  alias ls="ls --color -p"
-  alias ll="ls --color -plh"
-fi
+alias la="ls --color -pa"
+alias ls="ls --color -p"
+alias ll="ls --color -plh"
 
-alias ruby-server="ruby -r webrick -e \"s = WEBrick::HTTPServer.new(:Port => 9090, :DocumentRoot => Dir.pwd); trap('INT') { s.shutdown }; s.start\""
-alias lines="find . -name '*.*' | xargs wc -l"
 alias :q="exit"
 alias tree="tree -C"
 alias c="cd ~; clear"
@@ -23,7 +15,6 @@ alias v="nvim"
 alias vu="nvim +PlugInstall"
 alias vrc="nvim ~/.dotfiles/neovim/.config/nvim/init.vim"
 
-alias va="vagrant"
 alias t="tmux"
 
 alias agh="ag --hidden"
@@ -31,38 +22,20 @@ alias agh="ag --hidden"
 alias zrc="nvim ~/.dotfiles/zsh/.zshrc"
 alias rzsh="source ~/.zshrc && source ~/.zshrc.local"
 
-alias ber="bundle exec rails"
 alias rpca="RAILS_ENV=production bundle exec rake assets:precompile"
 
 alias be="bundle exec"
-alias bl="bundle list"
-alias bp="bundle package"
-alias bo="bundle open"
 alias bu="bundle update"
 alias bi="bundle install"
 alias bes="bundle exec rspec"
-alias besr="bundle exec rspec --order rand"
-alias bec="bundle exec cucumber"
+alias ber="bundle exec rails"
 
 alias mi="bundle exec rake db:migrate"
 alias mit="RAILS_ENV=test bundle exec rake db:migrate"
 
-alias gemb="gem build *.gemspec"
-alias box="gem inabox *.gem"
-
-alias d_ds="find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch"
-alias d_indexhtml="find . -name "index.html*" -print0 | xargs -0 rm"
-
-alias password="openssl rand -base64 24"
-
 alias winbox="wine ~/opt/winbox.exe"
 
 alias mine="wget -e robots=off -r -nc -np"
-
-alias start_pg="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
-alias stop_pg="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
-
-alias gg="googler"
 
 alias clean_testdb="RAILS_ENV=test bundle exec rake db:drop && RAILS_ENV=test bundle exec rake db:create && RAILS_ENV=test bundle exec rake db:migrate && RAILS_ENV=test bundle exec rake db:seed"
 
