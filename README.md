@@ -13,7 +13,7 @@ sudo pacman -S stow
 git clone git@github.com:kthibodeaux/.dotfiles.git
 cd .dotfiles
 sh stow_all
-sh setup
+bash setup
 ```
 
 # fix crappy audio

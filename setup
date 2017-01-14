@@ -3,6 +3,8 @@
 # Keep-alive: update existing `sudo` time stamp until `setup` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
+RUBY_VERSION="2.2.2"
+
 pacman_install() {
   if pacman -Qs $1 > /dev/null; then
     echo "skipping $1: already installed"
@@ -72,14 +74,14 @@ else
 fi
 
 echo "sourcing rvm script"
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+source "$HOME/.rvm/scripts/rvm"
 
-if rvm use 2.2.2 > /dev/null; then
-  echo "skipping install ruby 2.2.2: already installed"
+if rvm use $RUBY_VERSION > /dev/null; then
+  echo "skipping install ruby $RUBY_VERSION: already installed"
 else
-  rvm install 2.2.2
-  rvm --default use 2.2.2
-  rvm use 2.2.2
+  rvm install $RUBY_VERSION
+  rvm --default use $RUBY_VERSION
+  rvm use $RUBY_VERSION
   gem install bundler
   gem install neovim
 fi
