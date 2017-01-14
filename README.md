@@ -14,7 +14,7 @@ These instructions will turn an Antergor MATE install into a configured i3 syste
 
 `yaourt -S i3-gaps`
 
-`sudo pacman -S i3lock i3status tmux zsh neovim python3 the_silver_searcher termite feh redshift scrot htop blueman pavucontrol redis ruby tree pgadmin3`
+`sudo pacman -S i3lock i3blocks tmux zsh neovim python3 the_silver_searcher termite feh redshift scrot htop blueman pavucontrol redis ruby tree pgadmin3`
 
 `yaourt -S thunderbird skype google-talkplugin yakyak-git slack-desktop rofi`
 
@@ -49,6 +49,10 @@ Still need to find out how that can apply to bluetooth headphones.
 `yaourt -S mbpfan-git && sudo systemctl enable mbpfan.service && sudo systemctl start mbpfan.service`
 
 Source: https://loicpefferkorn.net/2015/01/arch-linux-on-macbook-pro-retina-2014-with-dm-crypt-lvm-and-suspend-to-disk/#fan-control
+
+# i3bar system tray
+
+The system tray outputs on the primary display.  It can be set with `xrandr --output <output> --primary`
 
 # fonts
 
