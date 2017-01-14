@@ -14,3 +14,7 @@ neovim/.config/nvim/plugged
 neovim/.config/nvim/.init.vim-rplugin~
 
 gtk3/.config/gtk-3.0/bookmarks
+
+ranger/.config/ranger/bookmarks
+ranger/.config/ranger/history
+ranger/.config/ranger/tagged

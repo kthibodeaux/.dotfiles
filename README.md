@@ -22,7 +22,7 @@ These instructions will turn an Antergor MATE install into a configured i3 syste
 
 `yaourt -S light ttf-meslo compton flatplat-theme archdroid-icon-theme`
 
-`yaourt -S universal-ctags-git pgcli-git`
+`yaourt -S universal-ctags-git pgcli-git ranger`
 
 `wget https://bootstrap.pypa.io/get-pip.py`
 
