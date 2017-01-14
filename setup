@@ -71,6 +71,9 @@ else
   curl -sSL https://get.rvm.io | bash -s stable
 fi
 
+echo "sourcing rvm script"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
 if rvm use 2.2.2 > /dev/null; then
   echo "skipping install ruby 2.2.2: already installed"
 else
