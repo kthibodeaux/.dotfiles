@@ -11,7 +11,7 @@ These instructions will turn an Antergos MATE install into a configured i3 syste
 Before running the below commands make sure you can clone from GitHub by adding your SSH key to your profile.
 
 ```
-sudo pacman -S stow
+sudo pacman -S stow vte3-ng
 git clone git@github.com:kthibodeaux/.dotfiles.git
 cd .dotfiles
 sh stow_all
