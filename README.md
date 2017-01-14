@@ -54,10 +54,10 @@ Source: https://loicpefferkorn.net/2015/01/arch-linux-on-macbook-pro-retina-2014
 
 This setup depents on the following fonts
 
-. fontawesome-webfont.ttf
-. Meslo LG S Regular for Powerline.otf
-. MesloLGS-Regular.ttf
-. System San Francisco Display Bold.ttf
-. System San Francisco Display Regular.ttf
-. System San Francisco Display Thin.ttf
-. System San Francisco Display Ultralight.ttf
+1. fontawesome-webfont.ttf
+1. Meslo LG S Regular for Powerline.otf
+1. MesloLGS-Regular.ttf
+1. System San Francisco Display Bold.ttf
+1. System San Francisco Display Regular.ttf
+1. System San Francisco Display Thin.ttf
+1. System San Francisco Display Ultralight.ttf
