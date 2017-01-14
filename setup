@@ -112,5 +112,5 @@ fi
 echo "If this is your first time running setup on this computer then you may"
 echo "want to:"
 echo ""
-echo "Run `vu` to install vim plugins"
-echo "Run `:UpdateRemotePlugins` in neovim"
+echo "Run vu to install vim plugins"
+echo "Run :UpdateRemotePlugins in neovim"
