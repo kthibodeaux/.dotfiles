@@ -8,6 +8,8 @@ Uses [GNU Stow](https://www.gnu.org/software/stow/) for management.
 
 These instructions will turn an Antergos MATE install into a configured i3 system
 
+Before running the below commands make sure you can clone from GitHub by adding your SSH key to your profile.
+
 ```
 sudo pacman -S stow
 git clone git@github.com:kthibodeaux/.dotfiles.git
