@@ -7,7 +7,6 @@ let maplocalleader = ","
 filetype plugin indent on
 au FileType * setlocal ai sw=2 sts=2 et
 syntax on
-set shell=/bin/zsh
 set autoindent
 set backspace=indent,eol,start
 set colorcolumn=80
@@ -251,7 +250,7 @@ Plug 'slim-template/vim-slim'
 Plug 'kchmck/vim-coffee-script'
 Plug 'junegunn/vim-peekaboo'
 Plug 'fishbullet/deoplete-ruby'
-Plug 'Konfekt/FastFold', { 'commit': '664c576930114cda993c88eb493285e2464eb83f' }
+Plug 'Konfekt/FastFold'
 Plug 'SirVer/ultisnips'
 Plug 'vim-scripts/rainbow-end'
 call plug#end()
