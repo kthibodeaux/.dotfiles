@@ -37,8 +37,8 @@ bindsym --release $mod+z exec scrot -s
 bindsym $mod+q kill
 # }}}
 # {{{ keyboard layout
-bindsym $mod+Control+Shift+q exec setxkbmap us
-bindsym $mod+Control+Shift+c exec setxkbmap us -variant colemak
+bindsym $mod+Control+Shift+q exec "setxkbmap us && xmodmap ~/.Xmodmap"
+bindsym $mod+Control+Shift+c exec "setxkbmap us -variant colemak && xmodmap ~/.Xmodmap"
 # }}}
 # {{{ volume
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%; exec pactl set-sink-mute @DEFAULT_SINK@ 0
