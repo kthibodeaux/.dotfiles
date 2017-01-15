@@ -39,6 +39,7 @@ pacman_install "tmux"
 pacman_install "tree"
 pacman_install "zsh"
 
+yaourt_install "acpi"
 yaourt_install "archdroid-icon-theme"
 yaourt_install "avr-gcc"
 yaourt_install "compton"
