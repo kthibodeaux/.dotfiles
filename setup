@@ -21,6 +21,14 @@ yaourt_install() {
   fi
 }
 
+font_install() {
+  if [ -f ~/.fonts/$1 ]; then
+    echo "skipping $1: already installed"
+  else
+    wget -O "$HOME/.fonts/$1" "$2"
+  fi
+}
+
 pacman_install "blueman"
 pacman_install "feh"
 pacman_install "htop"
@@ -110,8 +118,17 @@ else
   sudo pip3 install neovim
 fi
 
+mkdir ~/.fonts > /dev/null
+font_install "fontawesome-webfont.ttf" "https://github.com/FortAwesome/Font-Awesome/raw/master/fonts/fontawesome-webfont.ttf"
+font_install "System San Francisco Display Bold.ttf" "https://github.com/supermarin/YosemiteSanFranciscoFont/raw/master/System%20San%20Francisco%20Display%20Bold.ttf"
+font_install "System San Francisco Display Ultralight.ttf" "https://github.com/supermarin/YosemiteSanFranciscoFont/raw/master/System%20San%20Francisco%20Display%20Ultralight.ttf"
+font_install "System San Francisco Display Regular.ttf" "https://github.com/supermarin/YosemiteSanFranciscoFont/raw/master/System%20San%20Francisco%20Display%20Regular.ttf"
+font_install "System San Francisco Display Thin.ttf" "https://github.com/supermarin/YosemiteSanFranciscoFont/raw/master/System%20San%20Francisco%20Display%20Thin.ttf"
+font_install "Meslo LG S Regular for Powerline.otf"  "https://github.com/powerline/fonts/blob/master/Meslo/Meslo%20LG%20S%20Regular%20for%20Powerline.otf"
+
 echo "If this is your first time running setup on this computer then you may"
 echo "want to:"
 echo ""
-echo "Run vu to install vim plugins"
-echo "Run :UpdateRemotePlugins in neovim"
+echo "Run 'vu' to install vim plugins"
+echo "Run ':UpdateRemotePlugins' in neovim"
+echo "Set your primary display with 'xrandr --output <output> --primary'"
