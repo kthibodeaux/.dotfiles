@@ -151,7 +151,6 @@ bar {
   status_command    i3blocks -c ~/.config/i3/i3blocks.conf
   position          top
   separator_symbol  " "
-  tray_output       primary
   workspace_buttons yes
 
   colors {
