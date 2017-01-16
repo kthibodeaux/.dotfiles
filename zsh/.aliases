@@ -28,6 +28,7 @@ alias be="bundle exec"
 alias bu="bundle update"
 alias bi="bundle install"
 alias bes="bundle exec rspec"
+alias bep="bundle exec rake parallel:spec[8]"
 alias ber="bundle exec rails"
 
 alias mi="bundle exec rake db:migrate"
