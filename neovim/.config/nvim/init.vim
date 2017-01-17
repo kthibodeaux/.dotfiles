@@ -285,9 +285,6 @@ nnoremap <F5> :UndotreeToggle<cr>
 " FZF {{{
 set rtp+=~/.fzf
 nnoremap <leader>c :BCommits<cr> |" Commits for current file
-nnoremap <leader>t :BTags<cr> |" Tags for current file
-nnoremap <leader>y :Tags<cr> |" Tags for current project
-nnoremap <leader>p :Tags<cr> |" Tags for project
 nnoremap <leader>/ :Files<cr> |" Project dir files
 " }}}
 " Open Alternate {{{
