@@ -1,4 +1,5 @@
 [options]
+browser = firefox
 font = Meslo LG S 14
 cursor_blink = off
 cursor_shape = block
