@@ -37,7 +37,11 @@ pacman_install "lm_sensors"
 pacman_install "neovim"
 pacman_install "pavucontrol"
 pacman_install "pgadmin3"
-pacman_install "python"
+if which python > /dev/null; then
+    echo "skipping python: already installed"
+  else
+    pacman_install "python"
+fi
 pacman_install "redis"
 pacman_install "redshift"
 pacman_install "ruby"
