@@ -51,6 +51,7 @@ pacman_install "the_silver_searcher"
 pacman_install "tmux"
 pacman_install "tree"
 pacman_install "zsh"
+echo ""
 
 yaourt_install "acpi"
 yaourt_install "archdroid-icon-theme"
@@ -73,6 +74,7 @@ yaourt_install "thunderbird"
 yaourt_install "ttf-meslo"
 yaourt_install "universal-ctags-git"
 yaourt_install "yakyak-git"
+echo ""
 
 if [ $(getent passwd $LOGNAME | cut -d: -f7) == "/usr/bin/zsh" ]; then
   echo "skipping change shell: shell is already zsh"
@@ -80,6 +82,7 @@ else
   echo "setting shell to /usr/bin/zsh"
   chsh -s /usr/bin/zsh
 fi
+echo ""
 
 if [ -d ~/.rvm ]; then
   echo "skipping rvm: already installed"
@@ -87,6 +90,7 @@ else
   gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
   curl -sSL https://get.rvm.io | bash -s stable
 fi
+echo ""
 
 echo "sourcing rvm script"
 source "$HOME/.rvm/scripts/rvm"
@@ -102,6 +106,7 @@ else
   gem install reek
   gem install rubocop
 fi
+echo ""
 
 if [ -d ~/.fzf ]; then
   echo "skipping fzf: already installed"
@@ -109,6 +114,7 @@ else
   git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
   ~/.fzf/install --key-bindings --completion --no-update-rc
 fi
+echo ""
 
 if test $(which pip3); then
   echo "skipping pip3: already installed"
@@ -117,12 +123,14 @@ else
   sudo python get-pip.py
   rm get-pip.py
 fi
+echo ""
 
 if pip3 show neovim > /dev/null; then
   echo "skipping python3 neovim support: already installed"
 else
   sudo pip3 install neovim
 fi
+echo ""
 
 mkdir ~/.fonts
 font_install "fontawesome-webfont.ttf" "https://github.com/FortAwesome/Font-Awesome/raw/master/fonts/fontawesome-webfont.ttf"
@@ -131,7 +139,11 @@ font_install "System San Francisco Display Ultralight.ttf" "https://github.com/s
 font_install "System San Francisco Display Regular.ttf" "https://github.com/supermarin/YosemiteSanFranciscoFont/raw/master/System%20San%20Francisco%20Display%20Regular.ttf"
 font_install "System San Francisco Display Thin.ttf" "https://github.com/supermarin/YosemiteSanFranciscoFont/raw/master/System%20San%20Francisco%20Display%20Thin.ttf"
 font_install "Meslo LG S Regular for Powerline.otf" "https://github.com/powerline/fonts/raw/master/Meslo/Meslo%20LG%20S%20Regular%20for%20Powerline.otf"
+echo ""
 
+
+echo ""
+echo ""
 echo "If this is your first time running setup on this computer then you may"
 echo "want to:"
 echo ""
