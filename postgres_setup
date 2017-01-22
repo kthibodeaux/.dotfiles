@@ -1,0 +1,7 @@
+# vi: set ft=sh :
+
+if yaourt -SQ "postgresql-9.5" > /dev/null; then
+  # if other pg is installed print an error telling the user there
+  # is a conflict then exit this script
+  yaourt -S --noconfirm "postgresql-9.5"
+fi
