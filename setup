@@ -4,6 +4,7 @@
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 RUBY_VERSION="2.2.2"
+PGDATADIR=/var/lib/postgres/encrypted_data
 
 pacman_install() {
   if pacman -Qe $1 > /dev/null; then
@@ -30,6 +31,7 @@ font_install() {
 }
 
 pacman_install "blueman"
+pacman_install "encfs"
 pacman_install "feh"
 pacman_install "htop"
 pacman_install "i3lock"
@@ -65,6 +67,7 @@ yaourt_install "i3-gaps"
 yaourt_install "i3blocks"
 yaourt_install "light"
 yaourt_install "pgcli-git"
+yaourt_install "postgresql-9.5"
 yaourt_install "ranger"
 yaourt_install "rofi"
 yaourt_install "skype"
@@ -141,6 +144,27 @@ font_install "System San Francisco Display Thin.ttf" "https://github.com/superma
 font_install "Meslo LG S Regular for Powerline.otf" "https://github.com/powerline/fonts/raw/master/Meslo/Meslo%20LG%20S%20Regular%20for%20Powerline.otf"
 echo ""
 
+pgdata_mountline="encfs#$PGDATADIR  /var/lib/postgres/data  fuse  noauto,user  0  0"
+if sudo grep -r "$pgdata_mountline" "/etc/fstab" > /dev/null; then
+  echo "skipping adding $pgdata_mountline to /etc/fstab: already exists"
+else
+  echo "adding $pgdata_mountline to /etc/fstab"
+  echo "$pgdata_mountline" | sudo tee -a /etc/fstab > /dev/null
+fi
+echo ""
+
+if [ -d $PGDATADIR ]; then
+  echo "skipping encrypted pgdata: $PGDATADIR exists"
+else
+  echo "creating secure pgdata directory"
+
+  sudo mkdir $PGDATADIR
+  sudo chown postgres:postgres $PGDATADIR
+  sudo chmod 775 $PGDATADIR
+
+  sudo -u postgres encfs $PGDATADIR /var/lib/postgres/data
+fi
+echo ""
 
 echo ""
 echo ""
@@ -149,4 +173,5 @@ echo "want to:"
 echo ""
 echo "Run 'vu' to install vim plugins"
 echo "Run ':UpdateRemotePlugins' in neovim"
+echo "Initialize postgres with: mountpg && sudo -u postgres initdb --locale en_US.UTF-8 -D '/var/lib/postgres/data'"
 echo "Comment out the line that remaps the capslock key to backspace for Colemak in /usr/share/X11/xkb/symbols/us"

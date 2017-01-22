@@ -1,0 +1,35 @@
+# vi: set ft=sh :
+
+is_postgres_mounted() {
+  if grep -r "/var/lib/postgres/data" "/etc/mtab" > /dev/null; then
+    return 0;
+  else
+    return 1;
+  fi
+}
+
+startpg() {
+  if is_postgres_mounted; then
+    sudo -u postgres pg_ctl start -D /var/lib/postgres/data -w -t 120
+  else
+    echo "postgres data not mounted. try running 'mountpg'"
+  fi
+}
+
+mountpg() {
+  if is_postgres_mounted; then
+    echo "/var/lib/postgres/data is already mounted"
+  else
+    sudo -u postgres mount /var/lib/postgres/data
+  fi
+}
+
+umountpg() {
+  if is_postgres_mounted; then
+    sudo umount /var/lib/postgres/data
+  else
+    echo "/var/lib/postgres/data is not mounted"
+  fi
+}
+
+alias stoppg="sudo -u postgres pg_ctl stop -D /var/lib/postgres/data -w -t 120"
