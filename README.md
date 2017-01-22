@@ -18,6 +18,10 @@ sh stow_all
 bash setup
 ```
 
+# postgres
+
+If you plan on storing postgres data in an encrypted partition then don't forget to `sudo chown -Rv postgres:postgres /var/lib/postgres` after mounting the encrypted partition (before running initdb).
+
 # fix crappy audio
 
 See: https://lampjs.wordpress.com/2015/10/13/enhance-audio-with-equalizer-on-arch-linux/
