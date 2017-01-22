@@ -39,6 +39,9 @@ alias winbox="wine ~/opt/winbox.exe"
 
 alias mine="wget -e robots=off -r -nc -np"
 
+alias startpg="sudo -u postgres pg_ctl start -D /var/lib/postgres/data -w -t 120"
+alias stoppg="sudo -u postgres pg_ctl stop -D /var/lib/postgres/data -w -t 120"
+
 alias clean_testdb="RAILS_ENV=test bundle exec rake db:drop && RAILS_ENV=test bundle exec rake db:create && RAILS_ENV=test bundle exec rake db:migrate && RAILS_ENV=test bundle exec rake db:seed"
 alias pclean_testdb="bundle exec rake parallel:drop[8]; bundle exec rake parallel:create[8]; bundle exec rake parallel:migrate[8]; bundle exec rake parallel:seed[8]"
 
