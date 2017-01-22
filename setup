@@ -76,6 +76,7 @@ yaourt_install "thunderbird"
 yaourt_install "ttf-meslo"
 yaourt_install "universal-ctags-git"
 yaourt_install "yakyak-git"
+yaourt_install "whatsapp-web-desktop"
 echo ""
 
 if [ $(getent passwd $LOGNAME | cut -d: -f7) == "/usr/bin/zsh" ]; then
