@@ -33,13 +33,14 @@ alias ber="bundle exec rails"
 
 alias mi="bundle exec rake db:migrate"
 alias mit="RAILS_ENV=test bundle exec rake db:migrate"
+alias pmit="bundle exec rake parallel:migrate[8]"
 
 alias winbox="wine ~/opt/winbox.exe"
 
 alias mine="wget -e robots=off -r -nc -np"
 
 alias clean_testdb="RAILS_ENV=test bundle exec rake db:drop && RAILS_ENV=test bundle exec rake db:create && RAILS_ENV=test bundle exec rake db:migrate && RAILS_ENV=test bundle exec rake db:seed"
-alias pclean_testdb="bundle exec rake parallel:drop[8] && bundle exec rake parallel:create[8] && bundle exec rake parallel:migrate[8] && bundle exec rake parallel:seed[8]"
+alias pclean_testdb="bundle exec rake parallel:drop[8]; bundle exec rake parallel:create[8]; bundle exec rake parallel:migrate[8]; bundle exec rake parallel:seed[8]"
 
 [[ -f ~/.zsh/git.sh ]] && source ~/.zsh/git.sh ]]
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local ]]
