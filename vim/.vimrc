@@ -30,10 +30,12 @@ set background=dark
 colorscheme slate
 
 " Random maps (normal, visual, select, operater pending)
-map ; :
 nnoremap <CR> :noh<CR><CR> " Cancel search by pressing return
 nnoremap <leader><tab> mtgg=G`t
-inoremap jj <Esc>
+inoremap ii <Esc>
+noremap h k
+noremap j h
+noremap k j
 
 " Searching
 set hlsearch
@@ -59,7 +61,7 @@ augroup END
 " Window management
 set hidden " Allow unsaved buffers to be put in background
 set winwidth=84 " Active window min width
-noremap <c-j> <c-w>j
-noremap <c-k> <c-w>k
+noremap <c-k> <c-w>j
+noremap <c-h> <c-w>k
 noremap <c-l> <c-w>l
-noremap <c-h> <c-w>h
+noremap <c-j> <c-w>j
