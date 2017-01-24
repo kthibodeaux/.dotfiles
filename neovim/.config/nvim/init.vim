@@ -162,17 +162,6 @@ nnoremap <leader>n <C-]>
 
 vnoremap K :m '>+1<CR>gv=gv " move visual block down
 vnoremap H :m '<-2<CR>gv=gv " move visual block up
-" Buffers {{{
-" Close the buffer and reuse the window for an existing buffer
-nnoremap <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
-
-" Delete the buffer and close the window
-nnoremap <leader>d :bd<CR>
-
-" Buffer cycling
-nnoremap <C-p> :bprev<CR>
-nnoremap <C-n> :bnext<CR>
-" }}}
 " RSpec {{{
 let g:rspec_command = 'call VimuxRunCommand("bundle exec rspec {spec}\n")'
 map <Leader>rr :call RunNearestSpec()<CR>
@@ -215,7 +204,6 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'tpope/vim-fugitive'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
-Plug 'Lokaltog/vim-easymotion'
 Plug 'Townk/vim-autoclose'
 Plug 'airblade/vim-gitgutter'
 Plug 'danro/rename.vim'
