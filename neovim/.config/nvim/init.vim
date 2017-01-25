@@ -241,6 +241,7 @@ Plug 'fishbullet/deoplete-ruby'
 Plug 'Konfekt/FastFold'
 Plug 'SirVer/ultisnips'
 Plug 'vim-scripts/rainbow-end'
+Plug 'sunaku/vim-dasht'
 call plug#end()
 " }}}
 " Theme {{{
@@ -304,5 +305,9 @@ let g:UltiSnipsEditSplit="vertical"
 " }}}
 " Rainbow-End {{{
 nnoremap <leader>re :call ToggleRainbow()<CR>
+" }}}
+" {{{ dasht.vim
+nnoremap <Leader>k :Dasht<Space>
+nnoremap <silent> K :call Dasht([expand('<cWORD>'), expand('<cword>')])<Return>
 " }}}
 " }}}
