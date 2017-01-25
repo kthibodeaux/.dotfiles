@@ -35,20 +35,11 @@ setopt extended_history
 
 # vi mode
 bindkey -v
-
 bindkey ii vi-cmd-mode
 bindkey -M vicmd j vi-backward-char
 bindkey -M vicmd h up-line-or-history
 bindkey -M vicmd k down-line-or-history
-
-autoload -z edit-command-line
-zle -N edit-comnand-line
-
-# bind useful keys
-bindkey "^A" beginning-of-line
-bindkey "^E" end-of-line
 bindkey "^R" history-incremental-search-backward
-bindkey "^v" edit-command-line
 
 # prompt
 autoload -U promptinit && promptinit
