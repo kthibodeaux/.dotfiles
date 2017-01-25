@@ -57,6 +57,7 @@ yaourt_install "acpi"
 yaourt_install "archdroid-icon-theme"
 yaourt_install "avr-gcc"
 yaourt_install "compton"
+yaourt_install "dasht"
 yaourt_install "dfu-programmer"
 yaourt_install "enpass-bin"
 yaourt_install "flatplat-theme"
@@ -133,6 +134,11 @@ if pip3 show neovim > /dev/null; then
   echo "skipping python3 neovim support: already installed"
 else
   sudo pip3 install neovim
+fi
+echo ""
+
+if test $(which dasht); then
+  dasht-docsets-install -f ruby_2 ruby_on_rails_4 bootstrap_3 coffeescript css javascript jquery postgresql sass
 fi
 echo ""
 
