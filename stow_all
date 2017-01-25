@@ -18,6 +18,7 @@ stow -vv rspec
 stow -vv termite
 stow -vv tmux
 stow -vv vim
+stow -vv w3m
 stow -vv xmodmap
 stow -vv yaourt
 stow -vv zsh
