@@ -25,6 +25,8 @@ bash setup
 
 # postgres
 
+Modify the postgresql config file and set local connections to trust.
+
 Assuming `/dev/sda4` is a blank ext4 partition, these steps will let you store your postgres data there (encrypted):
 
 ```
