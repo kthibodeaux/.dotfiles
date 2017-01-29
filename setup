@@ -21,16 +21,26 @@ font_install() {
   fi
 }
 
+if [ -f /etc/apt/sources.list.d/enpass.list ]; then
+  echo "skipping creating enpass apt list: already exists"
+else
+  echo 'deb http://repo.sinew.in/ stable main' | sudo tee -a /etc/apt/sources.list.d/enpass.list
+fi
+
+sudo apt-get update
+
 apt_install "compton"
 apt_install "curl"
 apt_install "dfu-programmer"
 apt_install "ecryptfs-utils"
+apt_install "enpass"
 apt_install "feh"
 apt_install "gitflow"
 apt_install "glances"
 apt_install "htop"
 apt_install "i3blocks"
 apt_install "i3lock"
+apt_install "libpq-dev"
 apt_install "neovim"
 apt_install "pgcli"
 apt_install "postgresql-9.5"
