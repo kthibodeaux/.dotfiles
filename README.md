@@ -23,6 +23,11 @@ sh stow_all
 bash setup
 ```
 
+# theme
+
+Install gtk theme: https://github.com/nana-4/Flat-Plat#installation
+Icons: `git clone https://github.com/GreenRaccoon23/archdroid-icon-theme.git ~/opt/archdroid && cd ~/opt/archdroid && chmod +x INSTALL && ./INSTALL`
+
 # postgres
 
 Modify the postgresql config file and set local connections to trust.
