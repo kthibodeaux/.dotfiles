@@ -5,19 +5,11 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 RUBY_VERSION="2.2.2"
 
-pacman_install() {
-  if pacman -Qe $1 > /dev/null; then
+apt_install() {
+  if dpkg -s $1 > /dev/null; then
     echo "skipping $1: already installed"
   else
-    sudo pacman -S --noconfirm $1
-  fi
-}
-
-yaourt_install() {
-  if yaourt -SQ $1 > /dev/null; then
-    echo "skipping $1: already installed"
-  else
-    yaourt -S --noconfirm $1
+    sudo apt-get -y install $1
   fi
 }
 
@@ -29,56 +21,31 @@ font_install() {
   fi
 }
 
-pacman_install "blueman"
-pacman_install "feh"
-pacman_install "htop"
-pacman_install "i3lock"
-pacman_install "lm_sensors"
-pacman_install "neovim"
-pacman_install "pavucontrol"
-pacman_install "pgadmin3"
-if which python > /dev/null; then
-    echo "skipping python: already installed"
-  else
-    pacman_install "python"
-fi
-pacman_install "redis"
-pacman_install "redshift"
-pacman_install "ruby"
-pacman_install "scrot"
-pacman_install "termite"
-pacman_install "the_silver_searcher"
-pacman_install "tmux"
-pacman_install "tree"
-pacman_install "zsh"
-echo ""
-
-yaourt_install "acpi"
-yaourt_install "archdroid-icon-theme"
-yaourt_install "avr-gcc"
-yaourt_install "compton"
-yaourt_install "dasht"
-yaourt_install "dfu-programmer"
-yaourt_install "enpass-bin"
-yaourt_install "flatplat-theme"
-yaourt_install "gitflow-git"
-yaourt_install "glances"
-yaourt_install "google-talkplugin"
-yaourt_install "i3-gaps"
-yaourt_install "i3blocks"
-yaourt_install "light"
-yaourt_install "pgcli-git"
-yaourt_install "postgresql-9.5"
-yaourt_install "ranger"
-yaourt_install "rofi"
-yaourt_install "skype"
-yaourt_install "slack-desktop"
-yaourt_install "teensy-loader-cli"
-yaourt_install "thunderbird"
-yaourt_install "ttf-meslo"
-yaourt_install "universal-ctags-git"
-yaourt_install "yakyak-git"
-yaourt_install "whatsapp-web-desktop"
+apt_install "compton"
+apt_install "curl"
+apt_install "dfu-programmer"
+apt_install "feh"
+apt_install "gitflow"
+apt_install "glances"
+apt_install "htop"
+apt_install "i3blocks"
+apt_install "i3lock"
+apt_install "neovim"
+apt_install "pgcli"
+apt_install "postgresql-9.5"
+apt_install "python3"
+apt_install "python3-pip"
+apt_install "ranger"
+apt_install "redis-server"
+apt_install "redshift"
+apt_install "rofi"
+apt_install "ruby"
+apt_install "scrot"
+apt_install "silversearcher-ag"
+apt_install "thunderbird"
+apt_install "tmux"
+apt_install "tree"
+apt_install "zsh"
 echo ""
 
 if [ $(getent passwd $LOGNAME | cut -d: -f7) == "/usr/bin/zsh" ]; then
@@ -118,15 +85,6 @@ if [ -d ~/.fzf ]; then
 else
   git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
   ~/.fzf/install --key-bindings --completion --no-update-rc
-fi
-echo ""
-
-if test $(which pip3); then
-  echo "skipping pip3: already installed"
-else
-  wget https://bootstrap.pypa.io/get-pip.py
-  sudo python get-pip.py
-  rm get-pip.py
 fi
 echo ""
 
