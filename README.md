@@ -47,3 +47,14 @@ sudo -u postgres initdb --locale en_US.UTF-8 -D '/var/lib/postgresql/9.5/main'
 ```
 
 Performance can be significantly improved by modifying `/var/lib/postgres/data/postgresql.conf` and turning `fsync` and `synchronous_commit` both off.
+
+todo:
+be able to compile qmk
+theme install should be automatic
+skype, slack, whatsapp
+universal ctags
+i3gaps
+googletalk plugin
+gitflow?
+dasht
+
