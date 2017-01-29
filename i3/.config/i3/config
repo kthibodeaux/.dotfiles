@@ -22,7 +22,7 @@ exec --no-startup-id enpass
 bindsym $mod+d exec rofi -show drun
 
 # terminal
-bindsym $mod+Return exec stterm -f "Menlo:size=14"
+bindsym $mod+Return exec stterm -f "Menlo:size=16"
 
 # take a screenshot of selected region
 bindsym --release $mod+z exec scrot -s
