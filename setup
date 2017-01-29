@@ -24,6 +24,7 @@ font_install() {
 apt_install "compton"
 apt_install "curl"
 apt_install "dfu-programmer"
+apt_install "ecryptfs-utils"
 apt_install "feh"
 apt_install "gitflow"
 apt_install "glances"
