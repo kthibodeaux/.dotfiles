@@ -93,7 +93,7 @@ bindsym $mod+r mode "resize"
 bindsym $mod+a focus parent
 bindsym $mod+c focus child
 
-bindsym $mod+Control+t [class=Termite] focus
+bindsym $mod+Control+t [class=stterm] focus
 bindsym $mod+Control+n [class=Firefox] focus
 
 # change focus
