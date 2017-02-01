@@ -1,6 +1,6 @@
 # dotfiles
 
-Made to work for Xubuntu with i3-gaps
+Made to work for Xubuntu with i3
 
 Uses [GNU Stow](https://www.gnu.org/software/stow/) for management.
 
@@ -51,9 +51,8 @@ Performance can be significantly improved by modifying `/var/lib/postgres/data/p
 todo:
 be able to compile qmk
 theme install should be automatic
-skype, slack, whatsapp
+skype, slack, whatsapp (nativier?)
 universal ctags
-i3gaps
 googletalk plugin
 gitflow?
 dasht
