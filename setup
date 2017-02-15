@@ -58,6 +58,7 @@ apt_install "stterm"
 apt_install "thunderbird"
 apt_install "tmux"
 apt_install "tree"
+apt_install "xclip"
 apt_install "zsh"
 echo ""
 
