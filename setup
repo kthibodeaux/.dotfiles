@@ -121,6 +121,7 @@ font_install "System San Francisco Display Ultralight.ttf" "https://github.com/s
 font_install "System San Francisco Display Regular.ttf" "https://github.com/supermarin/YosemiteSanFranciscoFont/raw/master/System%20San%20Francisco%20Display%20Regular.ttf"
 font_install "System San Francisco Display Thin.ttf" "https://github.com/supermarin/YosemiteSanFranciscoFont/raw/master/System%20San%20Francisco%20Display%20Thin.ttf"
 font_install "Menlo Regular.ttf" "https://github.com/hbin/top-programming-fonts/raw/master/Menlo-Regular.ttf"
+sudo fc-cache -f
 echo ""
 
 echo ""
