@@ -1,0 +1,24 @@
+.list-card-labels > span.card-label {
+  height: 22px;
+  padding: 5px 5px 0px 5px;
+  line-height: 14px;
+  width: auto;
+}
+
+.list-card-labels > span.card-label-purple {
+  width: 10px;
+  font-size: 0px;
+}
+
+.list-card-labels > span.card-label-purple:first-letter {
+  font-size: 14px;
+}
+
+.list-card-labels > span.card-label-black {
+  width: 10px !important;
+  font-size: 0px;
+}
+
+.list-wrapper {
+  width: auto !important;
+}
