@@ -15,10 +15,8 @@ stow -vv redshift
 stow -vv reek
 stow -vv rofi
 stow -vv rspec
-stow -vv termite
 stow -vv tmux
 stow -vv vim
 stow -vv w3m
-stow -vv xmodmap
-stow -vv yaourt
+stow -vv x
 stow -vv zsh

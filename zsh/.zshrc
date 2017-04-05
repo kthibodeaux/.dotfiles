@@ -52,3 +52,5 @@ prompt filthy
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 opentmux
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

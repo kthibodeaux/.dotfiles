@@ -1,12 +1,6 @@
 # vim:foldmethod=marker:foldlevel=0
-# Gaps
-for_window [class="^.*"] border pixel 3
-gaps inner 10
-gaps outer 5
-smart_gaps on
-smart_borders on
-
 set $mod Mod1
+for_window [class="^.*"] border pixel 1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -21,7 +15,6 @@ exec --no-startup-id redshift-gtk
 exec --no-startup-id blueman-applet
 exec --no-startup-id nm-applet
 exec --no-startup-id compton
-exec --no-startup-id enpass
 # }}}
 # {{{ keybinds
 # {{{ applications
@@ -29,7 +22,7 @@ exec --no-startup-id enpass
 bindsym $mod+d exec rofi -show drun
 
 # terminal
-bindsym $mod+Return exec termite
+bindsym $mod+Return exec stterm -f "Menlo:size=16"
 
 # take a screenshot of selected region
 bindsym --release $mod+z exec scrot -s
@@ -101,7 +94,7 @@ bindsym $mod+r mode "resize"
 bindsym $mod+a focus parent
 bindsym $mod+c focus child
 
-bindsym $mod+Control+t [class=Termite] focus
+bindsym $mod+Control+t [class=stterm] focus
 bindsym $mod+Control+n [class=Firefox] focus
 
 # change focus
