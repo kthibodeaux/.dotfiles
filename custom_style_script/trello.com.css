@@ -14,6 +14,15 @@
   font-size: 14px;
 }
 
+.list-card-labels > span.card-label-orange {
+  width: 10px;
+  font-size: 0px;
+}
+
+.list-card-labels > span.card-label-orange:first-letter {
+  font-size: 14px;
+}
+
 .list-card-labels > span.card-label-black {
   width: 10px !important;
   font-size: 0px;
