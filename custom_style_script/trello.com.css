@@ -5,6 +5,10 @@
   width: auto;
 }
 
+.list-card-cover {
+  display: none;
+}
+
 .list-card-labels > span.card-label-purple {
   width: 10px;
   font-size: 0px;
