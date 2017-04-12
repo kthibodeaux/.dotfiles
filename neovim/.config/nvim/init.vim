@@ -162,6 +162,11 @@ nnoremap <leader>n <C-]>
 
 vnoremap K :m '>+1<CR>gv=gv " move visual block down
 vnoremap H :m '<-2<CR>gv=gv " move visual block up
+
+" nasty hack for neovim under stterm
+" see https://github.com/neovim/neovim/issues/3211
+map <F1> <del>
+map! <F1> <del>
 " RSpec {{{
 let g:rspec_command = 'call VimuxRunCommand("bundle exec rspec {spec}\n")'
 map <Leader>rr :call RunNearestSpec()<CR>
