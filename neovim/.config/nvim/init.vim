@@ -273,8 +273,8 @@ nnoremap <F5> :UndotreeToggle<cr>
 " }}}
 " FZF {{{
 set rtp+=~/.fzf
-nnoremap <leader>c :BCommits<cr> |" Commits for current file
-nnoremap <leader>/ :Files<cr> |" Project dir files
+nnoremap <leader>c :BCommits<cr>
+nnoremap <leader>/ :Files<cr>
 " }}}
 " Open Alternate {{{
 nnoremap <leader>. :vs<CR>:OpenAlternate<CR>
