@@ -15,4 +15,6 @@ export CLICOLOR=1
 export FZF_DEFAULT_COMMAND='ag -g "" --hidden --ignore .git'
 export FZF_COMPLETION_TRIGGER=',,'
 
+export WATER_TIME=1200
+
 [[ -f ~/.zshenv.local ]] && source ~/.zshenv.local ]]
