@@ -196,7 +196,7 @@ function! ToggleQuickFix()
   endif
 endfunction
 
-nmap <script> <silent> <Leader><Leader>l :call ToggleQuickFix()<CR>
+nmap <script> <silent> <Leader>l :call ToggleQuickFix()<CR>
 " }}}
 " Matchit {{{
 " Load matchit.vim, but only if the user hasn't installed a newer version.
