@@ -126,7 +126,7 @@ alias gp="git push"
 alias gb="git branch"
 alias gcp="git cherry-pick"
 alias gun="git reset HEAD"
-alias oops="git resed HEAD~1"
+alias oops="git reset HEAD~1"
 
 alias releases="git log | grep -v 'tag: ' | grep -i 'feature\|hotfix'"
 
