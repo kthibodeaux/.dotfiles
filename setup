@@ -29,6 +29,7 @@ fi
 
 sudo apt-get update
 
+apt_install "avrdude"
 apt_install "compton"
 apt_install "curl"
 apt_install "dfu-programmer"
