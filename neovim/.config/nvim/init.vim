@@ -247,6 +247,7 @@ Plug 'Konfekt/FastFold'
 Plug 'SirVer/ultisnips'
 Plug 'vim-scripts/rainbow-end'
 Plug 'sunaku/vim-dasht'
+Plug 'emilsoman/spec-outline.vim'
 call plug#end()
 " }}}
 " Theme {{{
