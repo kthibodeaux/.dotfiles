@@ -197,6 +197,7 @@ function! ToggleQuickFix()
 endfunction
 
 nmap <script> <silent> <Leader>l :call ToggleQuickFix()<CR>
+autocmd BufReadPost quickfix nnoremap <buffer> q :cclose<CR>
 " }}}
 " Matchit {{{
 " Load matchit.vim, but only if the user hasn't installed a newer version.
