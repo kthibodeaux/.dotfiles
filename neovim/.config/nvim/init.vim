@@ -168,7 +168,7 @@ vnoremap H :m '<-2<CR>gv=gv " move visual block up
 map <F1> <del>
 map! <F1> <del>
 " RSpec {{{
-let g:rspec_command = 'call VimuxRunCommand("SKIP_SIMPLECOV=true bin/rspec {spec}\n")'
+let g:rspec_command = 'call VimuxRunCommand("SKIP_SIMPLECOV=true bundle exec rspec {spec}\n")'
 map <Leader>rr :call RunNearestSpec()<CR>
 map <Leader>rf :call RunCurrentSpecFile()<CR>
 map <Leader>rl :call RunLastSpec()<CR>
