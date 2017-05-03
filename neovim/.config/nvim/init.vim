@@ -98,10 +98,10 @@ augroup END
 function BoilerBuilder()
   if filereadable("boiler") == 1
     if filereadable(@%) == 0
-      read !ruby boiler %
+      read !bundle exec ruby boiler %
       norm ggdd
     elseif line('$') == 1 && col('$') == 1
-      read !ruby boiler %
+      read !bundle exec ruby boiler %
       norm ggdd
     endif
   endif
