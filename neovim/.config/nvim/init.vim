@@ -5,7 +5,11 @@ let maplocalleader = ","
 " }}}
 " Basic config {{{
 filetype plugin indent on
-au FileType * setlocal ai sw=2 sts=2 et
+set autoindent
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
+set expandtab
 syntax on
 set autoindent
 set backspace=indent,eol,start
