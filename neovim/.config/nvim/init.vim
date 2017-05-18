@@ -258,7 +258,7 @@ call plug#end()
 " Theme {{{
 set background=dark
 let base16colorspace=256
-colorscheme base16-ocean
+colorscheme base16-mocha
 " }}}
 " Plugin config {{{
 " Lightline {{{
