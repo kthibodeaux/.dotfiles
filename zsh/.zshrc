@@ -16,7 +16,7 @@ for function in ~/.zsh/functions/*; do
 done
 
 # use colors
-source ~/.zsh/base16-ocean.dark.sh
+source ~/.zsh/base16-mocha.dark.sh
 
 # syntax highlighting
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
