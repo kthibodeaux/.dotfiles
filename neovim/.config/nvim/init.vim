@@ -259,6 +259,18 @@ set background=dark
 let base16colorspace=256
 colorscheme base16-mocha
 " }}}
+" Statusline {{{
+set statusline=
+set statusline+=\ %t
+set statusline+=\ %m
+set statusline+=%r
+set statusline+=%=
+set statusline+=\ %y
+set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
+set statusline+=\ %{&fileformat}
+set statusline+=\ %p%%
+set statusline+=\ %l:%c
+" }}}
 " Plugin config {{{
 " Tmux navigator {{{
 let g:tmux_navigator_no_mappings = 1
