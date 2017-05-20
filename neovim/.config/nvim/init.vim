@@ -238,7 +238,6 @@ Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'AndrewRadev/linediff.vim'
 Plug 'cyphactor/vim-open-alternate'
-Plug 'itchyny/lightline.vim'
 Plug 'FooSoft/vim-argwrap'
 Plug 'neomake/neomake'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -258,12 +257,21 @@ call plug#end()
 " Theme {{{
 set background=dark
 let base16colorspace=256
-colorscheme base16-ocean
+colorscheme base16-mocha
+" }}}
+" Statusline {{{
+set statusline=
+set statusline+=\ %t
+set statusline+=\ %m
+set statusline+=%r
+set statusline+=%=
+set statusline+=\ %y
+set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
+set statusline+=\ %{&fileformat}
+set statusline+=\ %p%%
+set statusline+=\ %l:%c
 " }}}
 " Plugin config {{{
-" Lightline {{{
-let g:lightline = {'colorscheme': 'Tomorrow_Night'}
-" }}}
 " Tmux navigator {{{
 let g:tmux_navigator_no_mappings = 1
 nnoremap <silent> <c-j> :TmuxNavigateLeft<cr>
