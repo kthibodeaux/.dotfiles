@@ -1,11 +1,4 @@
-au BufWritePre * :call <SID>DefSpaceToUnderscore()
 au BufWritePost * :call jobstart('rm TAGS; ctags')
-
-fun! <SID>DefSpaceToUnderscore()
-  norm md
-  %s/\s*\(def [0-9a-zA-Z _]*\)\@<= /_/e
-  norm `d
-endfun
 
 nnoremap <localleader>c :Econtroller<CR>
 nnoremap <localleader>m :Emodel<CR>
