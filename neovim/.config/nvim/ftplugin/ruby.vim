@@ -1,5 +1,3 @@
-au BufWritePost * :call jobstart('rm TAGS; ctags')
-
 nnoremap <localleader>c :Econtroller<CR>
 nnoremap <localleader>m :Emodel<CR>
 nnoremap <localleader>v :Eview<CR>

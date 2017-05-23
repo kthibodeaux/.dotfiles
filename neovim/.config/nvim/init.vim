@@ -33,7 +33,6 @@ set wildmenu " Show menu options for completion
 set mouse-=a
 set splitright
 let g:netrw_liststyle=3
-set tags+=TAGS,gems.tags
 set list
 " Searching {{{
 set hlsearch
@@ -49,6 +48,10 @@ au BufRead *_spec.rb setlocal foldlevel=2
 au BufRead *.slim setlocal foldmethod=indent
 au BufRead *.slim setlocal foldlevel=4
 " }}}
+" }}}
+" Tags {{{
+set tags+=TAGS,gems.tags
+au BufWritePost *.rb :call jobstart('ctags')
 " }}}
 " Window managment {{{
 set hidden " Allow unsaved buffers to be put in background
