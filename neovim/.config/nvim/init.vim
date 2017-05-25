@@ -255,6 +255,8 @@ Plug 'SirVer/ultisnips'
 Plug 'vim-scripts/rainbow-end'
 Plug 'sunaku/vim-dasht'
 Plug 'kthibodeaux/spec-outline.vim', { 'branch': 'show-specify-and-behaves-like-lines' }
+Plug 'kana/vim-textobj-user'
+Plug 'rhysd/vim-textobj-ruby'
 call plug#end()
 " }}}
 " Theme {{{
