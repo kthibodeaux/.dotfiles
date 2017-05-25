@@ -214,7 +214,6 @@ endif
 " }}}
 " Plugins {{{
 call plug#begin('~/.config/nvim/plugged')
-Plug 'tpope/vim-fugitive'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'Townk/vim-autoclose'
