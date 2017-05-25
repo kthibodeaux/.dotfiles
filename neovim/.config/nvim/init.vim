@@ -175,6 +175,7 @@ vnoremap H :m '<-2<CR>gv=gv " move visual block up
 map <F1> <del>
 map! <F1> <del>
 " Git {{{
+nnoremap <leader>b :silent !tmux split-window -h "tig blame %"<CR>
 nnoremap <leader>c :silent !tmux split-window -h "tig --follow %"<CR>
 " }}}
 " RSpec {{{
