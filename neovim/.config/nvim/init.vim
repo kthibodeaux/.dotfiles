@@ -174,6 +174,9 @@ vnoremap H :m '<-2<CR>gv=gv " move visual block up
 " see https://github.com/neovim/neovim/issues/3211
 map <F1> <del>
 map! <F1> <del>
+" Git {{{
+nnoremap <leader>c :silent !tmux split-window -h "tig --follow %"<CR>
+" }}}
 " RSpec {{{
 let g:rspec_command = 'call VimuxRunCommand("SKIP_SIMPLECOV=true bundle exec rspec {spec}\n")'
 map <Leader>rr :call RunNearestSpec()<CR>
@@ -296,7 +299,6 @@ nnoremap <F5> :UndotreeToggle<cr>
 " }}}
 " FZF {{{
 set rtp+=~/.fzf
-nnoremap <leader>c :BCommits<cr>
 nnoremap <leader>/ :Files<cr>
 " }}}
 " Open Alternate {{{
