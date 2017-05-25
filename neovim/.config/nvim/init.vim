@@ -300,7 +300,7 @@ nnoremap <F5> :UndotreeToggle<cr>
 " }}}
 " FZF {{{
 set rtp+=~/.fzf
-nnoremap <leader>/ :Files<cr>
+nnoremap <leader>e :Files<cr>
 " }}}
 " Open Alternate {{{
 nnoremap <leader>. :vs<CR>:OpenAlternate<CR>
