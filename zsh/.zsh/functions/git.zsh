@@ -114,6 +114,11 @@ cfu() {
   fi
 }
 
+changes() {
+  set_base_branch
+  tig $BASE_BRANCH.."$(git rev-parse --abbrev-ref HEAD)"
+}
+
 # Complete g like git
 compdef g=git
 
