@@ -1,8 +1,14 @@
 # vi: set ft=sh :
 
-alias la="ls --color -pa"
-alias ls="ls --color -p"
-alias ll="ls --color -plh"
+if [[ $(uname) == Darwin ]]; then
+  alias la="ls -pa"
+  alias ls="ls -p"
+  alias ll="ls -plh"
+else
+  alias la="ls --color -pa"
+  alias ls="ls --color -p"
+  alias ll="ls --color -plh"
+fi
 
 alias :q="exit"
 alias tree="tree -C"
