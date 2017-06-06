@@ -115,8 +115,12 @@ cfu() {
 }
 
 changes() {
-  set_base_branch
-  tig $BASE_BRANCH.."$(git rev-parse --abbrev-ref HEAD)"
+  if [[ $# > 0 ]]; then
+    tig "$@".."$(git rev-parse --abbrev-ref HEAD)"
+  else
+    set_base_branch
+    tig $BASE_BRANCH.."$(git rev-parse --abbrev-ref HEAD)"
+  fi
 }
 
 # Complete g like git
