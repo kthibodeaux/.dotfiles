@@ -13,6 +13,15 @@ apt_install() {
   fi
 }
 
+pip3_install() {
+  if pip3 show $1 > /dev/null; then
+    echo "skipping pip3 $1: already installed"
+  else
+    sudo pip3 install $1
+  fi
+  echo ""
+}
+
 font_install() {
   if [ -f "$HOME/.fonts/$1" ]; then
     echo "skipping $1: already installed"
@@ -67,6 +76,8 @@ apt_install "xclip"
 apt_install "zsh"
 echo ""
 
+pip3_install "neovim"
+
 if [ $(getent passwd $LOGNAME | cut -d: -f7) == "/usr/bin/zsh" ]; then
   echo "skipping change shell: shell is already zsh"
 else
@@ -104,13 +115,6 @@ if [ -d ~/.fzf ]; then
 else
   git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
   ~/.fzf/install --key-bindings --completion --no-update-rc
-fi
-echo ""
-
-if pip3 show neovim > /dev/null; then
-  echo "skipping python3 neovim support: already installed"
-else
-  sudo pip3 install neovim
 fi
 echo ""
 
