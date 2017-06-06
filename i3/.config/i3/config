@@ -122,22 +122,22 @@ bindsym $mod+space focus mode_toggle
 # }}}
 # }}}
 # {{{ colors
-set $base00 #2b303b
-set $base01 #343d46
-set $base02 #4f5b66
-set $base03 #65737e
-set $base04 #a7adba
-set $base05 #c0c5ce
-set $base06 #dfe1e8
-set $base07 #eff1f5
-set $base08 #bf616a
-set $base09 #d08770
-set $base0a #ebcb8b
-set $base0b #a3be8c
-set $base0c #96b5b4
-set $base0d #8fa1b3
-set $base0e #b48ead
-set $base0f #ab7967
+set $base00 #3B3228
+set $base01 #534636
+set $base02 #645240
+set $base03 #7e705a
+set $base04 #b8afad
+set $base05 #d0c8c6
+set $base06 #e9e1dd
+set $base07 #f5eeeb
+set $base08 #cb6077
+set $base09 #d28b71
+set $base0A #f4bc87
+set $base0B #beb55b
+set $base0C #7bbda4
+set $base0D #8ab3b5
+set $base0E #a89bb9
+set $base0F #bb9584
 
 #                       border      background  text        indicator
 client.focused          $base0d     $base0d     $base00     $base01
