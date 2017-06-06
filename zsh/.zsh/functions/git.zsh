@@ -82,8 +82,12 @@ set_base_branch() {
 }
 
 ir() {
-  set_base_branch
-  git rebase -i $BASE_BRANCH
+  if [[ $# > 0 ]]; then
+    git rebase -i $@
+  else
+    set_base_branch
+    git rebase -i $BASE_BRANCH
+  fi
 }
 
 br() {
