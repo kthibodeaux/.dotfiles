@@ -3,38 +3,12 @@
 # Keep-alive: update existing `sudo` time stamp until `setup` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-RUBY_VERSION="2.2.2"
+. setup_support/apt.sh
+. setup_support/pip3.sh
+. setup_support/font.sh
+. setup_support/ruby.sh
 
-apt_install() {
-  if dpkg -s $1 > /dev/null; then
-    echo "skipping $1: already installed"
-  else
-    sudo apt-get -y install $1
-  fi
-}
-
-pip3_install() {
-  if pip3 show $1 > /dev/null; then
-    echo "skipping pip3 $1: already installed"
-  else
-    sudo pip3 install $1
-  fi
-  echo ""
-}
-
-font_install() {
-  if [ -f "$HOME/.fonts/$1" ]; then
-    echo "skipping $1: already installed"
-  else
-    wget -O "$HOME/.fonts/$1" "$2"
-  fi
-}
-
-if [ -f /etc/apt/sources.list.d/enpass.list ]; then
-  echo "skipping creating enpass apt list: already exists"
-else
-  echo 'deb http://repo.sinew.in/ stable main' | sudo tee -a /etc/apt/sources.list.d/enpass.list
-fi
+add_apt_source "/etc/apt/sources.list.d/enpass.list" "deb http://repo.sinew.in/ stable main"
 
 sudo apt-get update
 
@@ -78,37 +52,9 @@ echo ""
 
 pip3_install "neovim"
 
-if [ $(getent passwd $LOGNAME | cut -d: -f7) == "/usr/bin/zsh" ]; then
-  echo "skipping change shell: shell is already zsh"
-else
-  echo "setting shell to /usr/bin/zsh"
-  chsh -s /usr/bin/zsh
-fi
-echo ""
 
-if [ -d ~/.rvm ]; then
-  echo "skipping rvm: already installed"
-else
-  gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-  curl -sSL https://get.rvm.io | bash -s stable
-fi
-echo ""
-
-echo "sourcing rvm script"
-source "$HOME/.rvm/scripts/rvm"
-
-if rvm use $RUBY_VERSION > /dev/null; then
-  echo "skipping install ruby $RUBY_VERSION: already installed"
-else
-  rvm install $RUBY_VERSION
-  rvm --default use $RUBY_VERSION
-  rvm use $RUBY_VERSION
-  gem install bundler
-  gem install neovim
-  gem install reek
-  gem install rubocop
-fi
-echo ""
+install_ruby "2.2.2"
+set_default_ruby "2.2.2"
 
 if [ -d ~/.fzf ]; then
   echo "skipping fzf: already installed"
