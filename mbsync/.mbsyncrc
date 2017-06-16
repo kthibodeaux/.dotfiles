@@ -1,0 +1,71 @@
+# Global defaults
+Create Both
+Expunge Both
+SyncState *
+
+IMAPAccount Home
+Host imap.gmail.com
+User kthib892@gmail.com
+PassCmd "cat ~/.gpass | openssl rsautl -decrypt -inkey ~/.ssh/id_rsa"
+UseIMAPS yes
+
+IMAPStore Home-remote
+Account Home
+
+MaildirStore Home-local
+Path ~/.mail/Home/
+Inbox ~/.mail/Home/Home
+
+Channel Home-Home
+Master :Home-remote:INBOX
+Slave :Home-local:Home
+
+Channel Home-Drafts
+Master :Home-remote:"[Gmail]/Drafts"
+Slave :Home-local:Home.Drafts
+
+Channel Home-Sent
+Master :Home-remote:"[Gmail]/Sent Mail"
+Slave :Home-local:Home.Sent
+
+Channel Home-Starred
+Master :Home-remote:"[Gmail]/Starred"
+Slave :Home-local:Home.Starred
+
+Channel Home-Spam
+Master :Home-remote:"[Gmail]/Spam"
+Slave :Home-local:Home.Spam
+
+Channel Home-Trash
+Master :Home-remote:"[Gmail]/Trash"
+Slave :Home-local:Home.Trash
+
+Channel Home-All
+Master :Home-remote:"[Gmail]/All Mail"
+Slave :Home-local:Home.Archive
+
+# Catch-all for everything else: note that the `Patterns` have to exclude both
+# the remote and local names for all the folders we want to exclude (except
+# "INBOX", which is special-cased, it would seem).
+Channel Home-Default
+Master :Home-remote:
+Slave :Home-local:Home.
+Patterns *
+Patterns !INBOX
+Patterns ![Gmail]*
+Patterns !Archive
+Patterns !Drafts
+Patterns !Sent
+Patterns !Spam
+Patterns !Starred
+Patterns !Trash
+
+Group home
+Channel Home-Home
+Channel Home-Drafts
+Channel Home-Sent
+Channel Home-Starred
+Channel Home-Spam
+Channel Home-Trash
+Channel Home-All
+Channel Home-Default
