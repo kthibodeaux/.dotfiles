@@ -7,6 +7,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 . setup_support/pip3.sh
 . setup_support/font.sh
 . setup_support/ruby.sh
+. setup_support/shell.sh
 
 add_apt_source "/etc/apt/sources.list.d/enpass.list" "deb http://repo.sinew.in/ stable main"
 
@@ -53,6 +54,8 @@ echo ""
 pip3_install "neovim"
 
 
+install_rvm
+source_rvm
 install_ruby "2.2.2"
 set_default_ruby "2.2.2"
 
