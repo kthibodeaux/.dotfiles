@@ -16,6 +16,7 @@ sudo apt-get update
 
 apt_install "avrdude"
 apt_install "avr-libc"
+apt_install "ca-certificates"
 apt_install "compton"
 apt_install "curl"
 apt_install "dfu-programmer"
@@ -28,6 +29,7 @@ apt_install "glances"
 apt_install "htop"
 apt_install "i3blocks"
 apt_install "i3lock"
+apt_install "isync"
 apt_install "libappindicator1"
 apt_install "libpq-dev"
 apt_install "mpv"
@@ -61,7 +63,6 @@ echo ""
 pip2_install "websocket-client"
 pip3_install "neovim"
 
-
 install_rvm
 source_rvm
 install_ruby "2.2.2"
@@ -79,6 +80,8 @@ if test $(which dasht); then
   dasht-docsets-install -f ruby_2 ruby_on_rails_4 bootstrap_3 coffeescript css javascript jquery postgresql sass
 fi
 echo ""
+
+mkdir -p ~/mail/gmail/Inbox
 
 mkdir ~/.fonts
 font_install "fontawesome-webfont.ttf" "https://github.com/FortAwesome/Font-Awesome/raw/master/fonts/fontawesome-webfont.ttf"
