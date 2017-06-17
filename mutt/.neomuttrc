@@ -1,0 +1,55 @@
+#======================================================#
+# Boring details
+set realname = "Keith Thibodeaux"
+set from = kthib89@gmail.com
+set use_from = yes
+set envelope_from ="yes"
+set sendmail="/usr/bin/msmtp"
+
+#======================================================#
+# Folders
+set folder="~/.mail"
+set mbox = "+Home/Home.Archive"
+set postponed = "+Home/Home.Drafts"
+set spoolfile = "+Home/Home"
+set trash = "+Home/Home.Trash"
+unset record
+
+#======================================================#
+# Watch these mailboxes for new mail:
+mailboxes "+Home/Home" "+Home/Home.Archive" "+Home/Home.Drafts" "+Home/Home.Sent" "+Home/Home.Spam" "+Home/Home.Starred" "+Home/Home.Trash"
+set sort_browser=date
+
+#======================================================#
+# Order of headers and what to show
+hdr_order Date: From: User-Agent: X-Mailer \
+          To: Cc: Reply-To: Subject:
+ignore *
+unignore Date: From: User-Agent: X-Mailer  \
+         To: Cc: Reply-To: Subject:
+
+#======================================================#
+set editor="nvim -c 'set tw=70 et' '+/^$' "
+set edit_headers          # See the headers when editing
+
+#======================================================#
+# Aliases
+
+set sort_alias=alias     # sort aliases in alpha order by alias name
+
+#======================================================#
+# Odds and ends
+set markers          # mark wrapped lines of text in the pager with a +
+set smart_wrap       # Don't wrap mid-word
+set pager_context=5  # Retain 5 lines of previous page when scrolling.
+set status_on_top    # Status bar on top.
+
+set sidebar_visible
+set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
+set mail_check_stats
+
+set new_mail_command="notify-send 'New Email in %f' '%n new messages, %u unread.' &"
+
+bind index n mail
+macro pager m "<save-message>?<toggle-mailboxes>" "move to..."
+macro index m "<tag-prefix><save-message>?<toggle-mailboxes>" "move to..."
