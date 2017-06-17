@@ -10,6 +10,9 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 . setup_support/ruby.sh
 . setup_support/shell.sh
 
+mkdir -p ~/.mail/Home
+mkdir ~/.fonts
+
 add_apt_source "/etc/apt/sources.list.d/enpass.list" "deb http://repo.sinew.in/ stable main"
 
 sudo apt-get update
@@ -33,6 +36,7 @@ apt_install "isync"
 apt_install "libappindicator1"
 apt_install "libpq-dev"
 apt_install "mpv"
+apt_install "mutt"
 apt_install "neovim"
 apt_install "pandoc"
 apt_install "pgcli"
@@ -81,9 +85,6 @@ if test $(which dasht); then
 fi
 echo ""
 
-mkdir -p ~/mail/gmail/Inbox
-
-mkdir ~/.fonts
 font_install "fontawesome-webfont.ttf" "https://github.com/FortAwesome/Font-Awesome/raw/master/fonts/fontawesome-webfont.ttf"
 font_install "System San Francisco Display Bold.ttf" "https://github.com/supermarin/YosemiteSanFranciscoFont/raw/master/System%20San%20Francisco%20Display%20Bold.ttf"
 font_install "System San Francisco Display Ultralight.ttf" "https://github.com/supermarin/YosemiteSanFranciscoFont/raw/master/System%20San%20Francisco%20Display%20Ultralight.ttf"
