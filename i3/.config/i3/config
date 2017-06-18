@@ -31,6 +31,10 @@ bindsym --release $mod+z exec scrot -s
 # kill focused window
 bindsym $mod+q kill
 # }}}
+# touchpad {{{
+bindsym $mod+Control+q exec "xinput list | grep bcm5974 | awk '{print $4}' | sed 's/id=//' | xinput set-prop `cat` 'Device Enabled' 0; notify-send 'touchpad disabled'"
+bindsym $mod+Control+w exec "xinput list | grep bcm5974 | awk '{print $4}' | sed 's/id=//' | xinput set-prop `cat` 'Device Enabled' 1; notify-send 'touchpad enabled'"
+# }}}
 # {{{ keyboard layout
 bindsym $mod+Control+Shift+q exec "setxkbmap us && xmodmap ~/.Xmodmap"
 bindsym $mod+Control+Shift+c exec "setxkbmap us -variant colemak && xmodmap ~/.Xmodmap"
