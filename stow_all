@@ -10,6 +10,7 @@ stow -vv i3
 stow -vv less
 stow -vv mailcap
 stow -vv mbsync
+stow -vv msmtp
 stow -vv mutt
 stow -vv neovim
 stow -vv ranger
