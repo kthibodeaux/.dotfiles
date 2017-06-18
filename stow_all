@@ -8,6 +8,7 @@ stow -vv gtk2
 stow -vv gtk3
 stow -vv i3
 stow -vv less
+stow -vv mailcap
 stow -vv neovim
 stow -vv ranger
 stow -vv readline
