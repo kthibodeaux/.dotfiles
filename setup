@@ -4,6 +4,7 @@
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 . setup_support/apt.sh
+. setup_support/pip2.sh
 . setup_support/pip3.sh
 . setup_support/font.sh
 . setup_support/ruby.sh
@@ -34,6 +35,7 @@ apt_install "neovim"
 apt_install "pandoc"
 apt_install "pgcli"
 apt_install "postgresql-9.5"
+apt_install "python-pip"
 apt_install "python3"
 apt_install "python3-pip"
 apt_install "ranger"
@@ -56,6 +58,7 @@ apt_install "xclip"
 apt_install "zsh"
 echo ""
 
+pip2_install "websocket-client"
 pip3_install "neovim"
 
 
