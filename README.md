@@ -12,7 +12,7 @@ Manually install any proprietary drivers.
 
 Before running the below commands make sure you can clone from GitHub by adding your SSH key to your profile.
 
-```
+```bash
 sudo add-apt-repository ppa:neovim-ppa/unstable
 sudo apt-get update
 sudo apt-get upgrade
@@ -29,7 +29,11 @@ If using a hidpi screen then run `touch ~/.stterm-large-font` to use a bigger fo
 # theme
 
 Install gtk theme: https://github.com/nana-4/Flat-Plat#installation
-Icons: `git clone https://github.com/GreenRaccoon23/archdroid-icon-theme.git ~/opt/archdroid && cd ~/opt/archdroid && chmod +x INSTALL && ./INSTALL`
+
+Icons:
+```bash
+git clone https://github.com/GreenRaccoon23/archdroid-icon-theme.git ~/opt/archdroid && cd ~/opt/archdroid && chmod +x INSTALL && ./INSTALL
+````
 
 # postgres
 
@@ -37,7 +41,7 @@ Modify the postgresql config file and set local connections to trust.
 
 Assuming `/dev/sda4` is a blank ext4 partition, these steps will let you store your postgres data there (encrypted):
 
-```
+```bash
 sudo cryptsetup luksFormat /dev/sda4
 sudo cryptsetup open /dev/sda4 pgdata
 sudo mkfs.ext4 /dev/mapper/pgdata
