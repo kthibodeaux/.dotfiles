@@ -24,4 +24,5 @@ ranger/.config/ranger/tagged
 
 weechat/.weechat/*.log
 weechat/.weechat/logs
+weechat/.weechat/sec.conf
 weechat/.weechat/xfer
