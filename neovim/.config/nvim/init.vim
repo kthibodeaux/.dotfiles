@@ -228,7 +228,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'AndrewRadev/linediff.vim'
 Plug 'cyphactor/vim-open-alternate'
 Plug 'FooSoft/vim-argwrap'
-Plug 'neomake/neomake'
+Plug 'w0rp/ale'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'mbbill/undotree'
 Plug 'jelera/vim-javascript-syntax'
@@ -292,9 +292,6 @@ nnoremap <leader>. :vs<CR>:OpenAlternate<CR>
 " Argwrap {{{
 let g:argwrap_padded_braces = '[{'
 nnoremap <silent> <leader>a :ArgWrap<CR>
-" }}}
-" Neomake {{{
-autocmd! BufWritePost,BufRead * Neomake
 " }}}
 " vim-ruby {{{
 " https://github.com/vim-ruby/vim-ruby/blob/master/doc/vim-ruby.txt#L133
