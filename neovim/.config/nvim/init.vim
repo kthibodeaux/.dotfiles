@@ -147,7 +147,7 @@ noremap k j
 nnoremap <CR> :noh<CR><CR> " cancel search by pressing return
 nnoremap <leader><tab> mtgg=G`t " indent file
 nnoremap S i<cr><esc>^mwgk:silent! s/\v +$//<cr>:noh<cr>$ " split line
-nnoremap <s-tab> za " toggle fold
+nnoremap <tab> za " toggle fold
 nnoremap <leader>n <C-]>
 
 vnoremap K :m '>+1<CR>gv=gv " move visual block down
