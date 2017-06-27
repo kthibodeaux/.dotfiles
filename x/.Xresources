@@ -1,0 +1,6 @@
+#include ".Xresources.local"
+
+URxvt*termName  : xterm-256color
+URxvt*font      : xft:Menlo:size=12
+URxvt*scrollBar : false
+URxvt*borderColor : #3b3228

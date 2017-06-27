@@ -23,7 +23,7 @@ bindsym $mod+d exec rofi -show drun
 
 # terminal
 set $termsize $([ -f ~/.stterm-large-font ] && echo "32" || echo "16")
-bindsym $mod+Return exec stterm -f "Menlo:size=$termsize"
+bindsym $mod+Return exec urxvt
 
 # take a screenshot of selected region
 bindsym --release $mod+z exec scrot -s
