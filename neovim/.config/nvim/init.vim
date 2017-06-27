@@ -149,6 +149,7 @@ nnoremap <leader><tab> mtgg=G`t " indent file
 nnoremap S i<cr><esc>^mwgk:silent! s/\v +$//<cr>:noh<cr>$ " split line
 nnoremap <tab> za " toggle fold
 nnoremap <leader>n <C-]>
+nnoremap <leader><CR> :tabn<CR>
 
 vnoremap K :m '>+1<CR>gv=gv " move visual block down
 vnoremap H :m '<-2<CR>gv=gv " move visual block up
