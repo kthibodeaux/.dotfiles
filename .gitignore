@@ -22,6 +22,9 @@ ranger/.config/ranger/bookmarks
 ranger/.config/ranger/history
 ranger/.config/ranger/tagged
 
+w3m/.w3m/cookie
+w3m/.w3m/history
+
 weechat/.weechat/*.log
 weechat/.weechat/logs
 weechat/.weechat/sec.conf
