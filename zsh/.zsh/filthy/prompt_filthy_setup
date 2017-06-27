@@ -114,7 +114,7 @@ prompt_filthy_precmd() {
 
     # Print the current_path relative to the git root
     current_path=$(git rev-parse --show-prefix)
-    prompt_filthy_preprompt+=" %F{blue}${${current_path%/}:-"/"}%f $(drink_water)"
+    prompt_filthy_preprompt+=" %F{blue}${${current_path%/}:-"/"}%f"
   else
     # We're not in a repository, so just print the current path
     prompt_filthy_preprompt+="%F{blue}%~%f"
