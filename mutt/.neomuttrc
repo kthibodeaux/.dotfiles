@@ -5,19 +5,33 @@ set from = kthib892@gmail.com
 set use_from = yes
 set envelope_from ="yes"
 set sendmail="/usr/bin/msmtp"
+set copy = yes
 
 #======================================================#
 # Folders
 set folder="~/.mail"
 set mbox = "+Home/Home.Archive"
 set postponed = "+Home/Home.Drafts"
+set record = '+Home/Home.Sent'
 set spoolfile = "+Home/Home"
 set trash = "+Home/Home.Trash"
-unset record
 
+folder-hook +Home/ set from = 'kthib892@gmail.com'
+folder-hook +Home/ set mbox = '+Home/Home.Archive'
+folder-hook +Home/ set postponed ='+Home/Home.Drafts'
+folder-hook +Work/ set record = '+Home/Home.Sent'
+folder-hook +Home/ set spoolfile = '+Home/Home'
+folder-hook +Home/ set trash = '+Home/Home.Trash'
+
+folder-hook +Work/ set from = 'kthibodeaux@baldwinaviation.com'
+folder-hook +Work/ set mbox = '+Work/Work.Archive'
+folder-hook +Work/ set postponed ='+Work/Work.Drafts'
+folder-hook +Work/ set record = '+Work/Work.Sent'
+folder-hook +Work/ set spoolfile = '+Work/Work'
+folder-hook +Work/ set trash = '+Work/Work.Trash'
 #======================================================#
 # Watch these mailboxes for new mail:
-mailboxes "+Home/Home" "+Home/Home.Archive" "+Home/Home.Drafts" "+Home/Home.Sent" "+Home/Home.Spam" "+Home/Home.Starred" "+Home/Home.Trash" "+Work/Work" "+Work/Work.Sent" "+Work/Work.Archive" "+Work/Work.Bulk Mail" "+Work/Work.Trash"
+mailboxes "+Home/Home" "+Home/Home.Archive" "+Home/Home.Drafts" "+Home/Home.Sent" "+Home/Home.Spam" "+Home/Home.Starred" "+Home/Home.Trash" "+Work/Work" "+Work/Work.Sent" "+Work/Work.Archive" "+Work/Work.Drafts" "+Work/Work.Bulk Mail" "+Work/Work.Trash"
 set sort_browser=date
 
 #======================================================#
@@ -57,6 +71,3 @@ send2-hook '~e kthibodeaux@baldwinaviation.com' "set sendmail = '/usr/bin/msmtp 
 
 macro pager m "<save-message>?<toggle-mailboxes>" "move to..."
 macro index m "<tag-prefix><save-message>?<toggle-mailboxes>" "move to..."
-
-macro compose H "<esc>f^UKeith Thibodeaux <kthib892@gmail.com><enter>"
-macro compose W "<esc>f^UKeith Thibodeaux <kthibodeaux@baldwinaviation.com><enter>"
