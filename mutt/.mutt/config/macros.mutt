@@ -1,0 +1,4 @@
+# vi: set ft=conf :
+
+macro pager m "<save-message>?<toggle-mailboxes>" "move to..."
+macro index m "<tag-prefix><save-message>?<toggle-mailboxes>" "move to..."
