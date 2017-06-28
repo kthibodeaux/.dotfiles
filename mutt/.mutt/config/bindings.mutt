@@ -1,0 +1,3 @@
+# vi: set ft=conf :
+
+bind index n mail
