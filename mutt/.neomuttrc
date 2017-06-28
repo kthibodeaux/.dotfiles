@@ -32,7 +32,8 @@ folder-hook +Work/ set trash = '+Work/Work.Trash'
 #======================================================#
 # Watch these mailboxes for new mail:
 mailboxes "+Home/Home" "+Home/Home.Archive" "+Home/Home.Drafts" "+Home/Home.Sent" "+Home/Home.Spam" "+Home/Home.Starred" "+Home/Home.Trash" "+Work/Work" "+Work/Work.Sent" "+Work/Work.Archive" "+Work/Work.Drafts" "+Work/Work.Bulk Mail" "+Work/Work.Trash"
-set sort_browser=date
+set sort = threads
+set sort_aux = reverse-last-date-received
 
 #======================================================#
 # Order of headers and what to show
