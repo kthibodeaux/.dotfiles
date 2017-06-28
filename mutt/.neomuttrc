@@ -1,7 +1,7 @@
 #======================================================#
 # Boring details
 set realname = "Keith Thibodeaux"
-set from = kthib89@gmail.com
+set from = kthib892@gmail.com
 set use_from = yes
 set envelope_from ="yes"
 set sendmail="/usr/bin/msmtp"
@@ -17,7 +17,7 @@ unset record
 
 #======================================================#
 # Watch these mailboxes for new mail:
-mailboxes "+Home/Home" "+Home/Home.Archive" "+Home/Home.Drafts" "+Home/Home.Sent" "+Home/Home.Spam" "+Home/Home.Starred" "+Home/Home.Trash"
+mailboxes "+Home/Home" "+Home/Home.Archive" "+Home/Home.Drafts" "+Home/Home.Sent" "+Home/Home.Spam" "+Home/Home.Starred" "+Home/Home.Trash" "+Work/Work" "+Work/Work.Sent" "+Work/Work.Archive" "+Work/Work.Bulk Mail" "+Work/Work.Trash"
 set sort_browser=date
 
 #======================================================#
@@ -51,5 +51,12 @@ set mail_check_stats
 set new_mail_command="notify-send 'New Email in %f' '%n new messages, %u unread.' &"
 
 bind index n mail
+
+send2-hook '~e kthib892@gmail.com' "set sendmail = '/usr/bin/msmtp -a home'"
+send2-hook '~e kthibodeaux@baldwinaviation.com' "set sendmail = '/usr/bin/msmtp -a work'"
+
 macro pager m "<save-message>?<toggle-mailboxes>" "move to..."
 macro index m "<tag-prefix><save-message>?<toggle-mailboxes>" "move to..."
+
+macro compose H "<esc>f^UKeith Thibodeaux <kthib892@gmail.com><enter>"
+macro compose W "<esc>f^UKeith Thibodeaux <kthibodeaux@baldwinaviation.com><enter>"

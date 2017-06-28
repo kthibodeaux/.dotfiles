@@ -69,3 +69,57 @@ Channel Home-Spam
 Channel Home-Trash
 Channel Home-All
 Channel Home-Default
+
+IMAPAccount Work
+Host imap.secureserver.net
+User kthibodeaux@baldwinaviation.com
+PassCmd "cat ~/.wpass | openssl rsautl -decrypt -inkey ~/.ssh/id_rsa"
+UseIMAPS yes
+
+IMAPStore Work-remote
+Account Work
+
+MaildirStore Work-local
+Path ~/.mail/Work/
+Inbox ~/.mail/Work/Work
+
+Channel Work-Work
+Master :Work-remote:INBOX
+Slave :Work-local:Work
+
+Channel Work-Sent
+Master :Work-remote:"Sent Items"
+Slave :Work-local:Work.Sent
+
+Channel Work-Spam
+Master :Work-remote:"Bulk Mail"
+Slave :Work-local:Work.Spam
+
+Channel Work-Drafts
+Master :Work-remote:Drafts
+Slave :Work-local:Work.Drafts
+
+Channel Work-Trash
+Master :Work-remote:Trash
+Slave :Work-local:Work.Trash
+
+# Catch-all for everything else: note that the `Patterns` have to exclude both
+# the remote and local names for all the folders we want to exclude (except
+# "INBOX", which is special-cased, it would seem).
+Channel Work-Default
+Master :Work-remote:
+Slave :Work-local:Work.
+Patterns *
+Patterns !INBOX
+Patterns !"Deleted Items"
+Patterns !"Bulk Mail"
+Patterns !"Sent Items"
+Patterns !Drafts
+Patterns !Trash
+
+group work
+Channel Work-Work
+Channel Work-Sent
+Channel Work-Spam
+Channel Work-Trash
+Channel Work-Default
