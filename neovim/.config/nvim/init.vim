@@ -49,6 +49,9 @@ au BufRead *.slim setlocal foldmethod=indent
 au BufRead *.slim setlocal foldlevel=4
 " }}}
 " }}}
+" Commands {{{
+command! -bang -nargs=* Find call fzf#vim#grep('ag --hidden -A 0 -B 0 --nogroup --color '.shellescape(<q-args>), 0, <bang>0)
+" }}}
 " Tags {{{
 set tags+=TAGS,gems.tags
 au BufWritePost *.rb :call jobstart('ctags')
@@ -209,7 +212,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'danro/rename.vim'
 Plug 'ecomba/vim-ruby-refactoring'
 Plug 'matchit.zip'
-Plug 'rking/ag.vim'
 Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-rails'
