@@ -12,7 +12,7 @@ set sort = threads
 set sort_aux = reverse-last-date-received
 set sort_alias=alias
 
-set editor="nvim -c 'set tw=70 et' '+/^$' "
+set editor = 'nvim +/^$ +nohlsearch' # Move past headers.
 set edit_headers
 
 set markers          # mark wrapped lines of text in the pager with a +
