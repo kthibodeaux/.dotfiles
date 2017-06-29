@@ -1,0 +1,10 @@
+application/pdf; xdg-open %s
+
+# Explicitly render in less with 'v' (view attachment)
+text/plain; less %s
+
+# Explicitly render in browser with 'v' (view attachment)
+text/html; xdg-open %s
+
+# Try to display implicitly using elinks
+text/html; w3m -I %{charset} -T text/html; copiousoutput;

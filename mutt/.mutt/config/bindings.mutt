@@ -1,3 +1,6 @@
 # vi: set ft=conf :
 
+bind attach <enter> view-mailcap
+bind attach <return> view-mailcap
+
 bind index n mail

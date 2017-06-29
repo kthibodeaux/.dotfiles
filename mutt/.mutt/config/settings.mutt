@@ -26,6 +26,11 @@ set mail_check_stats
 
 set new_mail_command="notify-send 'New Email in %f' '%n new messages, %u unread.' &"
 
+set mailcap_path = "~/.mutt/config/mailcap"
+
+auto_view text/html
+alternative_order text/plain text/enriched text/html
+
 #======================================================#
 # Order of headers and what to show
 hdr_order Date: From: User-Agent: X-Mailer \
