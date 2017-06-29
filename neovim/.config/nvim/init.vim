@@ -161,6 +161,11 @@ vnoremap H :m '<-2<CR>gv=gv " move visual block up
 " see https://github.com/neovim/neovim/issues/3211
 map <F1> <del>
 map! <F1> <del>
+
+nnoremap <leader>ff :Find<space>
+nnoremap <leader>fv :vs<CR>:Find<space>
+nnoremap <leader>fa :vs<CR>:Find <C-R><C-W><CR>
+
 " Git {{{
 nnoremap <leader>b :silent !tmux split-window -h "tig blame %"<CR>
 nnoremap <leader>c :silent !tmux split-window -h "tig --follow %"<CR>
