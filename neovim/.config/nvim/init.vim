@@ -32,6 +32,7 @@ set visualbell " Flash the cursor on error instead of beeping
 set wildmenu " Show menu options for completion
 set mouse-=a
 set splitright
+set splitbelow
 let g:netrw_liststyle=3
 set list
 " Searching {{{
