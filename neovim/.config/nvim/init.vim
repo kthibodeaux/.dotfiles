@@ -247,7 +247,6 @@ Plug 'junegunn/vim-peekaboo'
 Plug 'fishbullet/deoplete-ruby'
 Plug 'Konfekt/FastFold'
 Plug 'SirVer/ultisnips'
-Plug 'vim-scripts/rainbow-end'
 Plug 'sunaku/vim-dasht'
 Plug 'kthibodeaux/spec-outline.vim', { 'branch': 'show-specify-and-behaves-like-lines' }
 Plug 'kana/vim-textobj-user'
@@ -318,9 +317,6 @@ let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
-" }}}
-" Rainbow-End {{{
-nnoremap <leader>re :call ToggleRainbow()<CR>
 " }}}
 " {{{ dasht.vim
 nnoremap <Leader>k :Dasht<Space>
