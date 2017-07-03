@@ -1,13 +1,13 @@
 # vi: set ft=conf :
 
 set realname = "Keith Thibodeaux"
-set from = kthib892@gmail.com
+set from = kthib89@gmail.com
 set use_from = yes
 set envelope_from ="yes"
 set sendmail="/usr/bin/msmtp"
 set copy = yes
 
-mailboxes "+Home/Home" "+Home/Home.Archive" "+Home/Home.Drafts" "+Home/Home.Sent" "+Home/Home.Spam" "+Home/Home.Starred" "+Home/Home.Trash" "+Work/Work" "+Work/Work.Sent" "+Work/Work.Archive" "+Work/Work.Drafts" "+Work/Work.Bulk Mail" "+Work/Work.Trash"
+mailboxes "+Home/Home" "+Home/Home.Archive" "+Home/Home.Drafts" "+Home/Home.Autopay" "+Home/Home.Railscoder" "+Home/Home.Sent" "+Home/Home.Spam" "+Home/Home.Starred" "+Home/Home.Trash" "+Work/Work" "+Work/Work.Sent" "+Work/Work.Archive" "+Work/Work.Drafts" "+Work/Work.Bulk Mail" "+Work/Work.Trash"
 set sort = threads
 set sort_aux = reverse-last-date-received
 set sort_alias=alias

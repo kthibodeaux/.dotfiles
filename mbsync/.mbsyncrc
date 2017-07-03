@@ -5,7 +5,7 @@ SyncState *
 
 IMAPAccount Home
 Host imap.gmail.com
-User kthib892@gmail.com
+User kthib89@gmail.com
 PassCmd "cat ~/.gpass | openssl rsautl -decrypt -inkey ~/.ssh/id_rsa"
 UseIMAPS yes
 
