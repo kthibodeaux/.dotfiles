@@ -1,4 +1,6 @@
 application/pdf; xdg-open %s
+image/gif; mpv '%s' --autofit 640x480 --loop=inf; test=test -n "$DISPLAY"
+image/*; feh -g 640x480 '%s'; test=test -n "$DISPLAY"
 
 # Explicitly render in less with 'v' (view attachment)
 text/plain; less %s
