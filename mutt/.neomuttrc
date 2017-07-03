@@ -1,0 +1,4 @@
+source $HOME/.mutt/config/hooks.mutt
+source $HOME/.mutt/config/bindings.mutt
+source $HOME/.mutt/config/macros.mutt
+source $HOME/.mutt/config/settings.mutt
