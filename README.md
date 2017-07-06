@@ -23,9 +23,6 @@ sh stow_all
 bash setup
 ```
 
-# i3
-
-If using a hidpi screen then run `touch ~/.stterm-large-font` to use a bigger font in stterm.
 # theme
 
 Install gtk theme: https://github.com/nana-4/Flat-Plat#installation
