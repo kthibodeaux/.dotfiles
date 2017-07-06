@@ -50,6 +50,9 @@ au BufRead *.slim setlocal foldmethod=indent
 au BufRead *.slim setlocal foldlevel=4
 " }}}
 " }}}
+" Abbreviations {{{
+iabbr pry ::Kernel.binding.pry
+" }}}
 " Commands {{{
 command! -bang -nargs=* Find call fzf#vim#grep('ag --hidden -A 0 -B 0 --nogroup --color '.shellescape(<q-args>), 0, <bang>0)
 " }}}
