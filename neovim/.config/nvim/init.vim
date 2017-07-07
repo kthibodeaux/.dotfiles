@@ -42,12 +42,9 @@ set smartcase " Only search upcase if provided with capital letter
 set gdefault " Assume /g flag on :%s to replace all matches on line
 set incsearch " Search as typing
 " }}}
-" Folding {{{
+" Default Folding {{{
 set foldmethod=syntax
 set foldlevelstart=3
-au BufRead *_spec.rb setlocal foldlevel=2
-au BufRead *.slim setlocal foldmethod=indent
-au BufRead *.slim setlocal foldlevel=4
 " }}}
 " }}}
 " Abbreviations {{{
