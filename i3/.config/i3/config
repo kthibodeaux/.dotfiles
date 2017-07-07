@@ -22,7 +22,6 @@ exec --no-startup-id compton
 bindsym $mod+d exec rofi -show drun
 
 # terminal
-set $termsize $([ -f ~/.stterm-large-font ] && echo "32" || echo "16")
 bindsym $mod+Return exec urxvt
 
 # take a screenshot of selected region
