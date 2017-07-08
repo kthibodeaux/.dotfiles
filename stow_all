@@ -24,6 +24,5 @@ stow -vv tig
 stow -vv tmux
 stow -vv vim
 stow -vv w3m
-stow -vv weechat
 stow -vv x
 stow -vv zsh
