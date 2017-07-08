@@ -103,6 +103,18 @@ endfunction
 
 au BufNewFile,BufReadPost *.rb silent! :call BoilerBuilder()
 " }}}
+" Alt {{{
+function! AltCommand(path, vim_command)
+  let l:alternate = system("alt " . a:path)
+  if empty(l:alternate)
+    echo "No alternate file for " . a:path . " exists!"
+  else
+    exec a:vim_command . " " . l:alternate
+  endif
+endfunction
+
+nnoremap <leader>. :call AltCommand(expand('%'), ':vsplit')<cr>
+" }}}
 " Undo config {{{
 set undofile
 set undodir=~/.config/nvim/undodir
@@ -235,7 +247,6 @@ Plug 'tpope/vim-vinegar'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'AndrewRadev/linediff.vim'
-Plug 'cyphactor/vim-open-alternate'
 Plug 'FooSoft/vim-argwrap'
 Plug 'w0rp/ale'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -293,9 +304,6 @@ nnoremap <F5> :UndotreeToggle<cr>
 " FZF {{{
 set rtp+=~/.fzf
 nnoremap <leader>e :Files<cr>
-" }}}
-" Open Alternate {{{
-nnoremap <leader>. :vs<CR>:OpenAlternate<CR>
 " }}}
 " Argwrap {{{
 let g:argwrap_padded_braces = '[{'
