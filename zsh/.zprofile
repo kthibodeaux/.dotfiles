@@ -5,3 +5,5 @@ export PAGER=less
 
 typeset -U path
 path=(~/.dotfiles/bin ~/opt/bin ~/.rvm/bin $path)
+
+export PATH="$HOME/.cargo/bin:$PATH"

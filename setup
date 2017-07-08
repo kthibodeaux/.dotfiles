@@ -74,6 +74,10 @@ source_rvm
 install_ruby "2.2.2"
 set_default_ruby "2.2.2"
 
+echo "rustc: installing/updating"
+curl https://sh.rustup.rs -sSf | sh -s -- -y
+echo ""
+
 if [ -d ~/.fzf ]; then
   echo "skipping fzf: already installed"
 else
