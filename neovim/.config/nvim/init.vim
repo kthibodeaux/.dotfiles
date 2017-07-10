@@ -55,7 +55,7 @@ command! -bang -nargs=* Find call fzf#vim#grep('ag --hidden -A 0 -B 0 --nogroup 
 " }}}
 " Tags {{{
 set tags+=TAGS,gems.tags
-au BufWritePost *.rb :call jobstart('ctags')
+au BufWritePost *.rb :call jobstart('ripper-tags -R --exclude .git/ --exclude log/ --exclude tmp/ --exclude vendor/ --exclude coverage/ --exclude db/ --exclude config/')
 " }}}
 " Window managment {{{
 set hidden " Allow unsaved buffers to be put in background
