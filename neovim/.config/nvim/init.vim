@@ -163,7 +163,7 @@ noremap k j
 nnoremap <CR> :noh<CR><CR> " cancel search by pressing return
 nnoremap <leader><tab> mtgg=G`t " indent file
 nnoremap S i<cr><esc>^mwgk:silent! s/\v +$//<cr>:noh<cr>$ " split line
-nnoremap <tab> za " toggle fold
+nnoremap <s-tab> za " toggle fold
 nnoremap <leader>n <C-]>
 nnoremap <leader><CR> :tabn<CR>
 
