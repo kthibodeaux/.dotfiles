@@ -55,7 +55,7 @@ command! -bang -nargs=* Find call fzf#vim#grep('ag --hidden -A 0 -B 0 --nogroup 
 " }}}
 " Tags {{{
 set tags+=TAGS,gems.tags
-au BufWritePost *.rb :call jobstart('ctags')
+au BufWritePost *.rb :call jobstart('ripper-tags -R --exclude .git/ --exclude log/ --exclude tmp/ --exclude vendor/ --exclude coverage/ --exclude db/ --exclude config/')
 " }}}
 " Window managment {{{
 set hidden " Allow unsaved buffers to be put in background
@@ -163,7 +163,7 @@ noremap k j
 nnoremap <CR> :noh<CR><CR> " cancel search by pressing return
 nnoremap <leader><tab> mtgg=G`t " indent file
 nnoremap S i<cr><esc>^mwgk:silent! s/\v +$//<cr>:noh<cr>$ " split line
-nnoremap <tab> za " toggle fold
+nnoremap <s-tab> za " toggle fold
 nnoremap <leader>n <C-]>
 nnoremap <leader><CR> :tabn<CR>
 
