@@ -103,9 +103,16 @@ endfunction
 
 au BufNewFile,BufReadPost *.rb silent! :call BoilerBuilder()
 " }}}
-" Alt {{{
-function! AltCommand(path, vim_command)
-  let l:alternate = system("alt " . a:path)
+" Open rails spec/source {{{
+function! RailsOpenAltCommand(path, vim_command)
+  if a:path =~ "spec/"
+    let l:alternate = substitute(a:path, "spec/", "app/", "")
+    let l:alternate = substitute(l:alternate, "_spec", "", "")
+  elseif a:path =~ "app/"
+    let l:alternate = substitute(a:path, "app/", "spec/", "")
+    let l:alternate = substitute(l:alternate, ".rb", "_spec.rb", "")
+  endif
+
   if empty(l:alternate)
     echo "No alternate file for " . a:path . " exists!"
   else
@@ -113,7 +120,7 @@ function! AltCommand(path, vim_command)
   endif
 endfunction
 
-nnoremap <leader>. :call AltCommand(expand('%'), ':vsplit')<cr>
+nnoremap <leader>. :call RailsOpenAltCommand(expand('%'), ':vsplit')<cr>
 " }}}
 " Undo config {{{
 set undofile
