@@ -2,3 +2,6 @@
 
 macro pager m "<save-message>?<toggle-mailboxes>" "move to..."
 macro index m "<tag-prefix><save-message>?<toggle-mailboxes>" "move to..."
+
+macro index w  "<change-folder> =Work/Work<enter>"  "go to work inbox"
+macro index h  "<change-folder> =Home/Home<enter>"  "go to home inbox"
