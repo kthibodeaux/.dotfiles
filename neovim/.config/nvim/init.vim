@@ -170,11 +170,6 @@ nnoremap <leader><CR> :tabn<CR>
 vnoremap K :m '>+1<CR>gv=gv " move visual block down
 vnoremap H :m '<-2<CR>gv=gv " move visual block up
 
-" nasty hack for neovim under stterm
-" see https://github.com/neovim/neovim/issues/3211
-map <F1> <del>
-map! <F1> <del>
-
 nnoremap <leader>ff :Find<space>
 nnoremap <leader>fv :vs<CR>:Find<space>
 nnoremap <leader>fa :vs<CR>:Find <C-R><C-W><CR>
