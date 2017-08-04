@@ -35,3 +35,8 @@
 .list-wrapper {
   width: auto !important;
 }
+
+.card-label.mod-card-front {
+  min-width: 10px !important;
+  max-width: 100px !important;
+}
