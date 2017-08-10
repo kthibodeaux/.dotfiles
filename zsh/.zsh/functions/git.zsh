@@ -54,6 +54,20 @@ git-nuke() {
   fi
 }
 
+gbD() {
+  if [[ $# == 0 ]]; then
+    branches=$(git branch)
+    if [ "$TMUX" = "" ]; then
+      targets=$(echo $branches | fzf -m)
+    else
+      targets=$(echo $branches | fzf-tmux -m)
+    fi
+
+    echo $targets
+    confirm && git branch -D $(echo $targets)
+  fi
+}
+
 dev() {
   git checkout develop && git up
 }
