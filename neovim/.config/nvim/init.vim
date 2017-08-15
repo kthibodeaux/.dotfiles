@@ -174,9 +174,6 @@ nnoremap <s-tab> za " toggle fold
 nnoremap <leader>n <C-]>
 nnoremap <leader><CR> :tabn<CR>
 
-vnoremap K :m '>+1<CR>gv=gv " move visual block down
-vnoremap H :m '<-2<CR>gv=gv " move visual block up
-
 nnoremap <leader>ff :Find<space>
 nnoremap <leader>fv :vs<CR>:Find<space>
 nnoremap <leader>fa :vs<CR>:Find <C-R><C-W><CR>
