@@ -173,6 +173,7 @@ nnoremap S i<cr><esc>^mwgk:silent! s/\v +$//<cr>:noh<cr>$ " split line
 nnoremap <s-tab> za " toggle fold
 nnoremap <leader>n <C-]>
 nnoremap <leader><CR> :tabn<CR>
+nnoremap <leader>m :edit db/migrate<CR>G
 
 nnoremap <leader>ff :Find<space>
 nnoremap <leader>fv :vs<CR>:Find<space>
