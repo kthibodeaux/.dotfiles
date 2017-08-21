@@ -10,3 +10,5 @@ text/html; xdg-open %s
 
 # Try to display implicitly using elinks
 text/html; w3m -I %{charset} -T text/html; copiousoutput;
+
+application/VND.OPENXMLFORMATS-OFFICEDOCUMENT.WORDPROCESSINGML.DOCUMENT; libreoffice %s
