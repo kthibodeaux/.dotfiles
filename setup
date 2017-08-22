@@ -20,6 +20,7 @@ sudo apt-get update
 
 apt_install "avrdude"
 apt_install "avr-libc"
+apt_install "awscli"
 apt_install "ca-certificates"
 apt_install "compton"
 apt_install "curl"
