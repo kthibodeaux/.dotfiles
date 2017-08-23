@@ -53,10 +53,6 @@ iabbr pry ::Kernel.binding.pry
 " Commands {{{
 command! -bang -nargs=* Find call fzf#vim#grep('ag --hidden -A 0 -B 0 --nogroup --color '.shellescape(<q-args>), 0, <bang>0)
 " }}}
-" Tags {{{
-set tags+=TAGS,gems.tags
-au BufWritePost *.rb :call jobstart('ripper-tags -R --exclude .git/ --exclude log/ --exclude tmp/ --exclude vendor/ --exclude coverage/ --exclude db/ --exclude config/')
-" }}}
 " Window managment {{{
 set hidden " Allow unsaved buffers to be put in background
 set winwidth=90 " Active window min width
@@ -171,7 +167,7 @@ nnoremap <CR> :noh<CR><CR> " cancel search by pressing return
 nnoremap <leader><tab> mtgg=G`t " indent file
 nnoremap S i<cr><esc>^mwgk:silent! s/\v +$//<cr>:noh<cr>$ " split line
 nnoremap <s-tab> za " toggle fold
-nnoremap <leader>n <C-]>
+nnoremap <leader>n gf
 nnoremap <leader><CR> :tabn<CR>
 nnoremap <leader>m :edit db/migrate<CR>G
 
