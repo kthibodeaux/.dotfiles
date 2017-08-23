@@ -226,7 +226,6 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'Townk/vim-autoclose'
-Plug 'airblade/vim-gitgutter'
 Plug 'danro/rename.vim'
 Plug 'ecomba/vim-ruby-refactoring'
 Plug 'matchit.zip'
