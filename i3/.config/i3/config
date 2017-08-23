@@ -25,7 +25,7 @@ bindsym $mod+d exec rofi -show drun
 bindsym $mod+Return exec urxvt
 
 # take a screenshot of selected region
-bindsym --release $mod+z exec scrot -s
+bindsym --release $mod+z exec scrot -s -e 'aws s3 cp $f s3://kthibodeaux-screenshots | echo -n "https://s3.amazonaws.com/kthibodeaux-screenshots/$n" | xclip -selection clipboard'
 
 # kill focused window
 bindsym $mod+q kill
