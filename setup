@@ -4,6 +4,7 @@
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 . setup_support/apt.sh
+. setup_support/snap.sh
 . setup_support/pip2.sh
 . setup_support/pip3.sh
 . setup_support/font.sh
@@ -65,6 +66,8 @@ apt_install "vlc"
 apt_install "weechat"
 apt_install "xclip"
 apt_install "zsh"
+
+snap_install "--classic" "go"
 echo ""
 
 pip2_install "websocket-client"
