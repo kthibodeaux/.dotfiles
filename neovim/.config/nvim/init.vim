@@ -255,7 +255,6 @@ Plug 'fishbullet/deoplete-ruby'
 Plug 'Konfekt/FastFold'
 Plug 'SirVer/ultisnips'
 Plug 'sunaku/vim-dasht'
-Plug 'kthibodeaux/spec-outline.vim', { 'branch': 'show-specify-and-behaves-like-lines' }
 Plug 'kana/vim-textobj-user'
 Plug 'rhysd/vim-textobj-ruby'
 Plug 'vimwiki/vimwiki'
