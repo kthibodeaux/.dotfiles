@@ -34,6 +34,7 @@ set mouse-=a
 set splitright
 set splitbelow
 let g:netrw_liststyle=3
+let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
 set list
 " Searching {{{
 set hlsearch
