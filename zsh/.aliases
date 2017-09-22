@@ -28,7 +28,7 @@ alias agh="ag --hidden"
 alias zrc="nvim ~/.dotfiles/zsh/.zshrc"
 alias rzsh="source ~/.zshrc && source ~/.zshrc.local"
 
-alias rpca="RAILS_ENV=production bundle exec rake assets:precompile"
+alias rpca="RAILS_ENV=development bundle exec rake assets:precompile"
 
 alias be="bundle exec"
 alias bu="bundle update"
@@ -50,6 +50,8 @@ alias stoppg="sudo systemctl stop postgresql"
 
 alias clean_testdb="RAILS_ENV=test bundle exec rake db:drop && RAILS_ENV=test bundle exec rake db:create && RAILS_ENV=test bundle exec rake db:migrate && RAILS_ENV=test bundle exec rake db:seed"
 alias pclean_testdb="bundle exec rake parallel:drop[8]; bundle exec rake parallel:create[8]; bundle exec rake parallel:migrate[8]; bundle exec rake parallel:seed[8]"
+
+alias prs="wf --pull-requests"
 
 [[ -f ~/.zsh/git.sh ]] && source ~/.zsh/git.sh ]]
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local ]]
