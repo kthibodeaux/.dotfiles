@@ -48,8 +48,8 @@ alias mine="wget -e robots=off -r -nc -np"
 alias startpg="sudo systemctl start postgresql"
 alias stoppg="sudo systemctl stop postgresql"
 
-alias clean_testdb="RAILS_ENV=test bundle exec rake db:drop && RAILS_ENV=test bundle exec rake db:create && RAILS_ENV=test bundle exec rake db:migrate && RAILS_ENV=test bundle exec rake db:seed"
-alias pclean_testdb="bundle exec rake parallel:drop[8]; bundle exec rake parallel:create[8]; bundle exec rake parallel:migrate[8]; bundle exec rake parallel:seed[8]"
+alias clean_testdb="RAILS_ENV=test bundle exec rake db:drop db:setup"
+alias pclean_testdb="bundle exec rake parallel:drop[8] parallel:setup[8]"
 
 alias prs="wf --pull-requests"
 
