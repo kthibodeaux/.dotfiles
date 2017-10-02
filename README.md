@@ -47,7 +47,9 @@ echo '/dev/mapper/pgdata /var/lib/postgresql/9.5/main ext4 defaults 0 0' | sudo 
 sudo mount /dev/mapper/pgdata
 sudo rm -rf /var/lib/postgres/9.5/main/*
 sudo chown -R postgres:postgres /var/lib/postgresql/9.5/main
-sudo -u postgres initdb --locale en_US.UTF-8 -D '/var/lib/postgresql/9.5/main'
+sudo -u postgres /usr/lib/postgresql/9.5/bin/initdb --locale en_US.UTF-8 -D '/var/lib/postgresql/9.5/main'
+# name the role after the logged in user
+sudo -u postgres createuser --interactive
 ```
 
 Performance can be significantly improved by modifying `/etc/postgresql/9.5/main/postgresql.conf` and turning `fsync` and `synchronous_commit` both off.
