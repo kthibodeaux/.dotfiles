@@ -52,7 +52,11 @@ set foldlevelstart=3
 iabbr pry ::Kernel.binding.pry
 " }}}
 " Commands {{{
-command! -bang -nargs=* Find call fzf#vim#grep('ag --hidden -A 0 -B 0 --nogroup --color '.shellescape(<q-args>), 0, <bang>0)
+command! -bang -nargs=* Find
+      \ call fzf#vim#grep(
+      \ 'ag --hidden -A 0 -B 0 --nogroup --color '.shellescape(<q-args>), 0,
+      \   fzf#vim#with_preview('up:60%')
+      \ )
 " }}}
 " Window managment {{{
 set hidden " Allow unsaved buffers to be put in background
