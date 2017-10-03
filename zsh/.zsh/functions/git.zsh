@@ -56,11 +56,13 @@ git-nuke() {
 
 gbD() {
   if [[ $# == 0 ]]; then
+    set_base_branch
+
     branches=$(git branch)
     if [ "$TMUX" = "" ]; then
-      targets=$(echo $branches | fzf -m)
+      targets=$(echo $branches | awk '{$1=$1};1' | fzf --preview 'git short-log $BASE_BRANCH..{} | head')
     else
-      targets=$(echo $branches | fzf-tmux -m)
+      targets=$(echo $branches | awk '{$1=$1};1' | fzf-tmux --preview 'git short-log $BASE_BRANCH..{} | head')
     fi
 
     echo $targets
