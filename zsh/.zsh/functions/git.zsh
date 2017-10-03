@@ -11,9 +11,9 @@ g() {
 
 a() {
   if [ "$TMUX" = "" ]; then
-    git add $(git status -s | awk '{ print $2 }' | fzf -m)
+    git add $(git status -s | awk '{ print $2 }' | fzf -m --preview 'git diff {}')
   else
-    git add $(git status -s | awk '{ print $2 }' | fzf-tmux -m)
+    git add $(git status -s | awk '{ print $2 }' | fzf-tmux -m --preview 'git diff {}')
   fi
 }
 
