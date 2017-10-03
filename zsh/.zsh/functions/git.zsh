@@ -106,11 +106,13 @@ ir() {
 
 br() {
   if [[ $# == 0 ]]; then
+    set_base_branch
+
     branches=$(git branch)
     if [ "$TMUX" = "" ]; then
-      target=$(echo $branches | fzf)
+      target=$(echo $branches | awk '{$1=$1};1' | fzf --preview 'git short-log $BASE_BRANCH..{} | head')
     else
-      target=$(echo $branches | fzf-tmux)
+      target=$(echo $branches | awk '{$1=$1};1' | fzf-tmux --preview 'git short-log $BASE_BRANCH..{} | head')
     fi
 
     if [[ $target != '' ]]; then
