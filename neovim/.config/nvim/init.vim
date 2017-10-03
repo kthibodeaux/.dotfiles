@@ -303,6 +303,10 @@ nnoremap <F5> :UndotreeToggle<cr>
 " FZF {{{
 set rtp+=~/.fzf
 nnoremap <leader>e :Files<cr>
+
+" :Files will preview the selected file
+command! -bang -nargs=? -complete=dir Files
+  \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
 " }}}
 " Argwrap {{{
 let g:argwrap_padded_braces = '[{'
