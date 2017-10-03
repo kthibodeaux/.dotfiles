@@ -19,9 +19,9 @@ a() {
 
 ap() {
   if [ "$TMUX" = "" ]; then
-    git add -p $(git status -s | awk '{ print $2 }' | fzf -m)
+    git add -p $(git status -s | awk '{ print $2 }' | fzf -m --preview 'git diff --color=always {}')
   else
-    git add -p $(git status -s | awk '{ print $2 }' | fzf-tmux -m)
+    git add -p $(git status -s | awk '{ print $2 }' | fzf-tmux -m --preview 'git diff --color=always {}')
   fi
 }
 
@@ -38,9 +38,9 @@ co() {
     git co $@
   else
     if [ "$TMUX" = "" ]; then
-      git co $(git status -s | awk '{ print $2 }' | fzf -m)
+      git co $(git status -s | awk '{ print $2 }' | fzf -m --preview 'git diff --color=always {}')
     else
-      git co $(git status -s | awk '{ print $2 }' | fzf-tmux -m)
+      git co $(git status -s | awk '{ print $2 }' | fzf-tmux -m --preview 'git diff --color=always {}')
     fi
   fi
 }
