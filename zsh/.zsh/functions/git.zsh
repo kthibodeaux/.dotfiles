@@ -126,9 +126,9 @@ br() {
 cfu() {
   set_base_branch
   if [ "$TMUX" = "" ]; then
-    target=$(git log --pretty=oneline $BASE_BRANCH.. | fzf | awk '{ print $1 }')
+    target=$(git log --pretty=oneline $BASE_BRANCH.. | fzf --preview "echo {} | cut -f 1 -d' ' | xargs -I SHA git show --color=always --pretty=fuller --stat SHA" | awk '{ print $1 }')
   else
-    target=$(git log --pretty=oneline $BASE_BRANCH.. | fzf-tmux | awk '{ print $1 }')
+    target=$(git log --pretty=oneline $BASE_BRANCH.. | fzf-tmux --preview "echo {} | cut -f 1 -d' ' | xargs -I SHA git show --color=always --pretty=fuller --stat SHA" | awk '{ print $1 }')
   fi
 
   if [[ $target != '' ]]; then
