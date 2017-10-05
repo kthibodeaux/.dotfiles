@@ -41,6 +41,11 @@ bindkey -M vicmd h up-line-or-history
 bindkey -M vicmd k down-line-or-history
 bindkey "^R" history-incremental-search-backward
 
+# provide zmv command for easy bulk renaming
+# example for changing extension of all matching files in a heirarchy:
+# zmv '(**/)(*).css.scss' '$1/$2.scss'
+autoload -U zmv
+
 # prompt
 autoload -U promptinit && promptinit
 prompt filthy
