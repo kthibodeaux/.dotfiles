@@ -180,6 +180,11 @@ nnoremap <leader>ff :Find<space>
 nnoremap <leader>fv :vs<CR>:Find<space>
 nnoremap <leader>fa :vs<CR>:Find <C-R><C-W><CR>
 
+" zoom in on a split
+nnoremap <leader>zz <C-w>z <C-w>_ <C-w>\|
+
+" equalize splits
+nnoremap <leader>zx <C-w>=
 " Git {{{
 nnoremap <leader>b :silent !tmux split-window -h "tig blame %"<CR>
 nnoremap <leader>c :silent !tmux split-window -h "tig --follow %"<CR>
