@@ -188,6 +188,16 @@ nnoremap <leader>zx <C-w>=
 " Git {{{
 nnoremap <leader>b :silent !tmux split-window -h "tig blame %"<CR>
 nnoremap <leader>c :silent !tmux split-window -h "tig --follow %"<CR>
+
+function ShowCommitForCurrentLine()
+  let l:line = line(".")
+  let l:file = expand("%")
+  let l:sha = system("git blame " . l:file . " -L" . l:line . "," . l:line . " \| cut -f 1 -d' '")
+  let l:command = "tig show " . l:sha
+
+  return l:command
+endfunction
+nnoremap <leader>y :execute "!tmux split-window -h " . ShowCommitForCurrentLine()<CR><CR>
 " }}}
 " RSpec {{{
 let g:rspec_command = 'call VimuxRunCommand("SKIP_SIMPLECOV=true bundle exec rspec {spec}\n")'
