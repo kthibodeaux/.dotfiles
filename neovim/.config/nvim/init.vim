@@ -192,7 +192,7 @@ nnoremap <leader>c :silent !tmux split-window -h "tig --follow %"<CR>
 function ShowCommitForCurrentLine()
   let l:line = line(".")
   let l:file = expand("%")
-  let l:sha = system("git blame " . l:file . " -L" . l:line . "," . l:line . " \| cut -f 1 -d' '")
+  let l:sha = system("git blame --root " . l:file . " -L" . l:line . "," . l:line . " \| cut -f 1 -d' '")
   let l:command = "tig show " . l:sha
 
   return l:command
