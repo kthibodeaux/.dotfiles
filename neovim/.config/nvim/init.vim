@@ -185,12 +185,6 @@ nnoremap <leader>zz <C-w>z <C-w>_ <C-w>\|
 
 " equalize splits
 nnoremap <leader>zx <C-w>=
-" Git {{{
-nnoremap <leader>c :silent TigFileHistory<CR>
-nnoremap <leader>b :silent TigBlame<CR>
-nnoremap <leader>y :silent TigLatestCommitForLine<CR>
-
-" }}}
 " RSpec {{{
 let g:rspec_command = 'call VimuxRunCommand("SKIP_SIMPLECOV=true bundle exec rspec {spec}\n")'
 map <Leader>rr :call RunNearestSpec()<CR>
@@ -339,5 +333,10 @@ let g:UltiSnipsEditSplit="vertical"
 " {{{ dasht.vim
 nnoremap <Leader>k :Dasht<Space>
 nnoremap <silent> K :call Dasht([expand('<cWORD>'), expand('<cword>')])<Return>
+" }}}
+" {{{ tig.vim
+nnoremap <leader>c :silent TigFileHistory<CR>
+nnoremap <leader>b :silent TigBlame<CR>
+nnoremap <leader>y :silent TigLatestCommitForLine<CR>
 " }}}
 " }}}
