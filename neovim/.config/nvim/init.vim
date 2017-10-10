@@ -186,8 +186,17 @@ nnoremap <leader>zz <C-w>z <C-w>_ <C-w>\|
 " equalize splits
 nnoremap <leader>zx <C-w>=
 " Git {{{
-nnoremap <leader>b :silent !tmux split-window -h "tig blame %"<CR>
 nnoremap <leader>c :silent !tmux split-window -h "tig --follow %"<CR>
+
+function ShowBlameAndFocusCurrentLine()
+  let l:line = line(".")
+  let l:file = expand("%")
+  let l:tig_command = "tig blame +" . l:line . " " . l:file
+  let l:tmux_command = "!tmux split-window -h " . l:tig_command
+
+  execute l:tmux_command
+endfunction
+nnoremap <leader>b :call ShowBlameAndFocusCurrentLine()<CR><CR>
 
 function ShowCommitForCurrentLine()
   let l:line = line(".")
