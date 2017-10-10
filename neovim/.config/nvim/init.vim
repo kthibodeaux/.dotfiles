@@ -193,11 +193,12 @@ function ShowCommitForCurrentLine()
   let l:line = line(".")
   let l:file = expand("%")
   let l:sha = system("git blame --root " . l:file . " -L" . l:line . "," . l:line . " \| cut -f 1 -d' '")
-  let l:command = "tig show " . l:sha
+  let l:tig_command = "tig show " . l:sha
+  let l:tmux_command = "!tmux split-window -h " . l:tig_command
 
-  return l:command
+  execute l:tmux_command
 endfunction
-nnoremap <leader>y :execute "!tmux split-window -h " . ShowCommitForCurrentLine()<CR><CR>
+nnoremap <leader>y :call ShowCommitForCurrentLine()<CR><CR>
 " }}}
 " RSpec {{{
 let g:rspec_command = 'call VimuxRunCommand("SKIP_SIMPLECOV=true bundle exec rspec {spec}\n")'
