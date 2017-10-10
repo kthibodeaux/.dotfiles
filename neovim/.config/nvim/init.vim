@@ -186,28 +186,10 @@ nnoremap <leader>zz <C-w>z <C-w>_ <C-w>\|
 " equalize splits
 nnoremap <leader>zx <C-w>=
 " Git {{{
-nnoremap <leader>c :silent !tmux split-window -h "tig --follow %"<CR>
+nnoremap <leader>c :silent TigFileHistory<CR>
+nnoremap <leader>b :silent TigBlame<CR>
+nnoremap <leader>y :silent TigLatestCommitForLine<CR>
 
-function ShowBlameAndFocusCurrentLine()
-  let l:line = line(".")
-  let l:file = expand("%")
-  let l:tig_command = "tig blame +" . l:line . " " . l:file
-  let l:tmux_command = "!tmux split-window -h " . l:tig_command
-
-  execute l:tmux_command
-endfunction
-nnoremap <leader>b :call ShowBlameAndFocusCurrentLine()<CR><CR>
-
-function ShowCommitForCurrentLine()
-  let l:line = line(".")
-  let l:file = expand("%")
-  let l:sha = system("git blame --root " . l:file . " -L" . l:line . "," . l:line . " \| cut -f 1 -d' '")
-  let l:tig_command = "tig show " . l:sha
-  let l:tmux_command = "!tmux split-window -h " . l:tig_command
-
-  execute l:tmux_command
-endfunction
-nnoremap <leader>y :call ShowCommitForCurrentLine()<CR><CR>
 " }}}
 " RSpec {{{
 let g:rspec_command = 'call VimuxRunCommand("SKIP_SIMPLECOV=true bundle exec rspec {spec}\n")'
@@ -286,6 +268,7 @@ Plug 'sunaku/vim-dasht'
 Plug 'kana/vim-textobj-user'
 Plug 'rhysd/vim-textobj-ruby'
 Plug 'vimwiki/vimwiki'
+Plug 'kthibodeaux/tig.vim'
 call plug#end()
 " }}}
 " Theme {{{
