@@ -32,6 +32,7 @@
   ui = true
 [diff]
   compactionHeuristic = true
+  tool = vimdiff
 [push]
   default = current
 [fetch]
@@ -42,3 +43,7 @@
 [rebase]
   autostash = true
   autosquash = true
+[merge]
+  tool = vimdiff
+[mergetool "vimdiff"]
+  path = nvim
