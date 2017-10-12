@@ -4,7 +4,6 @@
 --regex-ruby=/^[ 	]*has_one[ 	]*:([a-zA-Z0-9_]+)/\1/
 --regex-ruby=/^[ 	]*has_and_belongs_to_many[ 	]*:([a-zA-Z0-9_]+)/\1/
 -R
--f TAGS
 --exclude=.git
 --exclude=log
 --exclude=tmp
