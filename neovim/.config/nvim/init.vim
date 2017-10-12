@@ -189,7 +189,10 @@ nnoremap <leader>zz <C-w>z <C-w>_ <C-w>\|
 " equalize splits
 nnoremap <leader>zx <C-w>=
 
-nnoremap <leader>n <C-]>
+" iskeyword is local, so we remove it before leaving the buffer
+au BufLeave * set iskeyword-=:
+nnoremap <silent> <leader>n :set iskeyword+=:<CR><C-]>
+
 " RSpec {{{
 let g:rspec_command = 'call VimuxRunCommand("SKIP_SIMPLECOV=true bundle exec rspec {spec}\n")'
 map <Leader>rr :call RunNearestSpec()<CR>
