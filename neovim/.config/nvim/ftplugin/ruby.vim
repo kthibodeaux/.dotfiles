@@ -4,3 +4,5 @@ nnoremap <localleader>v :Eview<CR>
 nnoremap <localleader>s :Espec<CR>
 nnoremap <localleader>u :Eunittest<CR>
 
+setlocal iskeyword+=!
+setlocal iskeyword+=?
