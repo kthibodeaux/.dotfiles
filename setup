@@ -83,6 +83,8 @@ source_rvm
 install_ruby "2.2.2"
 set_default_ruby "2.2.2"
 
+sudo usermod -aG docker $USER
+
 if [ -d ~/.fzf ]; then
   echo "skipping fzf: already installed"
 else
@@ -110,6 +112,7 @@ echo ""
 echo "If this is your first time running setup on this computer then you may"
 echo "want to:"
 echo ""
+echo "Reboot so that user groups are properly recognized"
 echo "Run 'vu' to install vim plugins"
 echo "Run ':UpdateRemotePlugins' in neovim"
 echo "Setup postgres (see README.md)"
