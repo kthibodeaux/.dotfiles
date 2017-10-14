@@ -271,6 +271,7 @@ Plug 'kana/vim-textobj-user'
 Plug 'rhysd/vim-textobj-ruby'
 Plug 'vimwiki/vimwiki'
 Plug 'kthibodeaux/tig.vim'
+Plug 'AGhost-7/critiq.vim'
 call plug#end()
 " }}}
 " Theme {{{
