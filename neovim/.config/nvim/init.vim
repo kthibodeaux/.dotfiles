@@ -229,7 +229,6 @@ autocmd BufReadPost quickfix nnoremap <buffer> q :cclose<CR>
 call plug#begin('~/.config/nvim/plugged')
 Plug 'Townk/vim-autoclose'
 Plug 'danro/rename.vim'
-Plug 'ecomba/vim-ruby-refactoring'
 Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-rails'
