@@ -61,5 +61,4 @@ skype, slack, whatsapp (nativier?)
 universal ctags
 googletalk plugin
 gitflow?
-dasht
 

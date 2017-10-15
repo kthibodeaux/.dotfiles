@@ -266,7 +266,6 @@ Plug 'junegunn/vim-peekaboo'
 Plug 'fishbullet/deoplete-ruby'
 Plug 'Konfekt/FastFold'
 Plug 'SirVer/ultisnips'
-Plug 'sunaku/vim-dasht'
 Plug 'kana/vim-textobj-user'
 Plug 'rhysd/vim-textobj-ruby'
 Plug 'vimwiki/vimwiki'
@@ -338,10 +337,6 @@ let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
-" }}}
-" {{{ dasht.vim
-nnoremap <Leader>k :Dasht<Space>
-nnoremap <silent> K :call Dasht([expand('<cWORD>'), expand('<cword>')])<Return>
 " }}}
 " {{{ tig.vim
 nnoremap <leader>c :silent TigFileHistory<CR>
