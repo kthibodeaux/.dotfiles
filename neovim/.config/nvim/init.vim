@@ -227,8 +227,6 @@ autocmd BufReadPost quickfix nnoremap <buffer> q :cclose<CR>
 " }}}
 " Plugins {{{
 call plug#begin('~/.config/nvim/plugged')
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'tomtom/tlib_vim'
 Plug 'Townk/vim-autoclose'
 Plug 'danro/rename.vim'
 Plug 'ecomba/vim-ruby-refactoring'
@@ -244,7 +242,6 @@ Plug 'chriskempson/base16-vim'
 Plug 'tpope/vim-commentary'
 Plug 'junegunn/vim-easy-align'
 Plug 'unblevable/quick-scope'
-Plug 'dbakker/vim-projectroot'
 Plug 'tpope/vim-vinegar'
 Plug 'junegunn/fzf.vim'
 Plug 'AndrewRadev/linediff.vim'
