@@ -207,24 +207,6 @@ nnoremap <silent> <Left> :vertical resize +2<CR>
 nnoremap <silent> <Right> :vertical resize -2<CR>
 " }}}
 " }}}
-" Quickfix {{{
-function! ToggleQuickFix()
-  if exists("g:qwindow")
-    lclose
-    unlet g:qwindow
-  else
-    try
-      lopen 10
-      let g:qwindow = 1
-    catch
-      echo "No Errors found!"
-    endtry
-  endif
-endfunction
-
-nmap <script> <silent> <Leader>l :call ToggleQuickFix()<CR>
-autocmd BufReadPost quickfix nnoremap <buffer> q :cclose<CR>
-" }}}
 " Plugins {{{
 call plug#begin('~/.config/nvim/plugged')
 Plug 'Townk/vim-autoclose'
