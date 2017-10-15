@@ -240,7 +240,6 @@ Plug 'benmills/vimux'
 Plug 'chrisbra/Recover.vim'
 Plug 'chriskempson/base16-vim'
 Plug 'tpope/vim-commentary'
-Plug 'junegunn/vim-easy-align'
 Plug 'unblevable/quick-scope'
 Plug 'tpope/vim-vinegar'
 Plug 'junegunn/fzf.vim'
@@ -291,10 +290,6 @@ nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 " Quickscope {{{
 let g:qs_first_occurrence_highlight_color = 117
 let g:qs_second_occurrence_highlight_color = 219
-" }}}
-" EasyAlign {{{
-" Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
-vmap <Enter> <Plug>(EasyAlign)
 " }}}
 " Undotree {{{
 nnoremap <F5> :UndotreeToggle<cr>
