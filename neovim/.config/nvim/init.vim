@@ -225,12 +225,6 @@ endfunction
 nmap <script> <silent> <Leader>l :call ToggleQuickFix()<CR>
 autocmd BufReadPost quickfix nnoremap <buffer> q :cclose<CR>
 " }}}
-" Matchit {{{
-" Load matchit.vim, but only if the user hasn't installed a newer version.
-if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
-  runtime! macros/matchit.vim
-endif
-" }}}
 " Plugins {{{
 call plug#begin('~/.config/nvim/plugged')
 Plug 'MarcWeber/vim-addon-mw-utils'
@@ -238,7 +232,6 @@ Plug 'tomtom/tlib_vim'
 Plug 'Townk/vim-autoclose'
 Plug 'danro/rename.vim'
 Plug 'ecomba/vim-ruby-refactoring'
-Plug 'matchit.zip'
 Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-rails'
