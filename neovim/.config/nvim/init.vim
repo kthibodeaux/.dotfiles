@@ -80,25 +80,6 @@ endfunction
 
 au BufNewFile,BufReadPost *.rb silent! :call BoilerBuilder()
 " }}}
-" Open rails spec/source {{{
-function! RailsOpenAltCommand(path, vim_command)
-  if a:path =~ "spec/"
-    let l:alternate = substitute(a:path, "spec/", "app/", "")
-    let l:alternate = substitute(l:alternate, "_spec", "", "")
-  elseif a:path =~ "app/"
-    let l:alternate = substitute(a:path, "app/", "spec/", "")
-    let l:alternate = substitute(l:alternate, ".rb", "_spec.rb", "")
-  endif
-
-  if empty(l:alternate)
-    echo "No alternate file for " . a:path . " exists!"
-  else
-    exec a:vim_command . " " . l:alternate
-  endif
-endfunction
-
-nnoremap <leader>. :call RailsOpenAltCommand(expand('%'), ':vsplit')<cr>
-" }}}
 " Undo config {{{
 set undofile
 set undodir=~/.config/nvim/undodir
@@ -139,6 +120,8 @@ nnoremap <leader>ff :Find<space>
 nnoremap <leader>fv :vs<CR>:Find<space>
 nnoremap <leader>fa :vs<CR>:Find <C-R><C-W><CR>
 
+nmap <leader>. <Plug>RailsOpenAlt
+
 " zoom in on a split
 nnoremap <leader>zz <C-w>z <C-w>_ <C-w>\|
 
@@ -148,7 +131,6 @@ nnoremap <leader>zx <C-w>=
 " iskeyword is local, so we remove it before leaving the buffer
 au BufLeave * set iskeyword-=:
 nnoremap <silent> <leader>n :set iskeyword+=:<CR><C-]>
-
 " RSpec {{{
 let g:rspec_command = 'call VimuxRunCommand("SKIP_SIMPLECOV=true bundle exec rspec {spec}\n")'
 map <Leader>rr :call RunNearestSpec()<CR>
