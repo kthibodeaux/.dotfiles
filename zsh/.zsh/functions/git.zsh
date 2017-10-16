@@ -162,6 +162,4 @@ alias oops="git reset HEAD~1"
 alias stash="git stash --include-untracked"
 alias pop="git stash pop"
 
-alias releases="git log | grep -v 'tag: ' | grep -i 'feature\|hotfix'"
-
 alias churn="git log --all --name-only --format='format:' | grep -v '^$' | sort | uniq -c | sort -n | tail"
