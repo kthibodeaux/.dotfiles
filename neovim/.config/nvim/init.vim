@@ -209,7 +209,7 @@ nnoremap <silent> <Right> :vertical resize -2<CR>
 " }}}
 " Plugins {{{
 call plug#begin('~/.config/nvim/plugged')
-Plug 'Townk/vim-autoclose'
+Plug 'jiangmiao/auto-pairs'
 Plug 'danro/rename.vim'
 Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-endwise'
