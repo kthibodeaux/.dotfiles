@@ -195,6 +195,13 @@ prompt_filthy_git_branch() {
   # get the current git status
   local branch git_dir_local rtn
 
+  rtn=""
+
+  if command git rev-parse --verify --quiet refs/stash >/dev/null; then
+    rtn+="%F{red}"
+    rtn+="* "
+  fi
+
   branch=$(git status --short --branch -uno --ignore-submodules=all | head -1 | awk '{print $2}' 2>/dev/null)
   git_dir_local=$(git rev-parse --git-dir)
 
@@ -204,26 +211,26 @@ prompt_filthy_git_branch() {
   # check if HEAD is detached
   if [[ -d "${git_dir_local}/rebase-merge" ]]; then
     branch=$(git status | head -5 | tail -1 | awk '{print $6}')
-    rtn="%F{red}rebasing interactively%f%F{242} → ${branch//([[:space:]]|\')/}%f"
+    rtn+="%F{red}rebasing interactively%f%F{242} → ${branch//([[:space:]]|\')/}%f"
   elif [[ -d "${git_dir_local}/rebase-apply" ]]; then
     branch=$(git status | head -2 | tail -1 | awk '{print $6}')
-    rtn="%F{red}rebasing%f%F{242} → ${branch//([[:space:]]|\')/}%f"
+    rtn+="%F{red}rebasing%f%F{242} → ${branch//([[:space:]]|\')/}%f"
   elif [[ -f "${git_dir_local}/MERGE_HEAD" ]]; then
     branch=$(git status | head -1 | awk '{print $3}')
-    rtn="%F{red}merging%f%F{242} → ${branch//([[:space:]]|\')/}%f"
+    rtn+="%F{red}merging%f%F{242} → ${branch//([[:space:]]|\')/}%f"
   elif [[ "$branch" = "HEAD" ]]; then
     commit=$(git status HEAD -uno --ignore-submodules=all | head -1 | awk '{print $4}' 2>/dev/null)
 
     if [[ "$commit" = "on" ]]; then
-      rtn="%F{yellow}no branch%f"
+      rtn+="%F{yellow}no branch%f"
     else
-      rtn="%F{242}detached@%f"
+      rtn+="%F{242}detached@%f"
       rtn+="%F{yellow}"
       rtn+="$commit"
       rtn+="%f"
     fi
   else
-    rtn="%F{242}$branch%f"
+    rtn+="%F{242}$branch%f"
   fi
 
   print "$rtn"
