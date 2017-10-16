@@ -149,16 +149,6 @@ augroup CursorColumn
   au WinLeave * setlocal nocursorcolumn
 augroup END
 " }}}
-" Whitespace {{{
-" Strip trailing whitespace before saving
-au BufWritePre * :call <SID>StripWhite()
-fun! <SID>StripWhite()
-  norm md
-  %s/[ \t]\+$//ge
-  %s!^\( \+\)\t!\=StrRepeat("\t", 1 + strlen(submatch(1)) / 8)!ge
-  norm `d
-endfun
-" }}}
 " Mappings {{{
 inoremap ii <Esc>
 noremap h k
