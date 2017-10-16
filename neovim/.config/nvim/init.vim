@@ -65,21 +65,6 @@ command! -bang -nargs=* Find
 set hidden " Allow unsaved buffers to be put in background
 set winwidth=90 " Active window min width
 " }}}
-" Ruby file templates {{{
-function BoilerBuilder()
-  if filereadable("boiler") == 1
-    if filereadable(@%) == 0
-      read !bundle exec ruby boiler %
-      norm ggdd
-    elseif line('$') == 1 && col('$') == 1
-      read !bundle exec ruby boiler %
-      norm ggdd
-    endif
-  endif
-endfunction
-
-au BufNewFile,BufReadPost *.rb silent! :call BoilerBuilder()
-" }}}
 " Undo config {{{
 set undofile
 set undodir=~/.config/nvim/undodir
