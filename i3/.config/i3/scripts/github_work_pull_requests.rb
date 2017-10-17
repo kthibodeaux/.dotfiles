@@ -15,14 +15,15 @@ class PullRequests
   end
 
   def process
-    if my_reviewed_pull_requests.any? || pull_requests_to_review.any?
-      puts '*PR'
-    else
-      puts 'PR'
-    end
+    return unless needs_attention_count > 0
+    puts 'Pull Requests: #{ needs_attention_count.size }'
   end
 
   private
+
+  def needs_attention_count
+    my_reviewed_pull_requests.size + pull_requests_to_review.size
+  end
 
   def my_reviewed_pull_requests
     pull_requests
