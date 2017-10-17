@@ -16,7 +16,7 @@ class PullRequests
 
   def process
     return unless needs_attention_count > 0
-    puts 'Pull Requests: #{ needs_attention_count.size }'
+    puts "Pull Requests: #{ needs_attention_count }"
   end
 
   private
