@@ -1,6 +1,14 @@
 # vi: set ft=sh :
 # vim:foldmethod=indent:foldlevel=0
 
+fzf_prog(){
+  if [ "$TMUX" = "" ]; then
+    echo "fzf"
+  else
+    echo "fzf-tmux"
+  fi
+}
+
 g() {
   if [[ $# > 0 ]]; then
     git $@
@@ -10,19 +18,11 @@ g() {
 }
 
 a() {
-  if [ "$TMUX" = "" ]; then
-    git add $(git status -s | awk '{ print $2 }' | fzf -m --preview 'git diff --color=always {}')
-  else
-    git add $(git status -s | awk '{ print $2 }' | fzf-tmux -m --preview 'git diff --color=always {}')
-  fi
+  git add $(git status -s | awk '{ print $2 }' | $(fzf_prog) -m --preview 'git diff --color=always {}')
 }
 
 ap() {
-  if [ "$TMUX" = "" ]; then
-    git add -p $(git status -s | awk '{ print $2 }' | fzf -m --preview 'git diff --color=always {}')
-  else
-    git add -p $(git status -s | awk '{ print $2 }' | fzf-tmux -m --preview 'git diff --color=always {}')
-  fi
+  git add -p $(git status -s | awk '{ print $2 }' | $(fzf_prog) -m --preview 'git diff --color=always {}')
 }
 
 cm() {
@@ -37,11 +37,7 @@ co() {
   if [[ $# > 0 ]]; then
     git co $@
   else
-    if [ "$TMUX" = "" ]; then
-      git co $(git status -s | awk '{ print $2 }' | fzf -m --preview 'git diff --color=always {}')
-    else
-      git co $(git status -s | awk '{ print $2 }' | fzf-tmux -m --preview 'git diff --color=always {}')
-    fi
+    git co $(git status -s | awk '{ print $2 }' | $(fzf_prog) -m --preview 'git diff --color=always {}')
   fi
 }
 
@@ -59,11 +55,7 @@ gbD() {
     set_base_branch
 
     branches=$(git branch)
-    if [ "$TMUX" = "" ]; then
-      targets=$(echo $branches | awk '{$1=$1};1' | fzf --preview 'git short-log $BASE_BRANCH..{} | head')
-    else
-      targets=$(echo $branches | awk '{$1=$1};1' | fzf-tmux --preview 'git short-log $BASE_BRANCH..{} | head')
-    fi
+    targets=$(echo $branches | awk '{$1=$1};1' | $(fzf_prog) --preview 'git short-log $BASE_BRANCH..{} | head')
 
     echo $targets
     confirm && git branch -D $(echo $targets)
@@ -111,11 +103,7 @@ br() {
     set_base_branch
 
     branches=$(git branch)
-    if [ "$TMUX" = "" ]; then
-      target=$(echo $branches | awk '{$1=$1};1' | fzf --preview 'git short-log $BASE_BRANCH..{} | head')
-    else
-      target=$(echo $branches | awk '{$1=$1};1' | fzf-tmux --preview 'git short-log $BASE_BRANCH..{} | head')
-    fi
+    target=$(echo $branches | awk '{$1=$1};1' | $(fzf_prog) --preview 'git short-log $BASE_BRANCH..{} | head')
 
     if [[ $target != '' ]]; then
       git checkout $(echo $target)
@@ -125,11 +113,7 @@ br() {
 
 cfu() {
   set_base_branch
-  if [ "$TMUX" = "" ]; then
-    target=$(git log --pretty=oneline $BASE_BRANCH.. | fzf --preview "echo {} | cut -f 1 -d' ' | xargs -I SHA git show --color=always --pretty=fuller --stat SHA" | awk '{ print $1 }')
-  else
-    target=$(git log --pretty=oneline $BASE_BRANCH.. | fzf-tmux --preview "echo {} | cut -f 1 -d' ' | xargs -I SHA git show --color=always --pretty=fuller --stat SHA" | awk '{ print $1 }')
-  fi
+  target=$(git log --pretty=oneline $BASE_BRANCH.. | $(fzf_prog) --preview "echo {} | cut -f 1 -d' ' | xargs -I SHA git show --color=always --pretty=fuller --stat SHA" | awk '{ print $1 }')
 
   if [[ $target != '' ]]; then
     git commit --fixup $(echo $target)
