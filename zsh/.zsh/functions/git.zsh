@@ -9,6 +9,14 @@ fzf_prog(){
   fi
 }
 
+base_branch() {
+  if git rev-parse -q --verify develop > /dev/null; then
+    echo "develop"
+  else
+    echo "master"
+  fi
+}
+
 g() {
   if [[ $# > 0 ]]; then
     git $@
@@ -52,10 +60,8 @@ git-nuke() {
 
 gbD() {
   if [[ $# == 0 ]]; then
-    set_base_branch
-
     branches=$(git branch)
-    targets=$(echo $branches | awk '{$1=$1};1' | $(fzf_prog) --preview 'git short-log $BASE_BRANCH..{} | head')
+    targets=$(echo $branches | awk '{$1=$1};1' | $(fzf_prog) --preview 'git short-log $(base_branch)..{} | head')
 
     echo $targets
     confirm && git branch -D $(echo $targets)
@@ -81,29 +87,21 @@ support() {
   dev && git checkout -b "support/$branch"
 }
 
-set_base_branch() {
-  if git rev-parse -q --verify develop; then
-    BASE_BRANCH="develop"
-  else
-    BASE_BRANCH="master"
-  fi
-}
 
 ir() {
   if [[ $# > 0 ]]; then
     git rebase -i $@
   else
-    set_base_branch
-    git rebase -i $BASE_BRANCH
+    git rebase -i $(base_branch)
   fi
 }
 
 br() {
   if [[ $# == 0 ]]; then
-    set_base_branch
-
+    # have to assign as variable because the preview command will not see the function
+    base_branch=$(base_branch)
     branches=$(git branch)
-    target=$(echo $branches | awk '{$1=$1};1' | $(fzf_prog) --preview 'git short-log $BASE_BRANCH..{} | head')
+    target=$(echo $branches | awk '{$1=$1};1' | $(fzf_prog) --preview 'git short-log $base_branch..{} | head')
 
     if [[ $target != '' ]]; then
       git checkout $(echo $target)
@@ -112,8 +110,7 @@ br() {
 }
 
 cfu() {
-  set_base_branch
-  target=$(git log --pretty=oneline $BASE_BRANCH.. | $(fzf_prog) --preview "echo {} | cut -f 1 -d' ' | xargs -I SHA git show --color=always --pretty=fuller --stat SHA" | awk '{ print $1 }')
+  target=$(git log --pretty=oneline $(base_branch).. | $(fzf_prog) --preview "echo {} | cut -f 1 -d' ' | xargs -I SHA git show --color=always --pretty=fuller --stat SHA" | awk '{ print $1 }')
 
   if [[ $target != '' ]]; then
     git commit --fixup $(echo $target)
@@ -124,8 +121,7 @@ changes() {
   if [[ $# > 0 ]]; then
     tig "$@".."$(git rev-parse --abbrev-ref HEAD)"
   else
-    set_base_branch
-    tig $BASE_BRANCH.."$(git rev-parse --abbrev-ref HEAD)"
+    tig $(base_branch).."$(git rev-parse --abbrev-ref HEAD)"
   fi
 }
 
