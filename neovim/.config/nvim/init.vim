@@ -163,6 +163,7 @@ Plug 'rhysd/vim-textobj-ruby'
 Plug 'vimwiki/vimwiki'
 Plug 'kthibodeaux/tig.vim'
 Plug 'kthibodeaux/pull-review'
+Plug 'sgeb/vim-diff-fold'
 call plug#end()
 " }}}
 " Theme {{{
