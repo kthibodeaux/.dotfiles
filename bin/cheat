@@ -1,0 +1,5 @@
+# vi: set ft=sh :
+
+# https://cheat.sh
+
+curl cheat.sh/$1
