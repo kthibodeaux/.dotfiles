@@ -54,11 +54,11 @@ sudo -u postgres createuser --interactive
 
 Performance can be significantly improved by modifying `/etc/postgresql/9.5/main/postgresql.conf` and turning `fsync` and `synchronous_commit` both off.
 
-todo:
-be able to compile qmk
-theme install should be automatic
-skype, slack, whatsapp (nativier?)
-universal ctags
-googletalk plugin
-gitflow?
+# todo
 
+* be able to compile qmk
+* theme install should be automatic
+* skype, slack, whatsapp (nativier?)
+* universal ctags
+* googletalk plugin
+* gitflow?
