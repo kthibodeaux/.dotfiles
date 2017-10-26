@@ -1,14 +1,6 @@
 # vi: set ft=sh :
 # vim:foldmethod=indent:foldlevel=0
 
-fzf_prog(){
-  if [ "$TMUX" = "" ]; then
-    echo "fzf"
-  else
-    echo "fzf-tmux"
-  fi
-}
-
 base_branch() {
   if git rev-parse -q --verify develop > /dev/null; then
     echo "develop"
