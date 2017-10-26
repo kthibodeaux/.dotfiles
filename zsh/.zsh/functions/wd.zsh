@@ -1,5 +1,3 @@
-# vi: set ft=zsh :
-
 WD_DIRS_LOCATION=~/.dirs
 
 function wd() {
