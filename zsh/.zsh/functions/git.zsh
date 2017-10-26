@@ -1,4 +1,3 @@
-# vi: set ft=sh :
 # vim:foldmethod=indent:foldlevel=0
 
 base_branch() {
