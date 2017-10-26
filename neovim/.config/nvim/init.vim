@@ -106,6 +106,8 @@ nnoremap <leader>fa :vs<CR>:Find <C-R><C-W><CR>
 
 nmap <leader>. <Plug>RailsOpenAlt
 
+nmap <leader>fm :silent execute "!tmux split-window ranger " . expand('%:p:h')<CR>
+
 " zoom in on a split
 nnoremap <leader>zz <C-w>z <C-w>_ <C-w>\|
 
