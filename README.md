@@ -35,9 +35,3 @@ git clone https://github.com/GreenRaccoon23/archdroid-icon-theme.git ~/opt/archd
 # postgres
 
 see https://github.com/kthibodeaux/unsafe-postgres
-
-# todo
-
-* theme install should be automatic
-* universal ctags
-* fzf/docker scripts to quickly switch database servers
