@@ -38,10 +38,6 @@ see https://github.com/kthibodeaux/unsafe-postgres
 
 # todo
 
-* be able to compile qmk
 * theme install should be automatic
-* skype, slack, whatsapp (nativier?)
 * universal ctags
-* googletalk plugin
-* gitflow?
 * fzf/docker scripts to quickly switch database servers
