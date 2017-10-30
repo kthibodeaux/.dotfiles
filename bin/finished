@@ -1,3 +1,4 @@
+#! /usr/bin/zsh
 # vi: set ft=zsh :
 
 BRANCH=$(git rev-parse --abbrev-ref HEAD)
