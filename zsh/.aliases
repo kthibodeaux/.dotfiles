@@ -1,47 +1,78 @@
 # vi: set ft=sh :
+# vim:foldmethod=marker:foldlevel=0
+
+# {{{ bundler
+alias be="bundle exec"
+alias bu="bundle update"
+alias bi="bundle install"
+# }}}
+# {{{ databases
+alias clean_devdb="RAILS_ENV=development bundle exec rake db:drop db:setup"
+alias clean_testdb="RAILS_ENV=test bundle exec rake db:drop db:setup"
+alias pclean_testdb="bundle exec rake parallel:drop[8] parallel:setup[8]"
+# }}}
+# {{{ files
+alias agh="ag --hidden"
 
 alias la="ls --color -pa"
 alias ls="ls --color -p"
 alias ll="ls --color -plh"
 
-alias :q="exit"
-alias tree="tree -C"
-alias c="cd ~; clear"
-
 alias ra="ranger"
 
-alias v="nvim"
-alias vu="nvim +PlugInstall"
-alias vrc="nvim ~/.dotfiles/neovim/.config/nvim/init.vim"
+alias tree="tree -C"
+# }}}
+# {{{ git
+alias churn="git log --all --name-only --format='format:' | grep -v '^$' | sort | uniq -c | sort -n | tail"
 
-alias t="tmux"
+alias cl="git clone"
 
-alias agh="ag --hidden"
+alias d="git diff"
+alias ds="git diff --staged"
 
-alias zrc="nvim ~/.dotfiles/zsh/.zshrc"
-alias rzsh="source ~/.zshrc && source ~/.zshrc.local"
+alias gp="git push"
+alias gb="git branch"
+alias gcp="git cherry-pick"
+alias gun="git reset HEAD"
+alias oops="git reset HEAD~1"
 
-alias rpca="RAILS_ENV=development bundle exec rake assets:precompile"
+alias stash="git stash --include-untracked"
+alias pop="git stash pop"
+# }}}
+# {{{ misc
+alias mine="wget -e robots=off -r -nc -np"
 
-alias be="bundle exec"
-alias bu="bundle update"
-alias bi="bundle install"
+alias winbox="wine ~/opt/winbox.exe"
+# }}}
+# {{{ rails
+alias ber="bundle exec rails"
 alias bes="SKIP_SIMPLECOV=true bundle exec rspec"
 alias bep="SKIP_SIMPLECOV=true bundle exec rake parallel:spec[8]"
-alias ber="bundle exec rails"
 
 alias mi="bundle exec rake db:migrate"
 alias mit="RAILS_ENV=test bundle exec rake db:migrate"
 alias pmit="bundle exec rake parallel:migrate[8]"
 
-alias winbox="wine ~/opt/winbox.exe"
-
-alias mine="wget -e robots=off -r -nc -np"
-
-alias clean_devdb="RAILS_ENV=development bundle exec rake db:drop db:setup"
-alias clean_testdb="RAILS_ENV=test bundle exec rake db:drop db:setup"
-alias pclean_testdb="bundle exec rake parallel:drop[8] parallel:setup[8]"
-
+alias rpca="RAILS_ENV=development bundle exec rake assets:precompile"
+# }}}
+# {{{ tmux
+alias t="tmux"
+# }}}
+# {{{ vim
+alias v="nvim"
+alias vu="nvim +PlugInstall"
+alias vrc="nvim ~/.dotfiles/neovim/.config/nvim/init.vim"
+# }}}
+# {{{ workflow
 alias prs="wf --pull-requests"
+# }}}
+# {{{ zsh
+alias :q="exit"
+alias c="cd ~; clear"
+
+alias zrc="nvim ~/.dotfiles/zsh/.zshrc"
+alias rzsh="source ~/.zshrc && source ~/.zshrc.local"
+# }}}
+
 
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local

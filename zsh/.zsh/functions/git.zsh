@@ -118,19 +118,3 @@ changes() {
 
 # Complete g like git
 compdef g=git
-
-alias cl="git clone"
-
-alias d="git diff"
-alias ds="git diff --staged"
-
-alias gp="git push"
-alias gb="git branch"
-alias gcp="git cherry-pick"
-alias gun="git reset HEAD"
-alias oops="git reset HEAD~1"
-
-alias stash="git stash --include-untracked"
-alias pop="git stash pop"
-
-alias churn="git log --all --name-only --format='format:' | grep -v '^$' | sort | uniq -c | sort -n | tail"
