@@ -50,4 +50,4 @@ alias pclean_testdb="bundle exec rake parallel:drop[8] parallel:setup[8]"
 
 alias prs="wf --pull-requests"
 
-[[ -f ~/.aliases.local ]] && source ~/.aliases.local ]]
+[[ -f ~/.aliases.local ]] && source ~/.aliases.local
