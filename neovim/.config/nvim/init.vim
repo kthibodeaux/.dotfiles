@@ -230,8 +230,8 @@ let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 let g:UltiSnipsEditSplit="vertical"
 " }}}
 " {{{ tig.vim
-nnoremap <leader>c :silent TigFileHistory<CR>
-nnoremap <leader>b :silent TigBlame<CR>
-nnoremap <leader>y :silent TigLatestCommitForLine<CR>
+nmap <leader>c <Plug>TigFileHistory
+nmap <leader>b <Plug>TigBlame
+nmap <leader>y <Plug>TigLatestCommitForLine
 " }}}
 " }}}
