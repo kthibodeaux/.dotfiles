@@ -35,6 +35,7 @@ set splitbelow
 let g:netrw_liststyle=3
 let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
 set list
+set guicursor=
 " Searching {{{
 set hlsearch
 set ignorecase
