@@ -98,7 +98,7 @@ nnoremap <leader><tab> mtgg=G`t " indent file
 nnoremap S i<cr><esc>^mwgk:silent! s/\v +$//<cr>:noh<cr>$ " split line
 nnoremap <s-tab> za " toggle fold
 nnoremap <leader>t :tab new<CR>
-nnoremap <leader><CR> gt<CR>
+nnoremap <leader><CR> gt
 nnoremap <leader>m :edit db/migrate<CR>G
 
 nnoremap <leader>ff :Find<space>
