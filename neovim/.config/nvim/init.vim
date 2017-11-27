@@ -119,7 +119,7 @@ nnoremap <leader>zx <C-w>=
 au BufLeave * set iskeyword-=:
 nnoremap <silent> <leader>n :set iskeyword+=:<CR><C-]>
 " RSpec {{{
-let g:rspec_command = 'call VimuxRunCommand("SKIP_SIMPLECOV=true bundle exec rspec {spec}\n")'
+let g:rspec_command = 'call VimuxRunCommand("bes {spec}\n")'
 map <Leader>rr :call RunNearestSpec()<CR>
 map <Leader>rf :call RunCurrentSpecFile()<CR>
 map <Leader>rl :call RunLastSpec()<CR>
