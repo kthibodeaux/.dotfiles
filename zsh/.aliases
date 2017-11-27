@@ -3,7 +3,7 @@
 
 # {{{ docker
 alias k="docker"
-alias kc="docker-compose"
+alias c="docker-compose"
 # }}}
 # {{{ files
 alias agh="ag --hidden"
@@ -51,7 +51,6 @@ alias prs="wf --pull-requests"
 # }}}
 # {{{ zsh
 alias :q="exit"
-alias c="cd ~; clear"
 
 alias zrc="nvim ~/.dotfiles/zsh/.zshrc"
 alias rzsh="source ~/.zshrc && source ~/.zshrc.local"
