@@ -1,16 +1,6 @@
 # vi: set ft=sh :
 # vim:foldmethod=marker:foldlevel=0
 
-# {{{ bundler
-alias be="bundle exec"
-alias bu="bundle update"
-alias bi="bundle install"
-# }}}
-# {{{ databases
-alias clean_devdb="RAILS_ENV=development bundle exec rake db:drop db:setup"
-alias clean_testdb="RAILS_ENV=test bundle exec rake db:drop db:setup"
-alias pclean_testdb="bundle exec rake parallel:drop[8] parallel:setup[8]"
-# }}}
 # {{{ docker
 alias k="docker"
 alias kc="docker-compose"
@@ -47,17 +37,6 @@ alias pop="git stash pop"
 alias mine="wget -e robots=off -r -nc -np"
 
 alias winbox="wine ~/opt/winbox.exe"
-# }}}
-# {{{ rails
-alias ber="bundle exec rails"
-alias bes="SKIP_SIMPLECOV=true bundle exec rspec"
-alias bep="SKIP_SIMPLECOV=true bundle exec rake parallel:spec[8]"
-
-alias mi="bundle exec rake db:migrate"
-alias mit="RAILS_ENV=test bundle exec rake db:migrate"
-alias pmit="bundle exec rake parallel:migrate[8]"
-
-alias rpca="RAILS_ENV=development bundle exec rake assets:precompile"
 # }}}
 # {{{ tmux
 alias t="tmux"
