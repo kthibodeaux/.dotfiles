@@ -12,3 +12,4 @@ text/html; xdg-open %s
 text/html; w3m -I %{charset} -T text/html; copiousoutput;
 
 application/VND.OPENXMLFORMATS-OFFICEDOCUMENT.WORDPROCESSINGML.DOCUMENT; libreoffice %s
+application/vnd.ms-excel; libreoffice %s
