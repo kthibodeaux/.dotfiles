@@ -91,6 +91,13 @@ else
 fi
 echo ""
 
+if [ -d ~/.tmux/plugins/tmux-fingers ]; then
+  echo "skipping tmux-fingers: already installed"
+else
+  git clone --recursive https://github.com/Morantron/tmux-fingers ~/.tmux/plugins/tmux-fingers
+fi
+echo ""
+
 font_install "fontawesome-webfont.ttf" "https://github.com/FortAwesome/Font-Awesome/raw/master/fonts/fontawesome-webfont.ttf"
 font_install "System San Francisco Display Bold.ttf" "https://github.com/supermarin/YosemiteSanFranciscoFont/raw/master/System%20San%20Francisco%20Display%20Bold.ttf"
 font_install "System San Francisco Display Ultralight.ttf" "https://github.com/supermarin/YosemiteSanFranciscoFont/raw/master/System%20San%20Francisco%20Display%20Ultralight.ttf"
