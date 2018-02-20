@@ -1,5 +1,6 @@
 -R
 --exclude=.git
+--exclude=bundle
 --exclude=log
 --exclude=tmp
 --exclude=vendor
