@@ -1,5 +1,33 @@
 priority -50
 
+snippet l "let"
+let(:$1) { $0 }
+endsnippet
+
+snippet c "create"
+FactoryGirl.create(:$0)
+endsnippet
+
+snippet b "build"
+FactoryGirl.build(:$0)
+endsnippet
+
+snippet co "context"
+context '$1' do
+  $0
+end
+endsnippet
+
+snippet de "describe"
+describe '$1' do
+  $0
+end
+endsnippet
+
+snippet sp "specify"
+specify { expect($1).to $0 }
+endsnippet
+
 snippet r "attr_reader"
 attr_reader :$0
 endsnippet
