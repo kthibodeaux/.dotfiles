@@ -19,6 +19,7 @@ stow -vv reek
 stow -vv rofi
 stow -vv rspec
 stow -vv rtv
+stow -vv tmate
 stow -vv tig
 stow -vv tmux
 stow -vv vim
