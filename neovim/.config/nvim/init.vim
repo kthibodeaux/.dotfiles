@@ -118,6 +118,9 @@ nnoremap <leader>zx <C-w>=
 " iskeyword is local, so we remove it before leaving the buffer
 au BufLeave * set iskeyword-=:
 nnoremap <silent> <leader>n :set iskeyword+=:<CR><C-]>
+
+nnoremap <leader>l :split<CR>:Buffers<CR>
+nnoremap <leader>u :vsplit<CR>:Buffers<CR>
 " RSpec {{{
 let g:rspec_command = 'call VimuxRunCommand("bes {spec}\n")'
 map <Leader>rr :call RunNearestSpec()<CR>
