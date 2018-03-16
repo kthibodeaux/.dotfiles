@@ -171,6 +171,7 @@ Plug 'kthibodeaux/tig.vim'
 Plug 'kthibodeaux/pull-review'
 Plug 'sgeb/vim-diff-fold'
 Plug 'rhysd/vim-crystal'
+Plug 'kshenoy/vim-signature'
 call plug#end()
 " }}}
 " Theme {{{
