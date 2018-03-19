@@ -1,7 +1,7 @@
 au BufWritePre * :call <SID>StripWhite()
 fun! <SID>StripWhite()
-  norm md
+  let l:cursor_pos = getpos(".")
   %s/[ \t]\+$//ge
   %s!^\( \+\)\t!\=StrRepeat("\t", 1 + strlen(submatch(1)) / 8)!ge
-  norm `d
+  call cursor(l:cursor_pos[1], l:cursor_pos[2])
 endfun
