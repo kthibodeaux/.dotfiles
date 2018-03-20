@@ -137,40 +137,45 @@ nnoremap <silent> <Right> :vertical resize -2<CR>
 " }}}
 " Plugins {{{
 call plug#begin('~/.config/nvim/plugged')
-Plug 'jiangmiao/auto-pairs'
-Plug 'danro/rename.vim'
+Plug 'benmills/vimux'
+Plug 'christoomey/vim-tmux-navigator'
+
 Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-rails'
-Plug 'tpope/vim-surround'
 Plug 'vim-ruby/vim-ruby'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'benmills/vimux'
+
+Plug 'jelera/vim-javascript-syntax'
+Plug 'kchmck/vim-coffee-script'
+
+Plug 'slim-template/vim-slim'
+
+Plug 'rhysd/vim-crystal'
+
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'SirVer/ultisnips'
 Plug 'chrisbra/Recover.vim'
 Plug 'chriskempson/base16-vim'
-Plug 'tpope/vim-commentary'
-Plug 'unblevable/quick-scope'
-Plug 'tpope/vim-vinegar'
-Plug 'junegunn/fzf.vim'
-Plug 'FooSoft/vim-argwrap'
-Plug 'w0rp/ale'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'mbbill/undotree'
-Plug 'jelera/vim-javascript-syntax'
-Plug 'slim-template/vim-slim'
-Plug 'kchmck/vim-coffee-script'
-Plug 'junegunn/vim-peekaboo'
+Plug 'danro/rename.vim'
 Plug 'fishbullet/deoplete-ruby'
-Plug 'Konfekt/FastFold'
-Plug 'SirVer/ultisnips'
+Plug 'FooSoft/vim-argwrap'
+Plug 'jiangmiao/auto-pairs'
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/vim-peekaboo'
 Plug 'kana/vim-textobj-user'
-Plug 'rhysd/vim-textobj-ruby'
-Plug 'vimwiki/vimwiki'
-Plug 'kthibodeaux/tig.vim'
-Plug 'kthibodeaux/pull-review'
-Plug 'sgeb/vim-diff-fold'
-Plug 'rhysd/vim-crystal'
+Plug 'Konfekt/FastFold'
 Plug 'kshenoy/vim-signature'
+Plug 'kthibodeaux/pull-review'
+Plug 'kthibodeaux/tig.vim'
+Plug 'mbbill/undotree'
+Plug 'rhysd/vim-textobj-ruby'
+Plug 'sgeb/vim-diff-fold'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-vinegar'
+Plug 'unblevable/quick-scope'
+Plug 'vimwiki/vimwiki'
+Plug 'w0rp/ale'
 call plug#end()
 " }}}
 " Theme {{{
