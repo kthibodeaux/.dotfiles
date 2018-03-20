@@ -6,4 +6,4 @@
 " Needs to be in an "after" directory in order to beat Vim's runtime
 " ("$VIMRUNTIME/ftplugin/mail.vim"), which sets it back to 72, but only if it
 " was previously set to 0.
-set textwidth=0
+setlocal textwidth=0
