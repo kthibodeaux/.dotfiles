@@ -105,8 +105,6 @@ nnoremap <leader>ff :Find<space>
 nnoremap <leader>fv :vs<CR>:Find<space>
 nnoremap <leader>fa :vs<CR>:Find <C-R><C-W><CR>
 
-nmap <leader>. <Plug>RailsOpenAlt
-
 nmap <leader>fm :silent execute "!tmux split-window ranger " . expand('%:p:h')<CR>
 
 " zoom in on a split
@@ -115,19 +113,10 @@ nnoremap <leader>zz <C-w>z <C-w>_ <C-w>\|
 " equalize splits
 nnoremap <leader>zx <C-w>=
 
-" iskeyword is local, so we remove it before leaving the buffer
-au BufLeave * set iskeyword-=:
-nnoremap <silent> <leader>n :set iskeyword+=:<CR><C-]>
+nnoremap <silent> <leader>n <C-]>
 
 nnoremap <leader>l :split<CR>:Buffers<CR>
 nnoremap <leader>u :vsplit<CR>:Buffers<CR>
-" RSpec {{{
-let g:rspec_command = 'call VimuxRunCommand("bes {spec}\n")'
-map <Leader>rr :call RunNearestSpec()<CR>
-map <Leader>rf :call RunCurrentSpecFile()<CR>
-map <Leader>rl :call RunLastSpec()<CR>
-map <Leader>ra :call RunAllSpecs()<CR>
-" }}}
 " Resizing splits {{{
 nnoremap <silent> <Up> :resize -2<CR>
 nnoremap <silent> <Down> :resize +2<CR>
@@ -196,6 +185,9 @@ set statusline+=\ %p%%
 set statusline+=\ %l:%c
 " }}}
 " Plugin config {{{
+" RSpec {{{
+let g:rspec_command = 'call VimuxRunCommand("bes {spec}\n")'
+" }}}
 " Tmux navigator {{{
 let g:tmux_navigator_no_mappings = 1
 nnoremap <silent> <c-j> :TmuxNavigateLeft<cr>
