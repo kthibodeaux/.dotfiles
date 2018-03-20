@@ -1,8 +1,6 @@
-nnoremap <localleader>c :Econtroller<CR>
-nnoremap <localleader>m :Emodel<CR>
-nnoremap <localleader>v :Eview<CR>
-nnoremap <localleader>s :Espec<CR>
-nnoremap <localleader>u :Eunittest<CR>
+nnoremap <buffer> <localleader>c :Econtroller<CR>
+nnoremap <buffer> <localleader>m :Emodel<CR>
+nnoremap <buffer> <localleader>v :Eview<CR>
 
 setlocal iskeyword+=!
 setlocal iskeyword+=?
