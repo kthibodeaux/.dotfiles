@@ -152,7 +152,6 @@ Plug 'tpope/vim-commentary'
 Plug 'unblevable/quick-scope'
 Plug 'tpope/vim-vinegar'
 Plug 'junegunn/fzf.vim'
-Plug 'AndrewRadev/linediff.vim'
 Plug 'FooSoft/vim-argwrap'
 Plug 'w0rp/ale'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
