@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if [ ! -f .ctags_running ]; then
+  touch .ctags_running
+  ctags .
+  rm .ctags_running
+fi

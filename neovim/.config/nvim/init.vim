@@ -49,7 +49,7 @@ set foldlevelstart=3
 " }}}
 " }}}
 " Tags {{{
-au BufWritePost *.rb :call jobstart('ctags')
+au BufWritePost *.rb :call jobstart('sh ~/.dotfiles/bin/run_tags')
 " }}}
 " Abbreviations {{{
 iabbr pry ::Kernel.binding.pry
