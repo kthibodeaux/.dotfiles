@@ -163,6 +163,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'
 Plug 'unblevable/quick-scope'
+Plug 'powerman/vim-plugin-AnsiEsc'
 Plug 'vimwiki/vimwiki'
 Plug 'w0rp/ale'
 call plug#end()
