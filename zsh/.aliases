@@ -4,6 +4,8 @@
 # {{{ docker
 alias k="docker"
 alias c="docker-compose"
+alias npm="docker run --rm kthibodeaux/node:latest npm"
+alias nodejs="docker run --rm kthibodeaux/node:latest nodejs"
 # }}}
 # {{{ files
 alias agh="ag --hidden"
