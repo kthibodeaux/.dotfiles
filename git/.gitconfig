@@ -3,22 +3,10 @@
 [alias]
   aa = add --all
   amend = commit --amend
-  br = branch
-  cl = clone
-  co = checkout
-  cm = commit -m
-  cv = commit -v
   dm = !git branch --merged origin/develop | grep -v master | grep -v develop | xargs git branch -d
-  done = !git fetch && git rebase origin/master && git checkout master && git merge @{-1} --no-ff && git push
   iquit = !git reset --hard && git clean -fd -e bundle/
   l = log --graph --abbrev-commit --date=relative
-  loc = !git diff --stat `git hash-object -t tree /dev/null` | tail -1 | cut -d' ' -f5
-  lst = log --graph --abbrev-commit --date=relative --stat
   rc = rebase --continue
-  rom = !git fetch origin && git rebase origin/master
-  short-log = log --pretty=format:'%C(yellow)%h%Creset %s'
-  shove = !git remote | xargs -L 1 git push
-  unstage = reset HEAD
   wip = !git add --all && git commit -m 'WIP' && git push
 [format]
   pretty=format:%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an %ae>%Creset
