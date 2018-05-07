@@ -34,9 +34,9 @@ cm() {
 
 co() {
   if [[ $# > 0 ]]; then
-    git co $@
+    git checkout $@
   else
-    git co $(git status -s | awk '{ print $2 }' | $(fzf_prog) -m --preview 'git diff --color=always {}')
+    git checkout $(git status -s | awk '{ print $2 }' | $(fzf_prog) -m --preview 'git diff --color=always {}')
   fi
 }
 
