@@ -23,3 +23,5 @@ bep() { docker_or_local "bundle exec rake parallel:spec[8]" }
 mi() { docker_or_local "bundle exec rake db:migrate RAILS_ENV=development" }
 mit() { docker_or_local "bundle exec rake db:migrate RAILS_ENV=test" }
 pmit() { docker_or_local "bundle exec rake parallel:migrate[8]" }
+
+rl() { docker_or_local "bundle exec rake routes" | ag $1 }
