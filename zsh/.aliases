@@ -33,6 +33,8 @@ alias gu="git up"
 alias gun="git reset HEAD"
 alias oops="git reset HEAD~1"
 
+alias gh="git log | head"
+
 alias stash="git stash --include-untracked"
 alias pop="git stash pop"
 # }}}
