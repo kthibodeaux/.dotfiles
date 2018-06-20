@@ -142,6 +142,7 @@ Plug 'slim-template/vim-slim'
 
 Plug 'rhysd/vim-crystal'
 
+Plug 'AndrewRadev/splitjoin.vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'SirVer/ultisnips'
 Plug 'chrisbra/Recover.vim'
