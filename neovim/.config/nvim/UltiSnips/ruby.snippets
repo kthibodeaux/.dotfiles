@@ -16,6 +16,10 @@ snippet b "build"
 FactoryBot.build(:$0)
 endsnippet
 
+snippet lb "let build"
+let(:$1) { FactoryBot.build(:$1) }
+endsnippet
+
 snippet co "context"
 context '$1' do
   $0
