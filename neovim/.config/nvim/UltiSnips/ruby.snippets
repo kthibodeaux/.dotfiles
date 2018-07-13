@@ -8,6 +8,10 @@ snippet c "create"
 FactoryBot.create(:$0)
 endsnippet
 
+snippet lc "let create"
+let(:$1) { FactoryBot.create(:$1) }
+endsnippet
+
 snippet b "build"
 FactoryBot.build(:$0)
 endsnippet
