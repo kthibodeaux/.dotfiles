@@ -1,112 +1,26 @@
 # vi: set ft=sh :
 
+# exit with error if sudo not installed
+
 # Keep-alive: update existing `sudo` time stamp until `setup` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-. setup_support/apt.sh
-. setup_support/snap.sh
-. setup_support/pip2.sh
-. setup_support/pip3.sh
-. setup_support/font.sh
-. setup_support/ruby.sh
-. setup_support/shell.sh
+. setup_steps/apt.sh
+. setup_steps/pip2.sh
+. setup_steps/pip3.sh
+. setup_steps/font.sh
+. setup_steps/ruby.sh
+. setup_steps/shell.sh
+. setup_steps/tmux.sh
+. setup_steps/fzf.sh
+. setup_steps/neovim.sh
 
 mkdir -p ~/.mail/Home
 mkdir -p ~/.mail/Work
-mkdir ~/.fonts
-
-add_apt_source "/etc/apt/sources.list.d/enpass.list" "deb http://repo.sinew.in/ stable main"
-
-sudo apt-get update
-
-apt_install "avrdude"
-apt_install "avr-libc"
-apt_install "awscli"
-apt_install "ca-certificates"
-apt_install "cifs-utils"
-apt_install "curl"
-apt_install "dfu-programmer"
-apt_install "docker"
-apt_install "docker-compose"
-apt_install "docker-registry"
-apt_install "docker.io"
-apt_install "ecryptfs-utils"
-apt_install "enpass"
-apt_install "feh"
-apt_install "gcc-avr"
-apt_install "git-flow"
-apt_install "glances"
-apt_install "htop"
-apt_install "i3blocks"
-apt_install "i3lock"
-apt_install "isync"
-apt_install "kazam"
-apt_install "libappindicator1"
-apt_install "libpq-dev"
-apt_install "mpv"
-apt_install "msmtp"
-apt_install "mutt"
-apt_install "neovim"
-apt_install "pandoc"
-apt_install "pgcli"
-apt_install "python-pip"
-apt_install "python3"
-apt_install "python3-pip"
-apt_install "ranger"
-apt_install "redis-server"
-apt_install "redshift-gtk"
-apt_install "rofi"
-apt_install "ruby"
-apt_install "rxvt-unicode-256color"
-apt_install "scrot"
-apt_install "silversearcher-ag"
-apt_install "sshfs"
-apt_install "tig"
-apt_install "tmux"
-apt_install "tree"
-apt_install "urlview"
-apt_install "vlc"
-apt_install "weechat"
-apt_install "xclip"
-apt_install "zsh"
-
-snap_install "--classic" "go"
-echo ""
-
-pip2_install "websocket-client"
-pip3_install "neovim"
-
-install_rvm
-source_rvm
-install_ruby "2.2.2"
-set_default_ruby "2.2.2"
 
 sudo usermod -aG docker $USER
 
-if [ -d ~/.fzf ]; then
-  echo "skipping fzf: already installed"
-else
-  git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-  ~/.fzf/install --key-bindings --completion --no-update-rc
-fi
 echo ""
-
-if [ -d ~/.tmux/plugins/tmux-fingers ]; then
-  echo "skipping tmux-fingers: already installed"
-else
-  git clone --recursive https://github.com/Morantron/tmux-fingers ~/.tmux/plugins/tmux-fingers
-fi
-echo ""
-
-font_install "fontawesome-webfont.ttf" "https://github.com/FortAwesome/Font-Awesome/raw/master/fonts/fontawesome-webfont.ttf"
-font_install "System San Francisco Display Bold.ttf" "https://github.com/supermarin/YosemiteSanFranciscoFont/raw/master/System%20San%20Francisco%20Display%20Bold.ttf"
-font_install "System San Francisco Display Ultralight.ttf" "https://github.com/supermarin/YosemiteSanFranciscoFont/raw/master/System%20San%20Francisco%20Display%20Ultralight.ttf"
-font_install "System San Francisco Display Regular.ttf" "https://github.com/supermarin/YosemiteSanFranciscoFont/raw/master/System%20San%20Francisco%20Display%20Regular.ttf"
-font_install "System San Francisco Display Thin.ttf" "https://github.com/supermarin/YosemiteSanFranciscoFont/raw/master/System%20San%20Francisco%20Display%20Thin.ttf"
-font_install "Menlo Regular.ttf" "https://github.com/hbin/top-programming-fonts/raw/master/Menlo-Regular.ttf"
-sudo fc-cache -f
-echo ""
-
 echo ""
 echo ""
 echo "If this is your first time running setup on this computer then you may"

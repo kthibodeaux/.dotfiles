@@ -54,8 +54,7 @@ prompt filthy
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+source /usr/local/share/chruby/chruby.sh
+chruby ruby-2.5.1
 
 opentmux
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
