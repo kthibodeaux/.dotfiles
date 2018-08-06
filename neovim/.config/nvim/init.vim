@@ -238,4 +238,7 @@ nmap <leader>c <Plug>TigFileHistory
 nmap <leader>b <Plug>TigBlame
 nmap <leader>y <Plug>TigLatestCommitForLine
 " }}}
+" ale {{{
+highlight ALEWarning ctermbg=88 ctermfg=255
+" }}}
 " }}}
