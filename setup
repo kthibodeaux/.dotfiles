@@ -1,7 +1,5 @@
 # vi: set ft=sh :
 
-# exit with error if sudo not installed
-
 # Keep-alive: update existing `sudo` time stamp until `setup` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
@@ -14,6 +12,8 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 . setup_steps/tmux.sh
 . setup_steps/fzf.sh
 . setup_steps/neovim.sh
+. setup_steps/gtk.sh
+. setup_steps/icons.sh
 
 mkdir -p ~/.mail/Home
 mkdir -p ~/.mail/Work

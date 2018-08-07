@@ -11,7 +11,6 @@ curl -fsSL https://dl.sinew.in/keys/enpass-linux.key | sudo apt-key add -
 add_apt_source "/etc/apt/sources.list.d/docker.list" "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
 
-
 sudo apt-get update
 
 sudo apt install \
@@ -36,6 +35,8 @@ sudo apt install \
   git-flow \
   glances \
   gnupg2 \
+  gtk2-engines-murrine \
+  gtk2-engines-pixbuf \
   htop \
   i3 \
   i3blocks \
