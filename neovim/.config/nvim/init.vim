@@ -200,6 +200,11 @@ nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 " Quickscope {{{
 let g:qs_first_occurrence_highlight_color = 117
 let g:qs_second_occurrence_highlight_color = 219
+augroup qs_colors
+  autocmd!
+  autocmd ColorScheme * highlight QuickScopePrimary ctermfg=117 cterm=underline
+  autocmd ColorScheme * highlight QuickScopeSecondary ctermfg=219 cterm=underline
+augroup END
 " }}}
 " Undotree {{{
 nnoremap <F5> :UndotreeToggle<cr>
