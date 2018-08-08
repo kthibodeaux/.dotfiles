@@ -1,5 +1,6 @@
 # vi: set ft=sh :
 
+. ~/.dotfiles/stow_all
 . ~/.dotfiles/setup_steps/apt.sh
 . ~/.dotfiles/setup_steps/docker_compose.sh
 . ~/.dotfiles/setup_steps/pip2.sh
