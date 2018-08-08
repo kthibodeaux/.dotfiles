@@ -3,17 +3,17 @@
 # Keep-alive: update existing `sudo` time stamp until `setup` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-. setup_steps/apt.sh
-. setup_steps/pip2.sh
-. setup_steps/pip3.sh
-. setup_steps/font.sh
-. setup_steps/ruby.sh
-. setup_steps/shell.sh
-. setup_steps/tmux.sh
-. setup_steps/fzf.sh
-. setup_steps/neovim.sh
-. setup_steps/gtk.sh
-. setup_steps/icons.sh
+. ~/.dotfiles/setup_steps/apt.sh
+. ~/.dotfiles/setup_steps/pip2.sh
+. ~/.dotfiles/setup_steps/pip3.sh
+. ~/.dotfiles/setup_steps/font.sh
+. ~/.dotfiles/setup_steps/ruby.sh
+. ~/.dotfiles/setup_steps/shell.sh
+. ~/.dotfiles/setup_steps/tmux.sh
+. ~/.dotfiles/setup_steps/fzf.sh
+. ~/.dotfiles/setup_steps/neovim.sh
+. ~/.dotfiles/setup_steps/gtk.sh
+. ~/.dotfiles/setup_steps/icons.sh
 
 mkdir -p ~/.mail/Home
 mkdir -p ~/.mail/Work
