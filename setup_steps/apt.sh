@@ -30,6 +30,7 @@ sudo apt-get install \
   docker-ce \
   ecryptfs-utils \
   enpass \
+  evince \
   exuberant-ctags \
   feh \
   fonts-hack-otf \
