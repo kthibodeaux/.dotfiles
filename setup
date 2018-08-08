@@ -4,6 +4,7 @@
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 . ~/.dotfiles/setup_steps/apt.sh
+. ~/.dotfiles/setup_steps/docker_compose.sh
 . ~/.dotfiles/setup_steps/pip2.sh
 . ~/.dotfiles/setup_steps/pip3.sh
 . ~/.dotfiles/setup_steps/ruby.sh
