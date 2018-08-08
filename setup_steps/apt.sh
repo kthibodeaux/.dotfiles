@@ -6,17 +6,17 @@ add_apt_source() {
   fi
 }
 
-sudo apt update
-sudo apt install curl
+sudo apt-get update
+sudo apt-get install curl
 
 add_apt_source "/etc/apt/sources.list.d/enpass.list" "deb http://repo.sinew.in/ stable main"
 curl -fsSL https://dl.sinew.in/keys/enpass-linux.key | sudo apt-key add -
 add_apt_source "/etc/apt/sources.list.d/docker.list" "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
 
-sudo apt update
+sudo apt-get update
 
-sudo apt install \
+sudo apt-get install \
   apt-transport-https \
   automake \
   autotools-dev \
