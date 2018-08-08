@@ -1,6 +1,7 @@
 # vi: set ft=sh :
 
 stow -vv ctags
+stow -vv firefox
 stow -vv gem
 stow -vv git
 stow -vv gtk2
