@@ -1,5 +1,11 @@
 #!/bin/sh
 case "$@" in
+  *.jpg*)
+    feh $@
+    ;;
+  *.jpeg*)
+    feh $@
+    ;;
   *.png*)
     feh $@
     ;;
