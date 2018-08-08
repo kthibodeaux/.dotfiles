@@ -6,7 +6,6 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 . ~/.dotfiles/setup_steps/apt.sh
 . ~/.dotfiles/setup_steps/pip2.sh
 . ~/.dotfiles/setup_steps/pip3.sh
-. ~/.dotfiles/setup_steps/font.sh
 . ~/.dotfiles/setup_steps/ruby.sh
 . ~/.dotfiles/setup_steps/shell.sh
 . ~/.dotfiles/setup_steps/tmux.sh
@@ -18,6 +17,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 mkdir -p ~/.mail/Home
 mkdir -p ~/.mail/Work
 
+sudo fc-cache -f
 sudo usermod -aG docker $USER
 
 echo ""

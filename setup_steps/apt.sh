@@ -31,6 +31,9 @@ sudo apt install \
   enpass \
   exuberant-ctags \
   feh \
+  fonts-hack-otf \
+  fonts-hack-ttf \
+  fonts-hack-web \
   gettext \
   git-flow \
   glances \
