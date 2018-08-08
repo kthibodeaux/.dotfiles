@@ -8,3 +8,4 @@ pip3_install() {
 }
 
 pip3_install "neovim"
+pip3_install "rtv"
