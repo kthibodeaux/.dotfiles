@@ -22,6 +22,7 @@ sudo apt-get install \
   avr-libc \
   avrdude \
   awscli \
+  blueman \
   build-essential \
   ca-certificates \
   cifs-utils \
