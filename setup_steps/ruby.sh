@@ -16,8 +16,7 @@ install_ruby() {
 
 install_chruby() {
   if ! [ -f /usr/local/share/chruby/chruby.sh ]; then
-    mkdir ~/opt
-    cd ~/opt
+    cd ~/src
     wget -O chruby-0.3.9.tar.gz https://github.com/postmodern/chruby/archive/v0.3.9.tar.gz
     tar -xzvf chruby-0.3.9.tar.gz
     cd chruby-0.3.9/
@@ -30,8 +29,7 @@ install_chruby() {
 
 install_ruby_install() {
   if ! [ "$(command -v ruby-install)" ]; then
-    mkdir ~/opt
-    cd ~/opt
+    cd ~/src
     wget -O ruby-install-0.6.1.tar.gz https://github.com/postmodern/ruby-install/archive/v0.6.1.tar.gz
     tar -xzvf ruby-install-0.6.1.tar.gz
     cd ruby-install-0.6.1/

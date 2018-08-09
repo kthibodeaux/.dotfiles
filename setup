@@ -1,4 +1,6 @@
 # vi: set ft=sh :
+mkdir ~/opt
+mkdir ~/src
 
 . ~/.dotfiles/stow_all
 . ~/.dotfiles/setup_steps/apt.sh
