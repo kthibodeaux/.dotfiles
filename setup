@@ -13,6 +13,7 @@
 . ~/.dotfiles/setup_steps/neovim.sh
 . ~/.dotfiles/setup_steps/gtk.sh
 . ~/.dotfiles/setup_steps/icons.sh
+. ~/.dotfiles/setup_steps/dasht.sh
 
 mkdir -p ~/.mail/Home
 mkdir -p ~/.mail/Work
