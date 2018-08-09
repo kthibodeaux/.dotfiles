@@ -7,7 +7,7 @@ add_apt_source() {
 }
 
 sudo apt-get update
-sudo apt-get install apt-transport-https curl
+sudo apt-get install -y apt-transport-https curl
 
 add_apt_source "/etc/apt/sources.list.d/enpass.list" "deb http://repo.sinew.in/ stable main"
 curl -fsSL https://dl.sinew.in/keys/enpass-linux.key | sudo apt-key add -
@@ -16,7 +16,7 @@ curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
 
 sudo apt-get update
 
-sudo apt-get install \
+sudo apt-get install -y \
   automake \
   autotools-dev \
   avr-libc \
