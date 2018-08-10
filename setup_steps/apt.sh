@@ -33,7 +33,6 @@ sudo apt-get install -y \
   enpass \
   evince \
   exuberant-ctags \
-  feh \
   fonts-hack-otf \
   fonts-hack-ttf \
   fonts-hack-web \
@@ -50,10 +49,15 @@ sudo apt-get install -y \
   kazam \
   libappindicator1 \
   libevent-dev \
+  libcurl3-gnutls-dev \
+  libimlib2-dev \
   libncurses5-dev \
   libpq-dev \
   libssl-dev \
   libtool-bin \
+  libx11-dev \
+  libxinerama-dev \
+  libxt-dev \
   mpv \
   msmtp \
   mutt \
