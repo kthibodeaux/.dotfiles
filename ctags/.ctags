@@ -9,6 +9,7 @@
 --exclude=config
 
 --regex-ruby=/(^|;)[ \t]*(class|module)[ \t]+([A-Z][[:alnum:]_]+(::[A-Z][[:alnum:]_]+)+)/\3/c,class,constant/
+--regex-ruby=/(^|[:;])[ \t]*([A-Z][[:alnum:]_]+) *=/\2/c,class,constant/
 --regex-ruby=/^[ 	]*scope[ 	]*:([a-zA-Z0-9_]+)/\1/
 --regex-ruby=/^[ 	]*belongs_to[ 	]*:([a-zA-Z0-9_]+)/\1/
 --regex-ruby=/^[ 	]*has_many[ 	]*:([a-zA-Z0-9_]+)/\1/
