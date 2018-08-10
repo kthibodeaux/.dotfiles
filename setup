@@ -1,6 +1,9 @@
 # vi: set ft=sh :
 mkdir ~/opt
 mkdir ~/src
+mkdir -p ~/.local/share
+mkdir -p ~/.mail/Home
+mkdir -p ~/.mail/Work
 
 . ~/.dotfiles/stow_all
 . ~/.dotfiles/setup_steps/apt.sh
@@ -16,9 +19,6 @@ mkdir ~/src
 . ~/.dotfiles/setup_steps/gtk.sh
 . ~/.dotfiles/setup_steps/icons.sh
 . ~/.dotfiles/setup_steps/dasht.sh
-
-mkdir -p ~/.mail/Home
-mkdir -p ~/.mail/Work
 
 sudo fc-cache -f
 sudo usermod -aG docker $USER
