@@ -43,7 +43,10 @@ Manually install any proprietary drivers.
 Before running the below commands make sure you can clone from GitHub by adding your SSH key to your profile.
 
 ```bash
-sudo apt install git stow
+# as su
+apt install sudo git stow
+usermod -aG sudo kthibodeaux
+# as kthibodeaux
 git clone git@github.com:kthibodeaux/.dotfiles.git
 cd .dotfiles
 bash setup
