@@ -71,6 +71,7 @@ sudo apt-get install -y \
   redshift-gtk \
   rofi \
   rofi \
+  rxvt-unicode \
   scrot \
   sddm \
   silversearcher-ag \
