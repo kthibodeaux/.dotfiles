@@ -13,6 +13,7 @@ floating_modifier $mod
 exec --no-startup-id feh --bg-scale /home/kthibodeaux/Pictures/background.jpg
 exec --no-startup-id redshift-gtk
 exec --no-startup-id blueman-applet
+exec --no-startup-id sleep 4 && xmodmap ~/.Xmodmap &
 # }}}
 # {{{ keybinds
 # {{{ applications
