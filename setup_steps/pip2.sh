@@ -6,3 +6,5 @@ pip2_install() {
   fi
   echo ""
 }
+
+pip2_install "websocket-client"

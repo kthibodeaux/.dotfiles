@@ -1,5 +1,6 @@
 export DOTFILES=$HOME/.dotfiles
-export PATH="$DOTFILES/bin:$HOME/opt/bin:$PATH"
+export PATH="$DOTFILES/bin:$HOME/opt/bin:$HOME/opt/dasht/bin:$PATH"
+export MANPATH="$HOME/opt/dasht/man:$MANPATH"
 
 export BROWSER=/usr/bin/firefox
 export VISUAL=nvim

@@ -4,7 +4,7 @@ for_window [class="^.*"] border pixel 1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:System San Francisco Display 10
+font pango:Hack 10
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -13,7 +13,7 @@ floating_modifier $mod
 exec --no-startup-id feh --bg-scale /home/kthibodeaux/Pictures/background.jpg
 exec --no-startup-id redshift-gtk
 exec --no-startup-id blueman-applet
-exec --no-startup-id nm-applet
+exec --no-startup-id sleep 4 && xmodmap ~/.Xmodmap &
 # }}}
 # {{{ keybinds
 # {{{ applications
@@ -30,8 +30,8 @@ bindsym --release $mod+z exec scrot -s -e 'aws s3 cp $f s3://kthibodeaux-screens
 bindsym $mod+q kill
 # }}}
 # touchpad {{{
-bindsym $mod+Control+q exec "xinput list | grep bcm5974 | awk '{print $4}' | sed 's/id=//' | xinput set-prop `cat` 'Device Enabled' 0; notify-send 'touchpad disabled'"
-bindsym $mod+Control+w exec "xinput list | grep bcm5974 | awk '{print $4}' | sed 's/id=//' | xinput set-prop `cat` 'Device Enabled' 1; notify-send 'touchpad enabled'"
+bindsym $mod+Control+q exec "xinput list | grep TouchPad | awk '{print $6}' | sed 's/id=//' | xinput set-prop `cat` 'Device Enabled' 0; notify-send 'touchpad disabled'"
+bindsym $mod+Control+w exec "xinput list | grep TouchPad | awk '{print $6}' | sed 's/id=//' | xinput set-prop `cat` 'Device Enabled' 1; notify-send 'touchpad enabled'"
 # }}}
 # {{{ keyboard layout
 bindsym $mod+Control+Shift+q exec "setxkbmap us && xmodmap ~/.Xmodmap"

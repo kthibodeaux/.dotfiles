@@ -6,3 +6,6 @@ pip3_install() {
   fi
   echo ""
 }
+
+pip3_install "neovim"
+pip3_install "rtv"
