@@ -51,3 +51,5 @@ git clone git@github.com:kthibodeaux/.dotfiles.git
 cd .dotfiles
 bash setup
 ```
+
+To run `rspec` with more cores, override `RSPEC_CORES` in `~/.zshenv.local`

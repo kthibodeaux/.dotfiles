@@ -16,4 +16,6 @@ export CLICOLOR=1
 export FZF_DEFAULT_COMMAND='ag -g "" --hidden --ignore .git'
 export FZF_COMPLETION_TRIGGER=',,'
 
+export RSPEC_CORES=8
+
 [[ -f ~/.zshenv.local ]] && source ~/.zshenv.local ]]
