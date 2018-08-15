@@ -30,8 +30,8 @@ bindsym --release $mod+z exec scrot -s -e 'aws s3 cp $f s3://kthibodeaux-screens
 bindsym $mod+q kill
 # }}}
 # touchpad {{{
-bindsym $mod+Control+q exec "xinput list | grep TouchPad | awk '{print $6}' | sed 's/id=//' | xinput set-prop `cat` 'Device Enabled' 0; notify-send 'touchpad disabled'"
-bindsym $mod+Control+w exec "xinput list | grep TouchPad | awk '{print $6}' | sed 's/id=//' | xinput set-prop `cat` 'Device Enabled' 1; notify-send 'touchpad enabled'"
+bindsym $mod+Control+q exec "xinput list | grep TouchPad | awk '{print $6}' | sed 's/id=//' | xinput set-prop `cat` 'Device Enabled' 0"
+bindsym $mod+Control+w exec "xinput list | grep TouchPad | awk '{print $6}' | sed 's/id=//' | xinput set-prop `cat` 'Device Enabled' 1"
 # }}}
 # {{{ keyboard layout
 bindsym $mod+Control+Shift+q exec "setxkbmap us && xmodmap ~/.Xmodmap"
