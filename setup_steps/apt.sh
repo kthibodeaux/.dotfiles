@@ -60,7 +60,7 @@ sudo apt-get install -y \
   libxt-dev \
   mpv \
   msmtp \
-  mutt \
+  neomutt \
   pandoc \
   pavucontrol \
   pgcli \
