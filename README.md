@@ -36,15 +36,15 @@ Uses [GNU Stow](https://www.gnu.org/software/stow/) for management.
 
 ## setup
 
-These instructions will turn a fresh Debian net install into a configured i3 system
+These instructions will turn a fresh Xubuntu install into a configured i3 system
 
-Manually install any proprietary drivers.
+This will not install any proprietary drivers.
 
 Before running the below commands make sure you can clone from GitHub by adding your SSH key to your profile.
 
 ```bash
 # as su
-apt install sudo git stow
+apt install openssh-server git stow
 usermod -aG sudo kthibodeaux
 # as kthibodeaux
 git clone git@github.com:kthibodeaux/.dotfiles.git
