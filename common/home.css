@@ -1,0 +1,27 @@
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: #424242;
+  padding: 100px 100px 200px;
+  font-family: hack;
+  color: #535353;
+}
+
+i, a {
+  color: #535353;
+}
+
+.col {
+  line-height: 1.5em;
+  background: #d7d7d7;
+  text-align: center;
+  width: 16.66%;
+  padding: 10px;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
