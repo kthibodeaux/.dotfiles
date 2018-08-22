@@ -1,10 +1,9 @@
-<!doctype html>
+<!DOCTYPE html>
 
-<html lang="en">
+<html>
   <head>
-    <meta charset="utf-8">
-    <title>Home</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
     <style type="text/css">
     * {
     -moz-box-sizing: border-box;
@@ -35,98 +34,40 @@
     }
     </style>
   </head>
-
   <body>
-    <a href="https://facebook.com">
-      <div class="col">
-        <i class="fab fa-4x fa-facebook"></i>
-        <br />
-        facebook
+    <div id="app">
+      <div v-for="item in items">
+        <a v-bind:href="item.url">
+          <div class="col">
+            <i v-bind:class="item.css + ' fa-4x'"></i>
+            <br />
+            {{item.name}}
+          </div>
+        </a>
       </div>
-    </a>
-    <a href="https://github.com">
-      <div class="col">
-        <i class="fab fa-4x fa-github"></i>
-        <br />
-        github
-      </div>
-    </a>
-    <a href="https://app.codeship.com/home">
-      <div class="col">
-        <i class="fa fa-4x fa-ship"></i>
-        <br />
-        codeship
-      </div>
-    </a>
-    <a href="https://newrelic.com">
-      <div class="col">
-        <i class="fa fa-4x fa-chart-bar"></i>
-        <br />
-        new relic
-      </div>
-    </a>
-    <a href="https://player.siriusxm.com">
-      <div class="col">
-        <i class="fa fa-4x fa-play"></i>
-        <br />
-        sirius xm
-      </div>
-    </a>
-    <a href="https://web.whatsapp.com">
-      <div class="col">
-        <i class="fab fa-4x fa-whatsapp"></i>
-        <br />
-        whatsapp
-      </div>
-    </a>
-    <a href="https://youtube.com">
-      <div class="col">
-        <i class="fab fa-4x fa-youtube"></i>
-        <br />
-        youtube
-      </div>
-    </a>
-    <a href="https://trello.com">
-      <div class="col">
-        <i class="fab fa-4x fa-trello"></i>
-        <br />
-        trello
-      </div>
-    </a>
-    <a href="https://brooklyn.overdrive.com/">
-      <div class="col">
-        <i class="fa fa-4x fa-book-reader"></i>
-        <br />
-        overdrive
-      </div>
-    </a>
-    <a href="https://baldwinsafety.com">
-      <div class="col">
-        <i class="fa fa-4x fa-helicopter"></i>
-        <br />
-        prod
-      </div>
-    </a>
-    <a href="http://baldwindemo.com">
-      <div class="col">
-        <i class="fa fa-4x fa-server"></i>
-        <br />
-        demo
-      </div>
-    </a>
-    <a href="http://lightsong:3000">
-      <div class="col">
-        <i class="fa fa-4x fa-laptop"></i>
-        <br />
-        lightsong
-      </div>
-    </a>
-    <a href="http://lightsong:3000/demo/welcome">
-      <div class="col">
-        <i class="fa fa-4x fa-laptop"></i>
-        <br />
-        lightsong/demo
-      </div>
-    </a>
+    </div>
+
+    <script>
+new Vue({
+  el: '#app',
+  data: {
+    items: [
+      { name: 'facebook', url: 'https://facebook.com', css: 'fab fa-facebook' },
+      { name: 'github', url: 'https://github.com', css: 'fab fa-github' },
+      { name: 'codeship', url: 'https://app.codeship.com/home', css: 'fa fa-ship' },
+      { name: 'new relic', url: 'https://newrelic.com', css: 'fa fa-chart-bar' },
+      { name: 'sirius xm', url: 'https://player.siriusxm.com', css: 'fa fa-play' },
+      { name: 'whatsapp', url: 'https://web.whatsapp.com', css: 'fab fa-whatsapp' },
+      { name: 'youtube', url: 'https://youtube.com', css: 'fab fa-youtube' },
+      { name: 'trello', url: 'https://trello.com', css: 'fab fa-trello' },
+      { name: 'overdrive', url: 'https://overdrive.com', css: 'fa fa-book-reader' },
+      { name: 'prod', url: 'https://baldwinsafety.com', css: 'fa fa-helicopter' },
+      { name: 'demo', url: 'http://baldwindemo.com', css: 'fa fa-server' },
+      { name: 'lightsong', url: 'http://lightsong:3000', css: 'fa fa-laptop' },
+      { name: 'lightsong/demo', url: 'http://lightsong:3000/demo/welcome', css: 'fa fa-laptop' },
+    ]
+  }
+});
+    </script>
   </body>
 </html>
