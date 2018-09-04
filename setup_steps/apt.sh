@@ -17,6 +17,7 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo apt-get update
 
 sudo apt-get install -y \
+  arandr \
   automake \
   autotools-dev \
   avr-libc \
