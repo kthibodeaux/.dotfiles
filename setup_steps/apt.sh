@@ -62,6 +62,7 @@ sudo apt-get install -y \
   mpv \
   msmtp \
   neomutt \
+  npm \
   pandoc \
   pavucontrol \
   pgcli \
