@@ -8,6 +8,8 @@ docker_or_local() {
   fi
 }
 
+ya() { docker_or_local "yarn $@" }
+
 be() { docker_or_local "bundle exec $@" }
 bu() { docker_or_local "bundle update $@" }
 bi() { docker_or_local "bundle install $@" }
