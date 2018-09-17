@@ -247,4 +247,7 @@ nmap <leader>y <Plug>TigLatestCommitForLine
 " ale {{{
 highlight ALEWarning ctermbg=88 ctermfg=255
 " }}}
+" auto-pairs {{{
+let g:AutoPairsMultilineClose=0
+" }}}
 " }}}
