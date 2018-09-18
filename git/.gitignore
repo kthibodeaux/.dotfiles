@@ -4,3 +4,5 @@ gems.ctags
 .DS_Store
 .ruby-gemset
 metadocs/
+npm-debug.log
+node_modules/
