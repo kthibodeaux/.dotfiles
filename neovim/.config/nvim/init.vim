@@ -246,6 +246,10 @@ nmap <leader>y <Plug>TigLatestCommitForLine
 " }}}
 " ale {{{
 highlight ALEWarning ctermbg=88 ctermfg=255
+let g:ale_fixers = {
+\   '*': ['trim_whitespace', 'remove_trailing_lines'],
+\   'javascript': ['eslint']
+\}
 " }}}
 " auto-pairs {{{
 let g:AutoPairsMultilineClose=0
