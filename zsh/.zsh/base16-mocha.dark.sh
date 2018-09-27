@@ -33,8 +33,19 @@ color_foreground="d0/c8/c6" # Base 05
 color_background="3B/32/28" # Base 00
 color_cursor="d0/c8/c6" # Base 05
 
-printf_template="\033]4;%d;rgb:%s\033\\"
-printf_template_var="\033]%d;rgb:%s\033\\"
+if [ -n "$TMUX" ]; then
+  # tell tmux to pass the escape sequences through
+  # (Source: http://permalink.gmane.org/gmane.comp.terminal-emulators.tmux.user/1324)
+  printf_template="\033Ptmux;\033\033]4;%d;rgb:%s\007\033\\"
+  printf_template_var="\033Ptmux;\033\033]%d;rgb:%s\007\033\\"
+elif [ "${TERM%%-*}" = "screen" ]; then
+  # GNU screen (screen, screen-256color, screen-256color-bce)
+  printf_template="\033P\033]4;%d;rgb:%s\007\033\\"
+  printf_template_var="\033P\033]%d;rgb:%s\007\033\\"
+else
+  printf_template="\033]4;%d;rgb:%s\033\\"
+  printf_template_var="\033]%d;rgb:%s\033\\"
+fi
 
 # 16 color space
 printf $printf_template 0  $color00
