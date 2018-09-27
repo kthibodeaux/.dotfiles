@@ -7,5 +7,6 @@ pip3_install() {
   echo ""
 }
 
+pip3_install "hangups"
 pip3_install "neovim"
 pip3_install "rtv"
