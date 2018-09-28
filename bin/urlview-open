@@ -1,5 +1,8 @@
 #!/bin/sh
 case "$@" in
+  *slack.com*)
+    xdg-open $@
+    ;;
   *.jpg*)
     feh $@
     ;;
