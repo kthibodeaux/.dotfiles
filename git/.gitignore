@@ -7,3 +7,4 @@ metadocs/
 npm-debug.log
 node_modules/
 public/packs/
+public/sprockets/
