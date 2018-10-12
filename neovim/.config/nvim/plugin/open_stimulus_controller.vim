@@ -1,4 +1,4 @@
-function s:open_stimulus_controller(controller_name)
+function s:open_stimulus_controller()
   let l:line = getline('.')
   let l:name = matchlist(l:line, '.*data-controller=\%(\"\|''\)\(.*\)\%(\"\|''\).*')[1]
 
@@ -10,4 +10,4 @@ function s:open_stimulus_controller(controller_name)
   exec ":vsplit " . l:path . l:name . "_controller.js"
 endfunction
 
-nnoremap <Plug>OpenStimulusController :call <SID>open_stimulus_controller(expand('<cword>'))<CR>
+nnoremap <Plug>OpenStimulusController :call <SID>open_stimulus_controller()<CR>
