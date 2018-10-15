@@ -135,6 +135,7 @@ Plug 'fishbullet/deoplete-ruby'
 
 Plug 'jelera/vim-javascript-syntax'
 Plug 'kchmck/vim-coffee-script'
+Plug 'posva/vim-vue'
 
 " locked until https://github.com/slim-template/vim-slim/pull/70 is merged
 " Plug 'slim-template/vim-slim'
@@ -154,11 +155,9 @@ Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-peekaboo'
 Plug 'kana/vim-textobj-user'
 Plug 'Konfekt/FastFold'
-Plug 'kshenoy/vim-signature'
 Plug 'kthibodeaux/pull-review'
 Plug 'kthibodeaux/tig.vim'
 Plug 'mbbill/undotree'
-Plug 'posva/vim-vue'
 Plug 'rhysd/vim-textobj-ruby'
 Plug 'sgeb/vim-diff-fold'
 Plug 'tpope/vim-commentary'
@@ -166,7 +165,6 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'
 Plug 'unblevable/quick-scope'
 Plug 'powerman/vim-plugin-AnsiEsc'
-Plug 'vimwiki/vimwiki'
 Plug 'w0rp/ale'
 call plug#end()
 " }}}
