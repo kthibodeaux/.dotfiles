@@ -115,8 +115,6 @@ nnoremap <leader>zx <C-w>=
 
 nnoremap <silent> <leader>n <C-]>
 
-nnoremap <leader>l :split<CR>:Buffers<CR>
-nnoremap <leader>u :vsplit<CR>:Buffers<CR>
 " Resizing splits {{{
 nnoremap <silent> <Up> :resize -2<CR>
 nnoremap <silent> <Down> :resize +2<CR>
