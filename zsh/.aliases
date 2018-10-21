@@ -4,6 +4,7 @@
 # {{{ docker
 alias k="docker"
 alias c="docker-compose"
+alias docker-nuke="docker container prune -f; docker volume prune -f; docker image prune -f"
 # }}}
 # {{{ files
 alias agh="ag --hidden"
