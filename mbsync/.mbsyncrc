@@ -82,6 +82,7 @@ Account Work
 MaildirStore Work-local
 Path ~/.mail/Work/
 Inbox ~/.mail/Work/Work
+SubFolders Legacy
 
 Channel Work-Work
 Master :Work-remote:INBOX
