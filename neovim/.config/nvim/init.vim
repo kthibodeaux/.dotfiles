@@ -90,6 +90,7 @@ augroup END
 " }}}
 " Mappings {{{
 inoremap ii <Esc>
+inoremap jj <Esc>
 noremap h k
 noremap j h
 noremap k j
