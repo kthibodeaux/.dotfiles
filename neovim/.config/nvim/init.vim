@@ -91,9 +91,6 @@ augroup END
 " Mappings {{{
 inoremap ii <Esc>
 inoremap jj <Esc>
-noremap h k
-noremap j h
-noremap k j
 nnoremap <CR> :noh<CR><CR> " cancel search by pressing return
 nnoremap <leader><tab> mtgg=G`t " indent file
 nnoremap S i<cr><esc>^mwgk:silent! s/\v +$//<cr>:noh<cr>$ " split line
@@ -192,10 +189,6 @@ let g:rspec_command = 'call VimuxRunCommand("bes {spec}\n")'
 " }}}
 " Tmux navigator {{{
 let g:tmux_navigator_no_mappings = 1
-nnoremap <silent> <c-j> :TmuxNavigateLeft<cr>
-nnoremap <silent> <c-k> :TmuxNavigateDown<cr>
-nnoremap <silent> <c-h> :TmuxNavigateUp<cr>
-nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 " }}}
 " Quickscope {{{
 augroup qs_colors
@@ -251,4 +244,8 @@ let g:ale_fixers = {
 " auto-pairs {{{
 let g:AutoPairsMultilineClose=0
 " }}}
+" }}}
+" Keyboard Layouts {{{
+nmap <leader>lq <Plug>UseQwertyNavigation
+nmap <leader>lc <Plug>UseColemakNavigation
 " }}}
