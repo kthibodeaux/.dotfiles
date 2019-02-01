@@ -1,7 +1,7 @@
 #include ".Xresources.local"
 
 URxvt*termName  : xterm-256color
-URxvt*font      : xft:Hack:size=12
+URxvt*font      : xft:Hack:size=16
 URxvt*scrollBar : false
 URxvt*borderColor : #3b3228
 URxvt*pointerBlank : true
