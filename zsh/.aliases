@@ -40,8 +40,6 @@ alias pop="git stash pop"
 # }}}
 # {{{ misc
 alias mine="wget -e robots=off -r -nc -np"
-
-alias winbox="wine ~/opt/winbox.exe"
 # }}}
 # {{{ tmux
 alias t="tmux"
