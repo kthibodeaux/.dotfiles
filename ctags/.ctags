@@ -7,6 +7,9 @@
 --exclude=coverage
 --exclude=db
 --exclude=config
+--exclude=node_modules
+--exclude=public
+--exclude=store
 
 --regex-ruby=/(^|;)[ \t]*(class|module)[ \t]+([A-Z][[:alnum:]_]+(::[A-Z][[:alnum:]_]+)+)/\3/c,class,constant/
 --regex-ruby=/(^|[:;])[ \t]*([A-Z][[:alnum:]_]+) *=/\2/c,class,constant/
