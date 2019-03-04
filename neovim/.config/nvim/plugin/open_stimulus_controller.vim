@@ -2,8 +2,8 @@ function s:open_stimulus_controller()
   let l:line = getline('.')
   let l:name = matchlist(l:line, '.*data-controller=\%(\"\|''\)\(.*\)\%(\"\|''\).*')[1]
 
-  let l:name = substitute(l:name, "--", "/", "")
-  let l:name = substitute(l:name, "-", "_", "")
+  let l:name = substitute(l:name, "--", "/", "g")
+  let l:name = substitute(l:name, "-", "_", "g")
 
   let l:path = getcwd() . "/app/javascript/controllers/"
 
