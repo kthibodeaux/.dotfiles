@@ -6,6 +6,7 @@ TOKEN = File.readlines("#{ ENV['HOME'] }/.github_token").first.chomp
 class PullRequests
   READY_TO_REVIEW_LABEL = 'Ready For Review'
   REVIEWED_LABEL = 'Changes Requested'
+  ALREADY_REVIEWED_LABEL = 'Keith Signed Off'
   AWAITING_RESPONSE_LABEL = 'Awaiting Response'
   GITHUB_USERNAME = 'kthibodeaux'
   REPO = 'BaldwinAviation/baldwin-web'
@@ -35,6 +36,7 @@ class PullRequests
   def pull_requests_to_review
     pull_requests
       .reject { |pr| pr.creator == GITHUB_USERNAME }
+      .reject { |pr| pr.labels.include?(ALREADY_REVIEWED_LABEL) }
       .select { |pr| pr.labels.include?(READY_TO_REVIEW_LABEL) }
   end
 
