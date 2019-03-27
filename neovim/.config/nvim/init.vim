@@ -215,6 +215,7 @@ nnoremap <silent> <leader>a :ArgWrap<CR>
 " vim-ruby {{{
 " https://github.com/vim-ruby/vim-ruby/blob/master/doc/vim-ruby.txt#L133
 let g:ruby_indent_block_style = 'do'
+let g:ruby_indent_assignment_style = 'hanging'
 " }}}
 " Deoplete {{{
 let g:deoplete#enable_at_startup = 1
