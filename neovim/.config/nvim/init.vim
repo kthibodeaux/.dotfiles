@@ -92,7 +92,7 @@ augroup END
 inoremap ii <Esc>
 inoremap jj <Esc>
 nnoremap <CR> :noh<CR><CR> " cancel search by pressing return
-nnoremap <leader><tab> mtgg=G`t " indent file
+nnoremap <leader><tab> mtgg=G`t " indent file, ruby.vim overrides for *.rb
 nnoremap S i<cr><esc>^mwgk:silent! s/\v +$//<cr>:noh<cr>$ " split line
 nnoremap <s-tab> za " toggle fold
 nnoremap <leader>t :tab new<CR>
