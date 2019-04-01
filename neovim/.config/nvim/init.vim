@@ -206,7 +206,7 @@ nnoremap <leader>e :Files<cr>
 
 " :Files will preview the selected file
 command! -bang -nargs=? -complete=dir Files
-  \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
+      \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
 " }}}
 " Argwrap {{{
 let g:argwrap_padded_braces = '{'
@@ -238,9 +238,9 @@ nmap <leader>y <Plug>TigLatestCommitForLine
 " ale {{{
 highlight ALEWarning ctermbg=88 ctermfg=255
 let g:ale_fixers = {
-\   '*': ['trim_whitespace', 'remove_trailing_lines'],
-\   'javascript': ['eslint']
-\}
+      \   '*': ['trim_whitespace', 'remove_trailing_lines'],
+      \   'javascript': ['eslint']
+      \}
 " }}}
 " auto-pairs {{{
 let g:AutoPairsMultilineClose=0
