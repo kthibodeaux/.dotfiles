@@ -17,4 +17,4 @@ au BufLeave <buffer> set iskeyword-=:
 nnoremap <silent> <buffer> <leader>n :set iskeyword+=:<CR><C-]>
 
 " override file indent to run rubocop
-nnoremap <buffer> <leader><tab> :!rubocop --safe-auto-correct %<CR>
+nmap <buffer> <leader><tab> <Plug>RunRubocop
