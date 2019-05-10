@@ -155,6 +155,7 @@ Plug 'kana/vim-textobj-user'
 Plug 'Konfekt/FastFold'
 Plug 'kthibodeaux/pull-review'
 Plug 'kthibodeaux/tig.vim'
+Plug 'alvan/vim-closetag'
 Plug 'mbbill/undotree'
 Plug 'rhysd/vim-textobj-ruby'
 Plug 'sgeb/vim-diff-fold'
@@ -244,6 +245,10 @@ let g:ale_fixers = {
 " }}}
 " auto-pairs {{{
 let g:AutoPairsMultilineClose=0
+" }}}
+" vim-closetag {{{
+let g:closetag_filetypes = 'html,vue,xhtml'
+let g:closetag_xhtml_filetypes = 'html,vue,xhtml'
 " }}}
 " }}}
 " Keyboard Layouts {{{
