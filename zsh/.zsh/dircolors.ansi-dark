@@ -102,7 +102,7 @@ EIGHTBIT 1
 # Below are the color init strings for the basic file types. A color init
 # string consists of one or more of the following numeric codes:
 #
-# Attribute codes: 
+# Attribute codes:
 #   00=none 01=bold 04=underscore 05=blink 07=reverse 08=concealed
 # Text color codes:
 #   30=black 31=red 32=green 33=yellow 34=blue 35=magenta 36=cyan 37=white
@@ -115,8 +115,8 @@ EIGHTBIT 1
 #   ANSI Color code       Solarized  Notes                Universal             SolDark              SolLight
 #   ~~~~~~~~~~~~~~~       ~~~~~~~~~  ~~~~~                ~~~~~~~~~             ~~~~~~~              ~~~~~~~~
 #   00    none                                            NORMAL, FILE          <SAME>               <SAME>
-#   30    black           base02                                                
-#   01;30 bright black    base03     bg of SolDark                                                                         
+#   30    black           base02
+#   01;30 bright black    base03     bg of SolDark
 #   31    red             red                             docs & mm src         <SAME>               <SAME>
 #   01;31 bright red      orange                          EXEC                  <SAME>               <SAME>
 #   32    green           green                           editable text         <SAME>               <SAME>
@@ -129,8 +129,8 @@ EIGHTBIT 1
 #   01;35 bright magenta  violet                          archive/compressed    <SAME>               <SAME>
 #   36    cyan            cyan                            DIR                   <SAME>               <SAME>
 #   01;36 bright cyan     base1                           unimportant non-text                       <SAME>
-#   37    white           base2                                                                      
-#   01;37 bright white    base3      bg in SolLight                                                                        
+#   37    white           base2
+#   01;37 bright white    base3      bg in SolLight
 #   05;37;41                         unclear in Putty dark
 
 
@@ -233,80 +233,80 @@ EXEC 01;31  # Unix
 ### Multimedia formats
 
 # Image
-.bmp 33
-.cgm 33
-.dl 33
-.dvi 33
-.emf 33
-.eps 33
-.gif 33
-.jpeg 33
-.jpg 33
-.JPG 33
-.mng 33
-.pbm 33
-.pcx 33
-.pdf 33
-.pgm 33
-.png 33
-.ppm 33
-.pps 33
-.ppsx 33
-.ps 33
-.svg 33
-.svgz 33
-.tga 33
-.tif 33
-.tiff 33
-.xbm 33
-.xcf 33
-.xpm 33
-.xwd 33
-.xwd 33
-.yuv 33
+.bmp 01;34
+.cgm 01;34
+.dl 01;34
+.dvi 01;34
+.emf 01;34
+.eps 01;34
+.gif 01;34
+.jpeg 01;34
+.jpg 01;34
+.JPG 01;34
+.mng 01;34
+.pbm 01;34
+.pcx 01;34
+.pdf 01;34
+.pgm 01;34
+.png 01;34
+.ppm 01;34
+.pps 01;34
+.ppsx 01;34
+.ps 01;34
+.svg 01;34
+.svgz 01;34
+.tga 01;34
+.tif 01;34
+.tiff 01;34
+.xbm 01;34
+.xcf 01;34
+.xpm 01;34
+.xwd 01;34
+.xwd 01;34
+.yuv 01;34
 
 # Audio
-.aac 33
-.au  33
-.flac 33
-.mid 33
-.midi 33
-.mka 33
-.mp3 33
-.mpa 33
-.mpeg 33
-.mpg 33
-.ogg  33
-.ra 33
-.wav 33
+.aac 01;34
+.au  01;34
+.flac 01;34
+.mid 01;34
+.midi 01;34
+.mka 01;34
+.mp3 01;34
+.mpa 01;34
+.mpeg 01;34
+.mpg 01;34
+.ogg  01;34
+.ra 01;34
+.wav 01;34
 
 # Video
-.anx 33
-.asf 33
-.avi 33
-.axv 33
-.flc 33
-.fli 33
-.flv 33
-.gl 33
-.m2v 33
-.m4v 33
-.mkv 33
-.mov 33
-.mp4 33
-.mp4v 33
-.mpeg 33
-.mpg 33
-.nuv 33
-.ogm 33
-.ogv 33
-.ogx 33
-.qt 33
-.rm 33
-.rmvb 33
-.swf 33
-.vob 33
-.wmv 33
+.anx 01;34
+.asf 01;34
+.avi 01;34
+.axv 01;34
+.flc 01;34
+.fli 01;34
+.flv 01;34
+.gl 01;34
+.m2v 01;34
+.m4v 01;34
+.mkv 01;34
+.mov 01;34
+.mp4 01;34
+.mp4v 01;34
+.mpeg 01;34
+.mpg 01;34
+.nuv 01;34
+.ogm 01;34
+.ogv 01;34
+.ogx 01;34
+.qt 01;34
+.rm 01;34
+.rmvb 01;34
+.swf 01;34
+.vob 01;34
+.wmv 01;34
 
 ### Misc
 
