@@ -145,7 +145,6 @@ Plug 'AndrewRadev/splitjoin.vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'SirVer/ultisnips'
 Plug 'chrisbra/Recover.vim'
-Plug 'chriskempson/base16-vim'
 Plug 'danro/rename.vim'
 Plug 'FooSoft/vim-argwrap'
 Plug 'jiangmiao/auto-pairs'
@@ -169,8 +168,8 @@ call plug#end()
 " }}}
 " Theme {{{
 set background=dark
-let base16colorspace=256
-colorscheme base16-mocha
+colorscheme solarized
+hi clear SignColumn " fix grey gutter
 " }}}
 " Statusline {{{
 set statusline=
@@ -237,7 +236,7 @@ nmap <leader>b <Plug>TigBlame
 nmap <leader>y <Plug>TigLatestCommitForLine
 " }}}
 " ale {{{
-highlight ALEWarning ctermbg=88 ctermfg=255
+highlight ALEWarning ctermbg=10 ctermfg=255
 let g:ale_fixers = {
       \   '*': ['trim_whitespace', 'remove_trailing_lines'],
       \   'javascript': ['eslint']
