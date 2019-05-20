@@ -152,21 +152,22 @@ client.urgent           $base04     $base08     $base07     $base08
 # }}}
 # {{{ bar
 bar {
-  status_command    i3blocks -c ~/.config/i3/i3blocks.conf
-  position          top
-  separator_symbol  " "
-  workspace_buttons yes
-
-  colors {
-    background $base01
-    statusline $base07
-    separator  $base07
-
-    # Colors           border  backgr. text
-    focused_workspace  $base04 $base0d $base00
-    active_workspace   $base04 $base05 $base00
-    inactive_workspace $base04 $base03 $base0c
-    urgent_workspace   $base04 $base08 $base00
-  }
+  position top
+    status_command i3blocks -c ~/.config/i3/i3blocks.conf
+    colors {
+      background #002b36
+      statusline #839496
+      separator  #586e75
+      focused_workspace  #b58900 #b58900 #002b36
+      active_workspace   #586e75 #586e75 #002b36
+      inactive_workspace #073642 #002b36 #839496
+      urgent_workspace   #dc322f #dc322f #fdf6e3
+    }
 }
+
+
+client.focused          #002b36 #586e75 #fdf6e3 #268bd2
+client.focused_inactive #002b36 #073642 #839496 #073642
+client.unfocused        #002b36 #073642 #839496 #073642
+client.urgent           #002b36 #dc322f #fdf6e3 #002b36
 # }}}

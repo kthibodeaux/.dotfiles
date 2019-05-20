@@ -15,15 +15,10 @@ for function in ~/.zsh/functions/*; do
   source $function
 done
 
-# use colors
-source ~/.zsh/base16-mocha.dark.sh
+eval `dircolors ~/.zsh/dircolors.ansi-dark`
 
 # syntax highlighting
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# makes color constants available
-autoload -U colors
-colors
 
 # history settings
 HISTFILE=~/.zsh_history
