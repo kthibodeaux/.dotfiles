@@ -19,7 +19,7 @@ exec --no-startup-id sleep 4 && xmodmap ~/.Xmodmap &
 # {{{ keybinds
 # {{{ applications
 # application launcher
-bindsym $mod+d exec rofi -show drun
+bindsym $mod+d exec rofi -show drun -theme solarized
 
 # terminal
 bindsym $mod+Return exec urxvt
