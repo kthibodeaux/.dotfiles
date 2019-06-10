@@ -177,6 +177,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'
 Plug 'unblevable/quick-scope'
 Plug 'powerman/vim-plugin-AnsiEsc'
+Plug 'wincent/vcs-jump'
 Plug 'w0rp/ale'
 call plug#end()
 " }}}
