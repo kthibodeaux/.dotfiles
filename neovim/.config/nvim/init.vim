@@ -128,12 +128,10 @@ nnoremap <leader>zx <C-w>=
 
 nnoremap <silent> <leader>n <C-]>
 
-" Resizing splits {{{
-nnoremap <silent> <Up> :resize -2<CR>
-nnoremap <silent> <Down> :resize +2<CR>
+nnoremap <silent> <Up> :cprevious<CR>
+nnoremap <silent> <Down> :cnext<CR>
 nnoremap <silent> <Left> :vertical resize +2<CR>
 nnoremap <silent> <Right> :vertical resize -2<CR>
-" }}}
 " }}}
 " Plugins {{{
 call plug#begin('~/.config/nvim/plugged')
