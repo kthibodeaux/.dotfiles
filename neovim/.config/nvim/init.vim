@@ -146,7 +146,7 @@ Plug 'fishbullet/deoplete-ruby'
 
 Plug 'jelera/vim-javascript-syntax'
 Plug 'kchmck/vim-coffee-script'
-Plug 'posva/vim-vue'
+Plug 'kthibodeaux/vim-vue'
 
 " locked until https://github.com/slim-template/vim-slim/pull/70 is merged
 " Plug 'slim-template/vim-slim'
