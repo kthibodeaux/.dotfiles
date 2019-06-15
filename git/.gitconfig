@@ -34,5 +34,6 @@
   autosquash = true
 [merge]
   tool = vimdiff
+  conflictstyle = diff3
 [mergetool "vimdiff"]
   path = nvim
