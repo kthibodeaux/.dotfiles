@@ -261,8 +261,8 @@ let g:ale_fixers = {
 let g:AutoPairsMultilineClose=0
 " }}}
 " vim-closetag {{{
-let g:closetag_filetypes = 'html,vue,xhtml'
-let g:closetag_xhtml_filetypes = 'html,vue,xhtml'
+let g:closetag_filetypes = 'html,eruby,vue,xhtml'
+let g:closetag_xhtml_filetypes = 'html,eruby,vue,xhtml'
 " }}}
 " }}}
 " Keyboard Layouts {{{
