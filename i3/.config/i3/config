@@ -14,6 +14,7 @@ exec --no-startup-id feh --bg-scale /home/kthibodeaux/Pictures/background.jpg
 exec --no-startup-id nm-applet
 exec --no-startup-id redshift-gtk
 exec --no-startup-id blueman-applet
+exec --no-startup-id /home/kthibodeaux/.config/i3/monitors.sh
 exec --no-startup-id /usr/lib/notification-daemon/notification-daemon
 exec --no-startup-id sleep 4 && xmodmap ~/.Xmodmap &
 # }}}
