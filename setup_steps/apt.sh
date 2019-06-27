@@ -68,6 +68,7 @@ sudo apt-get install -y \
   pgcli \
   pkg-config \
   python-pip \
+  python3 \
   python3-pip \
   ranger \
   redshift-gtk \
@@ -89,3 +90,12 @@ sudo apt-get install -y \
   x11-xserver-utils \
   xclip \
   zsh
+
+
+# gtk solarized dependencies
+sudo apt-get install -y \
+  ruby-sass \
+  libglib2.0-dev \
+  libgdk-pixbuf2.0-dev \
+  libxml2-utils \
+  inkscape
