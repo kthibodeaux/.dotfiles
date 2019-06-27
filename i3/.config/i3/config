@@ -11,6 +11,7 @@ floating_modifier $mod
 
 # {{{ startup
 exec --no-startup-id feh --bg-scale /home/kthibodeaux/Pictures/background.jpg
+exec --no-startup-id nm-applet
 exec --no-startup-id redshift-gtk
 exec --no-startup-id blueman-applet
 exec --no-startup-id /usr/lib/notification-daemon/notification-daemon
