@@ -4,6 +4,6 @@ else
   cd ~/src
   git clone git@github.com:vinceliuice/vimix-icon-theme.git
   cd vimix-icon-theme
-  ./Installer.sh
+  ./install.sh
   cd ~
 fi
