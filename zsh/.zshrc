@@ -49,7 +49,7 @@ prompt filthy
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-source /usr/local/share/chruby/chruby.sh
-chruby ruby-2.5.1
+source /usr/share/chruby/chruby.sh
+chruby ruby-2.6.3
 
 opentmux
