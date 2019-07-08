@@ -20,6 +20,7 @@ pacaur -S --noconfirm \
   chruby \
   docker \
   docker-compose \
+  dunst-git \
   enpass-bin \
   evince \
   feh \
