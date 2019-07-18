@@ -6,3 +6,5 @@ let b:ale_linters = ['eslint', 'vls']
 
 set foldmethod=indent
 set foldlevel=4
+
+nmap <buffer> <leader><tab> mm/<script<CR>=G:noh<CR>`m
