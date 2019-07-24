@@ -16,6 +16,7 @@ sudo pacman -S --noconfirm pacaur stow
 . ~/.dotfiles/stow_all
 
 pacaur -S --noconfirm \
+  aspell \
   aws-cli \
   chruby \
   docker \
