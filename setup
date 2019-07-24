@@ -36,6 +36,7 @@ pacaur -S --noconfirm \
   nemo \
   neomutt \
   neovim \
+  nodejs \
   openssh \
   pa-applet \
   pavecontrol \
