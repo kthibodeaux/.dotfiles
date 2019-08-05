@@ -28,6 +28,7 @@ pacaur -S --noconfirm \
   firefox \
   gdk-pixbuf2 \
   glib2 \
+  heroku-cli \
   i3blocks \
   inkscape \
   isync \
