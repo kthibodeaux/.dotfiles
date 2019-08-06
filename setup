@@ -27,6 +27,7 @@ pacaur -S --noconfirm \
   feh \
   firefox \
   gdk-pixbuf2 \
+  gitflow-avh \
   glib2 \
   heroku-cli \
   i3blocks \
