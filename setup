@@ -35,6 +35,7 @@ pacaur -S --noconfirm \
   isync \
   mpv \
   msmtp \
+  ncdu \
   nemo \
   neomutt \
   neovim \
