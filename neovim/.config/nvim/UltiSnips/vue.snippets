@@ -4,6 +4,16 @@ snippet ic
 import $1 from '@/components/$1.vue'
 endsnippet
 
+snippet mg "import mapGetters"
+import {mapGetters} from 'vuex'
+endsnippet
+
+snippet .mg
+...mapGetters({
+  $1
+})
+endsnippet
+
 snippet aic
 $1: () => import('@/components/$1.vue')
 endsnippet
