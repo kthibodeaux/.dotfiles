@@ -1,42 +1,30 @@
-.list-card-labels > span.card-label {
-  height: 22px;
-  padding: 5px 5px 0px 5px;
-  line-height: 14px;
-  width: auto;
-}
+// ==UserScript==
+// @name     Override trello label colors
+// @include  https://trello.com*
+// @grant    GM_addStyle
+// @run-at   document-start
+// ==/UserScript==
 
-.list-card-cover {
-  display: none;
-}
-
-.list-card-labels > span.card-label-purple {
-  width: 10px;
-  font-size: 0px;
-}
-
-.list-card-labels > span.card-label-purple:first-letter {
-  font-size: 14px;
-}
-
-.list-card-labels > span.card-label-orange {
-  width: 10px;
-  font-size: 0px;
-}
-
-.list-card-labels > span.card-label-orange:first-letter {
-  font-size: 14px;
-}
-
-.list-card-labels > span.card-label-black {
-  width: 10px !important;
-  font-size: 0px;
-}
-
-.list-wrapper {
-  width: auto !important;
-}
-
-.card-label.mod-card-front {
-  min-width: 10px !important;
-  max-width: 100px !important;
-}
+GM_addStyle ( `
+.label-text, .js-select-label { color:white }
+.card-label-green { background-color: #5dbf48; }
+.card-labels-hover .card-label-green.mod-card-front, .card-label-green.mod-card-front { background-color: #5dbf48; }
+.card-label-yellow { background-color: #f3d800; }
+.card-labels-hover .card-label-yellow.mod-card-front, .card-label-yellow.mod-card-front { background-color: #f3d800; }
+.card-label-orange { background-color: #ffac3e; }
+.card-labels-hover .card-label-orange.mod-card-front, .card-label-orange.mod-card-front { background-color: #ffac3e; }
+.card-label-red { background-color: #ed5940; }
+.card-labels-hover .card-label-red.mod-card-front, .card-label-red.mod-card-front { background-color: #ed5940; }
+.card-label-purple { background-color: #c473e2; }
+.card-labels-hover .card-label-purple.mod-card-front, .card-label-purple.mod-card-front { background-color: #c473e2; }
+.card-label-blue { background-color: #0077c2; }
+.card-labels-hover .card-label-blue.mod-card-front, .card-label-blue.mod-card-front { background-color: #0077c2; }
+.card-label-sky { background-color: #00c2e2; }
+.card-labels-hover .card-label-sky.mod-card-front, .card-label-sky.mod-card-front { background-color: #00c2e2; }
+.card-label-lime { background-color: #48ea95; }
+.card-labels-hover .card-label-lime.mod-card-front, .card-label-lime.mod-card-front { background-color: #48ea95; }
+.card-label-pink { background-color: #ff7dcf; }
+.card-labels-hover .card-label-pink.mod-card-front, .card-label-pink.mod-card-front { background-color: #ff7dcf; }
+.card-label-black { background-color: #4d4d4d; }
+.card-labels-hover .card-label-black.mod-card-front, .card-label-black.mod-card-front { background-color: #4d4d4d; }
+`)
