@@ -40,7 +40,7 @@ smart_borders on
 # {{{ keybinds
 # {{{ applications
 # application launcher
-bindsym $mod+d exec rofi -show drun -theme solarized
+bindsym $mod+d exec rofi -show drun -theme solarized -font "Hack 36"
 
 # terminal
 bindsym $mod+Return exec urxvt
