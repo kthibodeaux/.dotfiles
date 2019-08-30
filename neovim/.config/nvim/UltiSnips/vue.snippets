@@ -13,14 +13,14 @@ import {mapState} from 'vuex'
 endsnippet
 
 snippet .mg
-...mapGetters({
+...mapGetters(${1:'${2:namespace}', }{
   $1
 })
 endsnippet
 
 snippet .ms
-...mapState({
-  $1
+...mapState(${1:'${2:namespace}', }{
+  $0
 })
 endsnippet
 
