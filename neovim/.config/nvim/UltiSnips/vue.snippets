@@ -8,8 +8,18 @@ snippet mg "import mapGetters"
 import {mapGetters} from 'vuex'
 endsnippet
 
+snippet ms "import mapState"
+import {mapState} from 'vuex'
+endsnippet
+
 snippet .mg
 ...mapGetters({
+  $1
+})
+endsnippet
+
+snippet .ms
+...mapState({
   $1
 })
 endsnippet
