@@ -133,6 +133,7 @@ Plug 'tpope/vim-rails'
 Plug 'vim-ruby/vim-ruby'
 Plug 'fishbullet/deoplete-ruby'
 
+Plug 'digitaltoad/vim-pug'
 Plug 'jelera/vim-javascript-syntax'
 Plug 'kchmck/vim-coffee-script'
 Plug 'posva/vim-vue'
