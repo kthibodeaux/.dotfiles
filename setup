@@ -42,7 +42,7 @@ pacaur -S --noconfirm \
   nodejs \
   openssh \
   pa-applet \
-  pavecontrol \
+  pavucontrol \
   pgcli-git \
   pulseaudio-bluetooth \
   python-neovim \
