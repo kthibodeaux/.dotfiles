@@ -1,13 +1,5 @@
 # vim:foldmethod=indent:foldlevel=0
 
-docker_or_local() {
-  if [[ -f docker-compose.yml ]]; then
-    eval {"docker-compose run --rm --no-deps -e SKIP_SIMPLECOV=true web $@"}
-  else
-    eval {"SKIP_SIMPLECOV=true $@"}
-  fi
-}
-
 ya() { docker_or_local "yarn $@" }
 
 be() { docker_or_local "bundle exec $@" }
