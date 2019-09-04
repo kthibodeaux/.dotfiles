@@ -60,6 +60,7 @@ pacaur -S --noconfirm \
   tmux \
   ttf-hack \
   universal-ctags-git \
+  unzip \
   urlview-git \
   weechat \
   youtube-dl \
