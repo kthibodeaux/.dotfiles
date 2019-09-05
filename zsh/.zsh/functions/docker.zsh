@@ -4,7 +4,8 @@ docker_or_local() {
 
   if [[ -f docker-compose.yml ]]; then
     if [[ -f .docker_or_local ]]; then
-      local config=$(grep "$1=" .docker_or_local)
+      local command=$(echo $1 | cut -d' ' -f1)
+      local config=$(grep "$command=" .docker_or_local)
       local image=$(echo $config | cut -d= -f2)
     fi
 
