@@ -4,16 +4,16 @@ snippet : "Object key key: 'value'"
 ${1:key}: ${2:"${3:value}"}${4:, }
 endsnippet
 
-snippet f "function(){}" w
-function ${1:function_name}(${2:argument}) {
+snippet f "function f(){}" w
+function ${1:function_name}($2) {
   ${VISUAL}$0
 }
 endsnippet
 
-snippet () "function(){}" w
-${1:function_name}() {
+snippet () "f(){}," w
+${1:function_name}($2) {
   $0
-}
+},
 endsnippet
 
 snippet ed
