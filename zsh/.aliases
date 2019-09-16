@@ -51,15 +51,11 @@ alias v="nvim"
 alias vu="nvim +PlugInstall"
 alias vrc="nvim ~/.dotfiles/neovim/.config/nvim/init.vim"
 # }}}
-# {{{ workflow
-alias prs="wf --pull-requests"
-# }}}
 # {{{ zsh
 alias :q="exit"
 
 alias zrc="nvim ~/.dotfiles/zsh/.zshrc"
 alias rzsh="source ~/.zshrc && source ~/.zshrc.local"
 # }}}
-
 
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
