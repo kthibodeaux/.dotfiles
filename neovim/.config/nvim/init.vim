@@ -132,15 +132,12 @@ Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-rails'
 Plug 'vim-ruby/vim-ruby'
 Plug 'fishbullet/deoplete-ruby'
+Plug 'slim-template/vim-slim'
 
 Plug 'digitaltoad/vim-pug'
 Plug 'jelera/vim-javascript-syntax'
 Plug 'kchmck/vim-coffee-script'
 Plug 'posva/vim-vue'
-
-" locked until https://github.com/slim-template/vim-slim/pull/70 is merged
-" Plug 'slim-template/vim-slim'
-Plug 'lisinge/vim-slim', { 'commit': '10871cd7c94d2b3264a19d98ce2c9690342d9652' }
 
 Plug 'rhysd/vim-crystal'
 
