@@ -40,6 +40,7 @@ alias pop="git stash pop"
 # }}}
 # {{{ misc
 alias mine="wget -e robots=off -r -nc -np"
+alias serve="ruby -run -e httpd ./ -p 9999"
 alias ycal="cal $(date +"%Y")"
 # }}}
 # {{{ tmux
