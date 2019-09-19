@@ -134,6 +134,7 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'fishbullet/deoplete-ruby'
 Plug 'slim-template/vim-slim'
 
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 Plug 'digitaltoad/vim-pug'
 Plug 'jelera/vim-javascript-syntax'
 Plug 'kchmck/vim-coffee-script'
