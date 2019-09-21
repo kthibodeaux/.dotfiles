@@ -5,35 +5,74 @@ mkdir -p ~/.local/share
 mkdir -p ~/.mail/Home
 mkdir -p ~/.mail/Work
 
-. ~/.dotfiles/stow_all
-. ~/.dotfiles/setup_steps/apt.sh
-. ~/.dotfiles/setup_steps/docker_compose.sh
-. ~/.dotfiles/setup_steps/pip2.sh
-. ~/.dotfiles/setup_steps/pip3.sh
-. ~/.dotfiles/setup_steps/ruby.sh
-. ~/.dotfiles/setup_steps/shell.sh
-. ~/.dotfiles/setup_steps/tmux.sh
-. ~/.dotfiles/setup_steps/fzf.sh
-. ~/.dotfiles/setup_steps/neovim.sh
-. ~/.dotfiles/setup_steps/feh.sh
-. ~/.dotfiles/setup_steps/gtk.sh
-. ~/.dotfiles/setup_steps/icons.sh
-. ~/.dotfiles/setup_steps/dasht.sh
+mv ~/.Xresources ~/.Xresources.original
+mv ~/.gtkrc-2.0 ~/.gtkrc-2.0.original
+mv ~/.config/gtk-3.0 ~/.config/gtk-3.0.original
 
-sudo fc-cache -f
+sudo pacman -Syu
+
+sudo pacman -S --noconfirm pacaur stow
+
+. ~/.dotfiles/stow_all
+
+pacaur -S --noconfirm \
+  aspell \
+  aws-cli \
+  chruby \
+  docker \
+  docker-compose \
+  dunst-git \
+  enpass-bin \
+  evince \
+  feh \
+  firefox \
+  gdk-pixbuf2 \
+  gitflow-avh \
+  glib2 \
+  heroku-cli \
+  i3blocks \
+  inkscape \
+  isync \
+  mpv \
+  msmtp \
+  ncdu \
+  nemo \
+  neomutt \
+  neovim \
+  nodejs \
+  openssh \
+  pa-applet \
+  pavucontrol \
+  pgcli-git \
+  pulseaudio-bluetooth \
+  python-neovim \
+  python2-websocket-client \
+  ranger \
+  redshift-gtk-git \
+  rtv \
+  rofi \
+  ruby-install \
+  signal-desktop-bin \
+  scrot \
+  silver-searcher-git \
+  teensy-loader-cli \
+  tig \
+  tmux \
+  ttf-hack \
+  universal-ctags-git \
+  unzip \
+  urlview-git \
+  weechat \
+  youtube-dl \
+  xclip \
+  zsh
+
+fc-cache -f -v
+sudo systemctl enable sshd
+sudo systemctl enable docker.service
 sudo usermod -aG docker $USER
 
-echo ""
-echo ""
-echo ""
-echo "If this is your first time running setup on this computer then you may"
-echo "want to:"
-echo ""
-echo "* If on a laptop install `apmd`"
-echo "* Reboot so that user groups are properly recognized"
-echo "* Clone weechat config into ~"
-echo "* Configure ~/.gitconfig.local"
-echo "* Run 'vu' to install vim plugins"
-echo "* Run ':UpdateRemotePlugins' in neovim"
-echo "* Comment out the line that remaps the capslock key to backspace for"
-echo "    Colemak in /usr/share/X11/xkb/symbols/us"
+. ~/.dotfiles/setup_steps/shell.sh
+. ~/.dotfiles/setup_steps/ruby.sh
+. ~/.dotfiles/setup_steps/gtk.sh
+. ~/.dotfiles/setup_steps/tmux_plugins.sh

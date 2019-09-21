@@ -11,3 +11,4 @@ function s:boiler()
 endfunction
 
 au BufNewFile,BufReadPost *.rb silent! :call s:boiler()
+au BufNewFile,BufReadPost *.vue silent! :call s:boiler()

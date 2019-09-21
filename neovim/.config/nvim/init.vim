@@ -132,14 +132,14 @@ Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-rails'
 Plug 'vim-ruby/vim-ruby'
 Plug 'fishbullet/deoplete-ruby'
+Plug 'slim-template/vim-slim'
 
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+Plug 'digitaltoad/vim-pug'
 Plug 'jelera/vim-javascript-syntax'
+Plug 'joaohkfaria/vim-jest-snippets'
 Plug 'kchmck/vim-coffee-script'
 Plug 'posva/vim-vue'
-
-" locked until https://github.com/slim-template/vim-slim/pull/70 is merged
-" Plug 'slim-template/vim-slim'
-Plug 'lisinge/vim-slim', { 'commit': '10871cd7c94d2b3264a19d98ce2c9690342d9652' }
 
 Plug 'rhysd/vim-crystal'
 
@@ -157,11 +157,9 @@ Plug 'kana/vim-textobj-user'
 Plug 'Konfekt/FastFold'
 Plug 'kthibodeaux/pull-review'
 Plug 'kthibodeaux/tig.vim'
-Plug 'alvan/vim-closetag'
 Plug 'mbbill/undotree'
 Plug 'rhysd/vim-textobj-ruby'
 Plug 'sgeb/vim-diff-fold'
-Plug 'slm-lang/vim-slm'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'
@@ -187,6 +185,83 @@ set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
 set statusline+=\ %{&fileformat}
 set statusline+=\ %p%%
 set statusline+=\ %l:%c
+" }}}
+" Tabline {{{
+function! MyTabLine()
+    let s = ''
+    let t = tabpagenr()
+    let i = 1
+    while i <= tabpagenr('$')
+        let buflist = tabpagebuflist(i)
+        let winnr = tabpagewinnr(i)
+        let s .= '%' . i . 'T'
+        let s .= (i == t ? '%1*' : '%2*')
+
+        " let s .= (i == t ? '%#TabLineSel#' : '%#TabLine#')
+        " let s .= ' '
+        let s .= (i == t ? '%#TabNumSel#' : '%#TabNum#')
+        let s .= ' ' . i . ' '
+        let s .= (i == t ? '%#TabLineSel#' : '%#TabLine#')
+
+        let bufnr = buflist[winnr - 1]
+        let file = bufname(bufnr)
+        let buftype = getbufvar(bufnr, '&buftype')
+
+        if buftype == 'help'
+            let file = 'help:' . fnamemodify(file, ':t:r')
+
+        elseif buftype == 'quickfix'
+            let file = 'quickfix'
+
+        elseif buftype == 'nofile'
+            if file =~ '\/.'
+                let file = substitute(file, '.*\/\ze.', '', '')
+            endif
+
+        else
+            let file = pathshorten(fnamemodify(file, ':p:~:.'))
+            if getbufvar(bufnr, '&modified')
+                let file = '+' . file
+            endif
+
+        endif
+
+        if file == ''
+            let file = '[No Name]'
+        endif
+
+        let s .= ' ' . file
+
+        let nwins = tabpagewinnr(i, '$')
+        if nwins > 1
+            let modified = ''
+            for b in buflist
+                if getbufvar(b, '&modified') && b != bufnr
+                    let modified = '*'
+                    break
+                endif
+            endfor
+            let hl = (i == t ? '%#WinNumSel#' : '%#WinNum#')
+            let nohl = (i == t ? '%#TabLineSel#' : '%#TabLine#')
+            let s .= ' ' . modified . '(' . hl . winnr . nohl . '/' . nwins . ')'
+        endif
+
+        if i < tabpagenr('$')
+            let s .= ' %#TabLine#|'
+        else
+            let s .= ' '
+        endif
+
+        let i = i + 1
+
+    endwhile
+
+    let s .= '%T%#TabLineFill#%='
+    return s
+
+endfunction
+
+set tabline=%!MyTabLine()
 " }}}
 " Plugin config {{{
 " RSpec {{{
@@ -249,10 +324,6 @@ let g:ale_fixers = {
 " }}}
 " auto-pairs {{{
 let g:AutoPairsMultilineClose=0
-" }}}
-" vim-closetag {{{
-let g:closetag_filetypes = 'html,eruby,vue,xhtml'
-let g:closetag_xhtml_filetypes = 'html,eruby,vue,xhtml'
 " }}}
 " }}}
 " Keyboard Layouts {{{

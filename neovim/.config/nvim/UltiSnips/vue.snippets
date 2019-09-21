@@ -4,6 +4,82 @@ snippet ic
 import $1 from '@/components/$1.vue'
 endsnippet
 
+snippet mg "import mapGetters"
+import {mapGetters} from 'vuex'
+endsnippet
+
+snippet ms "import mapState"
+import {mapState} from 'vuex'
+endsnippet
+
+snippet .mg
+...mapGetters(${1:'${2:namespace}', }[
+  '$0',
+]),
+endsnippet
+
+snippet .ms
+...mapState(${1:'${2:namespace}', }[
+  '$0',
+]),
+endsnippet
+
 snippet aic
 $1: () => import('@/components/$1.vue')
+endsnippet
+
+snippet ts
+<template lang="pug">
+  ${1:div}
+</template>
+
+<script>
+export default {
+  name: '`!p snip.rv = snip.basename`',
+}
+</script>
+endsnippet
+
+snippet data
+data() {
+  return {
+    $0
+  }
+},
+endsnippet
+
+snippet props
+props: {
+  $0
+},
+endsnippet
+
+snippet computed
+computed: {
+  $0
+},
+endsnippet
+
+snippet components
+components: {
+  $0
+},
+endsnippet
+
+snippet created
+created() {
+  $0
+},
+endsnippet
+
+snippet methods
+methods: {
+  $0
+},
+endsnippet
+
+snippet style
+<style ${1:scoped}>
+$2
+</style>
 endsnippet

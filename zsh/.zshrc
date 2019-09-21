@@ -48,8 +48,10 @@ prompt filthy
 [[ -f ~/.aliases ]] && source ~/.aliases
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-source /usr/local/share/chruby/chruby.sh
-chruby ruby-2.5.1
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
+
+source /usr/share/chruby/chruby.sh
+chruby ruby-2.6.3
 
 opentmux

@@ -9,3 +9,5 @@ else
   xrandr --output $internal --mode 1920x1080 --left-of $external
   xrandr --output $external --mode 2560x1440
 fi
+
+feh --bg-scale /home/kthibodeaux/Pictures/background.jpg

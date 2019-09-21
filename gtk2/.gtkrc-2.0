@@ -1,3 +1,8 @@
 gtk-theme-name = "NumixSolarizedDarkGreen"
-gtk-icon-theme-name = "Vimix-Beryl"
-gtk-font-name = "System San Francisco Display 12"
+gtk-icon-theme-name="Papirus-Adapta-Nokto-Maia"
+gtk-font-name="Noto Sans 12"
+gtk-cursor-theme-name="xcursor-breeze"
+gtk-xft-antialias=1
+gtk-xft-hinting=1
+gtk-xft-hintstyle="hintfull"
+gtk-xft-rgba="rgb"
