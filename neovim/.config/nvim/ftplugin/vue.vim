@@ -2,7 +2,7 @@
 let b:ale_linter_aliases = ['javascript', 'vue']
 
 " Select the eslint and vls linters.
-let b:ale_linters = ['eslint', 'vls']
+let b:ale_linters = ['eslint', 'vls', 'puglintvue']
 
 set foldmethod=indent
 set foldlevel=4
