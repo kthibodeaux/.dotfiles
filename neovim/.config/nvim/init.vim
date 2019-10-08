@@ -21,7 +21,7 @@ set nrformats-=octal
 set number
 set relativenumber " 7.4+ shows both, below just relative
 set ruler " Show cursor position
-set scrolloff=1 " Always show at least one line above and below cursor
+set scrolloff=3 " Always show at least three lines above and below cursor
 set showcmd " Show partially typed commands
 set showmatch " Matches () etc
 set timeout
