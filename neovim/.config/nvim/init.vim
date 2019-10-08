@@ -124,6 +124,8 @@ nnoremap <silent> <Right> :vertical resize -2<CR>
 " }}}
 " Plugins {{{
 call plug#begin('~/.config/nvim/plugged')
+Plug 'lifepillar/vim-solarized8'
+
 Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
 
@@ -170,8 +172,9 @@ Plug 'w0rp/ale'
 call plug#end()
 " }}}
 " Theme {{{
+let g:solarized_use16=1
 set background=dark
-colorscheme solarized
+colorscheme solarized8
 hi clear SignColumn " fix grey gutter
 " }}}
 " Statusline {{{
