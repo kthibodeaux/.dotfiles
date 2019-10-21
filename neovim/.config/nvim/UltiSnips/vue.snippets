@@ -48,9 +48,13 @@ data() {
 },
 endsnippet
 
+snippet prop
+  $1: { type: ${2:String}, ${3:default: '${4}'} },$0
+endsnippet
+
 snippet props
 props: {
-  $0
+  $1: { type: ${2:String}, ${3:default: '${4}'} },$0
 },
 endsnippet
 
