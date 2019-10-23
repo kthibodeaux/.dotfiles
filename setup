@@ -5,6 +5,8 @@ mkdir -p ~/.local/share
 mkdir -p ~/.mail/Home
 mkdir -p ~/.mail/Work
 
+sudo cp ~/.dotfiles/common/safe-rm.conf /etc/safe-rm.conf
+
 mv ~/.Xresources ~/.Xresources.original
 mv ~/.gtkrc-2.0 ~/.gtkrc-2.0.original
 mv ~/.config/gtk-3.0 ~/.config/gtk-3.0.original
@@ -54,6 +56,7 @@ pacaur -S --noconfirm \
   rtv \
   rofi \
   ruby-install \
+  safe-rm \
   signal-desktop-bin \
   scrot \
   silver-searcher-git \
