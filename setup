@@ -21,6 +21,8 @@ sudo pacman -S --noconfirm pacaur stow
 
 pacaur -S --noconfirm \
   aspell \
+  avr-gcc \
+  avr-libc \
   aws-cli \
   chruby \
   docker \
