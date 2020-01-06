@@ -18,4 +18,4 @@ export FZF_DEFAULT_OPTS='--color dark,hl:33,hl+:37,fg+:235,bg+:0,fg+:254'
 
 export RSPEC_CORES=8
 
-[[ -f ~/.zshenv.local ]] && source ~/.zshenv.local ]]
+[[ -f ~/.zshenv.local ]] && source ~/.zshenv.local
