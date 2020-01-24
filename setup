@@ -37,7 +37,6 @@ pacaur -S --noconfirm \
   glib2 \
   heroku-cli \
   i3blocks \
-  i3blocks-contrib \
   inkscape \
   isync \
   mpv \
