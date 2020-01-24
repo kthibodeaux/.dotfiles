@@ -11,7 +11,7 @@ floating_modifier $mod
 
 # {{{ startup
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id sleep 4; pulseaudio -k; pulseaudio --start
+exec --no-startup-id sleep 4; pulseaudio -k; pulseaudio -D
 
 exec --no-startup-id /home/kthibodeaux/.config/i3/monitors.sh
 exec --no-startup-id /home/kthibodeaux/.config/i3/startpage.sh
