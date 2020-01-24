@@ -59,7 +59,7 @@ pacaur -S --noconfirm \
   rofi \
   ruby-install \
   safe-rm \
-  signal-desktop-bin \
+  signal-desktop \
   scrot \
   silver-searcher-git \
   teensy-loader-cli \
