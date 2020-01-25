@@ -6,6 +6,8 @@ alias k="docker"
 alias c="docker-compose"
 alias docker-nuke="docker container prune -f; docker volume prune -f; docker image prune -f"
 alias rebuild="docker-compose down; docker-compose up"
+
+alias slack="docker run --rm -it -v /etc/localtime:/etc/localtime:ro -v "${HOME}/.weechat:/home/user/.weechat" -u $(id -u ${USER}):$(id -g ${USER}) wee-slack"
 # }}}
 # {{{ files
 alias rm="safe-rm"
