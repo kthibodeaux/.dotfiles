@@ -52,7 +52,6 @@ pacaur -S --noconfirm \
   pgcli-git \
   pulseaudio-bluetooth \
   python-neovim \
-  python2-websocket-client \
   ranger \
   redshift-gtk-git \
   rtv \
