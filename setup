@@ -69,7 +69,6 @@ pacaur -S --noconfirm \
   universal-ctags-git \
   unzip \
   urlview-git \
-  weechat \
   youtube-dl \
   xclip \
   zsh
