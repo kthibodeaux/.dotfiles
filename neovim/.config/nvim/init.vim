@@ -58,7 +58,7 @@ iabbr pry ::Kernel.binding.pry
 command! -bang -nargs=* Find
       \ call fzf#vim#grep(
       \ 'ag --hidden -A 0 -B 0 --ignore .git --nogroup --color '.shellescape(<q-args>), 0,
-      \   fzf#vim#with_preview('right:50%')
+      \   fzf#vim#with_preview('up:70%')
       \ )
 " }}}
 " Window managment {{{
