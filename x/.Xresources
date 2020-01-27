@@ -79,3 +79,4 @@ URxvt*font      : xft:Hack:size=16
 URxvt*scrollBar : false
 URxvt*borderColor : S_base03
 URxvt*pointerBlank : true
+URxvt*urgentOnBell : true
