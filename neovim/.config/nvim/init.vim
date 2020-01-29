@@ -358,6 +358,7 @@ let g:AutoPairsMultilineClose=0
 if exists('g:started_by_firenvim')
   colorscheme slate
   set laststatus=0
+  startinsert!
 endif
 " }}}
 " }}}
