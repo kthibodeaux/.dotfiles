@@ -152,6 +152,7 @@ Plug 'chrisbra/Recover.vim'
 Plug 'danro/rename.vim'
 Plug 'FooSoft/vim-argwrap'
 Plug 'ap/vim-css-color'
+Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-peekaboo'
@@ -352,6 +353,12 @@ let g:ale_fixers = {
 " }}}
 " auto-pairs {{{
 let g:AutoPairsMultilineClose=0
+" }}}
+" firenvim {{{
+if exists('g:started_by_firenvim')
+  colorscheme slate
+  set laststatus=0
+endif
 " }}}
 " }}}
 " Keyboard Layouts {{{
