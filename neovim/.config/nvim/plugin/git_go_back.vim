@@ -1,7 +1,11 @@
 function s:handler(line)
   let l:sha = split(a:line, ' ')[0]
   let l:file = expand("%")
-  let l:command = "git show " . l:sha . ":" . l:file . " | bat -l " . &filetype
+  if executable('bat')
+    let l:command = "git show " . l:sha . ":" . l:file . " | bat -l " . &filetype
+  else
+    let l:command = "git show " . l:sha . ":" . l:file
+  endif
   let l:tmux_command = "!tmux split-window -h '" . l:command . "'"
 
   silent execute l:tmux_command
