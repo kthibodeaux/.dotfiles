@@ -13,7 +13,7 @@ endfunction
 
 function s:gitgoback()
   let l:file = expand("%")
-  let l:command = "git log " . l:file
+  let l:command = "git log --follow " . l:file
 
   call fzf#run(fzf#wrap({'source': l:command, 'sink': function('<SID>handler'),}))
 endfunction
