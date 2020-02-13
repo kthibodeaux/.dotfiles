@@ -16,7 +16,7 @@
 [core]
   editor = nvim
   excludesfile = ~/.dotfiles/git/.gitignore
-  pager = less -+F
+  pager = bat
 [color]
   ui = true
 [diff]
