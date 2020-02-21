@@ -13,6 +13,7 @@ stow -vv mbsync
 stow -vv msmtp
 stow -vv mutt
 stow -vv neovim
+stow -vv picom
 stow -vv ranger
 stow -vv readline
 stow -vv redshift
