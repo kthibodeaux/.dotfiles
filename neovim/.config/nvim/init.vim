@@ -36,6 +36,9 @@ let g:netrw_liststyle=3
 let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
 set list
 set guicursor=
+set updatetime=300
+set shortmess+=c
+set signcolumn=yes
 " Searching {{{
 set hlsearch
 set ignorecase
@@ -47,9 +50,6 @@ set incsearch " Search as typing
 set foldmethod=syntax
 set foldlevelstart=3
 " }}}
-" }}}
-" Tags {{{
-au BufWritePost *.rb :call jobstart('sh ~/.dotfiles/bin/run_tags')
 " }}}
 " Abbreviations {{{
 iabbr pry ::Kernel.binding.pry
@@ -96,7 +96,7 @@ augroup END
 inoremap ii <Esc>
 inoremap jj <Esc>
 nnoremap <CR> :noh<CR><CR> " cancel search by pressing return
-nnoremap <leader><tab> mtgg=G`t " indent file, ruby.vim overrides for *.rb
+nnoremap <leader><tab> mtgg=G`t " indent file, some filetype configs override to use coc
 nnoremap S i<cr><esc>^mwgk:silent! s/\v +$//<cr>:noh<cr>$ " split line
 nnoremap <s-tab> za " toggle fold
 nnoremap <leader>t :tab new<CR>
@@ -135,10 +135,8 @@ Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-rails'
 Plug 'vim-ruby/vim-ruby'
-Plug 'fishbullet/deoplete-ruby'
 Plug 'slim-template/vim-slim'
 
-Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 Plug 'digitaltoad/vim-pug'
 Plug 'joaohkfaria/vim-jest-snippets'
 Plug 'kchmck/vim-coffee-script'
@@ -148,29 +146,27 @@ Plug 'posva/vim-vue'
 Plug 'rhysd/vim-crystal'
 
 Plug 'AndrewRadev/splitjoin.vim'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'SirVer/ultisnips'
+Plug 'FooSoft/vim-argwrap'
+Plug 'Konfekt/FastFold'
+Plug 'ap/vim-css-color'
 Plug 'chrisbra/Recover.vim'
 Plug 'danro/rename.vim'
-Plug 'FooSoft/vim-argwrap'
-Plug 'ap/vim-css-color'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-peekaboo'
 Plug 'kana/vim-textobj-user'
-Plug 'Konfekt/FastFold'
 Plug 'kthibodeaux/pull-review'
 Plug 'kthibodeaux/tig.vim'
 Plug 'mbbill/undotree'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'powerman/vim-plugin-AnsiEsc'
 Plug 'rhysd/vim-textobj-ruby'
 Plug 'sgeb/vim-diff-fold'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'
 Plug 'unblevable/quick-scope'
-Plug 'powerman/vim-plugin-AnsiEsc'
 Plug 'wincent/vcs-jump'
-Plug 'w0rp/ale'
 call plug#end()
 " }}}
 " Theme {{{
@@ -183,6 +179,7 @@ hi clear SignColumn " fix grey gutter
 set statusline=
 set statusline+=\ %t
 set statusline+=\ %m
+set statusline+=\ %{coc#status()}
 set statusline+=%r
 set statusline+=%=
 set statusline+=\ %y
@@ -327,34 +324,78 @@ nnoremap <silent> <leader>a :ArgWrap<CR>
 let g:ruby_indent_block_style = 'do'
 let g:ruby_indent_assignment_style = 'hanging'
 " }}}
-" Deoplete {{{
-let g:deoplete#enable_at_startup = 1
-" }}}
-" UltiSnips {{{
-let g:UltiSnipsSnippetsDir = '~/.config/.nvim/UltiSnips'
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<c-b>"
-
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
-" }}}
 " {{{ tig.vim
 nmap <leader>c <Plug>TigFileHistory
 nmap <leader>b <Plug>TigBlame
 nmap <leader>y <Plug>TigLatestCommitForLine
 " }}}
-" ale {{{
-highlight ALEWarning ctermbg=10 ctermfg=255
-let g:ale_fixers = {
-      \   '*': ['trim_whitespace', 'remove_trailing_lines'],
-      \   'javascript': ['eslint']
-      \}
-" }}}
 " auto-pairs {{{
 let g:AutoPairsMultilineClose=0
 " }}}
+" {{{ coc.vim
+" {{{ functions
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+" }}}
+" {{{ mappings
+inoremap <silent><expr> <c-n> pumvisible() ? "\<C-n>" : <SID>check_back_space() ? "\<TAB>" :coc#refresh()
+inoremap <expr><S-c-n> pumvisible() ? "\<C-p>" : "\<C-h>"
+"
+" Use <c-n> to trigger completion.
+inoremap <silent><expr> <c-n> coc#refresh()
+
+" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
+" position. Coc only does snippet and additional edit on confirm.
+if has('patch8.1.1068')
+  " Use `complete_info` if your (Neo)Vim version supports it.
+  inoremap <expr> <tab> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+else
+  imap <expr> <tab> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+endif
+
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+xmap if <Plug>(coc-funcobj-i)
+xmap af <Plug>(coc-funcobj-a)
+omap if <Plug>(coc-funcobj-i)
+omap af <Plug>(coc-funcobj-a)
+
+nnoremap <silent> <space>d  :<C-u>CocList diagnostics<cr>
+" }}}
+" {{{ commands
+command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
+" }}}
+" {{{ snippets
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? coc#_select_confirm() :
+      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+let g:coc_snippet_next = '<tab>'
 " }}}
 " Keyboard Layouts {{{
 nmap <leader>lq <Plug>UseQwertyNavigation

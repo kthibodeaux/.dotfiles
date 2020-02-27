@@ -1,0 +1,12 @@
+{
+  "eslint.autoFixOnSave": true,
+  "eslint.options": { "configFile": "./.eslintrc.json" },
+  "eslint.filetypes": ["javascript", "vue"],
+  "javascript.format.enabled": false,
+  "solargraph.diagnostics": true,
+  "solargraph.autoformat": true,
+  "solargraph.formatting": true,
+  "solargraph.completion": true,
+  "solargraph.hover": true,
+  "vetur.format.defaultFormatter.js": "prettier-eslint"
+}
