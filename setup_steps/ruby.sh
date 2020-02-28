@@ -9,6 +9,7 @@ install_ruby() {
     gem install git-up
     gem install neovim
     gem install rubocop
+    gem install solargraph
   fi
   echo ""
 }
