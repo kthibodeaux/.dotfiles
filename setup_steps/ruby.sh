@@ -8,7 +8,6 @@ install_ruby() {
     gem install bundler
     gem install git-up
     gem install neovim
-    gem install reek
     gem install rubocop
   fi
   echo ""
