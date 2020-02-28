@@ -377,8 +377,6 @@ xmap if <Plug>(coc-funcobj-i)
 xmap af <Plug>(coc-funcobj-a)
 omap if <Plug>(coc-funcobj-i)
 omap af <Plug>(coc-funcobj-a)
-
-nnoremap <silent> <space>d  :<C-u>CocList diagnostics<cr>
 " }}}
 " {{{ commands
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
