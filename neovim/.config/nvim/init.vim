@@ -400,3 +400,6 @@ let g:coc_snippet_next = '<c-n>'
 nmap <leader>lq <Plug>UseQwertyNavigation
 nmap <leader>lc <Plug>UseColemakNavigation
 " }}}
+" {{{ vcs-jump
+nmap <Leader>d :VcsJump merge<CR>
+" }}}
