@@ -396,6 +396,19 @@ endfunction
 let g:coc_snippet_prev = '<c-p>'
 let g:coc_snippet_next = '<c-n>'
 " }}}
+" {{{ extensions
+let g:coc_global_extensions = [
+      \'coc-css',
+      \'coc-eslint',
+      \'coc-html',
+      \'coc-json',
+      \'coc-snippets',
+      \'coc-solargraph',
+      \'coc-tsserver',
+      \'coc-vetur',
+      \'coc-yaml',
+      \]
+" }}}
 " Keyboard Layouts {{{
 nmap <leader>lq <Plug>UseQwertyNavigation
 nmap <leader>lc <Plug>UseColemakNavigation
