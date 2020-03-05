@@ -46,6 +46,7 @@ pacaur -S --noconfirm \
   nemo \
   neomutt \
   neovim \
+  nerd-fonts-hack \
   nodejs \
   openssh \
   pa-applet \
@@ -65,7 +66,6 @@ pacaur -S --noconfirm \
   teensy-loader-cli \
   tig \
   tmux \
-  ttf-hack \
   universal-ctags-git \
   unzip \
   urlview-git \

@@ -75,7 +75,7 @@
 ! }}}
 
 URxvt*termName  : xterm-256color
-URxvt*font      : xft:Hack:size=16
+URxvt*font      : xft:Hack Nerd Font:size=16
 URxvt*scrollBar : false
 URxvt*borderColor : S_base03
 URxvt*pointerBlank : true
