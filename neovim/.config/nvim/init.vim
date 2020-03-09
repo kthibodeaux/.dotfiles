@@ -409,6 +409,7 @@ let g:coc_global_extensions = [
       \'coc-yaml',
       \]
 " }}}
+" }}}
 " Keyboard Layouts {{{
 nmap <leader>lq <Plug>UseQwertyNavigation
 nmap <leader>lc <Plug>UseColemakNavigation
