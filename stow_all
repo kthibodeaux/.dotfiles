@@ -17,7 +17,6 @@ stow -vv picom
 stow -vv ranger
 stow -vv readline
 stow -vv redshift
-stow -vv reek
 stow -vv rofi
 stow -vv rspec
 stow -vv rtv
