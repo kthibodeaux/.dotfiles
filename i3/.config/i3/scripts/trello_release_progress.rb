@@ -2,15 +2,15 @@
 require 'json'
 require 'yaml'
 
-DEV_BOARD_ID = 'iUU2lzsz'
-TRELLO = YAML.load(File.open("#{ ENV['HOME'] }/.wf.yml", 'r'))
-AUTH = "key=#{TRELLO['trello']['key']}&token=#{TRELLO['trello']['token']}"
+DEV_BOARD_ID = 'iUU2lzsz'.freeze
+TRELLO = YAML.load(File.open("#{ ENV['HOME'] }/.wf.yml", 'r')).freeze
+AUTH = "key=#{TRELLO['trello']['key']}&token=#{TRELLO['trello']['token']}".freeze
 READY_LABELS = [
   'Accepted',
   'Fixed in Production',
   'Hotfixed',
   'No Testing Required',
-]
+].freeze
 
 all_lists = JSON.parse(`curl --silent 'https://api.trello.com/1/boards/#{DEV_BOARD_ID}/?fields=name&lists=all&list_fields=all&#{AUTH}'`)
 active_lists = all_lists.fetch('lists').reject { |e| e.fetch('closed') }
