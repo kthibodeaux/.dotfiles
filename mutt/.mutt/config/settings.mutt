@@ -38,3 +38,5 @@ hdr_order Date: From: User-Agent: X-Mailer \
 ignore *
 unignore Date: From: User-Agent: X-Mailer  \
          To: Cc: Reply-To: Subject:
+
+set sidebar_short_path = yes
