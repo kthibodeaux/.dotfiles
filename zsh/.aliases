@@ -41,6 +41,8 @@ alias gh="git log | head"
 
 alias stash="git stash --include-untracked"
 alias pop="git stash pop"
+
+alias push="git push --follow --tags; git checkout master; git push; git checkout develop"
 # }}}
 # {{{ misc
 alias mine="wget -e robots=off -r -nc -np"
