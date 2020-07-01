@@ -27,10 +27,8 @@ class PullRequests
   end
 
   def my_reviewed_pull_requests
-    pull_requests
-      .select { |pr| pr.creator == GITHUB_USERNAME }
-      .select { |pr| pr.labels.include?(REVIEWED_LABEL) }
-      .select { |pr| pr.labels.include?(AWAITING_RESPONSE_LABEL) }
+    my_pull_requests.select { |pr| pr.labels.include?(REVIEWED_LABEL) } +
+      my_pull_requests.select { |pr| pr.labels.include?(AWAITING_RESPONSE_LABEL) }
   end
 
   def pull_requests_to_review
@@ -38,6 +36,10 @@ class PullRequests
       .reject { |pr| pr.creator == GITHUB_USERNAME }
       .reject { |pr| pr.labels.include?(ALREADY_REVIEWED_LABEL) }
       .select { |pr| pr.labels.include?(READY_TO_REVIEW_LABEL) }
+  end
+
+  def my_pull_requests
+    pull_requests.select { |pr| pr.creator == GITHUB_USERNAME }
   end
 
   def pull_requests
