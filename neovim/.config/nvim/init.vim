@@ -145,6 +145,8 @@ Plug 'posva/vim-vue'
 
 Plug 'rhysd/vim-crystal'
 
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'FooSoft/vim-argwrap'
 Plug 'Konfekt/FastFold'
