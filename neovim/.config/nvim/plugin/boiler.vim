@@ -1,5 +1,5 @@
 function s:boiler()
-  if filereadable("boiler") == 1
+  if filereadable("./.boiler/boiler") == 1
     if filereadable(@%) == 0
       read !./.boiler/boiler %
       norm ggdd
