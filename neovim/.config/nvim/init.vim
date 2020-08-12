@@ -142,8 +142,6 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'pangloss/vim-javascript'
 Plug 'posva/vim-vue'
 
-Plug 'rhysd/vim-crystal'
-
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 Plug 'AndrewRadev/splitjoin.vim'
