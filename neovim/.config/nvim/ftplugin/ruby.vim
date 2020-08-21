@@ -13,3 +13,5 @@ map <buffer> <Leader>rl :call RunLastSpec()<CR>
 map <buffer> <Leader>ra :call RunAllSpecs()<CR>
 
 nmap <buffer> <leader><tab> :call CocAction('format')<CR>
+
+autocmd BufWritePre <buffer> call CocAction('format')
