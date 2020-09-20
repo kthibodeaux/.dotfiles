@@ -1,5 +1,6 @@
 # vim:foldmethod=indent:foldlevel=0
 
+vue() { docker_or_local "vue $@" }
 ya() { docker_or_local "yarn $@" }
 
 be() { docker_or_local "bundle exec $@" }
