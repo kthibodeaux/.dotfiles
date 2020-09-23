@@ -1,12 +1,8 @@
 function s:open_db_migrate()
-  if isdirectory("db") == 1
+  if isdirectory("db/migrate") == 1
     exec ":edit db/migrate"
-  else
-    let l:dir = system("find . -maxdepth 1 -type d -name '*backend' -print -quit")
-    let l:dir = substitute(l:dir, '\n\+$', '', '')
-    let l:command = ":edit ". l:dir . "/db/migrate"
-
-    exec l:command
+  elseif isdirectory("backend/db/migrate") == 1
+    exec ":edit backend/db/migrate"
   endif
 endfunction
 
