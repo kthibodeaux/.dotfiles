@@ -4,7 +4,7 @@ function s:open_db_migrate()
   else
     let l:dir = system("find . -maxdepth 1 -type d -name '*backend' -print -quit")
     let l:dir = substitute(l:dir, '\n\+$', '', '')
-    let l:command = ":edit ". l:dir . "/db/"
+    let l:command = ":edit ". l:dir . "/db/migrate"
 
     exec l:command
   endif
