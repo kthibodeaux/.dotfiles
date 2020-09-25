@@ -66,7 +66,7 @@ set winwidth=90 " Active window min width
 " }}}
 " Vue `gf` for components {{{
 set suffixesadd=.vue
-set path=.,app/javascript/**
+set path=.,app/javascript/**,frontend/src/**
 " }}}
 " Undo config {{{
 set undofile
