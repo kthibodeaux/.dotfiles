@@ -60,6 +60,7 @@ pacaur -S --noconfirm \
   rofi \
   ruby-install \
   safe-rm \
+  sassc \
   signal-desktop \
   scrot \
   silver-searcher-git \
