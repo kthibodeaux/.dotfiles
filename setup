@@ -24,7 +24,6 @@ pacaur -S --noconfirm \
   avr-gcc \
   avr-libc \
   aws-cli \
-  bat \
   chruby \
   docker \
   docker-compose \
