@@ -68,7 +68,7 @@ gd() {
     return 1
   else
     merge_branch=$(git branch --show-current)
-    git fetch && git rebase origin/master && git checkout master && git merge @{-1} --ff-only && git push
+    git fetch && git rebase origin/master && git checkout master && git merge @{-1} --no-ff && git push
 
     git branch -D $merge_branch && git push origin :$merge_branch
   fi
