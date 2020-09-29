@@ -60,6 +60,20 @@ gbD() {
   fi
 }
 
+gd() {
+  base_branch=$(base_branch)
+
+  if [[ $base_branch == "develop" ]]; then
+    echo "Conflict with git-flow"
+    return 1
+  else
+    merge_branch=$(git branch --show-current)
+    git fetch && git rebase origin/master && git checkout master && git merge @{-1} --ff-only && git push
+
+    git branch -D $merge_branch && git push origin :$merge_branch
+  fi
+}
+
 dev() {
   git checkout develop && git up
 }
