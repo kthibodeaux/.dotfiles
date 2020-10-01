@@ -1,7 +1,0 @@
-#!/bin/sh
-if [ $# -eq 0 ]; then
-  echo "No URL given.  Provide a URL to shrink."
-  exit
-fi
-
-curl -s http://tinyurl.com/api-create.php?url=${1} | pbcopy
