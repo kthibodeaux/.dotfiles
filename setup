@@ -66,7 +66,6 @@ pacaur -S --noconfirm \
   teensy-loader-cli \
   tig \
   tmux \
-  universal-ctags-git \
   unzip \
   urlview-git \
   youtube-dl \

@@ -1,6 +1,5 @@
 # vi: set ft=sh :
 
-stow -vv ctags
 stow -vv dunst
 stow -vv gem
 stow -vv git
