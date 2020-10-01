@@ -1,5 +1,5 @@
 if $TMUX =~ 'tmate'
-  colorscheme slate
+  colorscheme default
   set colorcolumn=400
   autocmd! CursorLine
   autocmd! CursorColumn
