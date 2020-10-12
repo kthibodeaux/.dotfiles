@@ -123,4 +123,26 @@ snippet cw "console.warn" b
 console.warn(${1:"${2:value}"});
 endsnippet
 
+snippet mutate "apollo mutate"
+const handleSuccess = (response) => {
+	if(response.data.${1}.success) {
+		successToast(response.data.${1}.message)
+	} else {
+		errorToast(response.data.${1}.message)
+	}
+}
+
+const noLongerProcessing = () => {
+	this.isProcessing = false
+}
+
+await apolloClient.mutate({
+	mutation: gql(${1}Mutation),
+	variables: { ${2} },
+})
+	.then(handleSuccess)
+	.catch((error) => errorToast(error))
+	.finally(noLongerProcessing)
+endsnippet
+
 # vim:ft=snippets:
