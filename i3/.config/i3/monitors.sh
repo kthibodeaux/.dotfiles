@@ -3,10 +3,7 @@
 internal=$(xrandr -q | grep " connected" | cut -d" " -f1 | grep eDP)
 external=$(xrandr -q | grep " connected" | cut -d" " -f1 | grep HDMI)
 
-if [ -z "$external" ]; then
-  # on single monitor desktop
-  exit 0
-else
+if [ -n "$external" ]; then
   # on laptop with lid closed
   xrandr --output "$internal" --off
   xrandr --output "$external" --auto
