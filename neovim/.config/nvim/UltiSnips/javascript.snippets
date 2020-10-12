@@ -124,7 +124,7 @@ console.warn(${1:"${2:value}"});
 endsnippet
 
 snippet mutate "apollo mutate"
-const handleSuccess = (response) => {
+const handle200 = (response) => {
 	if(response.data.${1}.success) {
 		successToast(response.data.${1}.message)
 	} else {
@@ -140,7 +140,7 @@ await apolloClient.mutate({
 	mutation: gql(${1}Mutation),
 	variables: { ${2} },
 })
-	.then(handleSuccess)
+	.then(handle200)
 	.catch((error) => errorToast(error))
 	.finally(noLongerProcessing)
 endsnippet
