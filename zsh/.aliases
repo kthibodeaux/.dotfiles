@@ -5,7 +5,7 @@
 alias k="docker"
 alias c="docker-compose"
 alias docker-nuke="docker container prune -f; docker volume prune -f; docker image prune -f"
-alias rebuild="docker-compose down; docker-compose up"
+alias rebuild="docker-compose down; RESEED=true docker-compose up"
 
 alias slack="docker run --rm -it -e 'TERM=xterm-256color' -v /etc/localtime:/etc/localtime:ro -v "${HOME}/.weechat:/home/user/.weechat" -u $(id -u ${USER}):$(id -g ${USER}) wee-slack"
 # }}}
