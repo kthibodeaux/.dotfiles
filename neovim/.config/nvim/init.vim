@@ -282,7 +282,6 @@ augroup END
 nnoremap <F5> :UndotreeToggle<cr>
 " }}}
 " FZF {{{
-set rtp+=~/.fzf
 nnoremap <leader>e :Files<cr>
 
 " :Files will preview the selected file
