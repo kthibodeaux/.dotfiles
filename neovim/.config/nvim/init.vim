@@ -151,7 +151,7 @@ Plug 'ap/vim-css-color'
 Plug 'chrisbra/Recover.vim'
 Plug 'danro/rename.vim'
 Plug 'jiangmiao/auto-pairs'
-Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf.vim', { 'commit': '0fe8e198a3a501b54dbc4f9587526c097599f95a' }
 Plug 'junegunn/vim-peekaboo'
 Plug 'kana/vim-textobj-user'
 Plug 'kthibodeaux/pull-review'
