@@ -22,4 +22,4 @@ pmit() { docker_or_local "bundle exec rake parallel:migrate[$RSPEC_CORES]" }
 rq() { docker_or_local "bundle exec rake resque:work QUEUE=*" }
 rqd() { docker_or_local "bundle exec rake resque:scheduler" }
 
-rl() { docker_or_local "bundle exec rake routes" | ag $1 }
+rl() { docker_or_local "bundle exec rails routes" | ag $1 }
