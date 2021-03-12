@@ -331,6 +331,7 @@ nmap <leader>y <Plug>TigLatestCommitForLine
 let g:AutoPairsMultilineClose=0
 " }}}
 " {{{ coc.vim
+let g:coc_node_args = ['--max-old-space-size=8192']
 " {{{ functions
 function! s:check_back_space() abort
   let col = col('.') - 1
