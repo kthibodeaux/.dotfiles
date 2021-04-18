@@ -122,6 +122,9 @@ nnoremap <silent> <Left> :vertical resize +2<CR>
 nnoremap <silent> <Right> :vertical resize -2<CR>
 
 nmap <leader>h <Plug>GitGoBack
+
+nnoremap n nzz
+nnoremap N Nzz
 " }}}
 " Plugins {{{
 call plug#begin('~/.config/nvim/plugged')
