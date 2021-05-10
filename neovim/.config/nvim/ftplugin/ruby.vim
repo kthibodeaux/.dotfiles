@@ -14,4 +14,6 @@ map <buffer> <Leader>ra :call RunAllSpecs()<CR>
 
 nmap <buffer> <leader><tab> :call CocAction('format')<CR>
 
-autocmd BufWritePre <buffer> call CocAction('format')
+if expand('%')[len(expand('%'))-4:len(expand('%'))] != 'slim'
+  autocmd BufWritePre <buffer> call CocAction('format')
+endif
