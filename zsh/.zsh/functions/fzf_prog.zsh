@@ -1,7 +1,7 @@
-fzf_prog(){
-  if [ "$TMUX" = "" ]; then
-    echo "fzf"
-  else
+fzf_prog() {
+  if [ "$TMUX" =~ "tmux" ]; then
     echo "fzf-tmux"
+  else
+    echo "fzf"
   fi
 }
