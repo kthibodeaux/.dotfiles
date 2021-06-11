@@ -4,11 +4,7 @@ function wd() {
   if [[ $# == 0 ]]; then
     if [ -f $WD_DIRS_LOCATION ]; then
       files=$(cat $WD_DIRS_LOCATION | sed 's/#.*//g' | sed '/^\s*$/d' | sort | uniq)
-      if [ "$TMUX" = "" ]; then
-        destination=$(echo $files | fzf | sed 's/^.*: //' )
-      else
-        destination=$(echo $files | fzf-tmux | sed 's/^.*: //' )
-      fi
+      destination=$(echo $files | $(fzf_prog) | sed 's/^.*: //' )
 
       if [[ $destination != '' ]]; then
         cd $destination
