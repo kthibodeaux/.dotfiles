@@ -74,6 +74,14 @@ gd() {
   fi
 }
 
+gdm() {
+  if [[ $base_branch == "develop" ]]; then
+    git branch --merged origin/develop | grep -v master | grep -v develop | xargs git branch -d
+  else
+    git branch --merged origin/master | grep -v master | xargs git branch -d
+  fi
+}
+
 dev() {
   git checkout develop && git up
 }
