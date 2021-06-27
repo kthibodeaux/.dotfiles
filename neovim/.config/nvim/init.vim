@@ -12,6 +12,7 @@ set expandtab
 syntax on
 set autoindent
 set backspace=indent,eol,start
+set backupcopy=yes
 set colorcolumn=80
 set encoding=utf-8
 set fileencoding=utf-8
