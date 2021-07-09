@@ -146,8 +146,6 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'pangloss/vim-javascript'
 Plug 'posva/vim-vue'
 
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'FooSoft/vim-argwrap'
 Plug 'Konfekt/FastFold'
@@ -158,7 +156,6 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf.vim', { 'commit': '0fe8e198a3a501b54dbc4f9587526c097599f95a' }
 Plug 'junegunn/vim-peekaboo'
 Plug 'kana/vim-textobj-user'
-Plug 'kthibodeaux/pull-review'
 Plug 'kthibodeaux/tig.vim'
 Plug 'mbbill/undotree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
