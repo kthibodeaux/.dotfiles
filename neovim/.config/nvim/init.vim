@@ -30,41 +30,6 @@ augroup CursorColumn
   au WinLeave * setlocal nocursorcolumn
 augroup END
 " }}}
-" Mappings {{{
-inoremap ii <Esc>
-inoremap jj <Esc>
-nnoremap <CR> :noh<CR><CR> " cancel search by pressing return
-nnoremap <leader><tab> mtgg=G`t " indent file, some filetype configs override to use coc
-nnoremap S i<cr><esc>^mwgk:silent! s/\v +$//<cr>:noh<cr>$ " split line
-nnoremap <s-tab> za " toggle fold
-nnoremap <leader>t :tab new<CR>
-nnoremap <leader><CR> gt
-nmap <leader>m <Plug>OpenDbMigrate
-
-nnoremap <leader>ff :Find<space>
-nnoremap <leader>fv :vs<CR>:Find<space>
-nnoremap <leader>fa :vs<CR>:Find <C-R><C-W><CR>
-
-nmap <leader>fm :silent execute "!tmux split-window ranger " . expand('%:p:h')<CR>
-
-" zoom in on a split
-nnoremap <leader>zz <C-w>z <C-w>_ <C-w>\|
-
-" equalize splits
-nnoremap <leader>zx <C-w>=
-
-nnoremap <silent> <leader>n <C-]>
-
-nnoremap <silent> <Up> :cprevious<CR>
-nnoremap <silent> <Down> :cnext<CR>
-nnoremap <silent> <Left> :vertical resize +2<CR>
-nnoremap <silent> <Right> :vertical resize -2<CR>
-
-nmap <leader>h <Plug>GitGoBack
-
-nnoremap n nzz
-nnoremap N Nzz
-" }}}
 " Plugins {{{
 call plug#begin('~/.config/nvim/plugged')
 Plug 'lifepillar/vim-solarized8'
