@@ -45,21 +45,12 @@ set statusline+=\ %p%%
 set statusline+=\ %l:%c
 " }}}
 " Plugin config {{{
-" RSpec {{{
-let g:rspec_command = 'call VimuxRunCommand("bes {spec}\n")'
-" }}}
-" Tmux navigator {{{
-let g:tmux_navigator_no_mappings = 1
-" }}}
 " Quickscope {{{
 augroup qs_colors
   autocmd!
   autocmd ColorScheme * highlight QuickScopePrimary ctermfg=117 cterm=underline
   autocmd ColorScheme * highlight QuickScopeSecondary ctermfg=219 cterm=underline
 augroup END
-" }}}
-" Undotree {{{
-nnoremap <F5> :UndotreeToggle<cr>
 " }}}
 " FZF {{{
 nnoremap <leader>e :Files<cr>
