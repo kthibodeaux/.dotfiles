@@ -11,10 +11,6 @@ command! -bang -nargs=* Find
       \ 'ag --hidden -A 0 -B 0 --ignore .git --nogroup --color '.shellescape(<q-args>), 0,
       \   fzf#vim#with_preview('up:70%')
       \ )
-" Vue `gf` for components {{{
-set suffixesadd=.vue
-set path=.,app/javascript/**,frontend/src/**
-" }}}
 " Crosshair {{{
 " Highlight current line in active pane only
 augroup CursorLine
