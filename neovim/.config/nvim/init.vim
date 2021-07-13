@@ -1,81 +1,19 @@
-" vim:foldmethod=marker:foldlevel=0
-" Leaders {{{
-let mapleader = "\<Space>"
-let maplocalleader = ","
-" }}}
-" Basic config {{{
-filetype plugin indent on
-set shiftwidth=2
-set softtabstop=2
-set tabstop=2
-set expandtab
-syntax on
-set autoindent
-set backspace=indent,eol,start
-set backupcopy=yes
-set colorcolumn=80
-set encoding=utf-8
-set fileencoding=utf-8
-set laststatus=2 " Always show last status
-set nowrap
-set nrformats-=octal
-set number
-set relativenumber " 7.4+ shows both, below just relative
-set ruler " Show cursor position
-set scrolloff=3 " Always show at least three lines above and below cursor
-set showcmd " Show partially typed commands
-set showmatch " Matches () etc
-set timeout
-set timeoutlen=1000
-set ttimeoutlen=100
-set visualbell " Flash the cursor on error instead of beeping
-set wildmenu " Show menu options for completion
-set mouse-=a
-set splitright
-set splitbelow
-let g:netrw_liststyle=3
-let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
-set guicursor=
-set updatetime=300
-set shortmess+=c
-set signcolumn=yes
-" Searching {{{
-set hlsearch
-set ignorecase
-set smartcase " Only search upcase if provided with capital letter
-set gdefault " Assume /g flag on :%s to replace all matches on line
-set incsearch " Search as typing
-" }}}
-" Default Folding {{{
-set foldmethod=syntax
-set foldlevelstart=3
-" }}}
-" }}}
-" Abbreviations {{{
+" Config not set in lua:
+" set nrformats-=octal
+" set mouse-=a
+" set guicursor=
+" set shortmess+=c
+" set signcolumn=yes
+
 iabbr pry ::Kernel.binding.pry
-" }}}
-" Commands {{{
 command! -bang -nargs=* Find
       \ call fzf#vim#grep(
       \ 'ag --hidden -A 0 -B 0 --ignore .git --nogroup --color '.shellescape(<q-args>), 0,
       \   fzf#vim#with_preview('up:70%')
       \ )
-" }}}
-" Window managment {{{
-set hidden " Allow unsaved buffers to be put in background
-set winwidth=90 " Active window min width
-" }}}
 " Vue `gf` for components {{{
 set suffixesadd=.vue
 set path=.,app/javascript/**,frontend/src/**
-" }}}
-" Undo config {{{
-set undofile
-set undodir=~/.config/nvim/undodir
-" }}}
-" Backup config {{{
-set backupdir=~/.config/nvim/tmp
-set directory=~/.config/nvim/tmp
 " }}}
 " Crosshair {{{
 " Highlight current line in active pane only
