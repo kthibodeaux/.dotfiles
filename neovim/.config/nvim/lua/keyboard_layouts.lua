@@ -6,10 +6,10 @@ local function use_qwerty()
   vim.api.nvim_set_keymap('n', 'j', 'j', options)
   vim.api.nvim_set_keymap('n', 'k', 'k', options)
 
-  vim.api.nvim_set_keymap('n', '<c-h>', ':TmuxNavigateLeft<CR>', silent_options)
-  vim.api.nvim_set_keymap('n', '<c-j>', ':TmuxNavigateDown<CR>', silent_options)
-  vim.api.nvim_set_keymap('n', '<c-k>', ':TmuxNavigateUp<CR>', silent_options)
-  vim.api.nvim_set_keymap('n', '<c-l>', ':TmuxNavigateRight<CR>', silent_options)
+  vim.api.nvim_set_keymap('n', '<C-h>', ':TmuxNavigateLeft<CR>', options)
+  vim.api.nvim_set_keymap('n', '<C-j>', ':TmuxNavigateDown<CR>', options)
+  vim.api.nvim_set_keymap('n', '<C-k>', ':TmuxNavigateUp<CR>', options)
+  vim.api.nvim_set_keymap('n', '<C-l>', ':TmuxNavigateRight<CR>', options)
 
   print "Using Qwerty style navigation"
 end
@@ -19,10 +19,10 @@ local function use_colemak()
   vim.api.nvim_set_keymap('n', 'j', 'h', options)
   vim.api.nvim_set_keymap('n', 'k', 'j', options)
 
-  vim.api.nvim_set_keymap('n', '<c-j>', ':TmuxNavigateLeft<CR>', silent_options)
-  vim.api.nvim_set_keymap('n', '<c-k>', ':TmuxNavigateDown<CR>', silent_options)
-  vim.api.nvim_set_keymap('n', '<c-h>', ':TmuxNavigateUp<CR>', silent_options)
-  vim.api.nvim_set_keymap('n', '<c-l>', ':TmuxNavigateRight<CR>', silent_options)
+  vim.api.nvim_set_keymap('n', '<C-j>', ':TmuxNavigateLeft<CR>', options)
+  vim.api.nvim_set_keymap('n', '<C-k>', ':TmuxNavigateDown<CR>', options)
+  vim.api.nvim_set_keymap('n', '<C-h>', ':TmuxNavigateUp<CR>', options)
+  vim.api.nvim_set_keymap('n', '<C-l>', ':TmuxNavigateRight<CR>', options)
 
   print "Using Colemak style navigation"
 end
