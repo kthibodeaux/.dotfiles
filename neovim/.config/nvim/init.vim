@@ -31,19 +31,6 @@ augroup CursorColumn
   au WinLeave * setlocal nocursorcolumn
 augroup END
 " }}}
-" Statusline {{{
-set statusline=
-set statusline+=\ %t
-set statusline+=\ %m
-set statusline+=\ %{coc#status()}
-set statusline+=%r
-set statusline+=%=
-set statusline+=\ %y
-set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
-set statusline+=\ %{&fileformat}
-set statusline+=\ %p%%
-set statusline+=\ %l:%c
-" }}}
 " Plugin config {{{
 " Quickscope {{{
 augroup qs_colors
