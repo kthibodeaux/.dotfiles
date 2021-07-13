@@ -48,3 +48,5 @@ vim.opt.wrap = false
 vim.cmd('colorscheme solarized8')
 vim.cmd('filetype indent plugin on')
 vim.cmd('syntax on')
+
+require'keyboard_layouts'.use_colemak()

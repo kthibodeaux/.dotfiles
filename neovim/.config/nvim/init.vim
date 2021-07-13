@@ -172,7 +172,3 @@ let g:coc_global_extensions = [
       \]
 " }}}
 " }}}
-" Keyboard Layouts {{{
-nmap <leader>lq <Plug>UseQwertyNavigation
-nmap <leader>lc <Plug>UseColemakNavigation
-" }}}
