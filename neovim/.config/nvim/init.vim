@@ -11,21 +11,6 @@ command! -bang -nargs=* Find
       \ 'ag --hidden -A 0 -B 0 --ignore .git --nogroup --color '.shellescape(<q-args>), 0,
       \   fzf#vim#with_preview('up:70%')
       \ )
-" Crosshair {{{
-" Highlight current line in active pane only
-augroup CursorLine
-  au!
-  au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
-  au WinLeave * setlocal nocursorline
-augroup END
-
-" Highlight current column in active pane only
-augroup CursorColumn
-  au!
-  au VimEnter,WinEnter,BufWinEnter * setlocal cursorcolumn
-  au WinLeave * setlocal nocursorcolumn
-augroup END
-" }}}
 " Plugin config {{{
 " Quickscope {{{
 augroup qs_colors
