@@ -1,3 +1,3 @@
-require('plugins')
-require('settings')
-require('maps')
+require('init/plugins')
+require('init/settings')
+require('init/maps')
