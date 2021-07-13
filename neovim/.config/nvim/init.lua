@@ -1,5 +1,6 @@
 require('init/plugins')
 require('init/settings')
+require('init/abbr')
 require('init/maps')
 require('init/statusline')
 require('init/plugin_config/*')

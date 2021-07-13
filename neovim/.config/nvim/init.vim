@@ -6,7 +6,6 @@
 " set signcolumn=yes
 " hi clear SignColumn " fix grey gutter
 
-iabbr pry ::Kernel.binding.pry
 command! -bang -nargs=* Find
       \ call fzf#vim#grep(
       \ 'ag --hidden -A 0 -B 0 --ignore .git --nogroup --color '.shellescape(<q-args>), 0,
