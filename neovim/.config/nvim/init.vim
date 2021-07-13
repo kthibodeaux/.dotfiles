@@ -93,23 +93,6 @@ endfunction
 
 let g:fzf_layout = { 'window': 'call CreateCenteredFloatingWindow()' }
 " }}}
-" Argwrap {{{
-let g:argwrap_padded_braces = '{'
-nnoremap <silent> <leader>a :ArgWrap<CR>
-" }}}
-" vim-ruby {{{
-" https://github.com/vim-ruby/vim-ruby/blob/master/doc/vim-ruby.txt#L133
-let g:ruby_indent_block_style = 'do'
-let g:ruby_indent_assignment_style = 'hanging'
-" }}}
-" {{{ tig.vim
-nmap <leader>c <Plug>TigFileHistory
-nmap <leader>b <Plug>TigBlame
-nmap <leader>y <Plug>TigLatestCommitForLine
-" }}}
-" auto-pairs {{{
-let g:AutoPairsMultilineClose=0
-" }}}
 " {{{ coc.vim
 let g:coc_node_args = ['--max-old-space-size=8192']
 " {{{ functions
@@ -192,7 +175,4 @@ let g:coc_global_extensions = [
 " Keyboard Layouts {{{
 nmap <leader>lq <Plug>UseQwertyNavigation
 nmap <leader>lc <Plug>UseColemakNavigation
-" }}}
-" {{{ vcs-jump
-nmap <Leader>d :VcsJump merge<CR>
 " }}}
