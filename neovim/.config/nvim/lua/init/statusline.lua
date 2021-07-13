@@ -1,0 +1,11 @@
+vim.api.nvim_set_option('statusline', ''
+  .. '%t'
+  .. ' %m'
+  .. '%r'
+  .. '%='
+  .. ' %y'
+  .. ' %{&fileencoding?&fileencoding:&encoding}'
+  .. ' %{&fileformat}'
+  .. ' %p%%'
+  .. ' %l:%c'
+)
