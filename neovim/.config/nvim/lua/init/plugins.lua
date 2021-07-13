@@ -1,4 +1,7 @@
-vim.cmd("call plug#begin('~/.config/nvim/plugged')")
+local home = vim.env.HOME
+local config = home .. '/.config/nvim'
+
+vim.cmd("call plug#begin('" .. config .. "/plugged')")
 
 vim.cmd("Plug 'lifepillar/vim-solarized8'")
 
