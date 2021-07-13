@@ -1,9 +1,11 @@
+vim.g.solarized_use16 = 1
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ','
 vim.g.netrw_liststyle = 3
 vim.g.netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
 
 vim.opt.autoindent = true
+vim.opt.background = 'dark'
 vim.opt.backspace = 'indent,start,eol'
 vim.opt.backupcopy = 'yes'
 vim.opt.backupdir = '~/.config/nvim/tmp'
@@ -43,10 +45,6 @@ vim.opt.wildmenu = true
 vim.opt.winwidth = 90
 vim.opt.wrap = false
 
--- Automatic, language-dependent indentation, syntax coloring and other
--- functionality.
---
--- Must come *after* the `:packadd!` calls above otherwise the contents of
--- package "ftdetect" directories won't be evaluated.
+vim.cmd('colorscheme solarized8')
 vim.cmd('filetype indent plugin on')
 vim.cmd('syntax on')

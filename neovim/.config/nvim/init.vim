@@ -4,6 +4,7 @@
 " set guicursor=
 " set shortmess+=c
 " set signcolumn=yes
+" hi clear SignColumn " fix grey gutter
 
 iabbr pry ::Kernel.binding.pry
 command! -bang -nargs=* Find
@@ -29,12 +30,6 @@ augroup CursorColumn
   au VimEnter,WinEnter,BufWinEnter * setlocal cursorcolumn
   au WinLeave * setlocal nocursorcolumn
 augroup END
-" }}}
-" Theme {{{
-let g:solarized_use16=1
-set background=dark
-colorscheme solarized8
-hi clear SignColumn " fix grey gutter
 " }}}
 " Statusline {{{
 set statusline=
