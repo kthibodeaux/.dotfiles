@@ -30,48 +30,6 @@ augroup CursorColumn
   au WinLeave * setlocal nocursorcolumn
 augroup END
 " }}}
-" Plugins {{{
-call plug#begin('~/.config/nvim/plugged')
-Plug 'lifepillar/vim-solarized8'
-
-Plug 'benmills/vimux'
-Plug 'christoomey/vim-tmux-navigator'
-
-Plug 'thoughtbot/vim-rspec'
-Plug 'tpope/vim-endwise'
-Plug 'tpope/vim-rails'
-Plug 'vim-ruby/vim-ruby'
-Plug 'slim-template/vim-slim'
-
-Plug 'digitaltoad/vim-pug'
-Plug 'joaohkfaria/vim-jest-snippets'
-Plug 'kchmck/vim-coffee-script'
-Plug 'pangloss/vim-javascript'
-Plug 'posva/vim-vue'
-
-Plug 'AndrewRadev/splitjoin.vim'
-Plug 'FooSoft/vim-argwrap'
-Plug 'Konfekt/FastFold'
-Plug 'ap/vim-css-color'
-Plug 'chrisbra/Recover.vim'
-Plug 'danro/rename.vim'
-Plug 'jiangmiao/auto-pairs'
-Plug 'junegunn/fzf.vim', { 'commit': '0fe8e198a3a501b54dbc4f9587526c097599f95a' }
-Plug 'junegunn/vim-peekaboo'
-Plug 'kana/vim-textobj-user'
-Plug 'kthibodeaux/tig.vim'
-Plug 'mbbill/undotree'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'powerman/vim-plugin-AnsiEsc'
-Plug 'rhysd/vim-textobj-ruby'
-Plug 'sgeb/vim-diff-fold'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-vinegar'
-Plug 'unblevable/quick-scope'
-Plug 'wincent/vcs-jump'
-call plug#end()
-" }}}
 " Theme {{{
 let g:solarized_use16=1
 set background=dark
