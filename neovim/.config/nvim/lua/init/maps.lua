@@ -18,7 +18,6 @@ map('n', '<leader>fv', ':vs<CR>:Find<space>', options)
 map('n', '<leader>h', '<Plug>GitGoBack', options)
 map('n', '<leader>lc', ":lua require'keyboard_layouts'.use_colemak()<CR>", options)
 map('n', '<leader>lq', ":lua require'keyboard_layouts'.use_qwerty()<CR>", options)
-map('n', '<leader>m', '<Plug>OpenDbMigrate', options)
 map('n', '<leader>n', '<C-]>', silent_options)
 map('n', '<leader>t', ':tab new<CR>', options)
 map('n', '<leader>zx', '<C-w>=', options) -- equalize splits
