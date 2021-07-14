@@ -1,9 +1,14 @@
-vim.cmd("call plug#begin('~/.config/nvim/plugged')")
+local home = vim.env.HOME
+local config = home .. '/.config/nvim'
+
+vim.cmd("call plug#begin('" .. config .. "/plugged')")
 
 vim.cmd("Plug 'lifepillar/vim-solarized8'")
 
 vim.cmd("Plug 'benmills/vimux'")
 vim.cmd("Plug 'christoomey/vim-tmux-navigator'")
+
+vim.cmd("Plug 'neoclide/coc.nvim', {'branch': 'release'}")
 
 vim.cmd("Plug 'thoughtbot/vim-rspec'")
 vim.cmd("Plug 'tpope/vim-endwise'")

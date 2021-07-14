@@ -1,6 +1,7 @@
 vim.api.nvim_set_option('statusline', ''
   .. '%t'
   .. ' %m'
+  .. ' %{coc#status()}'
   .. '%r'
   .. '%='
   .. ' %y'

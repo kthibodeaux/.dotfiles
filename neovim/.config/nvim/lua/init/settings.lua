@@ -1,3 +1,6 @@
+local home = vim.env.HOME
+local config = home .. '/.config/nvim'
+
 vim.g.solarized_use16 = 1
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ','
@@ -8,9 +11,9 @@ vim.opt.autoindent = true
 vim.opt.background = 'dark'
 vim.opt.backspace = 'indent,start,eol'
 vim.opt.backupcopy = 'yes'
-vim.opt.backupdir = '~/.config/nvim/tmp'
+vim.opt.backupdir = config .. '/backup//'
 vim.opt.colorcolumn = '80'
-vim.opt.directory = '~/.config/nvim/tmp'
+vim.opt.backupdir = config .. '/tmp//'
 vim.opt.encoding = 'utf-8'
 vim.opt.expandtab = true
 vim.opt.fileencoding = 'utf-8'
@@ -39,7 +42,7 @@ vim.opt.tabstop = 2
 vim.opt.timeout = true
 vim.opt.timeoutlen = 1000
 vim.opt.ttimeoutlen = 100
-vim.opt.undodir = '~/.config/nvim/undodir'
+vim.opt.backupdir = config .. '/undodir//'
 vim.opt.undofile = true
 vim.opt.updatetime = 300
 vim.opt.visualbell = true

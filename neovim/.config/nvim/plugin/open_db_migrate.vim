@@ -6,4 +6,4 @@ function s:open_db_migrate()
   endif
 endfunction
 
-nnoremap <Plug>OpenDbMigrate :call <SID>open_db_migrate()<CR>G
+nnoremap <leader>m :call <SID>open_db_migrate()<CR>G
