@@ -11,7 +11,6 @@ vim.opt.autoindent = true
 vim.opt.background = 'dark'
 vim.opt.backspace = 'indent,start,eol'
 vim.opt.backupcopy = 'yes'
-vim.opt.backupdir = config .. '/backup//'
 vim.opt.colorcolumn = '80'
 vim.opt.backupdir = config .. '/tmp//'
 vim.opt.encoding = 'utf-8'
