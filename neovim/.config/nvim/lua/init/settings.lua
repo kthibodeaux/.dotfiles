@@ -1,14 +1,12 @@
 local home = vim.env.HOME
 local config = home .. '/.config/nvim'
 
-vim.g.solarized_use16 = 1
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ','
 vim.g.netrw_liststyle = 3
 vim.g.netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
 
 vim.opt.autoindent = true
-vim.opt.background = 'dark'
 vim.opt.backspace = 'indent,start,eol'
 vim.opt.backupcopy = 'yes'
 vim.opt.colorcolumn = '80'
@@ -65,8 +63,9 @@ augroup CursorColumn
 augroup END
 ]], false)
 
-vim.cmd('colorscheme solarized8')
+vim.cmd('syntax enable')
+vim.cmd('set termguicolors')
+vim.cmd('colorscheme OceanicNext')
 vim.cmd('filetype indent plugin on')
-vim.cmd('syntax on')
 
 require'keyboard_layouts'.use_colemak()

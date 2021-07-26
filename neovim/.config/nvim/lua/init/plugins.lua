@@ -3,7 +3,7 @@ local config = home .. '/.config/nvim'
 
 vim.cmd("call plug#begin('" .. config .. "/plugged')")
 
-vim.cmd("Plug 'lifepillar/vim-solarized8'")
+vim.cmd("Plug 'mhartington/oceanic-next'")
 
 vim.cmd("Plug 'benmills/vimux'")
 vim.cmd("Plug 'christoomey/vim-tmux-navigator'")
