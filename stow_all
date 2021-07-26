@@ -25,5 +25,4 @@ stow -vv tmux
 stow -vv urlview
 stow -vv vim
 stow -vv w3m
-stow -vv x
 stow -vv zsh
