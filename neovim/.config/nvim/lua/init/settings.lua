@@ -36,6 +36,7 @@ vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.suffixesadd = '.vue'
 vim.opt.tabstop = 2
+vim.opt.termguicolors = true
 vim.opt.timeout = true
 vim.opt.timeoutlen = 1000
 vim.opt.ttimeoutlen = 100
@@ -64,8 +65,7 @@ augroup END
 ]], false)
 
 vim.cmd('syntax enable')
-vim.cmd('set termguicolors')
-vim.cmd('colorscheme OceanicNext')
+vim.cmd('colorscheme NeoSolarized')
 vim.cmd('filetype indent plugin on')
 
 require'keyboard_layouts'.use_colemak()
