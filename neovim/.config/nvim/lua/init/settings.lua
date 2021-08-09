@@ -65,7 +65,7 @@ augroup END
 ]], false)
 
 vim.cmd('syntax enable')
-vim.cmd('colorscheme NeoSolarized')
+vim.cmd('colorscheme OceanicNext')
 vim.cmd('filetype indent plugin on')
 
 require'keyboard_layouts'.use_colemak()
