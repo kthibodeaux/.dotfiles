@@ -131,7 +131,8 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 # }}}
 # {{{ window manipulation
-mode "window_manipulation" {
+set $window_manipulation (f)ullscreen, s(p)lit, (t)abbed, (s)tacked
+mode "$window_manipulation" {
   bindsym a focus parent
   bindsym z focus child
 
@@ -147,14 +148,14 @@ mode "window_manipulation" {
 
   bindsym f fullscreen toggle
   bindsym p layout toggle split
-  bindsym w layout tabbed
-  bindsym g layout stacking
+  bindsym t layout tabbed
+  bindsym s layout stacking
 
   bindsym Return mode "default"
   bindsym Escape mode "default"
 }
 
-bindsym $mod+e mode "window_manipulation"
+bindsym $mod+e mode "$window_manipulation"
 # }}}
 # {{{ change focus
 bindsym $mod+j focus left
