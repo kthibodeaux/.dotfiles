@@ -14,4 +14,4 @@ install_ruby() {
   echo ""
 }
 
-install_ruby "2.6.3"
+install_ruby "3.0.2"
