@@ -5,3 +5,5 @@ export PAGER=less
 
 typeset -U path
 path=(~/.dotfiles/bin ~/opt/bin $path)
+
+[[ -f ~/.zprofile.local ]] && source ~/.zprofile.local
