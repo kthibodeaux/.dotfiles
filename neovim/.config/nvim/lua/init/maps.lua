@@ -20,8 +20,7 @@ map('n', '<leader>lc', ":lua require'keyboard_layouts'.use_colemak()<CR>", optio
 map('n', '<leader>lq', ":lua require'keyboard_layouts'.use_qwerty()<CR>", options)
 map('n', '<leader>n', '<C-]>', silent_options)
 map('n', '<leader>t', ':tab new<CR>', options)
-map('n', '<leader>zx', '<C-w>=', options) -- equalize splits
-map('n', '<leader>zz', '<C-w>z <C-w>_ <C-w>\\|', options) -- zoom in on a split
+map('n', '<leader>zz', ':tabnew %<CR>', options)
 map('n', '<s-tab>', 'za', options) -- toggle fold
 map('n', 'N', 'Nzz', options)
 map('n', 'S', 'i<cr><esc>^mwgk:silent! s/\v +$//<cr>:noh<cr>$', options) -- split line
