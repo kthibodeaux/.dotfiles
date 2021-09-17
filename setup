@@ -47,6 +47,7 @@ pacaur -S --noconfirm \
   neomutt \
   neovim \
   nerd-fonts-hack \
+  nginx \
   nodejs \
   openssh \
   pa-applet \
@@ -77,6 +78,9 @@ fc-cache -f -v
 sudo systemctl enable sshd
 sudo systemctl enable docker.service
 sudo usermod -aG docker $USER
+
+sudo systemctl enable nginx
+sudo systemctl start nginx
 
 . ~/.dotfiles/setup_steps/shell.sh
 . ~/.dotfiles/setup_steps/ruby.sh
