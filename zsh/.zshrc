@@ -15,7 +15,9 @@ for function in ~/.zsh/functions/*; do
   source $function
 done
 
-eval `dircolors ~/.zsh/dircolors.ansi-dark`
+if type "dircolors" > /dev/null; then
+  eval `dircolors ~/.zsh/dircolors.ansi-dark`
+fi
 
 # syntax highlighting
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
