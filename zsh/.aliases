@@ -15,9 +15,15 @@ alias rm="safe-rm"
 
 alias agh="ag --hidden"
 
-alias la="ls --color -pa"
-alias ls="ls --color -p"
-alias ll="ls --color -plh"
+if type "brew" > /dev/null; then
+  alias la="ls -pa"
+  alias ls="ls -p"
+  alias ll="ls -plh"
+else
+  alias la="ls --color -pa"
+  alias ls="ls --color -p"
+  alias ll="ls --color -plh"
+fi
 
 alias ra="ranger"
 
