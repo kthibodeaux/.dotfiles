@@ -44,7 +44,6 @@ pacaur -S --noconfirm \
   msmtp \
   ncdu \
   nemo \
-  neomutt \
   neovim \
   nerd-fonts-hack \
   nginx \
