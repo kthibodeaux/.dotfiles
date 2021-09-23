@@ -51,7 +51,7 @@ prompt filthy
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 
-if [[ `which nvm &>/dev/null && $?` != 0 ]]; then
+if type "brew" > /dev/null; then
   source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh
 else
   source /usr/share/chruby/chruby.sh
