@@ -51,8 +51,11 @@ prompt filthy
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 
-source /usr/share/chruby/chruby.sh
-
+if [[ `which nvm &>/dev/null && $?` != 0 ]]; then
+  source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh
+else
+  source /usr/share/chruby/chruby.sh
+fi
 chruby ruby-3.0.2
 
 opentmux
