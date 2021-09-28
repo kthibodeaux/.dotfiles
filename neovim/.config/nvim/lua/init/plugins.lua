@@ -25,6 +25,7 @@ vim.cmd("Plug 'posva/vim-vue'")
 vim.cmd("Plug 'mustache/vim-mustache-handlebars'")
 vim.cmd("Plug 'joukevandermaas/vim-ember-hbs'")
 vim.cmd("Plug 'gregsexton/MatchTag'")
+vim.cmd("Plug 'alvan/vim-closetag'")
 
 vim.cmd("Plug 'AndrewRadev/splitjoin.vim'")
 vim.cmd("Plug 'FooSoft/vim-argwrap'")
