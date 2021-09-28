@@ -54,6 +54,7 @@ let g:coc_snippet_next = '<c-n>'
 
 let g:coc_global_extensions = [
       \'coc-css',
+      \'coc-ember',
       \'coc-eslint',
       \'coc-html',
       \'coc-json',
