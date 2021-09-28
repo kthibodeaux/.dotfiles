@@ -60,8 +60,10 @@ fi
 
 if type "brew" > /dev/null; then
   source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh
+  source $(brew --prefix)/opt/chruby/share/chruby/auto.sh
 else
   source /usr/share/chruby/chruby.sh
+  source /usr/share/chruby/auto.sh
 fi
 chruby ruby-3.0.2
 
