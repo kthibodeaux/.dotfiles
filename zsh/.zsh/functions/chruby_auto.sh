@@ -19,11 +19,6 @@ function chruby_auto() {
     chruby $RUBY_AUTO_VERSION
     return $?
   done
-
-  if [[ -n "$RUBY_AUTO_VERSION" ]]; then
-    chruby_reset
-    unset RUBY_AUTO_VERSION
-  fi
 }
 
 if [[ -n "$ZSH_VERSION" ]]; then
