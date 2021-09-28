@@ -3,6 +3,8 @@
 base_branch() {
   if git rev-parse -q --verify develop > /dev/null; then
     echo "develop"
+  elif git rev-parse -q --verify main > /dev/null; then
+    echo "main"
   else
     echo "master"
   fi
@@ -63,10 +65,7 @@ gbD() {
 gd() {
   base_branch=$(base_branch)
 
-  if [[ $base_branch == "develop" ]]; then
-    echo "Conflict with git-flow"
-    return 1
-  else
+  if [[ $base_branch == "master" ]]; then
     merge_branch=$(git branch --show-current)
     git fetch && git rebase origin/master && git checkout master && git merge @{-1} --no-ff && git push
 
@@ -75,32 +74,18 @@ gd() {
 }
 
 gdm() {
-  if [[ $base_branch == "develop" ]]; then
-    git branch --merged origin/develop | grep -v master | grep -v develop | xargs git branch -d
+  if [[ $base_branch == "main" ]]; then
+    git branch --merged origin/main | grep -v main | xargs git branch -d
   else
     git branch --merged origin/master | grep -v master | xargs git branch -d
   fi
 }
 
 dev() {
-  git checkout develop && git up
-}
+  base_branch=$(base_branch)
 
-hotfix() {
-  branch=$(echo "$@" | tr ' ' '-')
-  git checkout master && git up && git checkout -b "hotfix/$branch"
+  git checkout $base_branch && git up
 }
-
-feature() {
-  branch=$(echo "$@" | tr ' ' '-')
-  dev && git checkout -b "feature/$branch"
-}
-
-support() {
-  branch=$(echo "$@" | tr ' ' '-')
-  dev && git checkout -b "support/$branch"
-}
-
 
 ir() {
   if [[ $# > 0 ]]; then
