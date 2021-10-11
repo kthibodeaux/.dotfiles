@@ -56,6 +56,6 @@ source /usr/share/fzf/completion.zsh
 source /usr/share/chruby/chruby.sh
 source ~/.zsh/functions/chruby_auto.sh
 
-chruby ruby-3.0.2
+chruby ruby-2.6.3
 
 opentmux
