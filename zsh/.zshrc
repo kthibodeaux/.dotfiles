@@ -50,20 +50,12 @@ prompt filthy
 [[ -f ~/.aliases ]] && source ~/.aliases
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
-if type "brew" > /dev/null; then
-  source /opt/homebrew/opt/fzf/shell/key-bindings.zsh
-  source /opt/homebrew/opt/fzf/shell/completion.zsh
-else
-  source /usr/share/fzf/key-bindings.zsh
-  source /usr/share/fzf/completion.zsh
-fi
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
 
-if type "brew" > /dev/null; then
-  source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh
-else
-  source /usr/share/chruby/chruby.sh
-fi
+source /usr/share/chruby/chruby.sh
 source ~/.zsh/functions/chruby_auto.sh
+
 chruby ruby-3.0.2
 
 opentmux
