@@ -76,6 +76,8 @@ gd() {
 gdm() {
   if [[ $base_branch == "main" ]]; then
     git branch --merged origin/main | grep -v main | xargs git branch -d
+  elif [[ $base_branch == "develop" ]]; then
+    git branch --merged origin/develop | grep -v develop | xargs git branch -d
   else
     git branch --merged origin/master | grep -v master | xargs git branch -d
   fi
