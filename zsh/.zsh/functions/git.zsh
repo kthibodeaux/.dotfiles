@@ -101,7 +101,7 @@ br() {
   if [[ $# == 0 ]]; then
     # have to assign as variable because the preview command will not see the function
     base_branch=$(base_branch)
-    branches=$(git branch)
+    branches=$(git branch -a)
     target=$(echo $branches | awk '{$1=$1};1' | $(fzf_prog) --preview 'git short-log $base_branch..{} | head')
 
     if [[ $target != '' ]]; then
