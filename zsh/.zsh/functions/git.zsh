@@ -98,15 +98,18 @@ ir() {
 }
 
 br() {
-  if [[ $# == 0 ]]; then
-    # have to assign as variable because the preview command will not see the function
-    base_branch=$(base_branch)
+  if [[ $1 == '-a' ]]; then
     branches=$(git branch -a)
-    target=$(echo $branches | awk '{$1=$1};1' | $(fzf_prog) --preview 'git short-log $base_branch..{} | head')
+  else
+    branches=$(git branch)
+  fi
 
-    if [[ $target != '' ]]; then
-      git checkout $(echo $target)
-    fi
+  # have to assign as variable because the preview command will not see the function
+  base_branch=$(base_branch)
+  target=$(echo $branches | awk '{$1=$1};1' | $(fzf_prog) --preview 'git short-log $base_branch..{} | head')
+
+  if [[ $target != '' ]]; then
+    git checkout $(echo $target)
   fi
 }
 
