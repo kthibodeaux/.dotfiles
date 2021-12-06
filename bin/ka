@@ -4,4 +4,4 @@ if [ $# -eq 0 ]; then
   exit
 fi
 
-ps -e | ag $1 | cut -d' ' -f2 | xargs -L 1 kill -9
+ps aux | ag $1 | cut -d' ' -f2 | xargs -L 1 kill -9
