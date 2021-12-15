@@ -2,8 +2,6 @@
 mkdir ~/opt
 mkdir ~/src
 mkdir -p ~/.local/share
-mkdir -p ~/.mail/Home
-mkdir -p ~/.mail/Work
 
 sudo cp ~/.dotfiles/common/safe-rm.conf /etc/safe-rm.conf
 
