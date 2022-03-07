@@ -1,7 +1,7 @@
-#!/usr/bin/env /home/kthibodeaux/.rubies/ruby-2.6.3/bin/ruby
+#!/usr/bin/env /home/kthibodeaux/.rubies/ruby-3.1.1/bin/ruby
 require 'json'
 
-TOKEN = File.readlines("#{ ENV['HOME'] }/.github_token").first.chomp
+TOKEN = File.readlines("#{ENV['HOME']}/.github_token").first.chomp
 
 class PullRequests
   READY_TO_REVIEW_LABEL = 'Ready For Review'
@@ -17,7 +17,8 @@ class PullRequests
 
   def process
     return unless needs_attention_count > 0
-    puts "Pull Requests: #{ needs_attention_count }"
+
+    puts "Pull Requests: #{needs_attention_count}"
   end
 
   private
@@ -43,9 +44,13 @@ class PullRequests
   end
 
   def pull_requests
-    @pull_requests ||= JSON.parse(`curl --silent -H "Authorization: token #{ TOKEN }" -H "Content-Type: application/json" "https://api.github.com/repos/#{ REPO }/issues"`)
-      .select { |e| e.has_key?('pull_request') }
-      .map { |e| PullRequest.new(e) }
+    @pull_requests ||= JSON.parse(`curl --silent -H "Authorization: token #{TOKEN}" -H "Content-Type: application/json" "https://api.github.com/repos/#{REPO}/issues"`)
+                           .select do |e|
+                         e.has_key?('pull_request')
+                       end
+                           .map do |e|
+      PullRequest.new(e)
+    end
   end
 
   class PullRequest
@@ -64,6 +69,7 @@ class PullRequests
     end
 
     private
+
     attr_reader :json_data
   end
 end
