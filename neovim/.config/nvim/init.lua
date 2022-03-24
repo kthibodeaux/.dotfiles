@@ -3,6 +3,7 @@ require('init/settings')
 require('init/abbr')
 require('init/maps')
 require('init/statusline')
+require('init/commands')
 
 require('init/plugin_config/auto-pairs')
 require('init/plugin_config/fzf')
