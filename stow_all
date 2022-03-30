@@ -1,5 +1,6 @@
 # vi: set ft=sh :
 
+stow -vv ag
 stow -vv alacritty
 stow -vv dunst
 stow -vv gem
