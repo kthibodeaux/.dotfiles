@@ -12,7 +12,8 @@ LIST_IDS = {
   on_deck: '58cc45de4041c3eeacedc85f',
   ready_for_testing: '5878ea48e1b7168900bfbb3a',
   testing_in_progress: '588a22d8615830d94cf7ad98',
-  ready_for_release: '588a22e48e9dae28ecbc95d6'
+  ready_for_release: '588a22e48e9dae28ecbc95d6',
+  release_started: '625d81d29491d70710d49690'
 }.freeze
 REJECTED_LABEL = 'Rejected'.freeze
 
@@ -50,6 +51,8 @@ if @cards.fetch(:testing_in_progress).any?
                       ''
                     end
   puts "In Testing: #{release_name}#{rejected_string}"
+elsif @cards.fetch(:release_started).any?
+  puts "Deploying: #{release_name_for_list(:release_started)}"
 elsif @cards.fetch(:ready_for_release).any?
   puts "Ready for Release: #{release_name_for_list(:ready_for_release)}"
 elsif @cards.fetch(:ready_for_testing).any?
