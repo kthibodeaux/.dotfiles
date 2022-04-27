@@ -66,6 +66,7 @@ pacaur -S --noconfirm \
   tmux \
   unzip \
   urlview-git \
+  yarn \
   youtube-dl \
   xclip \
   zsh
