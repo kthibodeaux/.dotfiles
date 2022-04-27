@@ -62,7 +62,7 @@ pacaur -S --noconfirm \
   signal-desktop \
   scrot \
   silver-searcher-git \
-  teensy-loader-cli \
+  teensy_loader_cli \
   tig \
   tmux \
   unzip \
