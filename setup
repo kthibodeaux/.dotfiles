@@ -49,7 +49,6 @@ pacaur -S --noconfirm \
   openssh \
   pa-applet \
   pavucontrol \
-  pgcli-git \
   pulseaudio-bluetooth \
   python-neovim \
   ranger \
