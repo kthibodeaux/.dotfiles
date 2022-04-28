@@ -1,5 +1,6 @@
 import:
   - ~/.config/alacritty/font.yml
+  - ~/.alacritty.yml.local
 
 env:
   TERM: xterm-256color
