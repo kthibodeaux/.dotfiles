@@ -15,8 +15,8 @@ docker_or_local() {
   fi
 
   if [[ $image == "" ]]; then
-    eval {"SKIP_SIMPLECOV=true $@"}
+    eval {"$@"}
   else
-    eval {"docker-compose run --rm --no-deps -e SKIP_SIMPLECOV=true $image /bin/bash -c \"$@\""}
+    eval {"docker-compose run --rm --no-deps -e $image /bin/bash -c \"$@\""}
   fi
 }
