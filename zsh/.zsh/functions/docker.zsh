@@ -17,6 +17,6 @@ docker_or_local() {
   if [[ $image == "" ]]; then
     eval {"$@"}
   else
-    eval {"docker-compose run --rm --no-deps -e $image /bin/bash -c \"$@\""}
+    eval {"docker-compose run --rm --no-deps $image /bin/bash -c \"$@\""}
   fi
 }
