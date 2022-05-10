@@ -44,7 +44,6 @@ vim.cmd("Plug 'tpope/vim-commentary'")
 vim.cmd("Plug 'tpope/vim-surround'")
 vim.cmd("Plug 'tpope/vim-vinegar'")
 vim.cmd("Plug 'tpope/vim-abolish'")
-vim.cmd("Plug 'unblevable/quick-scope'")
 vim.cmd("Plug 'wincent/vcs-jump'")
 
 vim.cmd("call plug#end()")
