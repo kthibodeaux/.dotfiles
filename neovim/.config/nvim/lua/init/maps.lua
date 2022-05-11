@@ -23,5 +23,5 @@ map('n', '<leader>t', ':tab new<CR>', options)
 map('n', '<leader>zz', ':tabnew %<CR>', options)
 map('n', '<s-tab>', 'za', options) -- toggle fold
 map('n', 'N', 'Nzz', options)
-map('n', '<leader>s', 'i<cr><esc>^mwgk:silent! s/\v +$//<cr>:noh<cr>$', options) -- split line
+map('n', '<leader>S', 'i<cr><esc>^mwgk:silent! s/\v +$//<cr>:noh<cr>$', options) -- split line
 map('n', 'n', 'nzz', options)
