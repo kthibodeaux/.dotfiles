@@ -8,8 +8,6 @@ alias docker-nuke="docker container prune -f; docker volume prune -f; docker ima
 alias rebuild="docker-compose down; RESEED=true docker-compose up"
 # }}}
 # {{{ files
-alias rm="safe-rm"
-
 alias agh="ag --hidden"
 
 alias la="ls --color -pa"

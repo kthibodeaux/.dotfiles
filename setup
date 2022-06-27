@@ -56,7 +56,6 @@ pacaur -S --noconfirm \
   rtv \
   rofi \
   ruby-install \
-  safe-rm \
   sassc \
   signal-desktop \
   scrot \
