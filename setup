@@ -13,11 +13,11 @@ mv ~/.config/ranger ~/.config/ranger.original
 
 sudo pacman -Syu
 
-sudo pacman -S --noconfirm pacaur stow
+sudo pacman -S --noconfirm stow
 
 . ~/.dotfiles/stow_all
 
-pacaur -S --noconfirm \
+yay -S --noconfirm \
   alacritty \
   aspell \
   avr-gcc \
