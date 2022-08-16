@@ -89,14 +89,6 @@ dev() {
   git checkout $base_branch && git up
 }
 
-ir() {
-  if [[ $# > 0 ]]; then
-    git rebase -i $@
-  else
-    git rebase -i $(base_branch)
-  fi
-}
-
 br() {
   if [[ $1 == '-a' ]]; then
     branches=$(git branch -a)

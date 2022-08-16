@@ -1,0 +1,51 @@
+#!/usr/bin/env /home/kthibodeaux/.rubies/ruby-3.1.1/bin/ruby
+# vim:filetype=ruby
+
+class SmartInteractiveRebase
+  def call
+    if no_rebase_allowed?
+      puts "Cannot rebase #{current_branch_name}"
+    elsif manually_defined?
+      system("git rebase -i #{ARGV.first}")
+    else
+      system("git rebase -i #{base_branch}")
+    end
+  end
+
+  private
+
+  def no_rebase_allowed?
+    %w[main master develop].include?(current_branch_name)
+  end
+
+  def manually_defined?
+    !ARGV.first.nil?
+  end
+
+  def part?
+    current_branch_name.downcase.start_with?('part')
+  end
+
+  def base_branch
+    if part?
+      trello_id = current_branch_name.split('/').last.split('-').first
+      epic_branches.detect { |e| e.include?(trello_id) }
+    else
+      `zsh -lic 'echo $(base_branch)'`.strip.chomp
+    end
+  end
+
+  def current_branch_name
+    `git branch --show-current`.strip.chomp
+  end
+
+  def epic_branches
+    `git branch -a`
+      .split("\n")
+      .map { |e| e.delete('*') }
+      .map { |e| e.strip }
+      .select { |e| e.start_with?('epic') }
+  end
+end
+
+SmartInteractiveRebase.new.call
