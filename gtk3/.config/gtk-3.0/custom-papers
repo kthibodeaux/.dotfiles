@@ -1,0 +1,21 @@
+[Paper0]
+Name=Custom Size 1
+DisplayName=Custom Size 1
+Width=101.59999999999999
+Height=152.39999999999998
+MarginTop=0
+MarginBottom=0
+MarginLeft=0
+MarginRight=0
+Orientation=portrait
+
+[Paper1]
+Name=Letter No Margin
+DisplayName=Letter No Margin
+Width=215.89999389648438
+Height=279.39999389648438
+MarginTop=0
+MarginBottom=0
+MarginLeft=0
+MarginRight=0
+Orientation=portrait
