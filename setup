@@ -7,9 +7,12 @@ sudo cp ~/.dotfiles/common/safe-rm.conf /etc/safe-rm.conf
 
 mv ~/.Xresources ~/.Xresources.original
 mv ~/.gtkrc-2.0 ~/.gtkrc-2.0.original
-mv ~/.config/gtk-3.0 ~/.config/gtk-3.0.original
+
 mv ~/.config/dunst ~/.config/dunst.original
+mv ~/.config/i3 ~/.config/i3.original
+mv ~/.config/gtk-3.0 ~/.config/gtk-3.0.original
 mv ~/.config/ranger ~/.config/ranger.original
+mv ~/.config/rofi ~/.config/rofi.original
 
 sudo pacman -Syu
 
