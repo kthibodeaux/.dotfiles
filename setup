@@ -51,7 +51,6 @@ yay -S --noconfirm \
   openssh \
   pa-applet \
   pavucontrol \
-  pulseaudio-bluetooth \
   python-neovim \
   ranger \
   redshift-gtk-git \
