@@ -34,7 +34,6 @@ yay -S --noconfirm \
   gdk-pixbuf2 \
   gitflow-avh \
   glib2 \
-  heroku-cli \
   i3blocks \
   inkscape \
   isync \
