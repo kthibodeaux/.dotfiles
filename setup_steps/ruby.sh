@@ -3,7 +3,6 @@ install_ruby() {
     echo "skipping install ruby $1: already installed"
   else
     ruby-install ruby-$1
-    source /usr/share/chruby/chruby.sh
     chruby $1
     gem install bundler
     gem install git-up
