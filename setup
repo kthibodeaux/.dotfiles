@@ -14,9 +14,9 @@ mv ~/.config/gtk-3.0 ~/.config/gtk-3.0.original
 mv ~/.config/ranger ~/.config/ranger.original
 mv ~/.config/rofi ~/.config/rofi.original
 
-sudo pacman -Syu
+yay -Syyu
 
-sudo pacman -S --noconfirm stow
+yay -S --noconfirm stow
 
 . ~/.dotfiles/stow_all
 
