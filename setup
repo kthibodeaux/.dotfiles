@@ -84,6 +84,9 @@ sudo usermod -aG docker $USER
 sudo systemctl enable nginx
 sudo systemctl start nginx
 
+sudo systemctl enable bluetooth
+sudo systemctl start bluetooth
+
 . ~/.dotfiles/setup_steps/shell.sh
 . ~/.dotfiles/setup_steps/ruby.sh
 . ~/.dotfiles/setup_steps/gtk.sh
