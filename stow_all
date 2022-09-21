@@ -17,10 +17,10 @@ stow -vv readline
 stow -vv redshift
 stow -vv rofi
 stow -vv rspec
-stow -vv rtv
 stow -vv tmate
 stow -vv tig
 stow -vv tmux
+stow -vv tuir
 stow -vv urlview
 stow -vv vim
 stow -vv w3m
