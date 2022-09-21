@@ -14,63 +14,66 @@ mv ~/.config/gtk-3.0 ~/.config/gtk-3.0.original
 mv ~/.config/ranger ~/.config/ranger.original
 mv ~/.config/rofi ~/.config/rofi.original
 
-sudo pacman -Syu
+yay -Syyu
 
-sudo pacman -S --noconfirm stow
+install_package() {
+  yay -S --noconfirm $1
+}
 
+install_package "stow"
 . ~/.dotfiles/stow_all
 
-yay -S --noconfirm \
-  alacritty \
-  aspell \
-  avr-gcc \
-  avr-libc \
-  aws-cli \
-  chruby \
-  docker \
-  docker-compose \
-  dunst-git \
-  enpass-bin \
-  evince \
-  feh \
-  firefox \
-  gdk-pixbuf2 \
-  gitflow-avh \
-  glib2 \
-  i3blocks \
-  inkscape \
-  isync \
-  mpv \
-  msmtp \
-  ncdu \
-  nemo \
-  neovim \
-  nerd-fonts-hack \
-  nginx \
-  nodejs \
-  openssh \
-  pa-applet \
-  pavucontrol \
-  pulseaudio-bluetooth \
-  python-neovim \
-  ranger \
-  redshift-gtk-git \
-  rtv \
-  rofi \
-  ruby-install \
-  sassc \
-  signal-desktop \
-  scrot \
-  teensy_loader_cli \
-  the_silver_searcher \
-  tig \
-  tmux \
-  unzip \
-  urlview-git \
-  yarn \
-  youtube-dl \
-  xclip \
-  zsh
+install_package "alacritty"
+install_package "aspell"
+install_package "avr-gcc"
+install_package "avr-libc"
+install_package "aws-cli"
+install_package "chruby"
+install_package "discord"
+install_package "docker"
+install_package "docker-compose"
+install_package "dunst-git"
+install_package "enpass-bin"
+install_package "evince"
+install_package "feh"
+install_package "firefox"
+install_package "gdk-pixbuf2"
+install_package "gitflow-avh"
+install_package "glib2"
+install_package "i3blocks"
+install_package "inkscape"
+install_package "isync"
+install_package "mpv"
+install_package "msmtp"
+install_package "ncdu"
+install_package "nemo"
+install_package "neovim"
+install_package "nerd-fonts-hack"
+install_package "nginx"
+install_package "nodejs"
+install_package "obsidian"
+install_package "openssh"
+install_package "pa-applet"
+install_package "pavucontrol"
+install_package "python-neovim"
+install_package "ranger"
+install_package "redshift-gtk-git"
+install_package "rtv"
+install_package "rofi"
+install_package "ruby-install"
+install_package "sassc"
+install_package "signal-desktop"
+install_package "scrot"
+install_package "teensy_loader_cli"
+install_package "the_silver_searcher"
+install_package "tig"
+install_package "tmux"
+install_package "unzip"
+install_package "urlview-git"
+install_package "yarn"
+install_package "youtube-dl"
+install_package "xclip"
+install_package "zsh"
 
 fc-cache -f -v
 sudo systemctl enable sshd
