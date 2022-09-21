@@ -10,3 +10,15 @@ function! CheckBackspace() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+
+let g:coc_global_extensions = [
+      \'coc-css',
+      \'coc-eslint',
+      \'coc-html',
+      \'coc-json',
+      \'coc-snippets',
+      \'coc-solargraph',
+      \'coc-tsserver',
+      \'coc-vetur',
+      \'coc-yaml',
+      \]
