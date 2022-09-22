@@ -2,9 +2,7 @@
 
 ## setup
 
-These instructions are for a fresh Manjaro i3 edition install.
-
-This will not install any proprietary drivers.
+These instructions are for a fresh Endeavour i3 edition install.
 
 Before running the below commands make sure you can clone from GitHub by adding your SSH key to your profile.
 
