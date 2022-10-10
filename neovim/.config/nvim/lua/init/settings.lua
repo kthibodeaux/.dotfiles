@@ -47,6 +47,7 @@ vim.opt.visualbell = true
 vim.opt.wildmenu = true
 vim.opt.winwidth = 90
 vim.opt.wrap = false
+vim.opt.mouse=
 
 vim.api.nvim_exec([[
 " Highlight current line in active pane only
