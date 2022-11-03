@@ -2,8 +2,6 @@ local map = vim.api.nvim_set_keymap
 local options = { noremap = true }
 local silent_options = { noremap = true, silent = true }
 
-map('i', 'ii', '<Esc>', options)
-map('i', 'jj', '<Esc>', options)
 map('n', '<CR>', ':noh<CR><CR>', options) -- cancel search by pressing return
 map('n', '<Down>', ':cnext<CR>', silent_options)
 map('n', '<Left>', ':vertical resize +2<CR>', silent_options)
