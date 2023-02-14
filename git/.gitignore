@@ -4,7 +4,6 @@ gems.ctags
 .DS_Store
 .ruby-gemset
 metadocs/
-.vim/coc-settings.json
 
 node_modules/
 public/packs/
