@@ -11,3 +11,7 @@ map <buffer> <Leader>rr :call RunNearestSpec()<CR>
 map <buffer> <Leader>rf :call RunCurrentSpecFile()<CR>
 map <buffer> <Leader>rl :call RunLastSpec()<CR>
 map <buffer> <Leader>ra :call RunAllSpecs()<CR>
+
+if expand('%')[len(expand('%'))-4:len(expand('%'))] != 'slim'
+  autocmd BufWritePre <buffer> lua vim.lsp.buf.format()
+endif
