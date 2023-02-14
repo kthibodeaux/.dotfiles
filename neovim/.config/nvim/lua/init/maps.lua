@@ -8,7 +8,7 @@ map('n', '<Left>', ':vertical resize +2<CR>', silent_options)
 map('n', '<Right>', ':vertical resize -2<CR>', silent_options)
 map('n', '<Up>', ':cprevious<CR>', silent_options)
 map('n', '<leader><CR>', 'gt', options)
-map('n', '<leader><tab>', 'mtgg=G`t', options) -- indent file, some filetype configs override to use coc
+map('n', '<leader><tab>', 'mtgg=G`t', options) -- indent file, some filetype configs override
 map('n', '<leader>fa', ':vs<CR>:Find <C-R><C-W><CR>', options)
 map('n', '<leader>ff', ':Find<space>', options)
 map('n', '<leader>fm', ':silent execute "!tmux split-window ranger " . expand(\'%:p:h\')<CR>', options)

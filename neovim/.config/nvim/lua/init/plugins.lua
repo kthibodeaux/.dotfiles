@@ -8,8 +8,6 @@ vim.cmd("Plug 'mhartington/oceanic-next'")
 vim.cmd("Plug 'benmills/vimux'")
 vim.cmd("Plug 'christoomey/vim-tmux-navigator'")
 
-vim.cmd("Plug 'neoclide/coc.nvim', {'branch': 'release'}")
-
 vim.cmd("Plug 'thoughtbot/vim-rspec'")
 vim.cmd("Plug 'tpope/vim-endwise'")
 vim.cmd("Plug 'tpope/vim-rails'")

@@ -11,7 +11,3 @@ map <buffer> <Leader>rr :call RunNearestSpec()<CR>
 map <buffer> <Leader>rf :call RunCurrentSpecFile()<CR>
 map <buffer> <Leader>rl :call RunLastSpec()<CR>
 map <buffer> <Leader>ra :call RunAllSpecs()<CR>
-
-nmap <buffer> <leader><tab> :call CocAction('format')<CR>
-
-autocmd BufWritePre <buffer> silent call CocAction('format')
