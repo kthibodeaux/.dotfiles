@@ -18,13 +18,11 @@ vim.cmd("Plug 'slim-template/vim-slim'")
 
 vim.cmd("Plug 'digitaltoad/vim-pug'")
 vim.cmd("Plug 'joaohkfaria/vim-jest-snippets'")
-vim.cmd("Plug 'pangloss/vim-javascript'")
 vim.cmd("Plug 'posva/vim-vue'")
 
 vim.cmd("Plug 'AndrewRadev/splitjoin.vim'")
 vim.cmd("Plug 'FooSoft/vim-argwrap'")
 vim.cmd("Plug 'Konfekt/FastFold'")
-vim.cmd("Plug 'ap/vim-css-color'")
 vim.cmd("Plug 'chrisbra/Recover.vim'")
 vim.cmd("Plug 'danro/rename.vim'")
 vim.cmd("Plug 'jiangmiao/auto-pairs'")
