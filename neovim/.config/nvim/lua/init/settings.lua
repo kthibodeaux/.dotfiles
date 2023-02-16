@@ -6,6 +6,7 @@ vim.g.maplocalleader = ','
 vim.g.netrw_liststyle = 3
 vim.g.netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
 
+vim.opt.signcolumn = 'yes'
 vim.opt.autoindent = true
 vim.opt.backspace = 'indent,start,eol'
 vim.opt.backupcopy = 'yes'
