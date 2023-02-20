@@ -37,6 +37,15 @@ local function keymappings(_, bufnr)
   vim.keymap.set('n', 'gb', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
 end
 
+lsp.configure('eslint', {
+  on_attach = function(client, bufnr)
+    vim.api.nvim_create_autocmd("BufWritePre", {
+      buffer = bufnr,
+      command = "EslintFixAll",
+    })
+  end,
+})
+
 lsp.setup()
 
 vim.diagnostic.config({
