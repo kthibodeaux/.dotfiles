@@ -5,7 +5,6 @@ require('init/maps')
 require('init/statusline')
 require('init/commands')
 
-require('init/plugin_config/auto-pairs')
 require('init/plugin_config/fzf')
 require('init/plugin_config/tig')
 require('init/plugin_config/undotree')
