@@ -20,7 +20,6 @@ stow -vv rspec
 stow -vv tmate
 stow -vv tig
 stow -vv tmux
-stow -vv tuir
 stow -vv urlview
 stow -vv vim
 stow -vv w3m

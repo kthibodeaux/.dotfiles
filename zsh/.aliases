@@ -42,7 +42,6 @@ alias pop="git stash pop"
 alias mine="wget -e robots=off -r -nc -np"
 alias serve="ruby -run -e httpd ./ -p 9999"
 alias ycal="cal $(date +"%Y")"
-alias rtv="tuir"
 # }}}
 # {{{ tmux
 alias t="tmux"

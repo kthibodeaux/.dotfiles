@@ -3,9 +3,6 @@ TAGS
 
 .netrwhist
 
-rtv/.config/rtv/history.log
-rtv/.config/rtv/refresh-token
-
 vim/.vim/tmp/*
 
 neovim/.config/pgcli
