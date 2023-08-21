@@ -11,5 +11,3 @@ map <buffer> <Leader>rr :call RunNearestSpec()<CR>
 map <buffer> <Leader>rf :call RunCurrentSpecFile()<CR>
 map <buffer> <Leader>rl :call RunLastSpec()<CR>
 map <buffer> <Leader>ra :call RunAllSpecs()<CR>
-
-autocmd BufWritePre <buffer> lua vim.lsp.buf.format()
