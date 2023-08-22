@@ -18,6 +18,7 @@ vim.cmd("Plug 'digitaltoad/vim-pug'")
 vim.cmd("Plug 'joaohkfaria/vim-jest-snippets'")
 vim.cmd("Plug 'posva/vim-vue'")
 vim.cmd("Plug 'pangloss/vim-javascript'")
+vim.cmd("Plug 'kchmck/vim-coffee-script'")
 
 vim.cmd("Plug 'ap/vim-css-color'")
 vim.cmd("Plug 'AndrewRadev/splitjoin.vim'")
