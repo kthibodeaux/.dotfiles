@@ -1,7 +1,6 @@
 autocmd BufWritePre *.rb lua vim.lsp.buf.format()
 
 function s:fix_if_eslint_is_present()
-  echo 'fixing'
   if exists(':EslintFixAll') > 0
     exec ":EslintFixAll"
   endif
