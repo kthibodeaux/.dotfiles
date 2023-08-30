@@ -4,9 +4,7 @@ require 'json'
 TOKEN = File.readlines("#{ENV['HOME']}/.github_token").first.chomp
 
 class PullRequests
-  READY_TO_REVIEW_LABEL = 'Ready For Review'
   REVIEWED_LABEL = 'Changes Requested'
-  ALREADY_REVIEWED_LABEL = 'Keith Signed Off'
   AWAITING_RESPONSE_LABEL = 'Awaiting Response'
   GITHUB_USERNAME = 'kthibodeaux'
   REPO = 'BaldwinAviation/baldwin-web'
@@ -18,25 +16,18 @@ class PullRequests
   def process
     return unless needs_attention_count > 0
 
-    puts "Pull Requests: #{needs_attention_count}"
+    puts "My PRs: #{needs_attention_count}"
   end
 
   private
 
   def needs_attention_count
-    my_reviewed_pull_requests.size + pull_requests_to_review.size
+    my_reviewed_pull_requests.size
   end
 
   def my_reviewed_pull_requests
     my_pull_requests.select { |pr| pr.labels.include?(REVIEWED_LABEL) } +
       my_pull_requests.select { |pr| pr.labels.include?(AWAITING_RESPONSE_LABEL) }
-  end
-
-  def pull_requests_to_review
-    pull_requests
-      .reject { |pr| pr.creator == GITHUB_USERNAME }
-      .reject { |pr| pr.labels.include?(ALREADY_REVIEWED_LABEL) }
-      .select { |pr| pr.labels.include?(READY_TO_REVIEW_LABEL) }
   end
 
   def my_pull_requests
