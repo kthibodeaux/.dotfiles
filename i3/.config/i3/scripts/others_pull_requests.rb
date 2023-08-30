@@ -1,6 +1,10 @@
 #!/usr/bin/env /home/kthibodeaux/.rubies/ruby-3.1.1/bin/ruby
 require 'json'
 
+if ENV['BLOCK_BUTTON'].to_i == 1
+  `firefox https://github.com/BaldwinAviation/baldwin-web/pulls?q=is%3Aopen+is%3Apr+label%3A%22Ready+For+Review%22+-label%3A%22Keith+Signed+Off%22+-author%3Akthibodeaux`
+end
+
 TOKEN = File.readlines("#{ENV['HOME']}/.github_token").first.chomp
 
 class PullRequests
