@@ -8,16 +8,13 @@ vim.cmd("Plug 'mhartington/oceanic-next'")
 vim.cmd("Plug 'benmills/vimux'")
 vim.cmd("Plug 'christoomey/vim-tmux-navigator'")
 
+vim.cmd("Plug 'sheerun/vim-polyglot'")
+
 vim.cmd("Plug 'thoughtbot/vim-rspec'")
 vim.cmd("Plug 'tpope/vim-endwise'")
 vim.cmd("Plug 'tpope/vim-rails'")
-vim.cmd("Plug 'vim-ruby/vim-ruby'")
-vim.cmd("Plug 'slim-template/vim-slim'")
 
-vim.cmd("Plug 'digitaltoad/vim-pug'")
 vim.cmd("Plug 'joaohkfaria/vim-jest-snippets'")
-vim.cmd("Plug 'pangloss/vim-javascript'")
-vim.cmd("Plug 'kchmck/vim-coffee-script'")
 
 vim.cmd("Plug 'ap/vim-css-color'")
 vim.cmd("Plug 'AndrewRadev/splitjoin.vim'")
