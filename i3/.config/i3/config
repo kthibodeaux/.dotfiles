@@ -135,14 +135,14 @@ mode "$window_manipulation" {
   bindsym a focus parent
   bindsym z focus child
 
-  bindsym j move left
-  bindsym k move down
-  bindsym h move up
+  bindsym j move down
+  bindsym k move up
+  bindsym h move left
   bindsym l move right
 
-  bindsym $mod+j focus left
-  bindsym $mod+k focus down
-  bindsym $mod+h focus up
+  bindsym $mod+j focus down
+  bindsym $mod+k focus up
+  bindsym $mod+h focus left
   bindsym $mod+l focus right
 
   bindsym o floating toggle
@@ -158,9 +158,9 @@ mode "$window_manipulation" {
 bindsym $mod+e mode "$window_manipulation"
 # }}}
 # {{{ change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+h focus up
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+h focus left
 bindsym $mod+l focus right
 # }}}
 # {{{ colors
