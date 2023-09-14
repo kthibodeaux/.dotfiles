@@ -116,7 +116,8 @@
 			  :prefix "SPC"
 			  :global-prefix "C-SPC")
   (kthibodeaux/leader-keys
-    "e" 'projectile-find-file))
+    "e" 'projectile-find-file
+    "f" 'projectile-ripgrep))
 
 ; window management
 (kthibodeaux/leader-keys "h" help-map) ; remap default C-h
