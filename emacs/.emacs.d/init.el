@@ -5,9 +5,6 @@
 (tooltip-mode -1)
 (menu-bar-mode -1)
 
-; theme
-(load-theme 'wombat)
-
 ; make ESC quit prompts
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 
@@ -24,6 +21,10 @@
 
 (require 'use-package)
 (setq use-package-always-ensure t)
+
+; theme
+(use-package doom-themes
+  :init (load-theme 'doom-oceanic-next t))
 
 ; use ivy for completion
 (use-package swiper)
