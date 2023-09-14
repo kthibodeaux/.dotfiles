@@ -26,8 +26,7 @@
 (setq use-package-always-ensure t)
 
 ; use ivy for completion
-(use-package swiper
-  :ensure)
+(use-package swiper)
 (use-package ivy
   :diminish
   :bind (("C-s" . swiper)
@@ -47,7 +46,6 @@
   (ivy-mode 1))
 
 (use-package doom-modeline
-  :ensure t
   :init (doom-modeline-mode 1))
 
 ; line numbers
