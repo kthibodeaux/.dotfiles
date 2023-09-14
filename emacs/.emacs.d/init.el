@@ -56,3 +56,10 @@
 (global-display-line-numbers-mode t)
 (dolist (mode '(org-mode-hook))
   (add-hook mode(lambda() (display-line-numbers-mode 0))))
+
+(use-package which-key
+  :defer 0
+  :diminish which-key-mode
+  :config
+  (which-key-mode)
+  (setq which-key-idle-delay 1))
