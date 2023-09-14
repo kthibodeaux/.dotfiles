@@ -115,3 +115,10 @@
 			  :global-prefix "C-SPC")
   (kthibodeaux/leader-keys
     "e" 'find-file))
+
+; window management
+(kthibodeaux/leader-keys "h" help-map) ; remap default C-h
+(global-set-key (kbd "C-h") 'evil-window-left)
+(global-set-key (kbd "C-j") 'evil-window-down)
+(global-set-key (kbd "C-k") 'evil-window-up)
+(global-set-key (kbd "C-l") 'evil-window-right)
