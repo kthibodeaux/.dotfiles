@@ -96,6 +96,8 @@
   (setq evil-want-keybinding nil)
   (setq evil-want-C-u-scroll t)
   (setq evil-want-C-i-jump t)
+  (setq evil-vsplit-window-right t)
+  (setq evil-split-window-below t)
   :config
   (evil-mode 1)
   (evil-set-initial-state 'messages-buffer-mode 'normal)
