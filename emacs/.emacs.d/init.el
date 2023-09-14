@@ -26,6 +26,10 @@
 (use-package doom-themes
   :init (load-theme 'doom-oceanic-next t))
 
+; scroll settings
+(setq scroll-margin 3
+      scroll-step 1)
+
 ; use ivy for completion
 (use-package swiper)
 (setq ivy-re-builders-alist
