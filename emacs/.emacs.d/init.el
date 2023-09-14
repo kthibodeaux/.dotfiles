@@ -139,6 +139,7 @@
 (defun kthibodeaux/search ()
   (interactive)
   (setq current-prefix-arg '-)
-  (call-interactively 'projectile-ripgrep))
+  (call-interactively 'projectile-ripgrep)
+  (pop-to-buffer next-error-last-buffer))
 
 (kthibodeaux/leader-keys "ff" 'kthibodeaux/search)
