@@ -63,3 +63,12 @@
   :config
   (which-key-mode)
   (setq which-key-idle-delay 1))
+
+(use-package ivy-rich
+  :after ivy
+  :init
+  (ivy-rich-mode 1))
+
+(use-package counsel
+  :config
+  (counsel-mode 1))
