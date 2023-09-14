@@ -3,6 +3,7 @@
 stow -vv ag
 stow -vv alacritty
 stow -vv dunst
+stow -vv emacs
 stow -vv gem
 stow -vv git
 stow -vv gtk2
