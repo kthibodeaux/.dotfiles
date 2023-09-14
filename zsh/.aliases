@@ -39,6 +39,7 @@ alias stash="git stash --include-untracked"
 alias pop="git stash pop"
 # }}}
 # {{{ misc
+alias e="emacs -nw"
 alias mine="wget -e robots=off -r -nc -np"
 alias serve="ruby -run -e httpd ./ -p 9999"
 alias ycal="cal $(date +"%Y")"
