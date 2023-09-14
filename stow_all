@@ -15,6 +15,7 @@ stow -vv picom
 stow -vv ranger
 stow -vv readline
 stow -vv redshift
+stow -vv ripgrep
 stow -vv rofi
 stow -vv rspec
 stow -vv tmate
