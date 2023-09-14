@@ -6,6 +6,8 @@ TAGS
 emacs/.emacs.d/auto-save-list
 emacs/.emacs.d/elpa
 emacs/.emacs.d/transient
+emacs/.emacs.d/projectile-bookmarks.eld
+emacs/.emacs.d/projects
 
 vim/.vim/tmp/*
 

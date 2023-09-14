@@ -114,7 +114,7 @@
 			  :prefix "SPC"
 			  :global-prefix "C-SPC")
   (kthibodeaux/leader-keys
-    "e" 'find-file))
+    "e" 'projectile-find-file))
 
 ; window management
 (kthibodeaux/leader-keys "h" help-map) ; remap default C-h
@@ -122,3 +122,16 @@
 (global-set-key (kbd "C-j") 'evil-window-down)
 (global-set-key (kbd "C-k") 'evil-window-up)
 (global-set-key (kbd "C-l") 'evil-window-right)
+
+(use-package projectile
+  :diminish projectile-mode
+  :config (projectile-mode)
+  :custom ((projectile-completion-system 'ivy))
+  :bind-keymap
+  ("C-c p" . projectile-command-map)
+  :init
+  (when (file-directory-p "~/dev")
+    (setq projectile-project-search-path '("~/dev")))
+  (setq projectile-switch-project-action #'projectile-dired))
+
+(kthibodeaux/leader-keys "ff" 'projectile-ripgrep)
