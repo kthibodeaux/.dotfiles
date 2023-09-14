@@ -89,3 +89,29 @@
   ([remap describe-command] . helpful-command)
   ([remap describe-variable] . counsel-describe-variable)
   ([remap describe-key] . helpful-key))
+
+(use-package evil
+  :init
+  (setq evil-want-integration t)
+  (setq evil-want-keybinding nil)
+  (setq evil-want-C-u-scroll t)
+  (setq evil-want-C-i-jump t)
+  :config
+  (evil-mode 1)
+  (evil-set-initial-state 'messages-buffer-mode 'normal)
+  (evil-set-initial-state 'dashboard-mode 'normal))
+
+(use-package evil-collection
+  :after evil
+  :config
+  (evil-collection-init))
+
+(use-package general
+  :after evil
+  :config
+  (general-create-definer kthibodeaux/leader-keys
+			  :keymaps '(normal insert visual emacs)
+			  :prefix "SPC"
+			  :global-prefix "C-SPC")
+  (kthibodeaux/leader-keys
+    "e" 'find-file))
