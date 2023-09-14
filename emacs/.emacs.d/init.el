@@ -135,11 +135,3 @@
   (when (file-directory-p "~/dev")
     (setq projectile-project-search-path '("~/dev")))
   (setq projectile-switch-project-action #'projectile-dired))
-
-(defun kthibodeaux/search ()
-  (interactive)
-  (setq current-prefix-arg '-)
-  (call-interactively 'projectile-ripgrep)
-  (pop-to-buffer next-error-last-buffer))
-
-(kthibodeaux/leader-keys "ff" 'kthibodeaux/search)
