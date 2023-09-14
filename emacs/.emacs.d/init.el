@@ -28,6 +28,8 @@
 
 ; use ivy for completion
 (use-package swiper)
+(setq ivy-re-builders-alist
+      '((t . ivy--regex-fuzzy)))
 (use-package ivy
   :diminish
   :bind (("C-s" . swiper)
