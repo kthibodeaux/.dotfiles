@@ -138,3 +138,5 @@
   (when (file-directory-p "~/dev")
     (setq projectile-project-search-path '("~/dev")))
   (setq projectile-switch-project-action #'projectile-dired))
+
+(use-package ripgrep)
