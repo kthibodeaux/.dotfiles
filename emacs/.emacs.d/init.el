@@ -134,4 +134,9 @@
     (setq projectile-project-search-path '("~/dev")))
   (setq projectile-switch-project-action #'projectile-dired))
 
-(kthibodeaux/leader-keys "ff" 'projectile-ripgrep)
+(defun kthibodeaux/search ()
+  (interactive)
+  (setq current-prefix-arg '-)
+  (call-interactively 'projectile-ripgrep))
+
+(kthibodeaux/leader-keys "ff" 'kthibodeaux/search)
