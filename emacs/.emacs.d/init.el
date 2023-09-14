@@ -26,6 +26,8 @@
 (setq use-package-always-ensure t)
 
 ; use ivy for completion
+(use-package swiper
+  :ensure)
 (use-package ivy
   :diminish
   :bind (("C-s" . swiper)
