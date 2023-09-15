@@ -195,6 +195,9 @@
      (markdown "https://github.com/ikatyang/tree-sitter-markdown")
      (ruby "https://github.com/tree-sitter/tree-sitter-ruby")
      (toml "https://github.com/tree-sitter/tree-sitter-toml")
+     (tsx "https://github.com/tree-sitter/tree-sitter-typescript" "master" "tsx/src")
+     (typescript "https://github.com/tree-sitter/tree-sitter-typescript" "master" "typescript/src")
+     (vue "https://github.com/ikatyang/tree-sitter-vue")
      (yaml "https://github.com/ikatyang/tree-sitter-yaml")))
 
 (require 'treesit)
@@ -207,4 +210,20 @@
         (markdown-mode . markdown-ts-mode)
         (ruby-mode . ruby-ts-mode)
         (toml-mode . toml-ts-mode)
+        (typescript-mode . typescript-ts-mode)
         (yaml-mode . yaml-ts-mode)))
+
+(with-eval-after-load 'eglot
+  (add-to-list 'eglot-server-programs '(kthibodeaux-vue-mode . ("vls" "--stdio"))))
+
+(use-package web-mode)
+(define-derived-mode kthibodeaux-vue-mode web-mode "kVue")
+(add-to-list 'auto-mode-alist '("\\.vue\\'" . kthibodeaux-vue-mode))
+
+(add-hook 'kthibodeaux-vue-mode-hook 'eglot-ensure)
+(add-hook 'ruby-ts-mode-hook 'eglot-ensure)
+(add-hook 'js-ts-mode-hook 'eglot-ensure)
+(add-hook 'typescript-ts-mode-hook 'eglot-ensure)
+
+(use-package company
+  :init (global-company-mode))
