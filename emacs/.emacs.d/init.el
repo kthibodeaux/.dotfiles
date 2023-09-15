@@ -120,10 +120,7 @@
   (general-create-definer kthibodeaux/leader-keys
 			  :keymaps '(normal insert visual emacs)
 			  :prefix "SPC"
-			  :global-prefix "C-SPC")
-  (kthibodeaux/leader-keys
-    "e" 'projectile-find-file
-    "f" 'projectile-ripgrep))
+			  :global-prefix "C-SPC"))
 
 ; window management
 (kthibodeaux/leader-keys "h" help-map) ; remap default C-h
@@ -144,3 +141,17 @@
   (setq projectile-switch-project-action #'projectile-dired))
 
 (use-package ripgrep)
+
+(defun kthibodeaux/find-in-file ()
+  (interactive)
+  (setq current-prefix-arg '(4))
+  (call-interactively 'projectile-ripgrep)
+  (pop-to-buffer next-error-last-buffer))
+
+(defun kthibodeaux/find-file ()
+  (interactive)
+  (setq current-prefix-arg '(4))
+  (counsel-fzf nil (locate-dominating-file default-directory ".git") "--hidden "))
+
+(kthibodeaux/leader-keys "e" 'kthibodeaux/find-file)
+(kthibodeaux/leader-keys "ff" 'kthibodeaux/find-in-file)
