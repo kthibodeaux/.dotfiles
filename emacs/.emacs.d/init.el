@@ -112,7 +112,8 @@
   :config
   (evil-mode 1)
   (evil-set-initial-state 'messages-buffer-mode 'normal)
-  (evil-set-initial-state 'dashboard-mode 'normal))
+  (evil-set-initial-state 'dashboard-mode 'normal)
+  (define-key evil-insert-state-map (kbd "TAB") 'tab-to-tab-stop))
 
 (use-package evil-collection
   :after evil
