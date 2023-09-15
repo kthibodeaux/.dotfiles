@@ -5,7 +5,8 @@
 (tooltip-mode -1)
 (menu-bar-mode -1)
 
-(setq-default tab-width 2)
+(setq-default indent-tabs-mode nil
+              tab-width 2)
 
 ; make ESC quit prompts
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
@@ -107,6 +108,7 @@
   (setq evil-vsplit-window-right t)
   (setq evil-split-window-below t)
   (setq evil-undo-system 'undo-redo)
+  (setq evil-shift-width 2)
   :config
   (evil-mode 1)
   (evil-set-initial-state 'messages-buffer-mode 'normal)
