@@ -104,6 +104,7 @@
   (setq evil-want-C-i-jump t)
   (setq evil-vsplit-window-right t)
   (setq evil-split-window-below t)
+  (setq evil-undo-system 'undo-redo)
   :config
   (evil-mode 1)
   (evil-set-initial-state 'messages-buffer-mode 'normal)
