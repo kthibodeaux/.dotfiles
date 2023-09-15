@@ -8,6 +8,7 @@ emacs/.emacs.d/elpa
 emacs/.emacs.d/transient
 emacs/.emacs.d/projectile-bookmarks.eld
 emacs/.emacs.d/projects
+emacs/.emacs.d/tramp
 
 vim/.vim/tmp/*
 
