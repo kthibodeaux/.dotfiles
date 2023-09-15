@@ -156,3 +156,6 @@
 
 (kthibodeaux/leader-keys "e" 'kthibodeaux/find-file)
 (kthibodeaux/leader-keys "ff" 'kthibodeaux/find-in-file)
+
+(setq custom-file (locate-user-emacs-file "~/.emacs-custom"))
+(load custom-file 'noerror 'nomessage)
