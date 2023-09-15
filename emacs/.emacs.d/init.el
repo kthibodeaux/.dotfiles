@@ -77,7 +77,7 @@
   (setq which-key-idle-delay 1))
 
 (use-package ivy-rich
-  :after ivy
+  :after (ivy counsel)
   :init
   (ivy-rich-mode 1))
 
