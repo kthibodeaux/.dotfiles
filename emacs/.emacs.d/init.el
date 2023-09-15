@@ -5,6 +5,8 @@
 (tooltip-mode -1)
 (menu-bar-mode -1)
 
+(setq-default tab-width 2)
+
 ; make ESC quit prompts
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 
