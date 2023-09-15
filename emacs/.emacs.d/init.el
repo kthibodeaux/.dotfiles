@@ -126,7 +126,10 @@
   (general-create-definer kthibodeaux/leader-keys
 			  :keymaps '(normal insert visual emacs)
 			  :prefix "SPC"
-			  :global-prefix "C-SPC"))
+			  :global-prefix "C-SPC")
+
+  (kthibodeaux/leader-keys
+    "m" 'execute-extended-command))
 
 ; window management
 (kthibodeaux/leader-keys "h" help-map) ; remap default C-h
