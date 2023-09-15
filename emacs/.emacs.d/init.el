@@ -113,6 +113,7 @@
   (evil-mode 1)
   (evil-set-initial-state 'messages-buffer-mode 'normal)
   (evil-set-initial-state 'dashboard-mode 'normal)
+  (define-key evil-normal-state-map (kbd "-") 'counsel-find-file)
   (define-key evil-insert-state-map (kbd "TAB") 'tab-to-tab-stop))
 
 (use-package evil-collection
@@ -163,7 +164,7 @@
   (counsel-fzf nil (locate-dominating-file default-directory ".git") "--hidden "))
 
 (kthibodeaux/leader-keys "e" 'kthibodeaux/find-file)
-(kthibodeaux/leader-keys "ff" 'kthibodeaux/find-in-file)
+(kthibodeaux/leader-keys "f" 'kthibodeaux/find-in-file)
 
 (setq custom-file (locate-user-emacs-file "~/.emacs-custom"))
 (load custom-file 'noerror 'nomessage)
