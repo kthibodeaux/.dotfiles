@@ -3,7 +3,11 @@ TAGS
 
 .netrwhist
 
+emacs/.emacs.d/.cache
+emacs/.emacs.d/.lsp-session*
+emacs/.emacs.d/autosaves
 emacs/.emacs.d/auto-save-list
+emacs/.emacs.d/backups
 emacs/.emacs.d/elpa
 emacs/.emacs.d/transient
 emacs/.emacs.d/projectile-bookmarks.eld
