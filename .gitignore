@@ -13,6 +13,7 @@ emacs/.emacs.d/transient
 emacs/.emacs.d/projectile-bookmarks.eld
 emacs/.emacs.d/projects
 emacs/.emacs.d/tramp
+emacs/.emacs.d/tree-sitter
 
 vim/.vim/tmp/*
 
