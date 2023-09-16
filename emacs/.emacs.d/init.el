@@ -232,3 +232,5 @@
 
 (use-package flycheck-eglot
   :init (global-flycheck-eglot-mode 1))
+
+(add-hook 'ruby-ts-mode-hook (lambda () (add-hook 'before-save-hook 'eglot-format-buffer nil 'local)))
