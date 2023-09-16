@@ -213,17 +213,22 @@
         (typescript-mode . typescript-ts-mode)
         (yaml-mode . yaml-ts-mode)))
 
-(with-eval-after-load 'eglot
-  (add-to-list 'eglot-server-programs '(kthibodeaux-vue-mode . ("vls" "--stdio"))))
-
 (use-package web-mode)
 (define-derived-mode kthibodeaux-vue-mode web-mode "kVue")
 (add-to-list 'auto-mode-alist '("\\.vue\\'" . kthibodeaux-vue-mode))
 
-(add-hook 'kthibodeaux-vue-mode-hook 'eglot-ensure)
-(add-hook 'ruby-ts-mode-hook 'eglot-ensure)
-(add-hook 'js-ts-mode-hook 'eglot-ensure)
-(add-hook 'typescript-ts-mode-hook 'eglot-ensure)
+
+(with-eval-after-load 'eglot
+  (add-hook 'kthibodeaux-vue-mode-hook 'eglot-ensure)
+  (add-hook 'ruby-ts-mode-hook 'eglot-ensure)
+  (add-hook 'js-ts-mode-hook 'eglot-ensure)
+  (add-hook 'typescript-ts-mode-hook 'eglot-ensure)
+  (add-to-list 'eglot-server-programs '(kthibodeaux-vue-mode . ("vls" "--stdio")))
+  (add-to-list 'eglot-server-programs '(ruby-ts-mode . ("rubocop" "--lsp"))))
+
 
 (use-package company
   :init (global-company-mode))
+
+(use-package flycheck-eglot
+  :init (global-flycheck-eglot-mode 1))
