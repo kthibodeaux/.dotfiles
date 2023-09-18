@@ -66,6 +66,15 @@ augroup CursorColumn
 augroup END
 ]], false)
 
-vim.cmd('syntax enable')
-vim.cmd('colorscheme OceanicNext')
+require('nightfox').setup({
+  options = {
+    styles = {
+      comments = "italic",
+      keywords = "bold",
+      types = "bold",
+    }
+  }
+})
+
+vim.cmd('colorscheme nightfox')
 vim.cmd('filetype indent plugin on')
