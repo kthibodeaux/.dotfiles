@@ -1,4 +1,2 @@
 set tab-size			= 4		# Number of spaces to use when expanding tabs
 set line-graphics		= utf-8	# Enum: ascii, default, utf-8
-
-bind generic	j	view-help
