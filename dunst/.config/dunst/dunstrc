@@ -192,14 +192,3 @@
     background = "#D62929"
     foreground = "#F9FAF9"
     timeout = 0
-
-[weechat hl]
-     appname = weechat
-     category = weechat.HL
-     background = "#FF5C47"
-     foreground = "#FFFFFF"
-[weechat pn]
-     appname = weechat
-     category = weechat.PM
-     background = "#D53B84"
-     foreground = "#FFFFFF"
