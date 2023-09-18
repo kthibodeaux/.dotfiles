@@ -4,6 +4,7 @@ local config = home .. '/.config/nvim'
 vim.cmd("call plug#begin('" .. config .. "/plugged')")
 
 vim.cmd("Plug 'mhartington/oceanic-next'")
+vim.cmd("Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}")
 
 vim.cmd("Plug 'benmills/vimux'")
 vim.cmd("Plug 'christoomey/vim-tmux-navigator'")

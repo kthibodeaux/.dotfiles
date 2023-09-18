@@ -4,6 +4,7 @@ require('init/abbr')
 require('init/maps')
 require('init/statusline')
 require('init/commands')
+require('init/treesitter')
 
 require('init/plugin_config/fzf')
 require('init/plugin_config/tig')
