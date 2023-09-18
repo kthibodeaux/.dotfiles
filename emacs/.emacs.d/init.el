@@ -205,7 +205,7 @@
       '((bash-mode . bash-ts-mode)
         (css-mode . css-ts-mode)
         (elisp-mode . elisp-ts-mode)
-        (js2-mode . js-ts-mode)
+        (js-mode . js-ts-mode)
         (json-mode . json-ts-mode)
         (markdown-mode . markdown-ts-mode)
         (ruby-mode . ruby-ts-mode)
@@ -213,24 +213,60 @@
         (typescript-mode . typescript-ts-mode)
         (yaml-mode . yaml-ts-mode)))
 
-(use-package web-mode)
+(defun efs/lsp-mode-setup ()
+  (setq lsp-headerline-breadcrumb-segments '(path-up-to-project file symbols))
+  (lsp-headerline-breadcrumb-mode))
+
+(use-package lsp-mode
+  :commands (lsp lsp-deferred)
+  :hook (lsp-mode . efs/lsp-mode-setup)
+  :init
+  (setq lsp-keymap-prefix "C-c l")  ;; Or 'C-l', 's-l'
+  :config
+  (lsp-enable-which-key-integration t))
+
+(use-package lsp-ui
+  :hook (lsp-mode . lsp-ui-mode)
+  :custom
+  (lsp-ui-doc-position 'bottom))
+
+(use-package lsp-ivy)
+
+(add-hook 'ruby-ts-mode-hook #'lsp)
+(add-hook 'ruby-ts-mode-hook (lambda () (add-hook 'before-save-hook 'lsp-format-buffer t t)))
+
+(use-package web-mode
+  :custom
+  (web-mode-markup-indent-offset 2)
+  (web-mode-css-indent-offset 2)
+  (web-mode-code-indent-offset 2))
+
 (define-derived-mode kthibodeaux-vue-mode web-mode "kVue")
 (add-to-list 'auto-mode-alist '("\\.vue\\'" . kthibodeaux-vue-mode))
+(add-hook 'kthibodeaux-vue-mode-hook #'lsp)
+(add-hook 'kthibodeaux-vue-mode-hook (lambda () (add-hook 'before-save-hook 'lsp-format-buffer t t)))
 
-
-(with-eval-after-load 'eglot
-  (add-hook 'kthibodeaux-vue-mode-hook 'eglot-ensure)
-  (add-hook 'ruby-ts-mode-hook 'eglot-ensure)
-  (add-hook 'js-ts-mode-hook 'eglot-ensure)
-  (add-hook 'typescript-ts-mode-hook 'eglot-ensure)
-  (add-to-list 'eglot-server-programs '(kthibodeaux-vue-mode . ("vls" "--stdio")))
-  (add-to-list 'eglot-server-programs '(ruby-ts-mode . ("rubocop" "--lsp"))))
-
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js-ts-mode))
+(add-hook 'js-ts-mode-hook #'lsp)
+(add-hook 'js-ts-mode-hook (lambda () (add-hook 'before-save-hook 'lsp-format-buffer t t)))
 
 (use-package company
-  :init (global-company-mode))
+  :after lsp-mode
+  :hook (lsp-mode . company-mode)
+  :bind (:map company-active-map
+         ("<tab>" . company-complete-selection))
+        (:map lsp-mode-map
+         ("<tab>" . company-indent-or-complete-common))
+  :custom
+  (company-minimum-prefix-length 1)
+  (company-idle-delay 0.0))
 
-(use-package flycheck-eglot
-  :init (global-flycheck-eglot-mode 1))
+(use-package company-box
+  :hook (company-mode . company-box-mode))
 
-(add-hook 'ruby-ts-mode-hook (lambda () (add-hook 'before-save-hook 'eglot-format-buffer nil 'local)))
+(use-package interaction-log)
+
+(use-package editorconfig
+  :ensure t
+  :config
+  (editorconfig-mode 1))
