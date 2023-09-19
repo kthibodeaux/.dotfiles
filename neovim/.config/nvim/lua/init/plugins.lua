@@ -9,6 +9,7 @@ vim.cmd("Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}")
 vim.cmd("Plug 'benmills/vimux'")
 vim.cmd("Plug 'christoomey/vim-tmux-navigator'")
 
+vim.cmd("Plug 'nvim-neorg/neorg' | Plug 'nvim-lua/plenary.nvim'")
 vim.cmd("Plug 'lukas-reineke/headlines.nvim'")
 
 vim.cmd("Plug 'thoughtbot/vim-rspec'")
