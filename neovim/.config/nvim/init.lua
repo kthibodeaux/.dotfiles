@@ -1,8 +1,6 @@
--- vim:foldmethod=marker
 -- Leaders must be set before plugins are loaded
 require('init/settings')
 
--- {{{ Install package manager
 --    https://github.com/folke/lazy.nvim
 --    `:help lazy.nvim.txt` for more info
 local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
@@ -32,7 +30,6 @@ if not fs_stat(lazypath) then
 end
 
 vim.opt.runtimepath:prepend(lazypath)
--- }}}
 
 require('lazy').setup('plugins')
 
