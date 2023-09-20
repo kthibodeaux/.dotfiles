@@ -6,6 +6,16 @@ return {
   config = function()
     require('telescope').setup({
       defaults = {
+        vimgrep_arguments = {
+          "rg",
+          "--hidden",
+          "--color=never",
+          "--no-heading",
+          "--with-filename",
+          "--line-number",
+          "--column",
+          "--smart-case",
+        },
         mappings = {
           i = {
             ['<esc>'] = 'close',
@@ -24,7 +34,8 @@ return {
     })
   end,
   keys = {
-    { '<leader>e', "<cmd>lua require('telescope.builtin').find_files()<cr>" },
-    { '<leader>ff', "<cmd>lua require('telescope.builtin').live_grep()<cr>" },
+    { '<leader>e', "<cmd>lua require('telescope.builtin').git_files()<cr>" },
+    { '<leader>ff', "<cmd>lua require('telescope.builtin').grep_string({use_regex = true, search = vim.fn.input('Grep For > ')})<cr>" },
+    { '<leader>fa', "<cmd>lua require('telescope.builtin').grep_string()<cr>" },
   },
 }
