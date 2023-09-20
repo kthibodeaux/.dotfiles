@@ -22,6 +22,7 @@
   "quick-scope": { "branch": "master", "commit": "256d81e391a22eeb53791ff62ce65f870418fa71" },
   "rename.vim": { "branch": "master", "commit": "f133763b0bbd79039f4e071a467ea8fc27d97dbd" },
   "splitjoin.vim": { "branch": "main", "commit": "53962443e4dc557e4d4c02b501adfcb5cd1368c3" },
+  "telescope.nvim": { "branch": "master", "commit": "54930e1abfc94409e1bb9266e752ef8379008592" },
   "tig.vim": { "branch": "master", "commit": "b7bc27391a6e236ce979d5c22c35e13af137d507" },
   "undotree": { "branch": "master", "commit": "0e11ba7325efbbb3f3bebe06213afa3e7ec75131" },
   "vcs-jump": { "branch": "main", "commit": "519235fb46f3382f09a85aef173d2f78276e449f" },
