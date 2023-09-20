@@ -21,8 +21,3 @@ map('n', '<s-tab>', 'za', options) -- toggle fold
 map('n', 'N', 'Nzz', options)
 map('n', 'S', 'i<cr><esc>^mwgk:silent! s/\v +$//<cr>:noh<cr>$', options) -- split line
 map('n', 'n', 'nzz', options)
-
-map('n', '<C-h>', ':TmuxNavigateLeft<CR>', options)
-map('n', '<C-j>', ':TmuxNavigateDown<CR>', options)
-map('n', '<C-k>', ':TmuxNavigateUp<CR>', options)
-map('n', '<C-l>', ':TmuxNavigateRight<CR>', options)
