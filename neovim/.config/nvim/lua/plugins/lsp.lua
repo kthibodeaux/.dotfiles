@@ -56,6 +56,7 @@ return {
     },
     config = function()
       local cmp = require("cmp")
+      local cmp_action = require('lsp-zero').cmp_action()
       vim.opt.completeopt = { "menu", "menuone", "noselect" }
 
       cmp.setup({
@@ -77,6 +78,10 @@ return {
           { name = "path" },
           { name = "emoji", option = { insert = true } },
         }),
+        mapping = cmp.mapping.preset.insert({
+          ['<Tab>'] = cmp_action.luasnip_supertab(),
+          ['<S-Tab>'] = cmp_action.luasnip_shift_supertab(),
+        })
       })
 
       cmp.setup.cmdline(":", {
