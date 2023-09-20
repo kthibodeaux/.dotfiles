@@ -1,7 +1,6 @@
 -- vim:foldmethod=marker
 -- Leaders must be set before plugins are loaded
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ','
+require('init/settings')
 
 -- {{{ Install package manager
 --    https://github.com/folke/lazy.nvim
@@ -38,7 +37,6 @@ vim.opt.runtimepath:prepend(lazypath)
 require('lazy').setup('plugins')
 
 require('init/plugins')
-require('init/settings')
 require('init/abbr')
 require('init/maps')
 require('init/statusline')
