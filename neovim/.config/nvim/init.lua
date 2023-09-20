@@ -36,10 +36,7 @@ vim.opt.runtimepath:prepend(lazypath)
 
 require('lazy').setup('plugins')
 
-require('init/plugins')
 require('init/abbr')
 require('init/maps')
 require('init/statusline')
 require('init/commands')
-
-require('init/plugin_config/fzf')
