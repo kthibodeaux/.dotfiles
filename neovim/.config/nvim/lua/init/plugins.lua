@@ -3,9 +3,6 @@ local config = home .. '/.config/nvim'
 
 vim.cmd("call plug#begin('" .. config .. "/plugged')")
 
-vim.cmd("Plug 'benmills/vimux'")
-vim.cmd("Plug 'christoomey/vim-tmux-navigator'")
-
 vim.cmd("Plug 'nvim-neorg/neorg' | Plug 'nvim-lua/plenary.nvim'")
 
 vim.cmd("Plug 'ap/vim-css-color'")
