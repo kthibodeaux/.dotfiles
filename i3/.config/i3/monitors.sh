@@ -9,4 +9,4 @@ if [ -n "$external" ]; then
   xrandr --output "$external" --auto
 fi
 
-feh --bg-scale /home/kthibodeaux/Pictures/background.jpg
+feh --bg-scale /home/kthibodeaux/Pictures/background.png
