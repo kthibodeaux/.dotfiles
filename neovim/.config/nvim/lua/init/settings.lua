@@ -61,4 +61,3 @@ require('nightfox').setup({
 })
 
 vim.cmd('colorscheme nightfox')
-vim.cmd('filetype indent plugin on')
