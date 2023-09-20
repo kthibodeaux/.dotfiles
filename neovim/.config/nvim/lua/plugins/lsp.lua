@@ -73,7 +73,7 @@ return {
           { name = "nvim_lsp" },
           { name = "nvim_lua" },
           { name = "luasnip" },
-        }, {
+          { name = "neorg" },
           { name = "buffer" },
           { name = "path" },
           { name = "emoji", option = { insert = true } },
