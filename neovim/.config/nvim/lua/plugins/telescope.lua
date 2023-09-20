@@ -11,6 +11,15 @@ return {
             ['<esc>'] = 'close',
           },
         },
+        layout_strategy = "flex",
+        layout_config = {
+          preview_cutoff = 10,
+          width = 0.8,
+          height = 0.9,
+          flex = {
+            flip_columns = 170,
+          },
+        },
       },
     })
   end,
