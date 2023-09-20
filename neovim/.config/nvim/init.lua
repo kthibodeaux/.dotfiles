@@ -7,7 +7,6 @@ require('init/commands')
 require('init/treesitter')
 
 require('init/plugin_config/fzf')
-require('init/plugin_config/headlines')
 require('init/plugin_config/lsp')
 require('init/plugin_config/neorg')
 require('init/plugin_config/tig')
