@@ -1,5 +1,10 @@
 {
   "lazy.nvim": { "branch": "main", "commit": "3ad55ae678876516156cca2f361c51f7952a924b" },
   "nightfox.nvim": { "branch": "main", "commit": "ee3525fdfbe2ed81270a336ccbe62f433165357b" },
-  "nvim-treesitter": { "branch": "master", "commit": "c29d973c40f42fdf9823c2756c330fe7c8f7ca80" }
+  "nvim-treesitter": { "branch": "master", "commit": "c29d973c40f42fdf9823c2756c330fe7c8f7ca80" },
+  "vim-endwise": { "branch": "master", "commit": "e714ac3bcfd5a90038de49c3254eded7c70ae3c3" },
+  "vim-rails": { "branch": "master", "commit": "1ad9663ce31e8c08134849d04184cda94bb42aba" },
+  "vim-rspec": { "branch": "main", "commit": "52a72592b6128f4ef1557bc6e2e3eb014d8b2d38" },
+  "vim-textobj-ruby": { "branch": "master", "commit": "fb99d918273a65010b3ac4084371a19c34260c66" },
+  "vim-textobj-user": { "branch": "master", "commit": "41a675ddbeefd6a93664a4dc52f302fe3086a933" }
 }
