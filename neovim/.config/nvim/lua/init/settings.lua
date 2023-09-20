@@ -51,6 +51,7 @@ vim.opt.mouse=
 
 require('nightfox').setup({
   options = {
+    transparent = true,
     styles = {
       comments = "italic",
       keywords = "bold",
