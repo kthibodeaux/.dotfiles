@@ -3,8 +3,6 @@ local config = home .. '/.config/nvim'
 
 vim.cmd("call plug#begin('" .. config .. "/plugged')")
 
-vim.cmd("Plug 'nvim-neorg/neorg' | Plug 'nvim-lua/plenary.nvim'")
-
 vim.cmd("Plug 'ap/vim-css-color'")
 vim.cmd("Plug 'AndrewRadev/splitjoin.vim'")
 vim.cmd("Plug 'FooSoft/vim-argwrap'")

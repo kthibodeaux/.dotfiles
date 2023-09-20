@@ -44,7 +44,6 @@ require('init/commands')
 
 require('init/plugin_config/fzf')
 require('init/plugin_config/lsp')
-require('init/plugin_config/neorg')
 require('init/plugin_config/tig')
 require('init/plugin_config/undotree')
 require('init/plugin_config/vcs-jump')
