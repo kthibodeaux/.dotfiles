@@ -1,3 +1,7 @@
+window:
+  opacity: 0.6
+  decorations: none
+
 import:
   - ~/.config/alacritty/font.yml
   - ~/.alacritty.yml.local
