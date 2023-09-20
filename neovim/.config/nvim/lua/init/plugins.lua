@@ -3,20 +3,9 @@ local config = home .. '/.config/nvim'
 
 vim.cmd("call plug#begin('" .. config .. "/plugged')")
 
-vim.cmd("Plug 'ap/vim-css-color'")
-vim.cmd("Plug 'AndrewRadev/splitjoin.vim'")
-vim.cmd("Plug 'FooSoft/vim-argwrap'")
-vim.cmd("Plug 'Konfekt/FastFold'")
 vim.cmd("Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }")
 vim.cmd("Plug 'junegunn/fzf.vim'")
-vim.cmd("Plug 'junegunn/vim-peekaboo'")
-vim.cmd("Plug 'mbbill/undotree'")
-vim.cmd("Plug 'JoosepAlviste/nvim-ts-context-commentstring'")
-vim.cmd("Plug 'tpope/vim-commentary'")
-vim.cmd("Plug 'tpope/vim-surround'")
-vim.cmd("Plug 'tpope/vim-vinegar'")
-vim.cmd("Plug 'tpope/vim-abolish'")
-vim.cmd("Plug 'unblevable/quick-scope'")
+
 
 -- LSP Support
 vim.cmd("Plug 'neovim/nvim-lspconfig'")             -- Required
