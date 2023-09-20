@@ -5,4 +5,7 @@ return {
   {
     'danro/rename.vim',
   },
+  {
+    'tpope/vim-vinegar',
+  },
 }

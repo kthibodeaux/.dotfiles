@@ -30,9 +30,6 @@ return {
     'tpope/vim-surround',
   },
   {
-    'tpope/vim-vinegar',
-  },
-  {
     'tpope/vim-abolish',
   },
   {
