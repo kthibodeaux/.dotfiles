@@ -28,6 +28,7 @@ vim.cmd("Plug 'kthibodeaux/tig.vim'")
 vim.cmd("Plug 'mbbill/undotree'")
 vim.cmd("Plug 'kana/vim-textobj-user'")
 vim.cmd("Plug 'rhysd/vim-textobj-ruby'")
+vim.cmd("Plug 'JoosepAlviste/nvim-ts-context-commentstring'")
 vim.cmd("Plug 'tpope/vim-commentary'")
 vim.cmd("Plug 'tpope/vim-surround'")
 vim.cmd("Plug 'tpope/vim-vinegar'")
@@ -55,3 +56,5 @@ vim.cmd("Plug 'L3MON4D3/LuaSnip'")             -- Required
 vim.cmd("Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v1.x'}")
 
 vim.cmd("call plug#end()")
+
+require('ts_context_commentstring').setup {}
