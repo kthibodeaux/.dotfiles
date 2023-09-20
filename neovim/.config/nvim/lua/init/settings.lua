@@ -10,7 +10,6 @@ vim.opt.signcolumn = 'yes'
 vim.opt.autoindent = true
 vim.opt.backspace = 'indent,start,eol'
 vim.opt.backupcopy = 'yes'
-vim.opt.colorcolumn = '80'
 vim.opt.backupdir = config .. '/tmp//'
 vim.opt.encoding = 'utf-8'
 vim.opt.expandtab = true
