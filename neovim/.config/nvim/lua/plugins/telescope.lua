@@ -34,8 +34,8 @@ return {
     })
   end,
   keys = {
-    { '<leader>e', "<cmd>lua require('telescope.builtin').git_files()<cr>" },
-    { '<leader>ff', "<cmd>lua require('telescope.builtin').grep_string({use_regex = true, search = vim.fn.input('Grep For > ')})<cr>" },
-    { '<leader>fa', "<cmd>lua require('telescope.builtin').grep_string()<cr>" },
+    { '<leader>e', "<cmd>lua require('telescope.builtin').git_files()<cr>", desc = 'find file' },
+    { '<leader>ff', "<cmd>lua require('telescope.builtin').grep_string({use_regex = true, search = vim.fn.input('Grep For > ')})<cr>", desc = 'grep' },
+    { '<leader>fa', "<cmd>lua require('telescope.builtin').grep_string()<cr>", desc = 'grep current word' },
   },
 }

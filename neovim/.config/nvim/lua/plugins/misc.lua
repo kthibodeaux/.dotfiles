@@ -11,7 +11,7 @@ return {
       vim.g.argwrap_padded_braces = '{'
     end,
     keys = {
-      { '<leader>a', ':ArgWrap<CR>' },
+      { '<leader>a', ':ArgWrap<CR>', desc = 'arg wrap' },
     },
   },
   {
@@ -23,7 +23,7 @@ return {
   {
     'mbbill/undotree',
     keys = {
-      { '<F5>', ':UndotreeToggle<CR>' },
+      { '<F5>', ':UndotreeToggle<CR>', desc = 'undo tree' },
     }
   },
   {
