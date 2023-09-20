@@ -12,7 +12,6 @@ vim.cmd("Plug 'danro/rename.vim'")
 vim.cmd("Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }")
 vim.cmd("Plug 'junegunn/fzf.vim'")
 vim.cmd("Plug 'junegunn/vim-peekaboo'")
-vim.cmd("Plug 'kthibodeaux/tig.vim'")
 vim.cmd("Plug 'mbbill/undotree'")
 vim.cmd("Plug 'JoosepAlviste/nvim-ts-context-commentstring'")
 vim.cmd("Plug 'tpope/vim-commentary'")
@@ -20,7 +19,6 @@ vim.cmd("Plug 'tpope/vim-surround'")
 vim.cmd("Plug 'tpope/vim-vinegar'")
 vim.cmd("Plug 'tpope/vim-abolish'")
 vim.cmd("Plug 'unblevable/quick-scope'")
-vim.cmd("Plug 'wincent/vcs-jump'")
 
 -- LSP Support
 vim.cmd("Plug 'neovim/nvim-lspconfig'")             -- Required
