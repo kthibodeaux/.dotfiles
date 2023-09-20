@@ -47,7 +47,7 @@ vim.opt.visualbell = true
 vim.opt.wildmenu = true
 vim.opt.winwidth = 90
 vim.opt.wrap = false
-vim.opt.mouse=
+vim.opt.mouse = ''
 
 require('nightfox').setup({
   options = {
