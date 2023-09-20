@@ -15,7 +15,7 @@ function s:gitgoback()
   let l:file = expand("%")
   let l:command = "git log --follow " . l:file
 
-  call fzf#run(fzf#wrap({'source': l:command, 'sink': function('<SID>handler'),}))
+  " call fzf#run(fzf#wrap({'source': l:command, 'sink': function('<SID>handler'),}))
 endfunction
 
 nnoremap <Plug>GitGoBack :call <SID>gitgoback()<CR>
