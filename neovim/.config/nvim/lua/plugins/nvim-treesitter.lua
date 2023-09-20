@@ -1,5 +1,13 @@
 return {
   'nvim-treesitter/nvim-treesitter',
+  dependencies = {
+    {
+      'JoosepAlviste/nvim-ts-context-commentstring',
+      config = function()
+        require('ts_context_commentstring').setup {}
+      end,
+    },
+  },
   build = ':TSUpdate',
   config = function ()
     local configs = require('nvim-treesitter.configs')

@@ -43,4 +43,3 @@ require('init/statusline')
 require('init/commands')
 
 require('init/plugin_config/fzf')
-require('init/plugin_config/lsp')
