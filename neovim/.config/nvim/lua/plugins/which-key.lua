@@ -13,6 +13,7 @@ return {
       ["<leader>f"] = { name = "+file" },
       ["<leader>g"] = { name = "+git" },
       ["<leader>r"] = { name = "+specs" },
+      ["<leader>l"] = { name = "+lsp" },
     })
   end,
 }

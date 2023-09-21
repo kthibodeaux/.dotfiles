@@ -11,8 +11,12 @@ return {
       end)
 
       vim.diagnostic.config({ virtual_text = false, })
-      vim.cmd([[autocmd CursorHold * lua vim.diagnostic.open_float({scope='line'})]])
     end,
+    keys = {
+      { '<leader>ll', '<cmd> lua vim.diagnostic.open_float()<CR>', desc = 'diagnostics' },
+      { '<leader>lh', '<cmd> lua vim.lsp.buf.hover()<CR>', desc = 'hover' },
+      { '<leader>ld', '<cmd> lua vim.lsp.buf.definition()<CR>', desc = 'definition' },
+    },
   },
 
   {
