@@ -32,4 +32,17 @@ return {
   {
     'unblevable/quick-scope',
   },
+  {
+    'echasnovski/mini.indentscope',
+    version = '*',
+    config = function()
+      require('mini.indentscope').setup({
+        draw = {
+          delay = 100,
+          animation = require('mini.indentscope').gen_animation.none(),
+          priority = 2,
+        },
+      })
+    end,
+  },
 }
