@@ -52,7 +52,12 @@ return {
       'hrsh7th/cmp-cmdline',
       'hrsh7th/cmp-emoji',
       'saadparwaiz1/cmp_luasnip',
-      'L3MON4D3/LuaSnip',
+      {
+        'L3MON4D3/LuaSnip',
+        config = function()
+          require("luasnip.loaders.from_snipmate").lazy_load({paths = "./snippets"})
+        end,
+      },
     },
     config = function()
       local cmp = require("cmp")
@@ -81,6 +86,7 @@ return {
         mapping = cmp.mapping.preset.insert({
           ['<Tab>'] = cmp_action.luasnip_supertab(),
           ['<S-Tab>'] = cmp_action.luasnip_shift_supertab(),
+          ['<CR>'] = cmp.mapping.confirm({ select = true }),
         })
       })
 
