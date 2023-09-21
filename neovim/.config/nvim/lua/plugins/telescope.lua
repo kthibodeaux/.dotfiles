@@ -1,7 +1,8 @@
 return {
   'nvim-telescope/telescope.nvim', tag = '0.1.3',
   dependencies = {
-    'nvim-lua/plenary.nvim'
+    'nvim-lua/plenary.nvim',
+    { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' }
   },
   config = function()
     require('telescope').setup({
@@ -32,6 +33,8 @@ return {
         },
       },
     })
+
+    require('telescope').load_extension('fzf')
   end,
   keys = {
     { '<leader>e', "<cmd>lua require('telescope.builtin').git_files()<cr>", desc = 'find file' },
