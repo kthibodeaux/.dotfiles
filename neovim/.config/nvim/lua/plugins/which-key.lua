@@ -12,7 +12,7 @@ return {
       -- custom names for keys
       ["<leader>f"] = { name = "+file" },
       ["<leader>g"] = { name = "+git" },
-      ["<leader>r"] = { name = "+rspec" },
+      ["<leader>r"] = { name = "+specs" },
     })
   end,
 }
