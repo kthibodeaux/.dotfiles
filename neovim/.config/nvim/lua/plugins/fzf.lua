@@ -4,7 +4,10 @@ return {
     'nvim-tree/nvim-web-devicons'
   },
   config = function()
-    require('fzf-lua').setup({'telescope'})
+    require('fzf-lua').setup({
+      'telescope',
+      fzf_opts = { ["--layout"] = "reverse" },
+    })
   end,
   keys = {
     { '<leader>e', "<cmd>lua require('fzf-lua').files()<CR>", desc = 'find file' },
