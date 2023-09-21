@@ -6,8 +6,6 @@ mkdir -p ~/.local/share
 sudo cp ~/.dotfiles/common/safe-rm.conf /etc/safe-rm.conf
 
 mv ~/.Xresources ~/.Xresources.original
-mv ~/.gtkrc-2.0 ~/.gtkrc-2.0.original
-
 mv ~/.config/dunst ~/.config/dunst.original
 mv ~/.config/i3 ~/.config/i3.original
 mv ~/.config/gtk-3.0 ~/.config/gtk-3.0.original
@@ -35,6 +33,9 @@ install_package "debtap"
 install_package "discord"
 install_package "docker"
 install_package "docker-compose"
+install_package "dracula-gtk-theme"
+install_package "dracula-icons-git"
+install_package "dracula-rofi-git"
 install_package "dunst-git"
 install_package "enpass-bin"
 install_package "epson-inkjet-printer-escpr"
@@ -47,6 +48,7 @@ install_package "gdk-pixbuf2"
 install_package "gimp"
 install_package "gitflow-avh"
 install_package "glib2"
+install_package "gtk-engine-murrine"
 install_package "i3blocks"
 install_package "i3exit"
 install_package "inkscape"
@@ -99,5 +101,4 @@ sudo systemctl start bluetooth
 
 . ~/.dotfiles/setup_steps/shell.sh
 . ~/.dotfiles/setup_steps/ruby.sh
-. ~/.dotfiles/setup_steps/gtk.sh
 . ~/.dotfiles/setup_steps/tmux_plugins.sh

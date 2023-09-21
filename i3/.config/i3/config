@@ -39,8 +39,8 @@ smart_borders on
 # {{{ keybinds
 # {{{ applications
 # application launcher
-bindsym $mod+t exec rofi -show window -theme solarized -font "Hack Nerd Font 36"
-bindsym $mod+d exec rofi -show drun -theme solarized -font "Hack Nerd Font 36"
+bindsym $mod+t exec rofi -show window -theme dracula1 -font "Hack Nerd Font 36"
+bindsym $mod+d exec rofi -show drun -theme dracula1 -font "Hack Nerd Font 36"
 
 # terminal
 bindsym $mod+Return exec alacritty
