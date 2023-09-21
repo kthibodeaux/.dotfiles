@@ -18,9 +18,6 @@ return {
     'Konfekt/FastFold',
   },
   {
-    'junegunn/vim-peekaboo',
-  },
-  {
     'mbbill/undotree',
     keys = {
       { '<F5>', ':UndotreeToggle<CR>', desc = 'undo tree' },
