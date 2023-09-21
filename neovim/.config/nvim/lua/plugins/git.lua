@@ -2,15 +2,15 @@ return {
   {
     'kthibodeaux/tig.vim',
     keys = {
-      { '<leader>c', '<Plug>TigFileHistory' },
-      { '<leader>b', '<Plug>TigBlame' },
-      { '<leader>y', '<Plug>TigLatestCommitForLine' },
+      { '<leader>gc', '<Plug>TigFileHistory', desc = 'file history' },
+      { '<leader>gb', '<Plug>TigBlame', desc = 'blame' },
+      { '<leader>gl', '<Plug>TigLatestCommitForLine', desc = 'latest commit for line' },
     },
   },
   {
     'wincent/vcs-jump',
     keys = {
-      { '<leader>d', ':VcsJump merge<CR>' },
+      { '<leader>gd', ':VcsJump merge<CR>', desc = 'merge conflicts' },
     },
   },
 }
