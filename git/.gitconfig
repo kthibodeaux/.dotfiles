@@ -3,7 +3,6 @@
 [alias]
   aa = add --all
   amend = commit --amend
-  dm = !echo "Deprecated - use gdm"
   iquit = !git reset --hard && git clean -fd -e bundle/
   l = log --graph --abbrev-commit --date=relative
   rc = rebase --continue
