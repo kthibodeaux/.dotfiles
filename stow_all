@@ -16,7 +16,6 @@ stow -vv readline
 stow -vv redshift
 stow -vv rofi
 stow -vv rspec
-stow -vv tmate
 stow -vv tig
 stow -vv tmux
 stow -vv urlview

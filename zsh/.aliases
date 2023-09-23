@@ -45,7 +45,6 @@ alias ycal="cal $(date +"%Y")"
 # }}}
 # {{{ tmux
 alias t="tmux"
-alias tmate="tmate -f ~/.tmate.conf"
 # }}}
 # {{{ vim
 alias v="nvim"
