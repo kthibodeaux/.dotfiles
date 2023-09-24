@@ -6,9 +6,6 @@ return {
     end,
   },
   {
-    'tpope/vim-endwise'
-  },
-  {
     'tpope/vim-rails'
   },
   {
