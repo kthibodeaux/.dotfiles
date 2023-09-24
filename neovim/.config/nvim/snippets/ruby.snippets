@@ -1,3 +1,38 @@
+snippet each "each"
+	each do |$1|
+		$2
+	end
+
+snippet ea "ea"
+	each { |$1| $2 }
+
+snippet map "map"
+	map do |$1|
+		$2
+	end
+
+snippet ma "ma"
+	map { |$1| $2 }
+
+snippet select "select"
+	select do |$1|
+		$2
+	end
+
+snippet sel "sel"
+	select { |$1| $2 }
+
+snippet l "let"
+	let(:$1) { $0 }
+
+snippet reject "reject"
+	reject do |$1|
+		$2
+	end
+
+snippet rej "rej"
+	reject { |$1| $2 }
+
 snippet l "let"
 	let(:$1) { $0 }
 
@@ -35,9 +70,9 @@ snippet w "attr_writer"
 snippet rw "attr_accessor"
 	attr_accessor :$0
 
-snippet "\b(de)?f" "def <name>..." r
-	def ${1:function_name}${2:(${3:*args})}
-		$0
+snippet def "def"
+	def ${1}
+		$2
 	end
 
 snippet defi "def initialize ..."
