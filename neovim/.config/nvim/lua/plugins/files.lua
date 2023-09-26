@@ -6,6 +6,11 @@ return {
     'danro/rename.vim',
   },
   {
-    'tpope/vim-vinegar',
-  },
+    'stevearc/oil.nvim',
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    opts = {},
+    keys = {
+      { '-', "<cmd>Oil<CR>", desc = 'open parent dir' },
+    },
+  }
 }
