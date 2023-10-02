@@ -48,7 +48,6 @@ alias t="tmux"
 # }}}
 # {{{ vim
 alias v="nvim"
-alias vu="nvim +PlugInstall"
 # }}}
 # {{{ zsh
 alias :q="exit"
