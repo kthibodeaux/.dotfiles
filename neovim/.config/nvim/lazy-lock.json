@@ -26,6 +26,7 @@
   "nvim-web-devicons": { "branch": "master", "commit": "480a756df82a0c231622c9bf2173bb6634713716" },
   "oil.nvim": { "branch": "master", "commit": "96a334abeb85a26af87585ec3810116c7cb7d172" },
   "plenary.nvim": { "branch": "master", "commit": "9ce85b0f7dcfe5358c0be937ad23e456907d410b" },
+  "qfview.nvim": { "branch": "main", "commit": "f7a4fd8d700d02f6c1274f02115fa4e68e63aa54" },
   "quick-scope": { "branch": "master", "commit": "256d81e391a22eeb53791ff62ce65f870418fa71" },
   "rename.vim": { "branch": "master", "commit": "f133763b0bbd79039f4e071a467ea8fc27d97dbd" },
   "splitjoin.vim": { "branch": "main", "commit": "53962443e4dc557e4d4c02b501adfcb5cd1368c3" },

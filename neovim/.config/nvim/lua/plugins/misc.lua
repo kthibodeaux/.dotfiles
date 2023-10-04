@@ -45,4 +45,9 @@ return {
       })
     end,
   },
+  {
+    "ashfinal/qfview.nvim",
+    event = "UIEnter",
+    config = true,
+  },
 }
