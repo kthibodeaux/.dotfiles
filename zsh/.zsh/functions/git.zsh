@@ -1,5 +1,3 @@
-# vim:foldmethod=indent:foldlevel=0
-
 base_branch() {
   if git rev-parse -q --verify develop > /dev/null; then
     echo "develop"
