@@ -5,8 +5,16 @@ return {
   },
   config = function()
     require('fzf-lua').setup({
-      'telescope',
-      fzf_opts = { ["--layout"] = "reverse" },
+      'default',
+      winopts    = {
+        width   = 1,
+        height  = 1,
+        preview = {
+          hidden       = "nohidden",
+          vertical     = "up:70%",
+          horizontal   = "up:70%",
+        },
+      },
       grep = {
         rg_opts = "--sort-files --hidden --column --line-number --no-heading " ..
         "--color=always --smart-case -g '!{.git,node_modules}/*'",
