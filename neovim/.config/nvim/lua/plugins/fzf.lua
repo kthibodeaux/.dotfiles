@@ -11,8 +11,8 @@ return {
         height  = 1,
         preview = {
           hidden       = "nohidden",
-          vertical     = "up:70%",
-          horizontal   = "up:70%",
+          vertical     = "down:70%",
+          horizontal   = "down:70%",
         },
       },
       grep = {
