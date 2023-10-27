@@ -1,5 +1,4 @@
 {
-  "FastFold": { "branch": "master", "commit": "ab3d199d288a51708c3181a25aba1f9de2050b89" },
   "LuaSnip": { "branch": "master", "commit": "0df29db3543837f8b41597f2640397c5ec792b7b" },
   "Recover.vim": { "branch": "master", "commit": "e61319bce3cd1004e5b695933296d8f267dd65a3" },
   "cmp-buffer": { "branch": "main", "commit": "3022dbc9166796b644a841a02de8dd1cc1d311fa" },

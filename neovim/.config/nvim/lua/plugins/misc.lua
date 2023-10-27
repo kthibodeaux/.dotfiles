@@ -15,9 +15,6 @@ return {
     },
   },
   {
-    'Konfekt/FastFold',
-  },
-  {
     'mbbill/undotree',
     keys = {
       { '<F5>', ':UndotreeToggle<CR>', desc = 'undo tree' },
