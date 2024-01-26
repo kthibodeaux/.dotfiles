@@ -1,3 +1,3 @@
 vim.api.nvim_exec([[
-command! -nargs=0 FixRailsDBStructure :normal G?HEAD<CR>maG?><CR>V`a:s/;/,/g<CR>`ajGVG?>><CR>:g!/^[(]/d<CR>`addVG?,<CR>:sort u<CR>G?,<CR>r;:wq<CR>
+command! -nargs=0 FixRailsDBStructure :normal /HEAD<CR>dd/parent<CR>dd/===<CR>dd/>>><CR>ddV/INSERT INTO "sch<CR>j:sort! u<CR>:wq<CR>
 ]], false)
