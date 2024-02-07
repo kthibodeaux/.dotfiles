@@ -56,8 +56,3 @@ source ~/.zsh/functions/chruby_auto.sh
 chruby ruby-3.1.1
 
 opentmux
-
-if [ $(upterm session list | wc -l) != "1" ]; then
-  upterm session current | grep 'SSH Session' | tr -s ' ' | cut -d' ' -f3,4 | xclip -selection clipboard
-  echo "Copied pair SSH address to clipboard"
-fi
