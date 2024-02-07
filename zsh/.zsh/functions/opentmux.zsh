@@ -14,7 +14,13 @@ function opentmux() {
         return 1
         ;;
       [pP])
-        upterm host --force-command 'tmux attach -t pair-programming' $(choose_pairs) -- tmux new -t pair-programming
+        vared -p "Enter a session number, n for a new session " -c session_name
+
+        if [ "$session_name" = "n" ]; then
+          upterm host --force-command 'tmux attach -t pair-programming' $(choose_pairs) -- tmux new -t pair-programming
+        else
+          upterm host --force-command "tmux attach -t $session_name" $(choose_pairs) -- tmux attach -t $session_name
+        fi
         ;;
       *)
         tmux attach -t $response || tmux new
