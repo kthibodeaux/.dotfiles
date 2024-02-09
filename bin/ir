@@ -28,8 +28,8 @@ class SmartInteractiveRebase
 
   def base_branch
     if part?
-      trello_id = current_branch_name.split('/').last.split('-').first
-      epic_branches.detect { |e| e.include?(trello_id) }
+      unique_id = current_branch_name.split('/').last.split('-').first
+      epic_branches.detect { |e| e.include?(unique_id) }
     else
       `zsh -lic 'echo $(base_branch)'`.strip.chomp
     end
