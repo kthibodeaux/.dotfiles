@@ -17,9 +17,4 @@ mi() { docker_or_local "bundle exec rake db:migrate RAILS_ENV=development" }
 mit() { docker_or_local "bundle exec rake db:migrate RAILS_ENV=test" }
 pmit() { docker_or_local "bundle exec rake parallel:migrate[$RSPEC_CORES]" }
 
-rq() { docker_or_local "bundle exec rake resque:work QUEUE=*" }
-rqd() { docker_or_local "bundle exec rake resque:scheduler" }
-
 rl() { docker_or_local "bundle exec rails routes" | ag $1 }
-
-edit_credentials() { docker_or_local "apt-get install -y vim && EDITOR=vim bundle exec rails credentials:edit --environment=$@" }
