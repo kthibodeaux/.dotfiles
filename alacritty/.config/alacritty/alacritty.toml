@@ -1,0 +1,50 @@
+import = [
+  "/home/kthibodeaux/.config/alacritty/font.toml"
+]
+
+[[colors.indexed_colors]]
+color = "0xea9a97"
+index = 16
+
+[[colors.indexed_colors]]
+color = "0xeb98c3"
+index = 17
+
+[colors.bright]
+black = "0x47407d"
+blue = "0x65b1cd"
+cyan = "0xa6dae3"
+green = "0xb1d196"
+magenta = "0xccb1ed"
+red = "0xf083a2"
+white = "0xe2e0f7"
+yellow = "0xf9cb8c"
+
+[colors.normal]
+black = "0x393552"
+blue = "0x569fba"
+cyan = "0x9ccfd8"
+green = "0xa3be8c"
+magenta = "0xc4a7e7"
+red = "0xeb6f92"
+white = "0xe0def4"
+yellow = "0xf6c177"
+
+[colors.primary]
+background = "0x151724"
+foreground = "0xe0def4"
+
+[env]
+TERM = "xterm-256color"
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Control|Alt"
+
+[mouse]
+hide_when_typing = true
+
+[window]
+decorations = "none"
+opacity = 0.9
