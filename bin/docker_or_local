@@ -1,0 +1,42 @@
+#!/usr/bin/env ruby
+# vim:filetype=ruby
+
+ALL_FILES = Dir.entries(Dir.pwd).freeze
+COMMAND = ARGV.join(' ')
+
+def default_image
+  if Dir.pwd.include?('prizepicks')
+    'rails'
+  else
+    'web'
+  end
+end
+
+def use_docker?
+  ALL_FILES.include?('docker-compose.yaml') || ALL_FILES.include?('docker-compose.yml')
+end
+
+def use_config?
+  ALL_FILES.include?('.docker_or_local')
+end
+
+def config
+  @config ||= {}.tap do |c|
+    File.readlines('.docker_or_local').map do |line|
+      command, container = line.strip.split('=')
+      c[command] = container
+    end
+  end
+end
+
+if use_docker?
+  command = COMMAND.split(' ')[0]
+  container = use_config? ? config[command] || default_image : default_image
+
+  puts "running in docker container `#{container}`"
+  puts
+
+  system "docker compose run --rm --no-deps #{container} /bin/bash -c \"#{COMMAND}\""
+else
+  system COMMAND
+end
