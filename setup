@@ -5,7 +5,6 @@ mkdir -p ~/.local/share
 
 sudo cp ~/.dotfiles/common/safe-rm.conf /etc/safe-rm.conf
 
-mv ~/.Xresources ~/.Xresources.original
 mv ~/.config/dunst ~/.config/dunst.original
 mv ~/.config/i3 ~/.config/i3.original
 mv ~/.config/gtk-3.0 ~/.config/gtk-3.0.original
