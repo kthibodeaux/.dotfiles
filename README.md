@@ -12,4 +12,4 @@ cd .dotfiles
 bash setup
 ```
 
-To run `rspec` with more cores, override `RSPEC_CORES` in `~/.zshenv.local`
+To run `rspec` with more or less cores, override `RSPEC_CORES` in `~/.zshenv.local`

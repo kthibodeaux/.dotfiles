@@ -15,7 +15,7 @@ export FZF_DEFAULT_COMMAND='ag -g "" --hidden --ignore .git'
 export FZF_COMPLETION_TRIGGER=',,'
 export FZF_DEFAULT_OPTS='--color dark,hl:33,hl+:37,fg+:235,bg+:0,fg+:254'
 
-export RSPEC_CORES=6
+export RSPEC_CORES=12
 export NODE_OPTIONS="--max-old-space-size=8192"
 
 [[ -f ~/.zshenv.local ]] && source ~/.zshenv.local
