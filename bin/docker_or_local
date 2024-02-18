@@ -4,16 +4,16 @@
 ALL_FILES = Dir.entries(Dir.pwd).freeze
 COMMAND = ARGV.join(' ')
 
+def prizepicks?
+  @is_prizepicks ||= Dir.pwd.include?('prizepicks')
+end
+
 def default_image
-  if Dir.pwd.include?('prizepicks')
-    'rails'
-  else
-    'web'
-  end
+  'web'
 end
 
 def use_docker?
-  ALL_FILES.include?('docker-compose.yaml') || ALL_FILES.include?('docker-compose.yml')
+  ALL_FILES.include?('docker-compose.yml')
 end
 
 def use_config?
@@ -29,7 +29,9 @@ def config
   end
 end
 
-if use_docker?
+if prizepicks?
+  system "#{ENV['HOME']}/dev/prizepicks/prizepicks-devenv/run_in_container \"#{COMMAND}\""
+elsif use_docker?
   command = COMMAND.split(' ')[0]
   container = use_config? ? config[command] || default_image : default_image
 
