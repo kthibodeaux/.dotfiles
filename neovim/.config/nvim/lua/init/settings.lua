@@ -32,7 +32,6 @@ vim.opt.suffixesadd = '.vue'
 vim.opt.tabstop = 2
 vim.opt.termguicolors = true
 vim.opt.ttimeoutlen = 100
-vim.opt.backupdir = config .. '/undodir//'
 vim.opt.undofile = true
 vim.opt.updatetime = 300
 vim.opt.visualbell = true
