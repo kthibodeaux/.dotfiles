@@ -1,3 +1,5 @@
+go() { docker_or_local "go $@" }
+
 vue() { docker_or_local "vue $@" }
 ya() { docker_or_local "yarn $@" }
 
