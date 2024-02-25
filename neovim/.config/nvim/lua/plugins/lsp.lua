@@ -13,6 +13,7 @@ return {
       vim.diagnostic.config({ virtual_text = false, })
     end,
     keys = {
+      { '<leader>la', '<cmd> lua vim.lsp.buf.code_action()<CR>', desc = 'action' },
       { '<leader>ll', '<cmd> lua vim.diagnostic.open_float()<CR>', desc = 'diagnostics' },
       { '<leader>lh', '<cmd> lua vim.lsp.buf.hover()<CR>', desc = 'hover' },
       { '<leader>ld', '<cmd> lua vim.lsp.buf.definition()<CR>', desc = 'definition' },
