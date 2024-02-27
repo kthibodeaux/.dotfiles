@@ -1,5 +1,6 @@
 .ruby-gemset
 metadocs/
+.ignore
 
 node_modules/
 public/packs/
