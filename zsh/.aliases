@@ -4,7 +4,6 @@
 # {{{ docker
 alias k="docker"
 alias c="docker compose"
-alias z="lazydocker"
 alias docker-nuke="docker container prune -f; docker volume prune -f; docker image prune -f"
 alias rebuild="docker compose down; RESEED=true docker compose up"
 # }}}
