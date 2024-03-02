@@ -1,6 +1,7 @@
 autocmd BufWritePre *.go lua vim.lsp.buf.format()
 
 autocmd BufWritePre *.rb lua vim.lsp.buf.format()
+autocmd BufWritePre Gemfile lua vim.lsp.buf.format()
 
 function s:fix_if_eslint_is_present()
   if exists(':EslintFixAll') > 0
