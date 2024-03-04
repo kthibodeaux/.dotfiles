@@ -119,5 +119,11 @@ changes() {
   fi
 }
 
+pa() {
+  root_dir=$(pwd)
+  ls --color=never | xargs -I{} sh -c "echo {} && cd $root_dir/{} && git up"
+  cd $root_dir
+}
+
 # Complete g like git
 compdef g=git
