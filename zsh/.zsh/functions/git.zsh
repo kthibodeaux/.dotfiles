@@ -121,7 +121,7 @@ changes() {
 
 pa() {
   root_dir=$(pwd)
-  ls --color=never | xargs -I{} sh -c "echo {} && cd $root_dir/{} && git up"
+  ls -1 -d */ --indicator-style=none --color=never | xargs -I{} sh -c "echo {} && cd $root_dir/{} && git up"
   cd $root_dir
 }
 
