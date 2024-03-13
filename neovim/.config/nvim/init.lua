@@ -35,5 +35,4 @@ require('lazy').setup('plugins')
 
 require('init/abbr')
 require('init/maps')
-require('init/statusline')
 require('init/commands')
