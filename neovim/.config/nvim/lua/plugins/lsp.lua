@@ -19,7 +19,19 @@ return {
       { '<leader>ld', '<cmd> lua vim.lsp.buf.definition()<CR>', desc = 'definition' },
       { '<leader>lr', '<cmd> lua vim.lsp.buf.references()<CR>', desc = 'references' },
       { '<leader>ln', '<cmd> lua vim.lsp.buf.rename()<CR>', desc = 'rename' },
+      { '<leader>ls', '<cmd> lua vim.lsp.buf.signature_help()<CR>', desc = 'sig' },
     },
+  },
+
+  {
+    "ray-x/lsp_signature.nvim",
+    opts = {
+      fix_pos=true,
+      always_trigger=true
+    },
+    config = function(_, opts)
+      require'lsp_signature'.setup(opts)
+    end
   },
 
   {
