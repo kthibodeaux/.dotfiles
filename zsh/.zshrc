@@ -32,7 +32,6 @@ setopt extended_history
 
 # vi mode
 bindkey -v
-bindkey ii vi-cmd-mode
 bindkey "^R" history-incremental-search-backward
 
 # provide zmv command for easy bulk renaming
