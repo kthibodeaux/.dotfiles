@@ -7,6 +7,7 @@ stow -vv gem
 stow -vv git
 stow -vv gtk3
 stow -vv i3
+stow -vv lazydocker
 stow -vv less
 stow -vv mailcap
 stow -vv neovim
