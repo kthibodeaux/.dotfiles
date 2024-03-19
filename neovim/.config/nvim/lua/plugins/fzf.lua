@@ -29,6 +29,7 @@ return {
   end,
   keys = {
     { '<leader>e', "<cmd>lua require('fzf-lua').files()<CR>", desc = 'find file' },
+    { '<leader>n', "<cmd>lua require('fzf-lua').buffers()<CR>", desc = 'find buffer' },
     { '<leader>fg', "<cmd>lua require('fzf-lua').git_status()<CR>", desc = 'changed files' },
     { '<leader>ff', "<cmd>lua require('fzf-lua').grep({ no_esc=true })<CR>", desc = 'grep' },
     { '<leader>fa', "<cmd>lua require('fzf-lua').grep_visual()<CR>", mode = 'v', desc = 'grep visual selection' },
