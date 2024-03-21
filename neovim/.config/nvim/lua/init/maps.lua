@@ -11,7 +11,7 @@ map('n', '<leader><CR>', 'gt', { noremap = true, desc = 'next tab' })
 map('n', '<leader>fr', ':Rename ', { noremap = true, desc = 'rename' })
 map('n', '<leader>gh', '<Plug>GitGoBack', { noremap = true, desc = 'history' })
 map('n', '<leader>fm', '<Plug>OpenDbMigrate', { noremap = true, desc = 'migrations' })
-map('n', '<leader>t', ':tab new<CR>', { noremap = true, desc = 'new tab' })
+map('n', '<leader><tab>', ':tab new<CR>', { noremap = true, desc = 'new tab' })
 map('n', '<leader>fz', ':tabnew %<CR>', { noremap = true, desc = 'zoom split' })
 map('n', '<s-tab>', 'za', options) -- toggle fold
 map('n', 'N', 'Nzz', options)
