@@ -20,4 +20,6 @@ export NODE_OPTIONS="--max-old-space-size=8192"
 
 export TIMEFMT=$'user\t%U\nsys\t%S\nreal\t%E\nmax mem\t%Mkb\ncpu\t%P\n'
 
+export COMPOSE_PROFILES="*"
+
 [[ -f ~/.zshenv.local ]] && source ~/.zshenv.local
