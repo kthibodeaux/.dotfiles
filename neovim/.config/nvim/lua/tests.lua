@@ -12,6 +12,19 @@ local go = {
   run_all = function()
     vim.cmd("VimuxRunCommand('go test ./...')")
   end,
+  run_file = function()
+    local filename = get_filename()
+
+    if not filename:find("_test%.") then
+      local dotIndex = filename:find("%.[^.]*$")
+
+      if dotIndex then
+        filename = filename:sub(1, dotIndex - 1) .. "_test" .. filename:sub(dotIndex)
+      end
+    end
+
+    vim.cmd('VimuxRunCommand("go test ./' .. filename .. '")')
+  end,
 }
 
 local rspec = {
