@@ -1,6 +1,19 @@
 local function get_filename()
-  local filename = vim.fn.expand('%')
-  return filename
+  local cwd = vim.fn.getcwd()
+  local full_path = vim.fn.expand('%:p')
+  local relative_path = full_path:gsub("^" .. cwd:gsub("[%^%$%(%)%%%.%[%]%*%+%-%?]", "%%%0") .. "/", "")
+
+  return relative_path
+end
+
+local function remove_until(original_string, until_string)
+  local start_position, end_position = original_string:find(until_string)
+
+  if start_position then
+    return original_string:sub(start_position)
+  else
+    return original_string
+  end
 end
 
 local function get_line_number()
@@ -32,10 +45,12 @@ local rspec = {
     vim.cmd("VimuxRunCommand('bundle exec rspec')")
   end,
   run_file = function()
-    vim.cmd('VimuxRunCommand("bundle exec rspec ' .. get_filename() .. '")')
+    local filename = remove_until(get_filename(), "spec")
+    vim.cmd('VimuxRunCommand("bundle exec rspec ' .. filename .. '")')
   end,
   run_nearest = function()
-    vim.cmd('VimuxRunCommand("bundle exec rspec ' .. get_filename() .. ':' .. get_line_number() .. '")')
+    local filename = remove_until(get_filename(), "spec")
+    vim.cmd('VimuxRunCommand("bundle exec rspec ' .. filename .. ':' .. get_line_number() .. '")')
   end,
 }
 
