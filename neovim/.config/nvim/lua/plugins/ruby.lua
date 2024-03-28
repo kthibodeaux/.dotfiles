@@ -1,11 +1,5 @@
 return {
   {
-    'thoughtbot/vim-rspec',
-    config = function()
-      vim.g.rspec_command = 'call VimuxRunCommand("bes {spec}\n")'
-    end,
-  },
-  {
     'RRethy/nvim-treesitter-endwise',
     config = function()
       require('nvim-treesitter.configs').setup {

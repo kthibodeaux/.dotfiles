@@ -31,6 +31,8 @@ end
 
 vim.opt.runtimepath:prepend(lazypath)
 
+_G.tests = require('tests')
+
 require('lazy').setup('plugins')
 
 require('init/abbr')
