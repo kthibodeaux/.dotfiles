@@ -1,3 +1,13 @@
+local function get_filename()
+  local filename = vim.fn.expand('%')
+  return filename
+end
+
+local function get_line_number()
+  local line, column = unpack(vim.api.nvim_win_get_cursor(0))
+  return line
+end
+
 local go = {
   run_all = function()
     vim.cmd("VimuxRunCommand('go test ./...')")
@@ -9,14 +19,10 @@ local rspec = {
     vim.cmd("VimuxRunCommand('bundle exec rspec')")
   end,
   run_file = function()
-    local filename = vim.fn.expand('%')
-    vim.cmd('VimuxRunCommand("bundle exec rspec ' .. filename .. '")')
+    vim.cmd('VimuxRunCommand("bundle exec rspec ' .. get_filename() .. '")')
   end,
   run_nearest = function()
-    local filename = vim.fn.expand('%')
-    local line, column = unpack(vim.api.nvim_win_get_cursor(0))
-
-    vim.cmd('VimuxRunCommand("bundle exec rspec ' .. filename .. ':' .. line .. '")')
+    vim.cmd('VimuxRunCommand("bundle exec rspec ' .. get_filename() .. ':' .. get_line_number() .. '")')
   end,
 }
 
