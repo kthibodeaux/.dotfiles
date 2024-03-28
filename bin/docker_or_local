@@ -2,7 +2,11 @@
 # vim:filetype=ruby
 
 ALL_FILES = Dir.entries(Dir.pwd).freeze
-COMMAND = ARGV.join(' ')
+COMMAND = ARGV.reject { |e| e == '--force-local' }.join(' ')
+
+def force_local?
+  ARGV.include?('--force-local')
+end
 
 def prizepicks?
   @is_prizepicks ||= Dir.pwd.include?('prizepicks')
@@ -29,7 +33,12 @@ def config
   end
 end
 
-if prizepicks?
+if force_local?
+  puts 'forcing local execution'
+  puts
+
+  system COMMAND
+elsif prizepicks?
   system "#{ENV['HOME']}/dev/prizepicks/prizepicks-devenv/scripts/run_in_container \"#{COMMAND}\""
 elsif use_docker?
   command = COMMAND.split(' ')[0]
