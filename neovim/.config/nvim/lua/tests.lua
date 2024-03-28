@@ -40,17 +40,27 @@ local go = {
   end,
 }
 
+local js = {
+  run_all = function()
+    vim.cmd("VimuxRunCommand('yarn test')")
+  end,
+  run_file = function()
+    local filename = get_filename()
+    vim.cmd('VimuxRunCommand("yarn test ./' .. filename .. '")')
+  end,
+}
+
 local rspec = {
   run_all = function()
     vim.cmd("VimuxRunCommand('bundle exec rspec')")
   end,
   run_file = function()
     local filename = remove_until(get_filename(), "spec")
-    vim.cmd('VimuxRunCommand("bundle exec rspec ' .. filename .. '")')
+    vim.cmd('VimuxRunCommand("bundle exec rspec ./' .. filename .. '")')
   end,
   run_nearest = function()
     local filename = remove_until(get_filename(), "spec")
-    vim.cmd('VimuxRunCommand("bundle exec rspec ' .. filename .. ':' .. get_line_number() .. '")')
+    vim.cmd('VimuxRunCommand("bundle exec rspec ./' .. filename .. ':' .. get_line_number() .. '")')
   end,
 }
 
@@ -60,6 +70,7 @@ end
 
 return {
   go = go,
+  js = js,
   rspec = rspec,
   run_last = run_last,
 }
