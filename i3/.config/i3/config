@@ -1,5 +1,5 @@
 # vim:foldmethod=marker:foldlevel=0
-set $mod Mod1
+set $mod Mod4
 for_window [class="^.*"] border pixel 1
 
 # Font for window titles. Will also be used by the bar unless a different font
