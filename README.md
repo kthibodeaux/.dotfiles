@@ -12,4 +12,10 @@ cd .dotfiles
 bash setup
 ```
 
+## keyboard
+
+For international character support, add `Option "XkbVariant" "intl"` to the options in `/etc/X11/xorg.conf.d/00-keybord.conf`
+
+## rspec
+
 To run `rspec` with more or less cores, override `RSPEC_CORES` in `~/.zshenv.local`
