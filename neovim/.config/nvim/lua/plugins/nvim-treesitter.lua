@@ -23,6 +23,7 @@ return {
         'lua',
         'pug',
         'ruby',
+        'sql',
         'toml',
         'vim',
         'vue',
