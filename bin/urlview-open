@@ -1,0 +1,24 @@
+#!/bin/sh
+
+case "$@" in
+  *slack.com*)
+    xdg-open "$@"
+    ;;
+  *.jpg*)
+    feh "$@"
+    ;;
+  *.jpeg*)
+    feh "$@"
+    ;;
+  *.png*)
+    feh "$@"
+    ;;
+  *.gif*)
+    mpv "$@"
+    ;;
+  *.pdf*)
+    evince "$@"
+    ;;
+  *)
+    xdg-open "$@"
+esac
