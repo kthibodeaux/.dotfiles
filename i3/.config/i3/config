@@ -46,7 +46,8 @@ bindsym $mod+d exec rofi -show drun -theme dracula1 -font "Hack Nerd Font 36"
 bindsym $mod+Return exec alacritty
 
 # take a screenshot of selected region
-bindsym --release $mod+z exec scrot -s -e 'aws s3 cp $f s3://kthibodeaux-screenshots | echo -n "https://s3.amazonaws.com/kthibodeaux-screenshots/$n" | xclip -selection clipboard'
+bindsym --release $mod+x exec scrot -s -e 'aws s3 cp $f s3://kthibodeaux-screenshots | echo -n "https://s3.amazonaws.com/kthibodeaux-screenshots/$n" | xclip -selection clipboard'
+bindsym --release $mod+z exec scrot -s -e 'xclip -selection clipboard -t image/png -i $f'
 
 # kill focused window
 bindsym $mod+q kill
