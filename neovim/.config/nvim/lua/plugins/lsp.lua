@@ -9,6 +9,10 @@ return {
       lsp_zero.on_attach(function(client, bufnr)
         lsp_zero.default_keymaps({buffer = bufnr})
         lsp_zero.buffer_autoformat()
+
+        if (client.name == "eslint") then
+          vim.cmd('autocmd BufWritePre *.tsx,*.ts,*.jsx,*.js,*.vue EslintFixAll')
+        end
       end)
 
       vim.diagnostic.config({ virtual_text = false, })
