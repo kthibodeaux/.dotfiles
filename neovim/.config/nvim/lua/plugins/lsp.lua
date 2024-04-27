@@ -53,6 +53,7 @@ return {
     config = function()
       require('mason-lspconfig').setup({
         ensure_installed = {
+          'arduino_language_server',
           'bashls',
           'docker_compose_language_service',
           'dockerls',
