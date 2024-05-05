@@ -1,0 +1,63 @@
+#!/usr/bin/env ruby
+
+require 'yaml'
+
+CONFIG = YAML.safe_load(File.read('sketch.yaml'))
+
+class ArduinoAction
+  def call
+    return unless run?
+
+    system commands.join(' && ')
+  end
+
+  private
+
+  def run?
+    ARGV.include?(argument)
+  end
+
+  def fqbn
+    CONFIG['default_fqbn'] or raise "Missing 'default_fqbn' in sketch.yaml"
+  end
+
+  def port
+    CONFIG['default_port'] or raise "Missing 'default_port' in sketch.yaml"
+  end
+
+  def baud_rate
+    CONFIG['baud_rate'] or raise "Missing 'baud_rate' in sketch.yaml"
+  end
+end
+
+class ArduinoUpload < ArduinoAction
+  private
+
+  def argument
+    '--upload'
+  end
+
+  def commands
+    [
+      "arduino-cli compile --fqbn #{fqbn}",
+      "arduino-cli upload --fqbn #{fqbn} --port #{port} ./"
+    ]
+  end
+end
+
+class ArduinoMonitor < ArduinoAction
+  private
+
+  def argument
+    '--monitor'
+  end
+
+  def commands
+    [
+      "arduino-cli --port #{port} monitor -c Baudrate=#{baud_rate}"
+    ]
+  end
+end
+
+ArduinoUpload.new.call
+ArduinoMonitor.new.call
