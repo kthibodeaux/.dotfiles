@@ -1,6 +1,10 @@
 # vi: set ft=sh :
 # vim:foldmethod=marker:foldlevel=0
 
+# {{{ arduino
+alias am="arduino --monitor"
+alias aum="arduino --upload --monitor"
+# }}}
 # {{{ ruby
 alias be="bundle exec"
 alias bu="bundle update"
