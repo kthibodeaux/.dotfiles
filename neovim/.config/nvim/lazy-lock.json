@@ -39,7 +39,6 @@
   "vim-abolish": { "branch": "master", "commit": "dcbfe065297d31823561ba787f51056c147aa682" },
   "vim-argwrap": { "branch": "master", "commit": "f3e26a5ad249d09467804b92e760d08b1cc457a1" },
   "vim-css-color": { "branch": "master", "commit": "faa65935660a4596414fe21d57e2110faeb9e869" },
-  "vim-rails": { "branch": "master", "commit": "8972461e64c7c4bf049f2f86ea1bc571e8077b55" },
   "vim-surround": { "branch": "master", "commit": "3d188ed2113431cf8dac77be61b842acb64433d9" },
   "vim-textobj-ruby": { "branch": "master", "commit": "fb99d918273a65010b3ac4084371a19c34260c66" },
   "vim-textobj-user": { "branch": "master", "commit": "41a675ddbeefd6a93664a4dc52f302fe3086a933" },

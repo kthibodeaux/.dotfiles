@@ -10,11 +10,6 @@ return {
     end
   },
   {
-    'tpope/vim-rails',
-    lazy = true,
-    ft = 'ruby',
-  },
-  {
     'rhysd/vim-textobj-ruby',
     dependencies = {
       'kana/vim-textobj-user'
