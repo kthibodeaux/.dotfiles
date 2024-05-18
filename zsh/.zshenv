@@ -1,5 +1,5 @@
 export DOTFILES=$HOME/.dotfiles
-export PATH="$DOTFILES/bin:$HOME/opt/bin:$PATH"
+export PATH="$DOTFILES/bin:$HOME/opt/bin:$HOME/.local/share/bob/nvim-bin:$PATH"
 
 export BROWSER=/usr/bin/firefox
 export VISUAL=nvim
