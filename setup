@@ -114,4 +114,5 @@ sudo systemctl start bluetooth
 
 . ~/.dotfiles/setup_steps/shell.sh
 . ~/.dotfiles/setup_steps/ruby.sh
+. ~/.dotfiles/setup_steps/neovim.sh
 . ~/.dotfiles/setup_steps/tmux_plugins.sh
