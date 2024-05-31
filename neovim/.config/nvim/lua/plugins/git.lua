@@ -13,4 +13,7 @@ return {
       { '<leader>gd', ':VcsJump merge<CR>', desc = 'merge conflicts' },
     },
   },
+  {
+    'rhysd/committia.vim',
+  },
 }
