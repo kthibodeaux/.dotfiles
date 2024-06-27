@@ -13,7 +13,11 @@ export CLICOLOR=1
 
 export FZF_DEFAULT_COMMAND='ag -g "" --hidden --ignore .git'
 export FZF_COMPLETION_TRIGGER=',,'
-export FZF_DEFAULT_OPTS='--color dark,hl:33,hl+:37,fg+:235,bg+:0,fg+:254'
+if [ -n "$TMUX" ]; then
+  export FZF_DEFAULT_OPTS='--tmux --color dark,hl:33,hl+:37,fg+:235,bg+:0,fg+:254'
+else
+  export FZF_DEFAULT_OPTS='--color dark,hl:33,hl+:37,fg+:235,bg+:0,fg+:254'
+fi
 
 export RSPEC_CORES=12
 export NODE_OPTIONS="--max-old-space-size=8192"
