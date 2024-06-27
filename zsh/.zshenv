@@ -14,9 +14,7 @@ export CLICOLOR=1
 export FZF_DEFAULT_COMMAND='ag -g "" --hidden --ignore .git'
 export FZF_COMPLETION_TRIGGER=',,'
 if [ -n "$TMUX" ]; then
-  export FZF_DEFAULT_OPTS='--tmux 80% --color dark,hl:33,hl+:37,fg+:235,bg+:0,fg+:254'
-else
-  export FZF_DEFAULT_OPTS='--color dark,hl:33,hl+:37,fg+:235,bg+:0,fg+:254'
+  export FZF_DEFAULT_OPTS='--tmux 80%'
 fi
 
 export RSPEC_CORES=12
