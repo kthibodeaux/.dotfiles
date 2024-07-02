@@ -69,6 +69,7 @@ alias dp="dinner-planner"
 alias mine="wget -e robots=off -r -nc -np"
 alias serve="ruby -run -e httpd ./ -p 9999"
 alias ycal="cal $(date +"%Y")"
+alias tt="timetrace"
 # }}}
 # {{{ tmux
 alias t="tmux"
