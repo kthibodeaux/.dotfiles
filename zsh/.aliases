@@ -55,7 +55,6 @@ alias ds="git diff --staged"
 alias gp="git push"
 alias gb="git branch"
 alias gcp="git cherry-pick"
-alias gu="git up"
 alias gun="git reset HEAD"
 alias oops="git reset HEAD~1"
 

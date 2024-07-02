@@ -84,7 +84,7 @@ gdm() {
 dev() {
   base_branch=$(base_branch)
 
-  git checkout $base_branch && git up
+  git checkout $base_branch && git-up
 }
 
 br() {
@@ -121,7 +121,7 @@ changes() {
 
 pa() {
   root_dir=$(pwd)
-  ls -1 -d */ --indicator-style=none --color=never | xargs -I{} sh -c "echo {} && cd $root_dir/{} && git up"
+  ls -1 -d */ --indicator-style=none --color=never | xargs -I{} sh -c "echo {} && cd $root_dir/{} && git-up"
   cd $root_dir
 }
 

@@ -5,7 +5,6 @@ install_ruby() {
     ruby-install ruby-$1
     chruby $1
     gem install bundler
-    gem install git-up
     gem install neovim
     gem install rubocop
     gem install solargraph

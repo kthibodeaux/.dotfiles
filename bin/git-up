@@ -1,0 +1,17 @@
+#!/bin/sh
+
+original_branch=$(git branch --show-current)
+
+git fetch --all
+branches=$(git branch | sed 's/^\* //')
+
+for branch in $branches; do
+  echo "Rebasing branch \"$branch\""
+  git checkout "$branch"
+  git pull --rebase --autostash
+  echo ""
+done
+
+git checkout "$original_branch"
+
+echo "All branches have been updated."
