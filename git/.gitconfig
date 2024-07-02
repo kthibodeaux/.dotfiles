@@ -9,7 +9,7 @@
   rc = rebase --continue
   short-log = log --pretty=format:'%C(yellow)%h%Creset %s'
   wip = !git add --all && git commit -m 'WIP' && git push
-  up = !git-up && gdm
+  up = !git-up
 [format]
   pretty=format:%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an %ae>%Creset
 [commit]
