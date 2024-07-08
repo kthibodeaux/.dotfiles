@@ -4,12 +4,12 @@ end
 
 local function convert_to_spec_filename(filename)
   local app_filename = filename:gsub("app/", "spec/")
-  return app_filename:gsub(".rb", "_spec.rb")
+  return app_filename:gsub("%.rb$", "_spec.rb")
 end
 
 local function convert_to_app_filename(filename)
   local spec_filename = filename:gsub("spec/", "app/")
-  return spec_filename:gsub("_spec.rb", ".rb")
+  return spec_filename:gsub("%_spec.rb$", ".rb")
 end
 
 local function get_alternate_filename()
