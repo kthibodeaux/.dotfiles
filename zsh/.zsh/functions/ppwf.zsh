@@ -2,6 +2,11 @@ finished() {
   ppwf --create-pr
 }
 
+select_issue() {
+  $(fzf_prog)
+}
+
 next_story () {
-  ppwf --work-issue --issue $(ppwf --list-issues | fzf-tmux | awk '{print $1;}')
+  issue=$(ppwf --list-issues | select_issue | awk '{print $1;}')
+  ppwf --work-issue --issue $issue
 }
