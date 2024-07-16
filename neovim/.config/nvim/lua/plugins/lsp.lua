@@ -63,6 +63,7 @@ return {
           'jsonls',
           'solargraph',
           'tsserver',
+          'volar',
           'yamlls'
         }
       })
