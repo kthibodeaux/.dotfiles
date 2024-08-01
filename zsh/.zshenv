@@ -24,4 +24,6 @@ export TIMEFMT=$'user\t%U\nsys\t%S\nreal\t%E\nmax mem\t%Mkb\ncpu\t%P\n'
 
 export COMPOSE_PROFILES="*"
 
+export WORK_DIR="$HOME/dev/prizepicks"
+
 [[ -f ~/.zshenv.local ]] && source ~/.zshenv.local

@@ -39,7 +39,7 @@ if force_local?
 
   system COMMAND
 elsif prizepicks?
-  system "#{ENV['HOME']}/dev/prizepicks/prizepicks-devenv/scripts/run_in_container \"#{COMMAND}\""
+  system "#{ENV['WORK_DIR']}/prizepicks-devenv/scripts/run_in_container \"#{COMMAND}\""
 elsif use_docker?
   command = COMMAND.split(' ')[0]
   container = use_config? ? config[command] || default_image : default_image

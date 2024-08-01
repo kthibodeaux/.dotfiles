@@ -1,0 +1,7 @@
+#!/bin/zsh
+
+if [ ! -f docker-compose.yml ]; then
+  cd $WORK_DIR/prizepicks-devenv
+fi
+
+lazydocker -f docker-compose.yml
