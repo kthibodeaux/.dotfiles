@@ -22,29 +22,12 @@ class SmartInteractiveRebase
     !ARGV.first.nil?
   end
 
-  def part?
-    current_branch_name.downcase.start_with?('part')
-  end
-
   def base_branch
-    if part?
-      unique_id = current_branch_name.split('/').last.split('-').first
-      epic_branches.detect { |e| e.include?(unique_id) }
-    else
-      `zsh -lic 'echo $(base_branch)'`.strip.chomp
-    end
+    `zsh -lic 'echo $(base_branch)'`.strip.chomp
   end
 
   def current_branch_name
     `git branch --show-current`.strip.chomp
-  end
-
-  def epic_branches
-    `git branch -a`
-      .split("\n")
-      .map { |e| e.delete('*') }
-      .map { |e| e.strip }
-      .select { |e| e.start_with?('epic') }
   end
 end
 
