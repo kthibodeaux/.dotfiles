@@ -46,5 +46,4 @@ mods = "Control|Alt"
 hide_when_typing = true
 
 [window]
-decorations = "none"
 opacity = 0.9
