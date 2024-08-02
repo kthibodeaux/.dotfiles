@@ -1,5 +1,5 @@
 import = [
-  "/home/kthibodeaux/.config/alacritty/font.toml"
+  "~/.config/alacritty/font.toml"
 ]
 
 [[colors.indexed_colors]]
