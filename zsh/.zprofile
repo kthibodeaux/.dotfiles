@@ -9,8 +9,10 @@ path=(~/.dotfiles/bin ~/opt/bin ~/go/bin /opt/homebrew/bin /opt/homebrew/sbin $p
 
 [[ -f ~/.zprofile.local ]] && source ~/.zprofile.local
 
-export HOMEBREW_PREFIX="/opt/homebrew"
-export HOMEBREW_CELLAR="/opt/homebrew/Cellar"
-export HOMEBREW_REPOSITORY="/opt/homebrew"
-[ -z "${MANPATH-}" ] || export MANPATH=":${MANPATH#:}"
-export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}"
+if [[ $(uname) == "Darwin" ]]; then
+  export HOMEBREW_PREFIX="/opt/homebrew"
+  export HOMEBREW_CELLAR="/opt/homebrew/Cellar"
+  export HOMEBREW_REPOSITORY="/opt/homebrew"
+  [ -z "${MANPATH-}" ] || export MANPATH=":${MANPATH#:}"
+  export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}"
+fi
