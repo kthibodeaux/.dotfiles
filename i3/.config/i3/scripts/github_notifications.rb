@@ -1,4 +1,4 @@
-#!/usr/bin/env /home/kthibodeaux/.rubies/ruby-3.3.3/bin/ruby
+#!/usr/bin/env /home/kthibodeaux/.rubies/ruby-3.3.4/bin/ruby
 require 'json'
 
 `firefox https://github.com/notifications?query=is%3Aunread` if ENV['BLOCK_BUTTON'].to_i == 1

@@ -46,12 +46,18 @@ prompt filthy
 [[ -f ~/.aliases ]] && source ~/.aliases
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
-source /usr/share/fzf/key-bindings.zsh
-source /usr/share/fzf/completion.zsh
+if [[ $(uname) == "Darwin" ]]; then
+  source /opt/homebrew/opt/fzf/shell/completion.zsh
+  source /opt/homebrew/opt/fzf/shell/key-bindings.zsh
+  source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
+else
+  source /usr/share/fzf/key-bindings.zsh
+  source /usr/share/fzf/completion.zsh
+  source /usr/share/chruby/chruby.sh
+fi
 
-source /usr/share/chruby/chruby.sh
 source ~/.zsh/functions/chruby_auto.sh
 
-chruby ruby-3.3.3
+chruby ruby-3.3.4
 
 opentmux
