@@ -38,3 +38,4 @@ vim.opt.visualbell = true
 vim.opt.winwidth = 90
 vim.opt.wrap = false
 vim.opt.mouse = ''
+vim.opt.exrc = true
