@@ -5,15 +5,14 @@ return {
     local wk = require("which-key")
     wk.setup({
       plugins = { spelling = true },
-      key_labels = { ["<leader>"] = "SPC" },
+      replace = { ["<leader>"] = "SPC" },
     })
-    wk.register({
-      mode = { "n", "v" },
+    wk.add({
       -- custom names for keys
-      ["<leader>f"] = { name = "+file" },
-      ["<leader>g"] = { name = "+git" },
-      ["<leader>r"] = { name = "+specs" },
-      ["<leader>l"] = { name = "+lsp" },
+      { "<leader>f",  name = "+file" },
+      { "<leader>g",  name = "+git" },
+      { "<leader>r",  name = "+specs" },
+      { "<leader>l",  name = "+lsp" },
     })
   end,
 }
