@@ -4,7 +4,7 @@ function wd() {
   if [[ $# == 0 ]]; then
     if [ -f $WD_DIRS_LOCATION ]; then
       files=$(cat $WD_DIRS_LOCATION | sed 's/#.*//g' | sed '/^\s*$/d' | sort | uniq)
-      destination=$(echo $files | $(fzf_prog) | sed 's/^.*: //' )
+      destination=$(echo $files | fzf | sed 's/^.*: //' )
 
       if [[ $destination != '' ]]; then
         cd $destination

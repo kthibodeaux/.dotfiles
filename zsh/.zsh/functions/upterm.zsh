@@ -1,5 +1,5 @@
 choose_pairs() {
-  names=($(cat ~/pairs.txt | $(fzf_prog) -m))
+  names=($(cat ~/pairs.txt | fzf -m))
   printf "--github-user %s " "${names[@]}"
 }
 
