@@ -50,4 +50,7 @@ return {
     event = "UIEnter",
     config = true,
   },
+  {
+    'andymass/vim-matchup',
+  },
 }
