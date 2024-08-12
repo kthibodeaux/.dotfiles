@@ -45,5 +45,8 @@ mods = "Control|Alt"
 [mouse]
 hide_when_typing = true
 
+[selection]
+save_to_clipboard = true
+
 [window]
 opacity = 0.9
