@@ -11,7 +11,7 @@ export FILTHY_SHOW_EXIT_CODE=1
 # enable colored output from ls, etc
 export CLICOLOR=1
 
-export FZF_DEFAULT_COMMAND='ag -g "" --hidden --ignore .git'
+export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
 export FZF_COMPLETION_TRIGGER=',,'
 if [ -n "$TMUX" ]; then
   export FZF_DEFAULT_OPTS='--tmux 80%'
