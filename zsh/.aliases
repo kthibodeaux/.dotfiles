@@ -22,7 +22,7 @@ alias clean_devdb="bundle exec rake db:drop db:setup RAILS_ENV=development"
 alias clean_testdb="bundle exec rake db:drop db:setup RAILS_ENV=test"
 alias pclean_testdb="bundle exec rake parallel:drop[$RSPEC_CORES] parallel:setup[$RSPEC_CORES] RAILS_ENV=test"
 
-alias rl="bundle exec rails routes | ag"
+alias rl="bundle exec rails routes | rg"
 # }}}
 # {{{ javascript
 alias ya="yarn"
@@ -34,8 +34,6 @@ alias docker-nuke="docker container prune -f; docker volume prune -f; docker ima
 alias rebuild="docker compose down; RESEED=true docker compose up -d"
 # }}}
 # {{{ files
-alias agh="ag --hidden"
-
 alias la="ls --color -pa"
 alias ls="ls --color -p"
 alias ll="ls --color -plh"
