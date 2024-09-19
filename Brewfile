@@ -1,3 +1,4 @@
+brew "bat"
 brew "chruby"
 brew "fd"
 brew "fzf"
