@@ -1,12 +1,14 @@
 #!/bin/bash
 
-internal=$(xrandr -q | grep " connected" | cut -d" " -f1 | grep eDP)
-external=$(xrandr -q | grep " connected" | cut -d" " -f1 | grep HDMI)
+CURRENT_HOSTNAME=$(hostname)
 
-if [ -n "$external" ]; then
-  # on laptop with lid closed
-  xrandr --output "$internal" --off
-  xrandr --output "$external" --auto
+
+if [ "$CURRENT_HOSTNAME" = "all-mother" ]; then
+  horizontal=$(xrandr -q | grep " connected" | cut -d" " -f1 | grep HDMI)
+  vertical=$(xrandr -q | grep " connected" | cut -d" " -f1 | grep DP)
+
+  xrandr --output "$horizontal" --auto
+  xrandr --output "$vertical" --auto --right-of "$horizontal" --rotate left --pos 0x1080
 fi
 
 feh --bg-scale /home/kthibodeaux/Pictures/background.png
