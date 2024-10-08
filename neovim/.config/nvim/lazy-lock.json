@@ -39,6 +39,7 @@
   "qfview.nvim": { "branch": "main", "commit": "f7a4fd8d700d02f6c1274f02115fa4e68e63aa54" },
   "quick-scope": { "branch": "master", "commit": "4d35d3b2bc6794666353dcc241b2680bd560416f" },
   "rename.vim": { "branch": "master", "commit": "f133763b0bbd79039f4e071a467ea8fc27d97dbd" },
+  "render-markdown.nvim": { "branch": "main", "commit": "d3a565eb4c46005a390d4b19f80f9ad719607df6" },
   "splitjoin.vim": { "branch": "main", "commit": "cab1e6331a170403d227a31b5e63759214c37a8d" },
   "tig.vim": { "branch": "master", "commit": "33c0ea68972f0631ef01604c9e33b798ebc8a911" },
   "undotree": { "branch": "master", "commit": "56c684a805fe948936cda0d1b19505b84ad7e065" },
