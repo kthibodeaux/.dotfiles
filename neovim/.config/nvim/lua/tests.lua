@@ -56,11 +56,11 @@ local rspec = {
   end,
   run_file = function()
     local filename = remove_until(get_filename(), "spec")
-    vim.cmd('VimuxRunCommand("bundle exec rspec ./' .. filename .. '")')
+    vim.cmd('VimuxRunCommand("bundle exec rspec -f doc ./' .. filename .. '")')
   end,
   run_nearest = function()
     local filename = remove_until(get_filename(), "spec")
-    vim.cmd('VimuxRunCommand("bundle exec rspec ./' .. filename .. ':' .. get_line_number() .. '")')
+    vim.cmd('VimuxRunCommand("bundle exec rspec -f doc ./' .. filename .. ':' .. get_line_number() .. '")')
   end,
 }
 
