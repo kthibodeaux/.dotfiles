@@ -7,7 +7,7 @@ if [ "$CURRENT_HOSTNAME" = "all-mother" ]; then
   horizontal=$(xrandr -q | grep " connected" | cut -d" " -f1 | grep HDMI)
   vertical=$(xrandr -q | grep " connected" | cut -d" " -f1 | grep DP)
 
-  xrandr --output "$horizontal" --auto
+  xrandr --output "$horizontal" --auto --primary
   xrandr --output "$vertical" --auto --right-of "$horizontal" --rotate left --pos 0x1080
 fi
 
