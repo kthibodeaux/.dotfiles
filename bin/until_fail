@@ -1,0 +1,11 @@
+#!/bin/zsh
+
+source ~/.zshrc
+
+command_to_run="$@"
+
+while eval $command_to_run; do
+  echo "Command succeeded, running again..."
+done
+
+echo "Command failed with exit code $?"
