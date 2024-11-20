@@ -14,7 +14,9 @@ export CLICOLOR=1
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
 export FZF_COMPLETION_TRIGGER=',,'
 if [ -n "$TMUX" ]; then
-  export FZF_DEFAULT_OPTS='--tmux 80%'
+  if [[ "$TMUX" != *"tmate"* ]]; then
+    export FZF_DEFAULT_OPTS='--tmux 80%'
+  fi
 fi
 
 export RSPEC_CORES=12
