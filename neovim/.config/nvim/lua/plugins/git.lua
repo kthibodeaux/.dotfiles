@@ -4,7 +4,7 @@ return {
     keys = {
       { '<leader>gc', '<Plug>TigFileHistory', desc = 'file history' },
       { '<leader>gb', '<Plug>TigBlame', desc = 'blame' },
-      { '<leader>gl', '<Plug>TigLatestCommitForLine', desc = 'latest commit for line' },
+      { '<leader>gn', '<Plug>TigLatestCommitForLine', desc = 'latest commit for line' },
     },
   },
   {
