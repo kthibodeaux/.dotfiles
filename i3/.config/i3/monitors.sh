@@ -11,4 +11,13 @@ if [ "$CURRENT_HOSTNAME" = "all-mother" ]; then
   xrandr --output "$vertical" --auto --right-of "$horizontal" --rotate left --pos 0x1080
 fi
 
+if [ "$CURRENT_HOSTNAME" = "linux-kthibodeaux" ]; then
+  monitor=$(xrandr -q | grep " connected" | cut -d" " -f1 | grep HDMI)
+  laptop=$(xrandr -q | grep " connected" | cut -d" " -f1 | grep DP)
+
+  echo "$laptop"
+
+  xrandr --output "$laptop" --off
+fi
+
 feh --bg-scale /home/kthibodeaux/Pictures/background.png
