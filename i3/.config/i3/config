@@ -22,7 +22,7 @@ exec --no-startup-id xautolock -time 10 -locker blurlock
 exec --no-startup-id picom
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
-exec --no-startup-id redshift-gtk
+exec --no-startup-id redshift-gtk -l 33:-84 -O 3200
 exec --no-startup-id sleep 4 && xmodmap ~/.Xmodmap &
 # }}}
 # {{{ floaters
@@ -39,8 +39,8 @@ smart_borders on
 # {{{ keybinds
 # {{{ applications
 # application launcher
-bindsym $mod+t exec rofi -show window -theme dracula1 -font "Hack Nerd Font 36"
-bindsym $mod+d exec rofi -show drun -theme dracula1 -font "Hack Nerd Font 36"
+bindsym $mod+t exec rofi -show window -font "Hack Nerd Font 36"
+bindsym $mod+d exec rofi -show drun -font "Hack Nerd Font 36"
 
 # terminal
 bindsym $mod+Return exec alacritty

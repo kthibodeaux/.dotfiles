@@ -51,9 +51,14 @@ if [[ $(uname) == "Darwin" ]]; then
   source /opt/homebrew/opt/fzf/shell/key-bindings.zsh
   source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
 else
-  source /usr/share/fzf/key-bindings.zsh
-  source /usr/share/fzf/completion.zsh
-  source /usr/share/chruby/chruby.sh
+  if [ "$(hostname)" = "all-mother" ]; then
+    source /usr/share/fzf/key-bindings.zsh
+    source /usr/share/fzf/completion.zsh
+    source /usr/share/chruby/chruby.sh
+  else
+    source ~/.fzf.zsh
+    source ~/opt/chruby-0.3.9/share/chruby/chruby.sh
+  fi
 fi
 
 source ~/.zsh/functions/chruby_auto.sh
