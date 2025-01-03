@@ -58,4 +58,13 @@ return {
     opts = {},
     dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' },
   },
+   {
+    "andythigpen/nvim-coverage",
+    version = "*",
+    config = function()
+      require("coverage").setup({
+        auto_reload = true,
+      })
+    end,
+  },
 }
