@@ -6,6 +6,8 @@ vim.g.maplocalleader = ','
 vim.g.netrw_liststyle = 3
 vim.g.netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
 
+vim.g.vimwiki_ext2syntax = {}
+
 vim.opt.signcolumn = 'yes'
 vim.opt.backspace = 'indent,start,eol'
 vim.opt.backupcopy = 'yes'
