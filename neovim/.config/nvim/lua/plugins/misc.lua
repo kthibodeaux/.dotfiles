@@ -61,4 +61,12 @@ return {
   {
     'vimwiki/vimwiki',
   },
+  {
+    "vimwiki/vimwiki",
+    init = function()
+      vim.g.vimwiki_ext2syntax = {
+        wiki = 'default',
+      }
+    end,
+  }
 }
