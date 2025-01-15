@@ -17,6 +17,6 @@ map('n', '<s-tab>', 'za', options) -- toggle fold
 map('n', 'N', 'Nzz', options)
 map('n', 'S', 'i<cr><esc>^mwgk:silent! s/\v +$//<cr>:noh<cr>$', options) -- split line
 map('n', 'n', 'nzz', options)
-map('n', '<leader>ws', ':e ~/dev/standup.norg<CR>', { desc = 'standup notes' })
+map('n', '<leader>ws', ':e ~/dev/work-wiki/standup.wiki<CR>', { desc = 'standup notes' })
 
 map('n', '<leader>gl', ":lua require('git').line_history()<CR>", { noremap = true, desc = 'line history' })
