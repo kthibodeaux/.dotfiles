@@ -17,5 +17,5 @@ function wd() {
 }
 
 function wda() {
-  echo $@: $(pwd) >> $WD_DIRS_LOCATION
+  echo $(pwd) >> $WD_DIRS_LOCATION
 }
