@@ -11,6 +11,7 @@ stow -vv less
 stow -vv mailcap
 stow -vv neovim
 stow -vv picom
+stow -vv polybar
 stow -vv ranger
 stow -vv readline
 stow -vv redshift
