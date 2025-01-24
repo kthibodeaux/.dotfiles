@@ -3,7 +3,7 @@
 if [[ $# -eq 1 ]]; then
   selected=$1
 else
-  selected=$(cat ~/.dirs | fzf)
+  selected=$(cat ~/.dirs | grep -v $(pwd) | fzf)
 fi
 
 if [[ -z $selected ]]; then
