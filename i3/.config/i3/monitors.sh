@@ -17,6 +17,7 @@ if [ "$CURRENT_HOSTNAME" = "linux-kthibodeaux" ]; then
 
   echo "$laptop"
 
+  xrandr --output "$monitor" --auto --primary
   xrandr --output "$laptop" --off
 fi
 
