@@ -58,15 +58,4 @@ return {
     opts = {},
     dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' },
   },
-  {
-    'vimwiki/vimwiki',
-  },
-  {
-    "vimwiki/vimwiki",
-    init = function()
-      vim.g.vimwiki_ext2syntax = {
-        wiki = 'default',
-      }
-    end,
-  }
 }
