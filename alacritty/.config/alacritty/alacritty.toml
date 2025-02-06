@@ -1,6 +1,3 @@
-import = [
-  "~/.config/alacritty/font.toml"
-]
 
 [[colors.indexed_colors]]
 color = "0xea9a97"
@@ -47,3 +44,8 @@ hide_when_typing = true
 
 [window]
 opacity = 0.9
+
+[general]
+import = [
+  "~/.config/alacritty/font.toml"
+]
