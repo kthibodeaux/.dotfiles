@@ -46,19 +46,14 @@ prompt filthy
 [[ -f ~/.aliases ]] && source ~/.aliases
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
-if [[ $(uname) == "Darwin" ]]; then
-  source /opt/homebrew/opt/fzf/shell/completion.zsh
-  source /opt/homebrew/opt/fzf/shell/key-bindings.zsh
-  source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
+if [ -d "/home/linuxbrew" ]; then
+  source /home/linuxbrew/.linuxbrew/opt/fzf/shell/completion.zsh
+  source /home/linuxbrew/.linuxbrew/opt/fzf/shell/key-bindings.zsh
+  source /home/linuxbrew/.linuxbrew/opt/chruby/share/chruby/chruby.sh
 else
-  if [ "$(hostname)" = "all-mother" ]; then
-    source /usr/share/fzf/key-bindings.zsh
-    source /usr/share/fzf/completion.zsh
-    source /usr/share/chruby/chruby.sh
-  else
-    source ~/.fzf.zsh
-    source ~/opt/chruby-0.3.9/share/chruby/chruby.sh
-  fi
+  source /usr/share/fzf/key-bindings.zsh
+  source /usr/share/fzf/completion.zsh
+  source /usr/share/chruby/chruby.sh
 fi
 
 source ~/.zsh/functions/chruby_auto.sh
