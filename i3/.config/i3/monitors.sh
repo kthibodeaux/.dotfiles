@@ -21,4 +21,4 @@ if [ "$CURRENT_HOSTNAME" = "linux-kthibodeaux" ]; then
   xrandr --output "$laptop" --off
 fi
 
-feh --bg-scale /home/kthibodeaux/Pictures/background.png
+feh --bg-scale $HOME/Pictures/background.png
