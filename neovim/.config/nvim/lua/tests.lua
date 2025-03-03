@@ -28,15 +28,13 @@ local go = {
   run_file = function()
     local filename = get_filename()
 
-    if not filename:find("_test%.") then
-      local dotIndex = filename:find("%.[^.]*$")
+    local directory = filename:match("(.*/)")
 
-      if dotIndex then
-        filename = filename:sub(1, dotIndex - 1) .. "_test" .. filename:sub(dotIndex)
-      end
+    if directory ~= "./" then
+      directory = directory:sub(1, #directory - 1)
     end
 
-    vim.cmd('VimuxRunCommand("go test ./' .. filename .. '")')
+    vim.cmd('VimuxRunCommand("go test ./' .. directory .. '")')
   end,
 }
 
