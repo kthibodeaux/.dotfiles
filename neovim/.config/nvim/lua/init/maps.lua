@@ -18,5 +18,6 @@ map('n', 'N', 'Nzz', options)
 map('n', 'S', 'i<cr><esc>^mwgk:silent! s/\v +$//<cr>:noh<cr>$', options) -- split line
 map('n', 'n', 'nzz', options)
 map('n', '<leader>ws', ':e ~/wikis/work/standup.md<CR>', { desc = 'standup notes' })
+map('n', '<leader>ww', ':e ~/wikis/work/weekly.md<CR>', { desc = 'weekly sync notes' })
 
 map('n', '<leader>gl', ":lua require('git').line_history()<CR>", { noremap = true, desc = 'line history' })
