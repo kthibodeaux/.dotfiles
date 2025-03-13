@@ -72,14 +72,14 @@ bindsym XF86MonBrightnessDown exec light -U 20
 # {{{ workspaces
 set $workspace1 "1/CODE"
 set $workspace2 "2/BROWSE"
-set $workspace3 "3/SLACK"
+set $workspace3 "3/CHAT"
 set $workspace4 "4"
 set $workspace5 "5"
 set $workspace6 "6"
 set $workspace7 "7"
 set $workspace8 "8"
 set $workspace9 "9"
-set $workspace10 "0/CHAT"
+set $workspace10 "0"
 
 bindsym $mod+1 workspace $workspace1
 bindsym $mod+2 workspace $workspace2
