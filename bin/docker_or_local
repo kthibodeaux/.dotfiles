@@ -39,7 +39,14 @@ if force_local?
 
   system COMMAND
 elsif prizepicks?
-  system "#{ENV['WORK_DIR']}/prizepicks-devenv/scripts/run_in_container \"#{COMMAND}\""
+  current_directory = Dir.pwd.split('/').last
+
+  folder_map = %w[prizepicks-devenv devex-devenv].flat_map do |devenv_repo|
+    repo_list_path = "#{ENV['WORK_DIR']}/#{devenv_repo}/scripts/repository_list"
+    File.readlines(repo_list_path).map(&:strip).map { |repo| [repo, devenv_repo] }
+  end.to_h
+
+  system "#{ENV['WORK_DIR']}/#{folder_map[current_directory]}/scripts/run_in_container \"#{COMMAND}\""
 elsif use_docker?
   command = COMMAND.split(' ')[0]
   container = use_config? ? config[command] || default_image : default_image
