@@ -12,4 +12,4 @@ install_ruby() {
   echo ""
 }
 
-install_ruby "3.4.1"
+install_ruby "3.4.2"

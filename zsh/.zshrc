@@ -58,6 +58,6 @@ fi
 
 source ~/.zsh/functions/chruby_auto.sh
 
-chruby ruby-3.4.1
+chruby ruby-3.4.2
 
 opentmux
