@@ -46,7 +46,15 @@ elsif prizepicks?
     File.readlines(repo_list_path).map(&:strip).map { |repo| [repo, devenv_repo] }
   end.to_h
 
-  system "#{ENV['WORK_DIR']}/#{folder_map[current_directory]}/scripts/run_in_container \"#{COMMAND}\""
+  if folder_map[current_directory]
+    system "#{ENV['WORK_DIR']}/#{folder_map[current_directory]}/scripts/run_in_container \"#{COMMAND}\""
+  else
+    puts "could not determine prizepicks devenv repo for #{current_directory}"
+    puts 'falling back to system'
+    puts
+
+    system COMMAND
+  end
 elsif use_docker?
   command = COMMAND.split(' ')[0]
   container = use_config? ? config[command] || default_image : default_image
