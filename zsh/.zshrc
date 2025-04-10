@@ -2,9 +2,7 @@ unsetopt nomatch
 setopt extendedglob
 
 # completion
-fpath=(~/.zsh/completion ~/.zsh/filthy $fpath)
-autoload -U compinit
-compinit
+fpath=(~/.zsh/filthy $fpath)
 
 # completion
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
