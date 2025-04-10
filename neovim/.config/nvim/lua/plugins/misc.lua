@@ -58,4 +58,24 @@ return {
     opts = {},
     dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' },
   },
+  {
+    "nvzone/showkeys",
+    cmd = "ShowkeysToggle",
+    opts = {
+      maxkeys = 8,
+      keyformat = {
+        ["<BS>"] = "󰁮 ",
+        ["<CR>"] = "󰘌",
+        ["<Space>"] = "󱁐",
+        ["<Up>"] = "󰁝",
+        ["<Down>"] = "󰁅",
+        ["<Left>"] = "󰁍",
+        ["<Right>"] = "󰁔",
+        ["<PageUp>"] = "Page 󰁝",
+        ["<PageDown>"] = "Page 󰁅",
+        ["<M>"] = "Alt",
+        ["<C>"] = "Ctrl",
+      },
+    },
+  },
 }
