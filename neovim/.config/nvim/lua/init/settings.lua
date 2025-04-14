@@ -39,3 +39,4 @@ vim.opt.winwidth = 90
 vim.opt.wrap = false
 vim.opt.mouse = ''
 vim.opt.exrc = true
+vim.opt.winborder = 'double'
