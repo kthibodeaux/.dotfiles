@@ -124,6 +124,3 @@ pa() {
   ls -1 -d */ --indicator-style=none --color=never | xargs -I{} sh -c "echo {} && cd $root_dir/{} && git-up"
   cd $root_dir
 }
-
-# Complete g like git
-compdef g=git
