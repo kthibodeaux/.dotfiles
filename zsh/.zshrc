@@ -47,15 +47,9 @@ prompt filthy
 if [ -d "/home/linuxbrew" ]; then
   source /home/linuxbrew/.linuxbrew/opt/fzf/shell/completion.zsh
   source /home/linuxbrew/.linuxbrew/opt/fzf/shell/key-bindings.zsh
-  source /home/linuxbrew/.linuxbrew/opt/chruby/share/chruby/chruby.sh
 else
   source /usr/share/fzf/key-bindings.zsh
   source /usr/share/fzf/completion.zsh
-  source /usr/share/chruby/chruby.sh
 fi
-
-source ~/.zsh/functions/chruby_auto.sh
-
-chruby ruby-3.4.2
 
 opentmux

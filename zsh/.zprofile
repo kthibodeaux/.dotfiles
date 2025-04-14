@@ -16,3 +16,13 @@ if [[ $(uname) == "Darwin" ]]; then
   [ -z "${MANPATH-}" ] || export MANPATH=":${MANPATH#:}"
   export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}"
 fi
+
+if [ -d "/home/linuxbrew" ]; then
+  source /home/linuxbrew/.linuxbrew/opt/chruby/share/chruby/chruby.sh
+else
+  source /usr/share/chruby/chruby.sh
+fi
+
+chruby ruby-3.4.2
+
+source ~/.zsh/functions/chruby_auto.sh
