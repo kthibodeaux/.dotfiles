@@ -37,3 +37,4 @@ require('lazy').setup('plugins')
 
 require('init/maps')
 require('init/commands')
+require('init/lsp')
