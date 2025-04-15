@@ -5,4 +5,7 @@ return {
   init_options = {
     formatter = "auto",
   },
+  on_attach = function(client, bufnr)
+    client.server_capabilities.semanticTokensProvider = nil
+  end,
 }
