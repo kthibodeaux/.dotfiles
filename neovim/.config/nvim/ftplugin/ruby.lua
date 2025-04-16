@@ -11,6 +11,3 @@ buffer_map(0, 'n', '<leader>ra', ':lua _G.tests.rspec.run_all()<CR>', { noremap 
 buffer_map(0, 'n', '<leader>rl', ":lua _G.tests.run_last()<CR>", { noremap = true, desc = 'last test' })
 
 vim.cmd('iabbr <buffer> pry ::Kernel.binding.pry')
-vim.cmd('iabbr <buffer> rr attr_reader')
-vim.cmd('iabbr <buffer> rw attr_writer')
-vim.cmd('iabbr <buffer> ra attr_accessor')
