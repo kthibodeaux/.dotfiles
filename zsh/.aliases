@@ -32,6 +32,7 @@ alias k="docker"
 alias c="docker compose"
 alias docker-nuke="docker container prune -f; docker volume prune -f; docker image prune -f"
 alias rebuild="docker compose down; RESEED=true docker compose up -d"
+alias cbuild="COMPOSE_PROFILES='*' docker compose build --build-arg UID=$(id -u) --build-arg GID=$(id -g) --no-cache"
 # }}}
 # {{{ files
 alias la="ls --color -pa"
