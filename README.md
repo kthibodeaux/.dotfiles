@@ -4,7 +4,7 @@
 
 Before running the below commands make sure you can clone from GitHub by adding your SSH key to your profile.
 
-### linux
+### endeavour
 
 These instructions are for a fresh Endeavour i3 edition install.
 
@@ -12,19 +12,6 @@ These instructions are for a fresh Endeavour i3 edition install.
 git clone git@github.com:kthibodeaux/.dotfiles.git
 cd .dotfiles
 bash setup
-```
-
-### macos
-
-```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-export PATH="/opt/homebrew/bin:$PATH"
-brew install stow
-git clone git@github.com:kthibodeaux/.dotfiles.git
-cd .dotfiles
-sh stow_all
-brew bundle
-ruby-install <version>
 ```
 
 ## rspec
