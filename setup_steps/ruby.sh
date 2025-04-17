@@ -7,7 +7,7 @@ install_ruby() {
     gem install bundler
     gem install neovim
     gem install rubocop
-    gem install solargraph
+    gem install ruby-lsp
   fi
   echo ""
 }
