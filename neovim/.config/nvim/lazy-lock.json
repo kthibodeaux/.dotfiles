@@ -1,5 +1,6 @@
 {
   "Recover.vim": { "branch": "master", "commit": "e61319bce3cd1004e5b695933296d8f267dd65a3" },
+  "blink-copilot": { "branch": "main", "commit": "71102fe2fa1616353f8cb315bb8b85db0812a218" },
   "blink.cmp": { "branch": "main", "commit": "cb5e346d9e0efa7a3eee7fd4da0b690c48d2a98e" },
   "catppuccin": { "branch": "main", "commit": "5b5e3aef9ad7af84f463d17b5479f06b87d5c429" },
   "committia.vim": { "branch": "master", "commit": "c8c0f255e8090ed90dd9d5dd2e8672994f8e3671" },
