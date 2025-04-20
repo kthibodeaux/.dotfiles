@@ -8,6 +8,7 @@ install_ruby() {
     gem install neovim
     gem install rubocop
     gem install ruby-lsp
+    gem install ruby-lsp-rails
   fi
   echo ""
 }
