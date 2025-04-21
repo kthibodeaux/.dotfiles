@@ -7,6 +7,7 @@ install_ruby() {
     gem install bundler
     gem install neovim
     gem install rubocop
+    gem install rubocop-rspec
     gem install ruby-lsp
     gem install ruby-lsp-rails
   fi
