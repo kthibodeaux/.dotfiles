@@ -24,6 +24,9 @@ alias pclean_testdb="bundle exec rake parallel:drop[$RSPEC_CORES] parallel:setup
 
 alias rl="bundle exec rails routes | rg"
 # }}}
+# {{{ go
+alias got="echo 'go mod tidy' && go mod tidy && echo 'go mod download' && go mod download --force-local"
+# }}}
 # {{{ javascript
 alias ya="yarn"
 # }}}
