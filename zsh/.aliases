@@ -8,7 +8,7 @@ alias aum="arduino --upload --monitor"
 # {{{ ruby
 alias be="bundle exec"
 alias bu="bundle update"
-alias bi="bundle install"
+alias bi="bundle install && bundle install --force-local"
 
 alias ber="bundle exec rails"
 alias bes="bundle exec rspec"
