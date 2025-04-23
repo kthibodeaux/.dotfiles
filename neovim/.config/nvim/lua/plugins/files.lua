@@ -22,7 +22,7 @@ return {
     lazy = false,
     opts = {},
     keys = {
-      { '-', "<cmd>Oil<CR>", desc = 'open parent dir' },
+      { '<leader>s', "<cmd>Oil<CR>", desc = 'open parent dir' },
     },
   }
 }
