@@ -21,6 +21,7 @@ return {
         'bash',
         'diff',
         'git_rebase',
+        'go',
         'javascript',
         'json',
         'lua',
