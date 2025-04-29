@@ -12,12 +12,19 @@ local function get_alternate_filename()
   local extension = get_file_extension(filename)
 
   if(extension == "rb") then
-    if(filename:find("app/", 1, true)) then
-      local app_filename = filename:gsub("app/", "spec/")
-      return app_filename:gsub("%.rb$", "_spec.rb")
-    elseif(filename:find("spec/", 1, true)) then
-      local spec_filename = filename:gsub("spec/", "app/")
-      return spec_filename:gsub("%_spec.rb$", ".rb")
+    if filename:find("app/", 1, true) then
+      return filename:gsub("app/", "spec/"):gsub("%.rb$", "_spec.rb")
+    elseif filename:find("lib/", 1, true) then
+      return filename:gsub("lib/", "spec/"):gsub("%.rb$", "_spec.rb")
+    elseif filename:find("spec/", 1, true) then
+      local app_filename = filename:gsub("spec/", "app/"):gsub("%_spec%.rb$", ".rb")
+      local lib_filename = filename:gsub("spec/", "lib/"):gsub("%_spec%.rb$", ".rb")
+
+      if vim.fn.filereadable(app_filename) == 1 then
+        return app_filename
+      elseif vim.fn.filereadable(lib_filename) == 1 then
+        return lib_filename
+      end
     end
   elseif(extension == "go") then
     if(filename:find("_test", 1, true)) then
