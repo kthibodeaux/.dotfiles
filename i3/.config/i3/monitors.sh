@@ -15,10 +15,10 @@ if [ "$CURRENT_HOSTNAME" = "linux-kthibodeaux" ]; then
   monitor=$(xrandr -q | grep " connected" | cut -d" " -f1 | grep HDMI)
   laptop=$(xrandr -q | grep " connected" | cut -d" " -f1 | grep DP)
 
-  echo "$laptop"
-
-  xrandr --output "$monitor" --auto --primary
-  xrandr --output "$laptop" --off
+  if [ -n $monitor ]; then
+    xrandr --output "$monitor" --auto --primary
+    xrandr --output "$laptop" --off
+  fi
 fi
 
 feh --bg-scale $HOME/Pictures/background.png
