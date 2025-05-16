@@ -52,7 +52,9 @@ alias churn="git log --all --name-only --format='format:' | grep -v '^$' | sort 
 alias cl="git clone"
 
 alias d="git diff"
+alias dw="git diff -w"
 alias ds="git diff --staged"
+alias dsw="git diff --staged -w"
 
 alias gp="git push"
 alias gb="git branch"
