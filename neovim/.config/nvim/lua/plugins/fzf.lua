@@ -4,7 +4,8 @@ return {
     'nvim-tree/nvim-web-devicons'
   },
   config = function()
-    require('fzf-lua').setup({
+    local fzflua = require('fzf-lua')
+    fzflua.setup({
       'default',
       winopts    = {
         width   = 1,
@@ -29,6 +30,8 @@ return {
         },
       },
     })
+
+    fzflua.register_ui_select()
   end,
   keys = {
     { '<leader>e', "<cmd>lua require('fzf-lua').files()<CR>", desc = 'find file' },
