@@ -78,4 +78,13 @@ return {
       },
     },
   },
+  {
+    'm-demare/hlargs.nvim',
+    config = function()
+      require('hlargs').setup({
+        color = '#2CD9C5',
+        hl_priority = 1000,
+      })
+    end,
+  },
 }
