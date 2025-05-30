@@ -33,7 +33,7 @@ def config
   end
 end
 
-if force_local?
+if force_local? || File.exist?('.nodocker')
   puts 'forcing local execution'
   puts
 

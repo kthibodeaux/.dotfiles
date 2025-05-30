@@ -2,6 +2,7 @@
 metadocs/
 .ruby-lsp/
 .ignore
+.nodocker
 
 node_modules/
 public/packs/
