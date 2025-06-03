@@ -6,8 +6,16 @@ local function get_filename()
   return relative_path
 end
 
+local function ensure_spec(filename)
+  if filename:find("spec", 1, true) then
+    return filename
+  else
+    return require('open_alt').get_alternate_filename(filename)
+  end
+end
+
 local function remove_until(original_string, until_string)
-  local start_position, end_position = original_string:find(until_string)
+  local start_position, _ = original_string:find(until_string)
 
   if start_position then
     return original_string:sub(start_position)
@@ -17,7 +25,7 @@ local function remove_until(original_string, until_string)
 end
 
 local function get_line_number()
-  local line, column = unpack(vim.api.nvim_win_get_cursor(0))
+  local line, _ = unpack(vim.api.nvim_win_get_cursor(0))
   return line
 end
 
@@ -53,11 +61,11 @@ local rspec = {
     vim.cmd("VimuxRunCommand('bundle exec rspec')")
   end,
   run_file = function()
-    local filename = remove_until(get_filename(), "spec")
+    local filename = remove_until(ensure_spec(get_filename()), "spec")
     vim.cmd('VimuxRunCommand("bundle exec rspec -f doc ./' .. filename .. '")')
   end,
   run_nearest = function()
-    local filename = remove_until(get_filename(), "spec")
+    local filename = remove_until(ensure_spec(get_filename()), "spec")
     vim.cmd('VimuxRunCommand("bundle exec rspec -f doc ./' .. filename .. ':' .. get_line_number() .. '")')
   end,
 }

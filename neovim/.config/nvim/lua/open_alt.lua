@@ -7,8 +7,7 @@ local function get_file_extension(filename)
   end
 end
 
-local function get_alternate_filename()
-  local filename = vim.api.nvim_eval("expand('%')")
+local function get_alternate_filename(filename)
   local extension = get_file_extension(filename)
 
   if(extension == "rb") then
@@ -36,7 +35,8 @@ local function get_alternate_filename()
 end
 
 local function open()
-  local alternate_filename = get_alternate_filename()
+  local filename = vim.api.nvim_eval("expand('%')")
+  local alternate_filename = get_alternate_filename(filename)
 
   if(alternate_filename == "") then
     print "No alternate file found"
@@ -46,5 +46,6 @@ local function open()
 end
 
 return {
+  get_alternate_filename = get_alternate_filename,
   open = open
 }
