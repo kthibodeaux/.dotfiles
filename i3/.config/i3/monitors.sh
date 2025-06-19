@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bir/bash
 
 CURRENT_HOSTNAME=$(hostname)
 
@@ -22,3 +22,4 @@ if [ "$CURRENT_HOSTNAME" = "linux-kthibodeaux" ]; then
 fi
 
 feh --bg-scale $HOME/Pictures/background.png
+~/.config/polybar/launch.sh
