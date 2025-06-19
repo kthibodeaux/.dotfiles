@@ -16,6 +16,12 @@ return {
       { "nvim-lua/plenary.nvim", branch = "master" },
     },
     build = "make tiktoken",
-    opts = {},
+    opts = {
+      mappings = {
+        reset = {
+          normal = '<Leader>c',
+        },
+      }
+    },
   },
 }
