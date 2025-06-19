@@ -2,7 +2,6 @@
 
 CURRENT_HOSTNAME=$(hostname)
 
-
 if [ "$CURRENT_HOSTNAME" = "all-mother" ]; then
   horizontal=$(xrandr -q | grep " connected" | cut -d" " -f1 | grep HDMI)
   vertical=$(xrandr -q | grep " connected" | cut -d" " -f1 | grep DP)
