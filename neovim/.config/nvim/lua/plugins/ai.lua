@@ -19,6 +19,7 @@ return {
     opts = {
       mappings = {
         reset = {
+          insert = '<c-.>',
           normal = '<Leader>c',
         },
       }
