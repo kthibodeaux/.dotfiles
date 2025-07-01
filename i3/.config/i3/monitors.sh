@@ -1,4 +1,4 @@
-#!/bir/bash
+#!/bin/bash
 
 CURRENT_HOSTNAME=$(hostname)
 
