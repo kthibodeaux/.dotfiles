@@ -1,7 +1,7 @@
 encrypt_string() {
-  echo "$1" | openssl rsautl -encrypt -inkey ~/.ssh/id_rsa
+  echo "$1" | openssl pkeyutl -inkey ~/.ssh/id_rsa -encrypt
 }
 
 decrypt_string() {
-  echo "$1" | openssl rsautl -decrypt -inkey ~/.ssh/id_rsa
+  echo "$1" | openssl pkeyutl -inkey ~/.ssh/id_rsa -decrypt
 }
