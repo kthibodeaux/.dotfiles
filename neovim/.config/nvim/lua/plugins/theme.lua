@@ -4,6 +4,14 @@ return {
   priority = 1000,
   config = function()
     require("catppuccin").setup({
+      highlight_overrides = {
+        all = function(colors)
+          return {
+            TermCursor = { fg = "NONE", bg = "NONE" },
+            TermCursorNC = { fg = "NONE", bg = "NONE" },
+          }
+        end,
+      },
       flavour = "mocha", -- latte, frappe, macchiato, mocha
       transparent_background = true, -- disables setting the background color.
       styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
