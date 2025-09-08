@@ -37,8 +37,9 @@ local go = {
     local filename = get_filename()
 
     local directory = filename:match("(.*/)")
-
-    if directory ~= "./" then
+    if not directory then
+      directory = "..."
+    elseif directory ~= "./" then
       directory = directory:sub(1, #directory - 1)
     end
 
