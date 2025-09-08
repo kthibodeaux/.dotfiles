@@ -67,7 +67,7 @@ local go = {
       directory = directory:sub(1, #directory - 1)
     end
 
-    vim.cmd('VimuxRunCommand("go test ./' .. directory .. '")')
+    vim.cmd('VimuxRunCommand("go test -v ./' .. directory .. '")')
   end,
   run_nearest = function()
     local filename = get_filename()
@@ -80,9 +80,9 @@ local go = {
     end
 
     if test_name then
-      vim.cmd('VimuxRunCommand("go test ./' .. directory .. ' -run ' .. test_name .. '")')
+      vim.cmd('VimuxRunCommand("go test -v ./' .. directory .. ' -run ' .. test_name .. '")')
     else
-      vim.cmd('VimuxRunCommand("go test ./' .. directory .. '")')
+      vim.cmd('VimuxRunCommand("go test -v ./' .. directory .. '")')
     end
   end,
 }
