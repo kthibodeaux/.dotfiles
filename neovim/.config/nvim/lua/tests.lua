@@ -73,11 +73,13 @@ local go = {
     local filename = get_filename()
 
     local directory = filename:match("(.*/)")
-    local test_name = find_go_test_name()
-
-    if directory ~= "./" then
+    if not directory then
+      directory = "..."
+    elseif directory ~= "./" then
       directory = directory:sub(1, #directory - 1)
     end
+
+    local test_name = find_go_test_name()
 
     if test_name then
       vim.cmd('VimuxRunCommand("go test -v ./' .. directory .. ' -run ' .. test_name .. '")')
