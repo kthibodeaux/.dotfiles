@@ -87,6 +87,4 @@ alias :q="exit"
 alias rzsh="source ~/.zshrc && source ~/.zshrc.local"
 # }}}
 
-alias play="/bin/bash -c '$(curl -fsSL https://ascii-arcade.games/play)'"
-
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
