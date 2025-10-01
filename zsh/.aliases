@@ -56,7 +56,6 @@ alias dw="git diff -w"
 alias ds="git diff --staged"
 alias dsw="git diff --staged -w"
 
-alias gp="git push"
 alias gb="git branch"
 alias gcp="git cherry-pick"
 alias gun="git reset HEAD"

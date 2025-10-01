@@ -40,6 +40,21 @@ co() {
   fi
 }
 
+gp() {
+  base_branch=$(base_branch)
+  branch=$(git rev-parse --abbrev-ref HEAD)
+
+  if [[ "$branch" == "$base_branch" ]]; then
+    echo "Warning: You are pushing to $base_branch!"
+    read -r "reply?Are you sure you want to continue? [y/N] "
+    if [[ ! "$reply" =~ ^[Yy]$ ]]; then
+      echo "Push aborted."
+      return 1
+    fi
+  fi
+  git push "$@"
+}
+
 git-nuke() {
   if [[ $# == 1 ]]; then
     confirm && git branch -D $1 && git push origin :$1
