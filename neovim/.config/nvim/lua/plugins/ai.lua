@@ -27,14 +27,22 @@ return {
   },
   {
     "folke/sidekick.nvim",
-    opts = {
-      cli = {
-        mux = {
-          backend = "tmux",
-          enabled = true,
-        },
-      },
-    },
+    config = function(_, opts)
+      require("sidekick").setup(opts)
+
+      -- Auto-resize sidekick terminal to 84 chars when focused
+      vim.api.nvim_create_autocmd("WinEnter", {
+        callback = function()
+          local bufname = vim.api.nvim_buf_get_name(0)
+          if bufname:match("term://.*sidekick") or bufname:match("term://.*claude") then
+            local current_width = vim.api.nvim_win_get_width(0)
+            if current_width < 90 then
+              vim.api.nvim_win_set_width(0, 90)
+            end
+          end
+        end,
+      })
+    end,
     keys = {
       {
         "<tab>",
