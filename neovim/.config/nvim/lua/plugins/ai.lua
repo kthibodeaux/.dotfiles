@@ -42,6 +42,16 @@ return {
           end
         end,
       })
+
+      -- Add keybinding to enter Normal mode in sidekick terminal
+      vim.api.nvim_create_autocmd("TermOpen", {
+        callback = function()
+          local bufname = vim.api.nvim_buf_get_name(0)
+          if bufname:match("term://.*sidekick") or bufname:match("term://.*claude") then
+            vim.keymap.set('t', '<Esc><Esc>', [[<C-\><C-n>]], { buffer = true })
+          end
+        end,
+      })
     end,
     keys = {
       {
