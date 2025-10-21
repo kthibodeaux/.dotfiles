@@ -53,6 +53,9 @@ return {
         end,
       })
     end,
+    opts = {
+      nes = { enabled = false },
+    },
     keys = {
       {
         "<tab>",
