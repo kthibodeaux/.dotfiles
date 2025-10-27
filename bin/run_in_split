@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+TMUX_COMMAND="tmux"
+TMUX_SPLIT_SIZE=14
+
+if [ -z "$TMUX" ]; then
+  echo "Not running inside tmux or tmate session."
+  exit 1
+fi
+
+if [[ "$TMUX" = *"tmate"* ]]; then
+  TMUX_COMMAND="tmate"
+fi
+
+TMUX_SPLIT_ID=$($TMUX_COMMAND show-option -wv @tmux-split-id 2>/dev/null)
+CURRENT_PANE_ID=$($TMUX_COMMAND display-message -p '#{pane_id}')
+
+if [ -z "$TMUX_SPLIT_ID" ] || ! $TMUX_COMMAND list-panes | grep -q "$TMUX_SPLIT_ID" || [ "$CURRENT_PANE_ID" = "$TMUX_SPLIT_ID" ]; then
+  TMUX_SPLIT_ID=$($TMUX_COMMAND split-window -d -v -l $TMUX_SPLIT_SIZE -P -F "#{pane_id}")
+  $TMUX_COMMAND set-option -w @tmux-split-id "$TMUX_SPLIT_ID"
+fi
+
+$TMUX_COMMAND send-keys -t "$TMUX_SPLIT_ID" "$*" C-m
