@@ -1,3 +1,7 @@
+draft() {
+  ppwf --create-draft-pr
+}
+
 finished() {
   ppwf --create-pr
 }
