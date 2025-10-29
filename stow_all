@@ -3,6 +3,7 @@
 stow -vv alacritty
 stow -vv dinner-planner
 stow -vv dunst
+stow -vv gammastep
 stow -vv gem
 stow -vv git
 stow -vv gtk3
@@ -15,7 +16,6 @@ stow -vv picom
 stow -vv polybar
 stow -vv ranger
 stow -vv readline
-stow -vv redshift
 stow -vv rofi
 stow -vv rspec
 stow -vv tig
