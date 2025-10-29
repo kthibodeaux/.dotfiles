@@ -44,8 +44,8 @@ gp() {
   base_branch=$(base_branch)
   branch=$(git rev-parse --abbrev-ref HEAD)
 
-  if [[ "$branch" == "$base_branch" ]]; then
-    echo "Warning: You are pushing to $base_branch!"
+  if [[ "$branch" == "$base_branch" ]] || [[ "$branch" == release-* ]]; then
+    echo "Warning: You are pushing to $branch!"
     read -r "reply?Are you sure you want to continue? [y/N] "
     if [[ ! "$reply" =~ ^[Yy]$ ]]; then
       echo "Push aborted."
