@@ -12,12 +12,8 @@ export FILTHY_SHOW_EXIT_CODE=1
 export CLICOLOR=1
 
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
+export FZF_DEFAULT_OPTS='--preview-window=down:70%'
 export FZF_COMPLETION_TRIGGER=',,'
-if [ -n "$TMUX" ]; then
-  if [[ "$TMUX" != *"tmate"* ]]; then
-    export FZF_DEFAULT_OPTS='--tmux 80%'
-  fi
-fi
 
 export RSPEC_CORES=12
 export NODE_OPTIONS="--max-old-space-size=8192"
