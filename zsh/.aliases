@@ -27,9 +27,6 @@ alias rl="bundle exec rails routes | rg"
 # {{{ go
 alias got="echo 'go mod tidy' && go mod tidy && echo 'go mod download' && go mod download --force-local"
 # }}}
-# {{{ javascript
-alias ya="yarn"
-# }}}
 # {{{ docker
 alias k="docker"
 alias c="docker compose"
