@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 TMUX_COMMAND="tmux"
-TMUX_SPLIT_SIZE=14
+TMUX_SPLIT_SIZE=10
 
 if [ -z "$TMUX" ]; then
   echo "Not running inside tmux or tmate session."
