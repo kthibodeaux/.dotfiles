@@ -9,10 +9,4 @@ return {
       }
     end
   },
-  {
-    'rhysd/vim-textobj-ruby',
-    dependencies = {
-      'kana/vim-textobj-user'
-    },
-  },
 }
