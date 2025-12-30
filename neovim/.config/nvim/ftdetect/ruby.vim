@@ -8,3 +8,5 @@ au BufNewFile,BufRead *.cap set filetype=ruby
 au BufNewFile,BufRead *.rake set filetype=ruby
 au BufNewFile,BufRead *.ru set filetype=ruby
 au BufNewFile,BufRead *.pdf.prawn set filetype=ruby
+
+au BufNewFile,BufRead *.html.slim set filetype=slim
