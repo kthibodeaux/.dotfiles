@@ -70,6 +70,7 @@ alias serve="ruby -run -e httpd ./ -p 9999"
 alias ycal="cal $(date +"%Y")"
 alias tt="timetrace"
 alias sql="SQL_TERMINAL=alacritty SQL_EDITOR=nvim lazysql"
+alias j="just"
 # }}}
 # {{{ tmux
 alias t="tmux"
