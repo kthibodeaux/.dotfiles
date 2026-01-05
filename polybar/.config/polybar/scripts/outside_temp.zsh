@@ -1,6 +1,10 @@
 #!/usr/bin/env zsh
 set -euo pipefail
 
+if [[ -z "${HASS_URL:-}" || -z "${HASS_TOKEN:-}" ]]; then
+  exit 0
+fi
+
 ENTITY_ID="sensor.outdoor_temp_temperature"
 
 json="$(curl -s \
