@@ -1,5 +1,5 @@
 return {
-  cmd = { 'ruby-lsp' },
+  cmd = { 'zsh', '-l', '-c', 'source ~/.zsh/functions/chruby_auto.sh && chruby_auto && ruby-lsp' },
   filetypes = { 'ruby' },
   root_markers = { 'Gemfile', '.git' },
   init_options = {
