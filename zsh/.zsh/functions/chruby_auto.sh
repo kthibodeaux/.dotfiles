@@ -1,6 +1,15 @@
 unset RUBY_AUTO_VERSION
 
 function chruby_auto() {
+  # Source chruby if not already loaded
+  if ! type chruby >/dev/null 2>&1; then
+    if [[ -f /home/linuxbrew/.linuxbrew/opt/chruby/share/chruby/chruby.sh ]]; then
+      source /home/linuxbrew/.linuxbrew/opt/chruby/share/chruby/chruby.sh
+    elif [[ -f /usr/share/chruby/chruby.sh ]]; then
+      source /usr/share/chruby/chruby.sh
+    fi
+  fi
+
   local dir="$PWD/" version
 
   until [[ -z "$dir" ]]; do
