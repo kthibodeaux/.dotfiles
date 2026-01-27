@@ -1,5 +1,7 @@
 unset RUBY_AUTO_VERSION
 
+CHRUBY_DEFAULT_RUBY_VERSION="3.4.2"
+
 function chruby_auto() {
   # Source chruby if not already loaded
   if ! type chruby >/dev/null 2>&1; then
@@ -22,7 +24,7 @@ function chruby_auto() {
       fi
     else
       # latest ruby
-      RUBY_AUTO_VERSION=`chruby | tail -n 1 | cut -d'-' -f2`
+      RUBY_AUTO_VERSION=$CHRUBY_DEFAULT_RUBY_VERSION
     fi
 
     chruby $RUBY_AUTO_VERSION
