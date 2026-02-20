@@ -1,4 +1,34 @@
+local hostname = vim.fn.systemlist('hostname')[1]
+local is_beast = hostname == "all-mother"
+local is_work = hostname == "linux-kthibodeaux"
+
 return {
+  {
+    "olimorris/codecompanion.nvim",
+    enabled = is_beast,
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+    },
+    config = function()
+      require('codecompanion').setup({
+        interactions = {
+          chat = { adapter = "ollama", },
+          inline = { adapter = "ollama", },
+          cmd = { adapter = "ollama", },
+          background = { adapter = "ollama", },
+        },
+        provider = 'ollama',
+        ollama = {
+          host = 'http://localhost:11434',
+          model = 'qwen2.5-coder',
+        },
+      })
+    end,
+    keys = {
+      { '<leader>ia', "<cmd>CodeCompanionActions<CR>", desc = 'ai actions' },
+    },
+  },
   {
     'github/copilot.vim',
     config = function()
@@ -10,23 +40,8 @@ return {
     end,
   },
   {
-    "CopilotC-Nvim/CopilotChat.nvim",
-    dependencies = {
-      { "github/copilot.vim" },
-      { "nvim-lua/plenary.nvim", branch = "master" },
-    },
-    build = "make tiktoken",
-    opts = {
-      mappings = {
-        reset = {
-          insert = '<c-.>',
-          normal = '<Leader>c',
-        },
-      }
-    },
-  },
-  {
     "folke/sidekick.nvim",
+    enabled = is_work,
     config = function(_, opts)
       require("sidekick").setup(opts)
 
@@ -94,4 +109,3 @@ return {
     },
   },
 }
-
