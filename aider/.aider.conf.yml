@@ -1,0 +1,8 @@
+model: ollama/qwen3-coder
+openai-api-base: http://localhost:11434/v1
+openai-api-key: dummy
+
+edit-format: diff
+auto-commits: false
+auto-lint: false
+auto-test: false
