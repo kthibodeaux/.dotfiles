@@ -6,6 +6,8 @@ export VISUAL=nvim
 export EDITOR=$VISUAL
 export PAGER=less
 
+export OLLAMA_API_BASE=http://127.0.0.1:11434
+
 export FILTHY_SHOW_EXIT_CODE=1
 
 # enable colored output from ls, etc
