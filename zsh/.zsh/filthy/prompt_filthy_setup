@@ -152,7 +152,7 @@ prompt_filthy_rprompt() {
 
 prompt_filthy_git_repo_status() {
   # Do a fetch asynchronously
-  git fetch > /dev/null 2>&1 &!
+  # git fetch > /dev/null 2>&1 &!
 
   local clean
   local rtn=""
