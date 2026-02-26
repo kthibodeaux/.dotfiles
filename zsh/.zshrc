@@ -54,5 +54,6 @@ else
 fi
 
 source ~/.zsh/functions/chruby_auto.sh
+eval "$(direnv hook zsh)"
 
 opentmux
