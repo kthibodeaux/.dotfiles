@@ -50,3 +50,5 @@
   navigate = true
   line-numbers = true
   side-by-side = true
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
