@@ -87,4 +87,5 @@ return {
       })
     end,
   },
+  { "jannis-baum/vivify.vim" }
 }
