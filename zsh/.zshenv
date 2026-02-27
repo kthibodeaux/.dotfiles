@@ -1,10 +1,12 @@
 export DOTFILES=$HOME/.dotfiles
-export PATH="$DOTFILES/bin:$HOME/opt/bin:$HOME/.local/share/bob/nvim-bin:/home/linuxbrew/.linuxbrew/bin:$PATH"
+export PATH="$DOTFILES/bin:$HOME/.local/bin:$HOME/opt/bin:$HOME/.local/share/bob/nvim-bin:/home/linuxbrew/.linuxbrew/bin:$PATH"
 
 export BROWSER=/usr/bin/firefox
 export VISUAL=nvim
 export EDITOR=$VISUAL
 export PAGER=less
+
+export OLLAMA_API_BASE=http://127.0.0.1:11434
 
 export FILTHY_SHOW_EXIT_CODE=1
 

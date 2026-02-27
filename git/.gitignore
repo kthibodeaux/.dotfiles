@@ -18,3 +18,5 @@ backend/npm-debug.log
 
 frontend/node_modules/
 frontend/npm-debug.log
+
+.aider*
