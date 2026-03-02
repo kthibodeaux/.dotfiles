@@ -12,6 +12,9 @@ buffer_map(0, 'n', '<leader>rf', ":lua _G.tests.go.run_file()<CR>", { noremap = 
 buffer_map(0, 'n', '<leader>ra', ':lua _G.tests.go.run_all()<CR>', { noremap = true, desc = 'all files' })
 buffer_map(0, 'n', '<leader>rl', ":lua _G.tests.run_last()<CR>", { noremap = true, desc = 'last test' })
 
+buffer_map(0, 'n', '<leader>oa', ":lua vim.cmd('silent !run_in_split go generate ./...')<CR>", { noremap = true, desc = 'generate all' })
+buffer_map(0, 'n', '<leader>of', ":lua vim.cmd('silent !run_in_split go generate ' .. vim.fn.expand('%'))<CR>", { noremap = true, desc = 'generate file' })
+
 buffer_map(0, 'n', '<leader>.', ':lua require("open_alt").open()<CR>', { noremap = true, desc = 'open alt' })
 
 local first_lines = vim.api.nvim_buf_get_lines(0, 0, 10, false)
