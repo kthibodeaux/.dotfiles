@@ -14,6 +14,7 @@ buffer_map(0, 'n', '<leader>rl', ":lua _G.tests.run_last()<CR>", { noremap = tru
 
 buffer_map(0, 'n', '<leader>oa', ":lua vim.cmd('silent !run_in_split go generate ./...')<CR>", { noremap = true, desc = 'generate all' })
 buffer_map(0, 'n', '<leader>of', ":lua vim.cmd('silent !run_in_split go generate ' .. vim.fn.expand('%'))<CR>", { noremap = true, desc = 'generate file' })
+buffer_map(0, 'n', '<leader>ob', ":lua vim.cmd('silent !run_in_split buf generate')<CR>", { noremap = true, desc = 'buf generate' })
 
 buffer_map(0, 'n', '<leader>.', ':lua require("open_alt").open()<CR>', { noremap = true, desc = 'open alt' })
 
