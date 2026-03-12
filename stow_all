@@ -1,6 +1,5 @@
 # vi: set ft=sh :
 
-stow -vv aider
 stow -vv alacritty
 stow -vv dinner-planner
 stow -vv dunst
