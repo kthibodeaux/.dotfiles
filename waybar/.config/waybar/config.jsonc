@@ -9,7 +9,6 @@
   "fixed-center": true,
   "modules-left": [
     "hyprland/workspaces",
-    "hyprland/window",
     "hyprland/submap"
   ],
   "modules-center": [
@@ -20,8 +19,8 @@
     "memory",
     "pulseaudio",
     "tray",
-    "clock",
     "clock#simpleclock",
+    "clock",
     "custom/notification",
   ],
   "mpris": {
@@ -41,9 +40,6 @@
     "all-outputs": true,
     "disable-scroll": false,
     "active-only": false,
-  },
-  "hyprland/window": {
-    "format": "{title}",
   },
   "hyprland/submap": {
     "format": "  {}",
