@@ -1,2 +1,2 @@
-sudo pacman -S hyprland sddm mako xdg-desktop-portal-hyprland hyprpolkitagent qt5-wayland qt6-wayland alacritty hyprpaper cliphist waybar
+sudo pacman -S hyprland sddm mako xdg-desktop-portal-hyprland hyprpolkitagent qt5-wayland qt6-wayland alacritty hyprpaper cliphist waybar hyprshot
 sudo systemctl enable sddm.service
