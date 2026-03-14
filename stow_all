@@ -2,7 +2,6 @@
 
 stow -vv alacritty
 stow -vv dinner-planner
-stow -vv gammastep
 stow -vv gem
 stow -vv git
 stow -vv gtk3
