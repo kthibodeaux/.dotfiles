@@ -1,0 +1,2 @@
+sudo pacman -S hyprland sddm dunst xdg-desktop-portal-hyprland hyprpolkitagent qt5-wayland qt6-wayland alacritty hyprpaper hyprlauncher dolphin cliphist waybar
+sudo systemctl enable sddm.service
