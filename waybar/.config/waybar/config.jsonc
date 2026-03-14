@@ -51,10 +51,10 @@
   },
   "clock#simpleclock": {
     "tooltip": false,
-    "format": "  {:%H:%M}",
+    "format": " {:%H:%M}",
   },
   "clock": {
-    "format": "  {:L%a %d %b}",
+    "format": " {:L%a %d %b}",
     "calendar": {
       "format": {
         "days": "<span weight='normal'>{}</span>",
@@ -70,15 +70,15 @@
     "tooltip-format": "<span color='#cdd6f4' font='Lexend 16'><tt><small>{calendar}</small></tt></span>",
   },
   "cpu": {
-    "format": "  {usage}%",
+    "format": " {usage}%",
     "tooltip": true,
     "interval": 1,
   },
   "memory": {
-    "format": "  {used:0.1f}G",
+    "format": " {used:0.1f}G",
   },
   "pulseaudio": {
-    "format": "{icon} {volume}%",
+    "format": "{icon}{volume}%",
     "format-muted": " ",
     "format-icons": {
       "headphone": "",
