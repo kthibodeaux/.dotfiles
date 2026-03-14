@@ -19,6 +19,7 @@ exec --no-startup-id clipit
 exec --no-startup-id blueman-applet
 exec --no-startup-id xautolock -time 10 -locker blurlock
 exec --no-startup-id picom
+exec_always --no-startup-id dunst
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec --no-startup-id ~./config/i3/gammastep_toggle.sh
