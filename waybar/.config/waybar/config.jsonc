@@ -19,6 +19,18 @@
     "custom/notification",
     "custom/power",
   ],
+  "mpris": {
+    "format": "{player_icon} {title} - {artist}",
+    "format-paused": "{status_icon} {title} - {artist}",
+    "player-icons": {
+      "default": "▶",
+    },
+    "status-icons": {
+      "paused": "⏸",
+    },
+    "max-length": 40,
+    "tooltip-format": "{title}\n{artist}\n{album}",
+  },
   "hyprland/workspaces": {
     "on-click": "activate",
     "format": "{id}",
