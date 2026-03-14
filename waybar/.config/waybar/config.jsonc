@@ -28,7 +28,6 @@
     "status-icons": {
       "paused": "⏸",
     },
-    "max-length": 40,
     "tooltip-format": "{title}\n{artist}\n{album}",
   },
   "hyprland/workspaces": {
