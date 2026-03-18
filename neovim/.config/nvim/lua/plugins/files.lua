@@ -21,5 +21,16 @@ return {
     keys = {
       { '<leader>s', "<cmd>Oil<CR>", desc = 'open parent dir' },
     },
-  }
+  },
+  {
+    'stevearc/aerial.nvim',
+    opts = {},
+    dependencies = {
+       "nvim-treesitter/nvim-treesitter",
+       "nvim-tree/nvim-web-devicons"
+    },
+    keys = {
+      { '<leader>u', '<cmd>AerialToggle<CR>', desc = 'toggle aerial' },
+    },
+  },
 }
