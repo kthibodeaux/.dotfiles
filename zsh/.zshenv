@@ -1,6 +1,7 @@
 export DOTFILES=$HOME/.dotfiles
 export PATH="$DOTFILES/bin:$HOME/.local/bin:$HOME/opt/bin:$HOME/.local/share/bob/nvim-bin:/home/linuxbrew/.linuxbrew/bin:$PATH"
 
+export GTK_THEME=Fluent-grey-Dark
 export BROWSER=/usr/bin/firefox
 export VISUAL=nvim
 export EDITOR=$VISUAL

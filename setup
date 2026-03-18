@@ -5,8 +5,6 @@ mkdir -p ~/.local/share
 
 sudo cp ~/.dotfiles/common/safe-rm.conf /etc/safe-rm.conf
 
-mv ~/.config/dunst ~/.config/dunst.original
-mv ~/.config/i3 ~/.config/i3.original
 mv ~/.config/gtk-3.0 ~/.config/gtk-3.0.original
 mv ~/.config/ranger ~/.config/ranger.original
 mv ~/.config/rofi ~/.config/rofi.original
@@ -24,14 +22,15 @@ install_package "alacritty"
 install_package "aspell"
 install_package "avr-gcc"
 install_package "avr-libc"
-install_package "aws-cli"
 install_package "bat"
 install_package "bitwarden"
 install_package "blueman"
 install_package "bob"
+install_package "breeze-cursors"
 install_package "btop"
 install_package "buf"
 install_package "chruby"
+install_package "cliphist"
 install_package "ctop"
 install_package "debtap"
 install_package "delve"
@@ -40,16 +39,12 @@ install_package "direnv"
 install_package "discord"
 install_package "docker"
 install_package "docker-compose"
-install_package "dracula-icons-git"
-install_package "dracula-rofi-git"
-install_package "dunst-git"
 install_package "epson-inkjet-printer-escpr"
 install_package "evince"
 install_package "fd"
 install_package "feh"
 install_package "firefox"
 install_package "font-manager"
-install_package "gammastep"
 install_package "gdk-pixbuf2"
 install_package "gimp"
 install_package "git-delta-git"
@@ -61,12 +56,15 @@ install_package "gtk-engine-murrine"
 install_package "gum"
 install_package "htop"
 install_package "httpie"
-install_package "i3exit"
+install_package "hyprland"
+install_package "hyprpaper"
+install_package "hyprpolkitagent"
+install_package "hyprshot"
 install_package "inkscape"
 install_package "isync"
-install_package "juno-ocean-gtk-theme-git"
 install_package "just"
 install_package "lazydocker-bin"
+install_package "mako"
 install_package "mpv"
 install_package "msmtp"
 install_package "ncdu"
@@ -77,8 +75,9 @@ install_package "openssh"
 install_package "pa-applet"
 install_package "pavucontrol"
 install_package "pdftk"
-install_package "polybar"
 install_package "python-neovim"
+install_package "qt5-wayland"
+install_package "qt6-wayland"
 install_package "ranger"
 install_package "ripgrep"
 install_package "rofi"
@@ -86,9 +85,9 @@ install_package "ruby-install"
 install_package "sad"
 install_package "safe-rm"
 install_package "sassc"
-install_package "signal-desktop"
-install_package "scrot"
+install_package "sddm"
 install_package "shellcheck"
+install_package "signal-desktop"
 install_package "teensy_loader_cli"
 install_package "tern"
 install_package "tig"
@@ -99,10 +98,13 @@ install_package "uget"
 install_package "unzip"
 install_package "urlview-git"
 install_package "watchexec"
+install_package "waybar"
+install_package "xdg-desktop-portal-hyprland"
 install_package "yarn"
 install_package "youtube-dl"
-install_package "xclip"
 install_package "zsh"
+
+sudo systemctl enable sddm.service
 
 fc-cache -f -v
 sudo systemctl enable sshd
@@ -112,6 +114,7 @@ sudo usermod -aG docker $USER
 sudo systemctl enable bluetooth
 sudo systemctl start bluetooth
 
+. ~/.dotfiles/setup_steps/theme.sh
 . ~/.dotfiles/setup_steps/shell.sh
 . ~/.dotfiles/setup_steps/ruby.sh
 . ~/.dotfiles/setup_steps/neovim.sh
