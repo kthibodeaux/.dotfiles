@@ -1,3 +1,4 @@
+vim.lsp.enable('buf')
 vim.lsp.enable('golangci_lint_ls')
 vim.lsp.enable('gopls')
 vim.lsp.enable('luals')
