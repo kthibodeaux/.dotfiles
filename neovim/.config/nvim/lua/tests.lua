@@ -64,7 +64,7 @@ local go = {
   run_all = function()
     run_in_split("go test ./...")
   end,
-  run_file = function()
+  run_package = function()
     local filename = get_filename()
 
     local directory = filename:match("(.*/)")
