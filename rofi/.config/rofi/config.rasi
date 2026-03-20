@@ -7,7 +7,7 @@ configuration {
 * {
     font: "Hack Nerd 24";
     foreground: #f8f8f2;
-    background-color: #282a36;
+    background-color: #1E1E2E;
     active-background: #6272a4;
     urgent-background: #ff5555;
     urgent-foreground: #282a36;
