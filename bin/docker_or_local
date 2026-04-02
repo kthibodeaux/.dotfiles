@@ -13,14 +13,10 @@ def prizepicks?
 end
 
 def default_image
-  'web'
+  'api'
 end
 
 def use_docker?
-  ALL_FILES.include?('docker-compose.yml')
-end
-
-def use_config?
   ALL_FILES.include?('.docker_or_local')
 end
 
@@ -57,7 +53,7 @@ elsif prizepicks?
   end
 elsif use_docker?
   command = COMMAND.split(' ')[0]
-  container = use_config? ? config[command] || default_image : default_image
+  container = config[command] || default_image
 
   puts "running in docker container `#{container}`"
   puts
