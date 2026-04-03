@@ -10,10 +10,16 @@ return {
   {
     'wincent/vcs-jump',
     keys = {
-      { '<leader>gd', ':VcsJump merge<CR>', desc = 'merge conflicts' },
+      { '<leader>gm', ':VcsJump merge<CR>', desc = 'merge conflicts' },
     },
   },
   {
     'rhysd/committia.vim',
+  },
+  {
+    'sindrets/diffview.nvim',
+    keys = {
+      { '<leader>gd', ':DiffviewOpen<CR>', desc = 'diff view' },
+    },
   },
 }
