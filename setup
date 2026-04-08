@@ -104,6 +104,8 @@ install_package "youtube-dl"
 install_package "xclip"
 install_package "zsh"
 
+go install github.com/wasilibs/go-sql-formatter/cmd/sql-formatter@latest
+
 fc-cache -f -v
 sudo systemctl enable sshd
 sudo systemctl enable docker.service
