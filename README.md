@@ -6,7 +6,7 @@ Before running the below commands make sure you can clone from GitHub by adding 
 
 ### endeavour
 
-These instructions are for a fresh Endeavour i3 edition install.
+These instructions are for a fresh Endeavour no desktop install. It will install hyprland.
 
 ```bash
 git clone git@github.com:kthibodeaux/.dotfiles.git
