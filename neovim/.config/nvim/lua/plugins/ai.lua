@@ -10,22 +10,6 @@ return {
     end,
   },
   {
-    "CopilotC-Nvim/CopilotChat.nvim",
-    dependencies = {
-      { "github/copilot.vim" },
-      { "nvim-lua/plenary.nvim", branch = "master" },
-    },
-    build = "make tiktoken",
-    opts = {
-      mappings = {
-        reset = {
-          insert = '<c-.>',
-          normal = '<Leader>c',
-        },
-      }
-    },
-  },
-  {
     "folke/sidekick.nvim",
     config = function(_, opts)
       require("sidekick").setup(opts)
