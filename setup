@@ -88,6 +88,7 @@ install_package "sassc"
 install_package "sddm"
 install_package "shellcheck"
 install_package "signal-desktop"
+install_package "sql-formatter"
 install_package "teensy_loader_cli"
 install_package "tern"
 install_package "tig"
@@ -103,8 +104,6 @@ install_package "xdg-desktop-portal-hyprland"
 install_package "yarn"
 install_package "youtube-dl"
 install_package "zsh"
-
-go install github.com/wasilibs/go-sql-formatter/cmd/sql-formatter@latest
 
 sudo systemctl enable sddm.service
 
