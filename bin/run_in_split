@@ -20,4 +20,8 @@ if [ -z "$TMUX_SPLIT_ID" ] || ! $TMUX_COMMAND list-panes | grep -q "$TMUX_SPLIT_
   $TMUX_COMMAND set-option -w @tmux-split-id "$TMUX_SPLIT_ID"
 fi
 
-$TMUX_COMMAND send-keys -t "$TMUX_SPLIT_ID" "$*" C-m
+if [ "$($TMUX_COMMAND display-message -p '#{window_zoomed_flag}')" = '1' ]; then
+  $TMUX_COMMAND resize-pane -Z -t "$CURRENT_PANE_ID"
+fi
+
+$TMUX_COMMAND send-keys -t "$TMUX_SPLIT_ID" "$* && $TMUX_COMMAND resize-pane -Z -t $CURRENT_PANE_ID" C-m

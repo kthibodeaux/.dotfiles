@@ -62,3 +62,5 @@ elsif use_docker?
 else
   system COMMAND
 end
+
+exit $?.exitstatus
