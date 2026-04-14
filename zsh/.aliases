@@ -60,6 +60,8 @@ alias oops="git reset HEAD~1"
 
 alias gl="git log | head"
 
+alias shove="git remote | xargs -L1 git push"
+
 alias stash="git stash --include-untracked"
 alias pop="git stash pop"
 # }}}
