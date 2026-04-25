@@ -7,6 +7,14 @@ return {
         require('ts_context_commentstring').setup {}
       end,
     },
+    {
+      'nvim-treesitter/nvim-treesitter-context',
+      config = function()
+        require('treesitter-context').setup({
+          max_lines = 3,
+        })
+      end,
+    },
   },
   build = ':TSUpdate',
   config = function ()
