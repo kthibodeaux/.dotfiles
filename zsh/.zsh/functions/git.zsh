@@ -1,6 +1,8 @@
 base_branch() {
   if git rev-parse -q --verify develop > /dev/null; then
     echo "develop"
+  elif git rev-parse -q --verify multiverse > /dev/null; then
+    echo "multiverse"
   elif git rev-parse -q --verify main > /dev/null; then
     echo "main"
   else
