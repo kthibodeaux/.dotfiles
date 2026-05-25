@@ -15,13 +15,13 @@ docker run --rm -it \
   -v "$share_dir:/home/nvimuser/.local/share/nvim" \
   -v "$state_dir:/home/nvimuser/.local/state/nvim" \
   -v "$cache_dir:/home/nvimuser/.cache/nvim" \
-  -v "$PWD:/home/nvimuser/work" \
+  -v "$PWD:$PWD" \
   -v "$rubies_dir:/home/nvimuser/.rubies" \
   -v "$bundle_dir:/home/nvimuser/.gem-cache" \
   -e BUNDLE_PATH="/home/nvimuser/.gem-cache" \
   -v "$DOTFILES/bin/run_in_split:/usr/local/bin/run_in_split:ro" \
   -v "/tmp/tmux-$(id -u):/tmp/tmux-$(id -u)" \
-  -w /home/nvimuser/work \
+  -w "$PWD" \
   -e TERM="$TERM" \
   -e HOST_PWD="$PWD" \
   ${TMUX:+-e TMUX="$TMUX" -e TMUX_PANE="$TMUX_PANE"} \
