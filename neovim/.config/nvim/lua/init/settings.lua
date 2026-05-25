@@ -9,7 +9,11 @@ vim.g.netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
 vim.opt.signcolumn = 'yes'
 vim.opt.backspace = 'indent,start,eol'
 vim.opt.backupcopy = 'yes'
-vim.opt.backupdir = config .. '/tmp//'
+if vim.env.NVIM_CONTAINER then
+  vim.opt.backupdir = home .. '/.cache/nvim/backup//'
+else
+  vim.opt.backupdir = config .. '/tmp//'
+end
 vim.opt.encoding = 'utf-8'
 vim.opt.expandtab = true
 vim.opt.fileencoding = 'utf-8'
@@ -40,3 +44,17 @@ vim.opt.wrap = false
 vim.opt.mouse = ''
 vim.opt.exrc = true
 vim.opt.winborder = 'double'
+
+if vim.env.NVIM_CONTAINER then
+  vim.g.clipboard = {
+    name = 'OSC 52 + tmux paste',
+    copy = {
+      ['+'] = require('vim.ui.clipboard.osc52').copy('+'),
+      ['*'] = require('vim.ui.clipboard.osc52').copy('*'),
+    },
+    paste = {
+      ['+'] = function() return { vim.fn.system('tmux save-buffer -'), '' } end,
+      ['*'] = function() return { vim.fn.system('tmux save-buffer -'), '' } end,
+    },
+  }
+end
