@@ -24,4 +24,8 @@ if [ "$($TMUX_COMMAND display-message -p '#{window_zoomed_flag}')" = '1' ]; then
   $TMUX_COMMAND resize-pane -Z -t "$CURRENT_PANE_ID"
 fi
 
-$TMUX_COMMAND send-keys -t "$TMUX_SPLIT_ID" "$* && $TMUX_COMMAND resize-pane -Z -t $CURRENT_PANE_ID" C-m
+if [ -n "${HOST_PWD:-}" ]; then
+  $TMUX_COMMAND send-keys -t "$TMUX_SPLIT_ID" "cd $HOST_PWD && $* && $TMUX_COMMAND resize-pane -Z -t $CURRENT_PANE_ID" C-m
+else
+  $TMUX_COMMAND send-keys -t "$TMUX_SPLIT_ID" "$* && $TMUX_COMMAND resize-pane -Z -t $CURRENT_PANE_ID" C-m
+fi
