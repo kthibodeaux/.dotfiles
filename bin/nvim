@@ -32,6 +32,7 @@ docker run --rm -it \
   -v "$HOME/.config/nvim:/home/nvimuser/.config/nvim:ro" \
   -v "$HOME/.claude:/home/nvimuser/.claude" \
   -v "$HOME/.claude.json:/home/nvimuser/.claude.json" \
+  -v "$HOME/.config/github-copilot:/home/nvimuser/.config/github-copilot:ro" \
   -v "$share_dir:/home/nvimuser/.local/share/nvim" \
   -v "$state_dir:/home/nvimuser/.local/state/nvim" \
   -v "$cache_dir:/home/nvimuser/.cache/nvim" \
