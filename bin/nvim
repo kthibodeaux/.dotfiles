@@ -10,6 +10,24 @@ rubies_dir="$HOME/.local/share/nvim-sandbox/rubies"
 
 mkdir -p "$state_dir" "$cache_dir" "$bundle_dir" "$share_dir" "$rubies_dir"
 
+# Build extra mounts for file arguments outside $PWD
+extra_mounts=()
+for arg in "$@"; do
+  # Skip flags (starts with - or +)
+  [[ "$arg" == -* || "$arg" == +* ]] && continue
+  # Resolve to absolute path
+  if [[ "$arg" == /* ]]; then
+    filepath="$arg"
+  else
+    filepath="$PWD/$arg"
+  fi
+  dir="$(dirname "$filepath")"
+  # Only add mount if not already under $PWD
+  if [[ "$dir" != "$PWD"* ]]; then
+    extra_mounts+=(-v "$dir:$dir")
+  fi
+done
+
 docker run --rm -it \
   -v "$HOME/.config/nvim:/home/nvimuser/.config/nvim:ro" \
   -v "$HOME/.claude:/home/nvimuser/.claude" \
@@ -28,6 +46,7 @@ docker run --rm -it \
   -e HOST_PWD="$PWD" \
   ${TMUX:+-e TMUX="$TMUX" -e TMUX_PANE="$TMUX_PANE"} \
   --network=host \
+  "${extra_mounts[@]}" \
   --name "nvim-$$" \
   nvim-sandbox \
   nvim "$@"
