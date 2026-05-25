@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+project_hash=$(echo -n "$PWD" | md5sum | cut -c1-12)
+bundle_dir="$HOME/.local/share/nvim-sandbox/bundle/$project_hash"
+rubies_dir="$HOME/.local/share/nvim-sandbox/rubies"
+
+mkdir -p "$bundle_dir" "$rubies_dir"
+
+docker run --rm -it \
+  -v "$PWD:/home/nvimuser/work" \
+  -v "$rubies_dir:/home/nvimuser/.rubies" \
+  -v "$bundle_dir:/home/nvimuser/.gem-cache" \
+  -e BUNDLE_PATH="/home/nvimuser/.gem-cache" \
+  -w /home/nvimuser/work \
+  --network=host \
+  nvim-sandbox \
+  bash -lc 'source /usr/share/chruby/chruby.sh && source /usr/share/chruby/auto.sh && chruby_auto && bundle install'
