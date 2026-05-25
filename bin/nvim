@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+project_hash=$(echo -n "$PWD" | md5sum | cut -c1-12)
+state_dir="$HOME/.local/state/nvim-sandbox/$project_hash"
+cache_dir="$HOME/.cache/nvim-sandbox/$project_hash"
+bundle_dir="$HOME/.local/share/nvim-sandbox/bundle/$project_hash"
+share_dir="$HOME/.local/share/nvim-sandbox"
+rubies_dir="$HOME/.local/share/nvim-sandbox/rubies"
+
+mkdir -p "$state_dir" "$cache_dir" "$bundle_dir" "$share_dir" "$rubies_dir"
+
+docker run --rm -it \
+  -v "$HOME/.config/nvim:/home/nvimuser/.config/nvim:ro" \
+  -v "$share_dir:/home/nvimuser/.local/share/nvim" \
+  -v "$state_dir:/home/nvimuser/.local/state/nvim" \
+  -v "$cache_dir:/home/nvimuser/.cache/nvim" \
+  -v "$PWD:/home/nvimuser/work" \
+  -v "$rubies_dir:/home/nvimuser/.rubies" \
+  -v "$bundle_dir:/home/nvimuser/.gem-cache" \
+  -e BUNDLE_PATH="/home/nvimuser/.gem-cache" \
+  -v "$DOTFILES/bin/run_in_split:/usr/local/bin/run_in_split:ro" \
+  -v "/tmp/tmux-$(id -u):/tmp/tmux-$(id -u)" \
+  -w /home/nvimuser/work \
+  -e TERM="$TERM" \
+  -e HOST_PWD="$PWD" \
+  ${TMUX:+-e TMUX="$TMUX" -e TMUX_PANE="$TMUX_PANE"} \
+  --network=host \
+  --name "nvim-$$" \
+  nvim-sandbox \
+  nvim "$@"
