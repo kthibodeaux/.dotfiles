@@ -65,6 +65,9 @@ RUN ruby-install --no-install-deps ruby \
 # buf CLI
 RUN yay -S --noconfirm buf && yay -Scc --noconfirm
 
+# Claude Code CLI
+RUN sudo npm install -g @anthropic-ai/claude-code
+
 USER root
 RUN rm /etc/sudoers.d/nvimuser
 USER nvimuser
