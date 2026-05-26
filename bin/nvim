@@ -7,8 +7,9 @@ cache_dir="$HOME/.cache/nvim-sandbox/$project_hash"
 bundle_dir="$HOME/.local/share/nvim-sandbox/bundle/$project_hash"
 share_dir="$HOME/.local/share/nvim-sandbox"
 rubies_dir="$HOME/.local/share/nvim-sandbox/rubies"
+gems_dir="$HOME/.local/share/nvim-sandbox/gems"
 
-mkdir -p "$state_dir" "$cache_dir" "$bundle_dir" "$share_dir" "$rubies_dir"
+mkdir -p "$state_dir" "$cache_dir" "$bundle_dir" "$share_dir" "$rubies_dir" "$gems_dir"
 
 # Build extra mounts for file arguments outside $PWD
 extra_mounts=()
@@ -32,12 +33,13 @@ docker run --rm -it \
   -v "$HOME/.config/nvim:/home/nvimuser/.config/nvim:ro" \
   -v "$HOME/.claude:/home/nvimuser/.claude" \
   -v "$HOME/.claude.json:/home/nvimuser/.claude.json" \
-  -v "$HOME/.config/github-copilot:/home/nvimuser/.config/github-copilot:ro" \
+  -v "$HOME/.config/github-copilot:/home/nvimuser/.config/github-copilot" \
   -v "$share_dir:/home/nvimuser/.local/share/nvim" \
   -v "$state_dir:/home/nvimuser/.local/state/nvim" \
   -v "$cache_dir:/home/nvimuser/.cache/nvim" \
   -v "$PWD:$PWD" \
   -v "$rubies_dir:/home/nvimuser/.rubies" \
+  -v "$gems_dir:/home/nvimuser/.gem" \
   -v "$bundle_dir:/home/nvimuser/.gem-cache" \
   -e BUNDLE_PATH="/home/nvimuser/.gem-cache" \
   -v "$DOTFILES/bin/run_in_split:/usr/local/bin/run_in_split:ro" \

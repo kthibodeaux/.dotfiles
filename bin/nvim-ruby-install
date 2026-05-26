@@ -10,14 +10,16 @@ fi
 version="$1"
 share_dir="$HOME/.local/share/nvim-sandbox"
 rubies_dir="$share_dir/rubies"
+gems_dir="$share_dir/gems"
 
-mkdir -p "$rubies_dir"
+mkdir -p "$rubies_dir" "$gems_dir"
 
 docker run --rm -it \
   -v "$rubies_dir:/home/nvimuser/.rubies" \
+  -v "$gems_dir:/home/nvimuser/.gem" \
   --network=host \
   nvim-sandbox \
-  bash -c "ruby-install --no-install-deps ruby $version \
+  bash -c "ruby-install --no-install-deps ruby-$version \
     && source /usr/share/chruby/chruby.sh \
     && chruby ruby-$version \
     && gem install ruby-lsp ruby-lsp-rails rubocop"
