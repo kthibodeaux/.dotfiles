@@ -23,17 +23,20 @@ RUN git clone https://aur.archlinux.org/yay-bin.git /tmp/yay \
     && cd /tmp/yay && makepkg -si --noconfirm && rm -rf /tmp/yay
 
 # Install everything via yay
-RUN yay -S --noconfirm \
+RUN yay -Sy --noconfirm \
+    buf \
     chruby \
     curl \
     fzf \
     go \
+    golangci-lint \
     libyaml \
+    lua-language-server \
     neovim \
     nodejs \
     npm \
-    openssl \
     openssh \
+    openssl \
     postgresql-libs \
     python \
     python-pip \
@@ -43,12 +46,6 @@ RUN yay -S --noconfirm \
     tmux \
     tree-sitter-cli \
     unzip \
-    && yay -Scc --noconfirm
-
-# LSP servers via yay/pacman
-RUN yay -S --noconfirm \
-    lua-language-server \
-    golangci-lint \
     && yay -Scc --noconfirm
 
 # LSP servers via go
@@ -63,9 +60,6 @@ RUN ruby-install --no-install-deps ruby \
     && source /usr/share/chruby/chruby.sh \
     && chruby ruby \
     && gem install ruby-lsp ruby-lsp-rails rubocop
-
-# buf CLI
-RUN yay -S --noconfirm buf && yay -Scc --noconfirm
 
 # Claude Code CLI
 RUN sudo npm install -g @anthropic-ai/claude-code
