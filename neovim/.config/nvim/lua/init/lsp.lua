@@ -17,4 +17,5 @@ vim.api.nvim_set_keymap('n', '<leader>ll', '<CMD> lua vim.diagnostic.open_float(
 vim.api.nvim_set_keymap('n', '<leader>lh', '<CMD> lua vim.lsp.buf.hover()<CR>', { noremap = true, desc = 'documentation' })
 vim.api.nvim_set_keymap('n', '<leader>ld', '<C-]>', { noremap = true, desc = 'go to definition' })
 vim.api.nvim_set_keymap('n', '<leader>lr', '<CMD> lua vim.lsp.buf.references()<CR>', { noremap = true, desc = 'references' })
+vim.api.nvim_set_keymap('n', '<leader>li', '<CMD> lua vim.lsp.buf.implementation()<CR>', { noremap = true, desc = 'implementations' })
 vim.api.nvim_set_keymap('n', '<leader>ln', '<CMD> lua vim.lsp.buf.rename()<CR>', { noremap = true, desc = 'rename' })
