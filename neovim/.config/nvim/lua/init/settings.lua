@@ -53,8 +53,27 @@ if vim.env.NVIM_CONTAINER then
       ['*'] = require('vim.ui.clipboard.osc52').copy('*'),
     },
     paste = {
-      ['+'] = function() return { vim.fn.system('tmux save-buffer -'), '' } end,
-      ['*'] = function() return { vim.fn.system('tmux save-buffer -'), '' } end,
+      ['+'] = function()
+        -- run xclip on the host (via tmux server) and sync into tmux's paste buffer
+        vim.fn.system(
+          "tmux run-shell 'xclip -sel clip -o > /tmp/.nvim_clip 2>/dev/null && " ..
+          "[ -s /tmp/.nvim_clip ] && tmux load-buffer /tmp/.nvim_clip'"
+        )
+        local content = vim.fn.system('tmux save-buffer -')
+        local lines = vim.split(content, '\n', { plain = true })
+        if lines[#lines] == '' then table.remove(lines) end
+        return { lines, 'v' }
+      end,
+      ['*'] = function()
+        vim.fn.system(
+          "tmux run-shell 'xclip -sel clip -o > /tmp/.nvim_clip 2>/dev/null && " ..
+          "[ -s /tmp/.nvim_clip ] && tmux load-buffer /tmp/.nvim_clip'"
+        )
+        local content = vim.fn.system('tmux save-buffer -')
+        local lines = vim.split(content, '\n', { plain = true })
+        if lines[#lines] == '' then table.remove(lines) end
+        return { lines, 'v' }
+      end,
     },
   }
 end
