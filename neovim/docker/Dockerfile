@@ -43,6 +43,7 @@ RUN yay -Sy --noconfirm \
     ripgrep \
     ruby-install \
     tig \
+    tmate \
     tmux \
     tree-sitter-cli \
     unzip \

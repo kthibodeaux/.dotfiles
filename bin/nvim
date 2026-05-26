@@ -43,7 +43,7 @@ docker run --rm -it \
   -v "$bundle_dir:/home/nvimuser/.gem-cache" \
   -e BUNDLE_PATH="/home/nvimuser/.gem-cache" \
   -v "$DOTFILES/bin/run_in_split:/usr/local/bin/run_in_split:ro" \
-  -v "/tmp/tmux-$(id -u):/tmp/tmux-$(id -u)" \
+  ${TMUX:+-v "$(dirname "${TMUX%%,*}"):$(dirname "${TMUX%%,*}")"} \
   -w "$PWD" \
   -e TERM="$TERM" \
   -e HOST_PWD="$PWD" \
