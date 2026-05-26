@@ -33,6 +33,8 @@ RUN yay -S --noconfirm \
     nodejs \
     npm \
     openssl \
+    openssh \
+    postgresql-libs \
     python \
     python-pip \
     ripgrep \
