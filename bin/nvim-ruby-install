@@ -14,6 +14,11 @@ gems_dir="$share_dir/gems"
 
 mkdir -p "$rubies_dir" "$gems_dir"
 
+if [ -d "$rubies_dir/ruby-$version" ]; then
+  echo "Ruby $version already installed, skipping."
+  exit 0
+fi
+
 docker run --rm -it \
   -v "$rubies_dir:/home/nvimuser/.rubies" \
   -v "$gems_dir:/home/nvimuser/.gem" \
