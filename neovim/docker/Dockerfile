@@ -56,12 +56,6 @@ RUN go install golang.org/x/tools/gopls@latest \
 # LSP servers via npm
 RUN sudo npm install -g typescript typescript-language-server
 
-# Latest Ruby via ruby-install + LSP gems
-RUN ruby-install --no-install-deps ruby \
-    && source /usr/share/chruby/chruby.sh \
-    && chruby ruby \
-    && gem install ruby-lsp ruby-lsp-rails rubocop
-
 # Claude Code CLI
 RUN sudo npm install -g @anthropic-ai/claude-code
 

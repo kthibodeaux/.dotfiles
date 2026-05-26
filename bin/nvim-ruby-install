@@ -22,4 +22,4 @@ docker run --rm -it \
   bash -c "ruby-install --no-install-deps ruby-$version \
     && source /usr/share/chruby/chruby.sh \
     && chruby ruby-$version \
-    && gem install ruby-lsp ruby-lsp-rails rubocop"
+    && gem install bundler ruby-lsp ruby-lsp-rails rubocop rubocop-rspec"
