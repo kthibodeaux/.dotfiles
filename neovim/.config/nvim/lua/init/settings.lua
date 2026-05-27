@@ -46,7 +46,7 @@ vim.opt.exrc = true
 vim.opt.winborder = 'double'
 
 if vim.env.NVIM_CONTAINER then
-  local paste_cmd = vim.fn.system("tmux run-shell 'command -v wl-paste'"):find('wl%-paste')
+  local paste_cmd = vim.fn.system('tmux show-environment WAYLAND_DISPLAY 2>/dev/null'):find('WAYLAND_DISPLAY=')
     and 'wl-paste --no-newline'
     or 'xclip -sel clip -o'
 
