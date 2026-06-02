@@ -33,7 +33,12 @@ vim.opt.runtimepath:prepend(lazypath)
 
 _G.tests = require('tests')
 
-require('lazy').setup('plugins')
+local lazy_opts = {}
+if vim.env.NVIM_CONTAINER then
+  lazy_opts.lockfile = vim.fn.stdpath('data') .. '/lazy-lock.json'
+end
+
+require('lazy').setup('plugins', lazy_opts)
 
 require('init/maps')
 require('init/lsp')

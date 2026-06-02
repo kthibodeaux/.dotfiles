@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+if [ -z "${1:-}" ]; then
+  echo "Usage: nvim-ruby-install <version>"
+  echo "Example: nvim-ruby-install 3.2.0"
+  exit 1
+fi
+
+version="$1"
+share_dir="$HOME/.local/share/nvim-sandbox"
+rubies_dir="$share_dir/rubies"
+gems_dir="$share_dir/gems"
+
+mkdir -p "$rubies_dir" "$gems_dir"
+
+if [ -d "$rubies_dir/ruby-$version" ]; then
+  echo "Ruby $version already installed, skipping."
+
+  echo "Installing gems for Ruby $version..."
+  docker run --rm -it \
+    -v "$rubies_dir:/home/nvimuser/.rubies" \
+    -v "$gems_dir:/home/nvimuser/.gem" \
+    --network=host \
+    nvim-sandbox \
+    bash -c "source /usr/share/chruby/chruby.sh \
+      && chruby ruby-$version \
+      && gem install bundler ruby-lsp ruby-lsp-rails rubocop rubocop-rspec"
+  exit 0
+fi
+
+docker run --rm -it \
+  -v "$rubies_dir:/home/nvimuser/.rubies" \
+  -v "$gems_dir:/home/nvimuser/.gem" \
+  --network=host \
+  nvim-sandbox \
+  bash -c "ruby-install --no-install-deps ruby-$version \
+    && source /usr/share/chruby/chruby.sh \
+    && chruby ruby-$version \
+    && gem install bundler ruby-lsp ruby-lsp-rails rubocop rubocop-rspec"

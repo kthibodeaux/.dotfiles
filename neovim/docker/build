@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+
+docker build \
+  --build-arg UID="$(id -u)" \
+  --build-arg GID="$(id -g)" \
+  -t nvim-sandbox \
+  "$SCRIPT_DIR"

@@ -9,7 +9,11 @@ vim.g.netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
 vim.opt.signcolumn = 'yes'
 vim.opt.backspace = 'indent,start,eol'
 vim.opt.backupcopy = 'yes'
-vim.opt.backupdir = config .. '/tmp//'
+if vim.env.NVIM_CONTAINER then
+  vim.opt.backupdir = home .. '/.cache/nvim/backup//'
+else
+  vim.opt.backupdir = config .. '/tmp//'
+end
 vim.opt.encoding = 'utf-8'
 vim.opt.expandtab = true
 vim.opt.fileencoding = 'utf-8'
@@ -40,3 +44,32 @@ vim.opt.wrap = false
 vim.opt.mouse = ''
 vim.opt.exrc = true
 vim.opt.winborder = 'double'
+
+if vim.env.NVIM_CONTAINER then
+  local paste_cmd = vim.fn.system('tmux show-environment WAYLAND_DISPLAY 2>/dev/null'):find('WAYLAND_DISPLAY=')
+    and 'wl-paste --no-newline'
+    or 'xclip -sel clip -o'
+
+  local function paste_from_host()
+    vim.fn.system(
+      "tmux run-shell '" .. paste_cmd .. " > /tmp/.nvim_clip 2>/dev/null && " ..
+      "[ -s /tmp/.nvim_clip ] && tmux load-buffer /tmp/.nvim_clip'"
+    )
+    local content = vim.fn.system('tmux save-buffer -')
+    local lines = vim.split(content, '\n', { plain = true })
+    if lines[#lines] == '' then table.remove(lines) end
+    return { lines, 'v' }
+  end
+
+  vim.g.clipboard = {
+    name = 'OSC 52 + tmux paste',
+    copy = {
+      ['+'] = require('vim.ui.clipboard.osc52').copy('+'),
+      ['*'] = require('vim.ui.clipboard.osc52').copy('*'),
+    },
+    paste = {
+      ['+'] = paste_from_host,
+      ['*'] = paste_from_host,
+    },
+  }
+end
