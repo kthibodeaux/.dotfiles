@@ -81,7 +81,6 @@ install_package "rofi"
 install_package "ruby-install"
 install_package "sad"
 install_package "sassc"
-install_package "sddm"
 install_package "shellcheck"
 install_package "signal-desktop"
 install_package "sql-formatter"
@@ -102,8 +101,6 @@ install_package "yarn"
 install_package "yq"
 install_package "youtube-dl"
 install_package "zsh"
-
-sudo systemctl enable sddm.service
 
 fc-cache -f -v
 sudo systemctl enable sshd
