@@ -35,8 +35,6 @@ install_package "delve"
 install_package "diff-so-fancy"
 install_package "direnv"
 install_package "discord"
-install_package "docker"
-install_package "docker-compose"
 install_package "epson-inkjet-printer-escpr"
 install_package "evince"
 install_package "fd"
@@ -109,8 +107,6 @@ sudo systemctl enable sddm.service
 
 fc-cache -f -v
 sudo systemctl enable sshd
-sudo systemctl enable docker.service
-sudo usermod -aG docker $USER
 
 sudo systemctl enable bluetooth
 sudo systemctl start bluetooth
