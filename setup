@@ -3,8 +3,6 @@ mkdir ~/opt
 mkdir ~/src
 mkdir -p ~/.local/share
 
-sudo cp ~/.dotfiles/common/safe-rm.conf /etc/safe-rm.conf
-
 mv ~/.config/gtk-3.0 ~/.config/gtk-3.0.original
 mv ~/.config/ranger ~/.config/ranger.original
 mv ~/.config/rofi ~/.config/rofi.original
@@ -84,7 +82,6 @@ install_package "ripgrep"
 install_package "rofi"
 install_package "ruby-install"
 install_package "sad"
-install_package "safe-rm"
 install_package "sassc"
 install_package "sddm"
 install_package "shellcheck"
