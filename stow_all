@@ -1,6 +1,7 @@
 # vi: set ft=sh :
 
 stow -vv alacritty
+stow -vv foot
 stow -vv gem
 stow -vv git
 stow -vv gtk
