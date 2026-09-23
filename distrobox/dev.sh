@@ -26,7 +26,11 @@ distrobox enter dev -- sudo pacman -S --noconfirm --needed \
   npm \
   golangci-lint \
   docker \
-  docker-compose
+  docker-compose \
+  bat \
+  watchexec \
+  git-delta \
+  just
 
 # chsh goes through PAM, whose service files are stripped out of minimal
 # arch container images, so it denies the change even with a valid shell.
