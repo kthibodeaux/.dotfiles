@@ -1,6 +1,9 @@
 # vi: set ft=sh :
 
-./homebrew.sh
+if ! command -v brew > /dev/null 2>&1; then
+  echo "homebrew not installed - run host/homebrew.sh first"
+  exit 1
+fi
 
 if brew list qemu > /dev/null 2>&1; then
   echo "skipping install qemu: already installed"
