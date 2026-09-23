@@ -10,7 +10,6 @@ stow -vv lazydocker
 stow -vv mailcap
 stow -vv mako
 stow -vv neovim
-stow -vv ranger
 stow -vv readline
 stow -vv rofi
 stow -vv rspec
