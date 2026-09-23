@@ -34,6 +34,11 @@ exec swayidle -w \
 # is missing for anything they launch, so wayland-aware apps like dunst fall
 # back to trying X11 and crash.
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+
+# provides the XSettings (icon theme, gtk theme, cursor) that Thunar and
+# other xfce/gtk apps read - without it they fall back to GTK's built-in
+# defaults, ignoring gtk-icon-theme-name/gtk-theme-name entirely.
+exec xfsettingsd
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec nm-applet
 exec xfce4-power-manager
