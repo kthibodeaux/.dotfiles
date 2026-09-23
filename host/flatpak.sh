@@ -7,3 +7,4 @@ flatpak install -y flathub org.kicad.KiCad
 flatpak install -y flathub com.discordapp.Discord
 flatpak install -y flathub com.slack.Slack
 flatpak install -y flathub org.signal.Signal
+flatpak install -y flathub org.libreoffice.LibreOffice
