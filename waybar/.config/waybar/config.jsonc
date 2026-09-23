@@ -8,7 +8,9 @@
   "passthrough": false,
   "fixed-center": true,
   "modules-left": [
+    "sway/workspaces",
     "hyprland/workspaces",
+    "sway/mode",
     "hyprland/submap"
   ],
   "modules-center": [
@@ -45,7 +47,16 @@
     "disable-scroll": false,
     "active-only": false,
   },
+  "sway/workspaces": {
+    "format": "{name}",
+    "all-outputs": true,
+    "disable-scroll": false,
+  },
   "hyprland/submap": {
+    "format": "  {}",
+    "tooltip": false,
+  },
+  "sway/mode": {
     "format": "  {}",
     "tooltip": false,
   },
