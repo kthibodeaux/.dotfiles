@@ -49,7 +49,11 @@ window#waybar {
 #tray,
 #memory,
 #window,
-#mpris {
+#mpris,
+#battery,
+#network,
+#backlight,
+#idle_inhibitor {
   padding: 0.3rem 0.6rem;
   margin: 0.4rem 0.25rem;
   border-radius: 6px;
@@ -108,6 +112,38 @@ window#waybar.empty #window {
 
 #custom-power {
   color: #f38ba8;
+}
+
+#battery {
+  color: #fab387;
+}
+
+#battery.warning {
+  color: #f9e2af;
+}
+
+#battery.critical {
+  color: #f38ba8;
+}
+
+#network {
+  color: #89dceb;
+}
+
+#network.disconnected {
+  color: #f38ba8;
+}
+
+#backlight {
+  color: #f9e2af;
+}
+
+#idle_inhibitor {
+  color: #a6adc8;
+}
+
+#idle_inhibitor.activated {
+  color: #a6e3a1;
 }
 
 tooltip {
