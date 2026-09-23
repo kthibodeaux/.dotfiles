@@ -1,5 +1,6 @@
 # vi: set ft=sh :
 
+stow -vv dunst
 stow -vv foot
 stow -vv gem
 stow -vv git
@@ -7,8 +8,10 @@ stow -vv neovim
 stow -vv readline
 stow -vv rofi
 stow -vv rspec
+stow -vv sway
 stow -vv tig
 stow -vv tmate
 stow -vv tmux
 stow -vv vim
+stow -vv waybar
 stow -vv zsh
