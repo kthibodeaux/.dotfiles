@@ -53,7 +53,8 @@ window#waybar {
 #network,
 #backlight,
 #idle_inhibitor,
-#custom-hostname {
+#custom-hostname,
+#custom-dunst {
   padding: 0.3rem 0.6rem;
   margin: 0.4rem 0.25rem;
   border-radius: 6px;
@@ -144,6 +145,14 @@ window#waybar.empty #window {
 
 #custom-hostname {
   color: #b4befe;
+}
+
+#custom-dunst.active {
+  color: #a6adc8;
+}
+
+#custom-dunst.paused {
+  color: #f38ba8;
 }
 
 #idle_inhibitor.activated {

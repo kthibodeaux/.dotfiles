@@ -26,6 +26,7 @@
     "clock#simpleclock",
     "clock",
     "custom/hostname",
+    "custom/dunst",
   ],
   "mpris": {
     "format": "{player_icon} {title} - {artist}",
@@ -124,6 +125,13 @@
     "interval": "once",
     "format": " {}",
     "tooltip": false,
+  },
+  "custom/dunst": {
+    "exec": "~/.config/waybar/scripts/dunst-status.sh",
+    "on-click": "dunstctl set-paused toggle && pkill -RTMIN+8 waybar",
+    "signal": 8,
+    "return-type": "json",
+    "tooltip": true,
   },
   "custom/sep": {
     "format": "|",
