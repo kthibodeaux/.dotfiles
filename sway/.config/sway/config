@@ -61,7 +61,7 @@ bindsym $mod+d exec rofi -show drun
 bindsym $mod+Return exec foot
 
 # take a screenshot of selected region
-# x: save to file and copy to clipboard, z: clipboard only (matches hyprland.conf's hyprshot convention)
+# x: save to file and copy to clipboard, z: clipboard only
 bindsym --release $mod+x exec grim -g "$(slurp)" - | tee $HOME/Pictures/screenshots/$(date +%Y%m%d_%H%M%S).png | wl-copy
 bindsym --release $mod+z exec grim -g "$(slurp)" - | wl-copy
 

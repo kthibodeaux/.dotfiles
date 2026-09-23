@@ -9,9 +9,7 @@
   "fixed-center": true,
   "modules-left": [
     "sway/workspaces",
-    "hyprland/workspaces",
     "sway/mode",
-    "hyprland/submap"
   ],
   "modules-center": [
     "mpris"
@@ -40,21 +38,10 @@
     },
     "tooltip-format": "{title}\n{artist}\n{album}",
   },
-  "hyprland/workspaces": {
-    "on-click": "activate",
-    "format": "{id}",
-    "all-outputs": true,
-    "disable-scroll": false,
-    "active-only": false,
-  },
   "sway/workspaces": {
     "format": "{name}",
     "all-outputs": true,
     "disable-scroll": false,
-  },
-  "hyprland/submap": {
-    "format": "  {}",
-    "tooltip": false,
   },
   "sway/mode": {
     "format": "  {}",

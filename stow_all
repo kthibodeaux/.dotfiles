@@ -5,7 +5,6 @@ stow -vv foot
 stow -vv gem
 stow -vv git
 stow -vv gtk
-stow -vv hyprland
 stow -vv lazydocker
 stow -vv mailcap
 stow -vv mako
