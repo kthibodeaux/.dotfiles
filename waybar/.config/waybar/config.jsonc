@@ -38,7 +38,7 @@
       "default": "▶",
     },
     "status-icons": {
-      "paused": "⏸",
+      "paused": "",
     },
     "tooltip-format": "{title}\n{artist}\n{album}",
   },
