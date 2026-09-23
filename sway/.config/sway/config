@@ -43,8 +43,8 @@ gaps outer 5
 # {{{ keybinds
 # {{{ applications
 # application launcher
-bindsym $mod+t exec rofi -show window -font "Hack Nerd Font 36"
-bindsym $mod+d exec rofi -show drun -font "Hack Nerd Font 36"
+bindsym $mod+t exec rofi -show window
+bindsym $mod+d exec rofi -show drun
 
 # terminal
 bindsym $mod+Return exec foot
