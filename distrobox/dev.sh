@@ -32,3 +32,9 @@ distrobox enter dev -- sudo pacman -S --noconfirm --needed \
 # arch container images, so it denies the change even with a valid shell.
 # usermod edits /etc/passwd directly as root, bypassing that entirely.
 distrobox enter dev -- sudo usermod -s /usr/bin/zsh "$USER"
+
+if distrobox enter dev -- command -v lazydocker > /dev/null 2>&1; then
+  echo "skipping install lazydocker: already installed"
+else
+  distrobox enter dev -- go install github.com/jesseduffield/lazydocker@latest
+fi
