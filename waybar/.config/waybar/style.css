@@ -53,7 +53,8 @@ window#waybar {
 #battery,
 #network,
 #backlight,
-#idle_inhibitor {
+#idle_inhibitor,
+#custom-hostname {
   padding: 0.3rem 0.6rem;
   margin: 0.4rem 0.25rem;
   border-radius: 6px;
@@ -140,6 +141,10 @@ window#waybar.empty #window {
 
 #idle_inhibitor {
   color: #a6adc8;
+}
+
+#custom-hostname {
+  color: #b4befe;
 }
 
 #idle_inhibitor.activated {

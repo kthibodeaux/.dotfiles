@@ -23,9 +23,10 @@
     "backlight",
     "pulseaudio",
     "tray",
+    "custom/notification",
     "clock#simpleclock",
     "clock",
-    "custom/notification",
+    "custom/hostname",
   ],
   "mpris": {
     "format": "{player_icon} {title} - {artist}",
@@ -118,6 +119,12 @@
       "default": [" ", " ", " "],
     },
     "on-click": "pavucontrol",
+  },
+  "custom/hostname": {
+    "exec": "hostname",
+    "interval": "once",
+    "format": " {}",
+    "tooltip": false,
   },
   "custom/sep": {
     "format": "|",
