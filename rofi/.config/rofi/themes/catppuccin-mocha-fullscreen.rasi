@@ -1,0 +1,136 @@
+/**
+ * ROFI Color Theme
+ *
+ * Fullscreen icon-grid theme, Catppuccin Mocha (mauve accent).
+ * Based on rofi's stock fullscreen-preview.rasi layout.
+ */
+
+* {
+    base:      #1e1e2eee;
+    mantle:    #181825ee;
+    surface0:  #313244;
+    surface1:  #45475a;
+    text:      #cdd6f4;
+    subtext0:  #a6adc8;
+    overlay0:  #6c7086;
+    mauve:     #cba6f7;
+    red:       #f38ba8;
+
+    background-color: transparent;
+    text-color:       @text;
+}
+
+window {
+    fullscreen:       true;
+    background-color: @base;
+    padding:          4em;
+    children:         [ wrap, listview ];
+    spacing:          1.2em;
+}
+
+wrap {
+    expand:           false;
+    orientation:      vertical;
+    children:         [ inputbar, message ];
+    background-color: @surface0;
+    border-color:     @mauve;
+    border:           2px;
+    border-radius:    0.5em;
+}
+
+icon-ib {
+    expand:           false;
+    filename:         "system-search";
+    vertical-align:   0.5;
+    horizontal-align: 0.5;
+    size:             1.1em;
+}
+
+inputbar {
+    spacing: 0.5em;
+    padding: 0.6em 1em;
+    children: [ icon-ib, entry ];
+}
+
+entry {
+    placeholder:       "Search";
+    placeholder-color: @subtext0;
+}
+
+message {
+    background-color: @red;
+    text-color:        @mantle;
+    border-color:      @red;
+    border:            2px 0px 0px 0px;
+    padding:           0.5em 1em;
+}
+
+listview {
+    flow:          horizontal;
+    fixed-columns: true;
+    columns:       7;
+    lines:         5;
+    spacing:       1em;
+}
+
+element {
+    orientation:       vertical;
+    padding:           0.4em;
+    background-color:  @surface0;
+    border-radius:     0.5em;
+    children:          [ element-icon, element-text ];
+}
+
+element-icon {
+    size:             calc(((100% - 8em) / 7));
+    horizontal-align: 0.5;
+    vertical-align:   0.5;
+}
+
+element-text {
+    horizontal-align: 0.5;
+    vertical-align:   0.5;
+    padding:          0.3em;
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+element selected {
+    background-color: @mauve;
+    text-color:        @mantle;
+}
+
+/**
+ * Launching rofi with environment PREVIEW=true splits the
+ * screen and shows a large preview of the current entry.
+ */
+@media ( enabled: env(PREVIEW, false)) {
+    icon-current-entry {
+        expand: true;
+        size:   80%;
+    }
+    window {
+        children: [ wrap, listview-split ];
+    }
+    listview-split {
+        orientation: horizontal;
+        spacing:     0.4em;
+        children:    [ listview, icon-current-entry ];
+    }
+    listview {
+        columns: 4;
+    }
+}
+
+@media ( enabled: env(NO_IMAGE, false)) {
+    listview {
+        columns: 1;
+        spacing: 0.4em;
+    }
+    element {
+        children: [ element-text ];
+    }
+    element-text {
+        horizontal-align: 0.0;
+    }
+}
