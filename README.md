@@ -21,6 +21,7 @@ bash host/distrobox.sh   # install distrobox
 bash host/flatpak.sh     # add flathub and install flatpak apps
 bash host/fonts.sh       # install Hack Nerd Font
 bash host/gtk-theme.sh   # install catppuccin gtk theme
+bash host/i3a.sh         # i3a master-stack layout for sway, via pipx (requires host/homebrew.sh first)
 bash host/qemu.sh        # qemu/kvm via homebrew (requires host/homebrew.sh first)
 bash host/colima.sh      # colima + lima
 bash host/ssh.sh         # enable sshd

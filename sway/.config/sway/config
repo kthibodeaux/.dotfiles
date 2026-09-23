@@ -46,6 +46,10 @@ exec blueman-applet
 exec wl-paste --type text --watch cliphist store
 exec wl-paste --type image --watch cliphist store
 exec_always ff-theme-util
+
+# master-stack layout (see host/i3a.sh); --stack=dwm splits stack windows
+# instead of tabbing them
+exec_always i3a-master-stack --stack=dwm
 # }}}
 # {{{ gaps
 gaps inner 10
@@ -67,6 +71,10 @@ bindsym --release $mod+z exec grim -g "$(slurp)" - | wl-copy
 
 # kill focused window
 bindsym $mod+q kill
+# }}}
+# {{{ master-stack (i3a)
+# swap focused window into/out of the master pane
+bindsym $mod+m exec i3a-swap
 # }}}
 # touchpad {{{
 bindsym $mod+Control+q exec swaymsg input type:touchpad events disabled
