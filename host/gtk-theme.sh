@@ -20,34 +20,20 @@ else
   rm -rf "$tmp"
 fi
 
-if [ -d ~/.local/share/icons/grey-dark ]; then
-  echo "skipping install grey-dark icon theme: already installed"
+if [ -d ~/.local/share/icons/Papirus-Dark ]; then
+  echo "skipping install Papirus-Dark icon theme: already installed"
 else
+  # install to $HOME instead of the default /usr/share/icons - the latter is
+  # part of the read-only ostree deployment on this host.
+  DESTDIR="$HOME/.local/share/icons" EXTRA_THEMES="Papirus-Dark" \
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/install.sh)"
+
   tmp=$(mktemp -d)
-  git clone --depth 1 https://github.com/vinceliuice/Tela-icon-theme.git "$tmp"
-  "$tmp/install.sh" -d ~/.local/share/icons grey
-
-  # install.sh always prefixes with the theme name (defaults to "Tela", and
-  # -n "" doesn't strip it - it falls back to the default since the
-  # substitution it uses treats an empty value the same as unset). strip the
-  # prefix and repoint the light/dark variants' relative symlinks, which
-  # point at the standard variant's folder by name.
-  cd ~/.local/share/icons
-  for suffix in "" "-dark" "-light"; do
-    mv "Tela-grey$suffix" "grey$suffix"
-  done
-  for suffix in "-dark" "-light"; do
-    for link in "grey$suffix"/*; do
-      [ -L "$link" ] || continue
-      target=$(readlink "$link")
-      case "$target" in
-        *Tela-grey*) ln -sfn "${target/Tela-grey/grey}" "$link" ;;
-      esac
-    done
-    gtk-update-icon-cache -f "grey$suffix"
-  done
-  gtk-update-icon-cache -f grey
-  cd - > /dev/null
-
+  git clone --depth 1 https://github.com/catppuccin/papirus-folders.git "$tmp"
+  cp -r "$tmp/src/." ~/.local/share/icons/Papirus/
   rm -rf "$tmp"
+
+  curl -fLo ~/.local/bin/papirus-folders https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-folders/master/papirus-folders
+  chmod +x ~/.local/bin/papirus-folders
+  ~/.local/bin/papirus-folders -C cat-mocha-mauve --theme Papirus-Dark
 fi
