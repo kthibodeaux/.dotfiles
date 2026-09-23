@@ -14,8 +14,4 @@ neovim/.config/nvim/.init.vim-rplugin~
 
 gtk/.config/gtk-3.0/bookmarks
 
-ranger/.config/ranger/bookmarks
-ranger/.config/ranger/history
-ranger/.config/ranger/tagged
-
 tmux/.tmux/plugins/tmux-fingers
