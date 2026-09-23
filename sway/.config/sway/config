@@ -28,6 +28,12 @@ exec swayidle -w \
     before-sleep 'swaylock -f'
 # }}}
 # {{{ startup
+# systemd --user and D-Bus service activation (e.g. dunst.service, started
+# on demand when something calls the Notifications interface) don't inherit
+# sway's runtime environment automatically - without this, WAYLAND_DISPLAY
+# is missing for anything they launch, so wayland-aware apps like dunst fall
+# back to trying X11 and crash.
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec nm-applet
 exec xfce4-power-manager
