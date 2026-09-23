@@ -30,7 +30,19 @@ distrobox enter dev -- sudo pacman -S --noconfirm --needed \
   bat \
   watchexec \
   git-delta \
-  just
+  just \
+  direnv \
+  tig \
+  tmate \
+  jq \
+  go-yq \
+  shellcheck \
+  httpie \
+  delve \
+  gum \
+  avr-gcc \
+  avr-libc \
+  teensy_loader_cli
 
 # chsh goes through PAM, whose service files are stripped out of minimal
 # arch container images, so it denies the change even with a valid shell.

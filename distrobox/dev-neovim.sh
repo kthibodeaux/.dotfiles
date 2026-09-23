@@ -51,6 +51,12 @@ else
   distrobox enter dev -- sudo npm install -g @vue/language-server
 fi
 
+if distrobox enter dev -- command -v sql-formatter > /dev/null 2>&1; then
+  echo "skipping install sql-formatter: already installed"
+else
+  distrobox enter dev -- sudo npm install -g sql-formatter
+fi
+
 if distrobox enter dev -- command -v lua-language-server > /dev/null 2>&1; then
   echo "skipping install lua-language-server: already installed"
 else
