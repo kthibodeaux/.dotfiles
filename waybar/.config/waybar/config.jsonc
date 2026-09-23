@@ -23,7 +23,6 @@
     "backlight",
     "pulseaudio",
     "tray",
-    "custom/notification",
     "clock#simpleclock",
     "clock",
     "custom/hostname",
@@ -128,19 +127,6 @@
   },
   "custom/sep": {
     "format": "|",
-    "tooltip": false,
-  },
-  "custom/notification": {
-    "escape": true,
-    "exec": "swaync-client -swb",
-    "exec-if": "which swaync-client",
-    "format": "{icon}",
-    "format-icons": {
-      "none": "󰅺",
-      "notification": "󰡟",
-    },
-    "on-click": "sleep 0.1 && swaync-client -t -sw",
-    "return-type": "json",
     "tooltip": false,
   },
 }
