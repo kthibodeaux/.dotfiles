@@ -122,9 +122,9 @@ bindsym $mod+Control+c reload
 # restart sway inplace (preserves your layout/session, can be used to upgrade sway)
 bindsym $mod+Control+r restart
 
-bindsym $mod+Control+e mode "$mode_system"
-set $mode_system (m)onitors, (l)ock, (e)xit, (s)uspend, (r)eboot, (Shift+s)hutdown
-mode "$mode_system" {
+bindsym $mod+Control+e mode "$sysmenu"
+set $sysmenu (m)onitors, (l)ock, (e)xit, (s)uspend, (r)eboot, (Shift+s)hutdown
+mode "$sysmenu" {
     bindsym l exec swaylock -f, mode "default"
     bindsym s exec systemctl suspend, mode "default"
     bindsym e exec swaymsg exit, mode "default"
