@@ -14,7 +14,7 @@ floating_modifier $mod
 output * bg $HOME/Pictures/background.png fill
 # }}}
 # {{{ cursor
-seat seat0 xcursor_theme breeze_cursors 24
+seat seat0 xcursor_theme catppuccin-mocha-dark-cursors 24
 # }}}
 # {{{ bar
 bar {
