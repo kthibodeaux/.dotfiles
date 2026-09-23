@@ -16,7 +16,6 @@ stow -vv rspec
 stow -vv tig
 stow -vv tmate
 stow -vv tmux
-stow -vv urlview
 stow -vv vim
 stow -vv waybar
 stow -vv zsh
