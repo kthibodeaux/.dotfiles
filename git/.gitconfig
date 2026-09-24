@@ -17,7 +17,7 @@
 [core]
   editor = nvim
   excludesfile = ~/.dotfiles/git/.gitignore
-  pager = delta
+  pager = delta --width ${COLUMNS:-variable}
 [interactive]
   diffFilter = delta --color-only
 [color]
@@ -42,13 +42,14 @@
 [mergetool "vimdiff"]
   path = nvim
 [pager]
-  diff = delta
-  log  = delta
-  reflog = delta
-  show = delta
+  diff = delta --width ${COLUMNS:-variable}
+  log  = delta --width ${COLUMNS:-variable}
+  reflog = delta --width ${COLUMNS:-variable}
+  show = delta --width ${COLUMNS:-variable}
 [delta]
   navigate = true
   line-numbers = true
   side-by-side = true
+  wrap-max-lines = unlimited
 [url "ssh://git@github.com/"]
 	insteadOf = https://github.com/
