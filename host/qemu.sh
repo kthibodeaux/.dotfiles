@@ -32,6 +32,12 @@ else
   sudo groupadd kvm
 fi
 
+if grep -q '^kvm:' /etc/group; then
+  echo "skipping copy kvm group definition: already in /etc/group"
+else
+  grep -E '^kvm:' /usr/lib/group | sudo tee -a /etc/group > /dev/null
+fi
+
 if groups | grep -qw kvm; then
   echo "skipping kvm group membership: already a member"
 else
