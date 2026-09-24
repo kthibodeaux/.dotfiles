@@ -42,7 +42,9 @@ distrobox enter dev -- sudo pacman -S --noconfirm --needed \
   gum \
   avr-gcc \
   avr-libc \
-  teensy_loader_cli
+  teensy_loader_cli \
+  arduino-cli \
+  libyaml
 
 # chsh goes through PAM, whose service files are stripped out of minimal
 # arch container images, so it denies the change even with a valid shell.
