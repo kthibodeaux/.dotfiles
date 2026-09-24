@@ -12,7 +12,7 @@ HISTFILESIZE=20000
 shopt -s histappend
 shopt -s checkwinsize
 
-export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+export PATH="$HOME/.local/bin:/home/linuxbrew/.linuxbrew/bin:$PATH"
 
 PS1='[\u@\h \W]\$ '
 
