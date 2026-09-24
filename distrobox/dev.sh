@@ -3,7 +3,11 @@
 if distrobox list --no-color 2>/dev/null | awk -F'|' '{gsub(/^ +| +$/,"",$2); print $2}' | grep -qx "dev"; then
   echo "skipping create devbox dev: already exists"
 else
-  distrobox create --name dev --image archlinux:latest --yes
+  # --group-add keep-groups passes host supplementary groups (e.g. dialout/uucp)
+  # straight through without user-namespace remapping, needed for serial device
+  # access (Arduino/esptool). Some distrobox/podman versions don't add this by
+  # default, so it's made explicit here.
+  distrobox create --name dev --image archlinux:latest --additional-flags "--group-add keep-groups" --yes
 fi
 
 # fresh arch images can have a stale package-signing keyring, which fails
