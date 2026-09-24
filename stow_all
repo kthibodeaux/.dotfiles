@@ -1,5 +1,6 @@
 # vi: set ft=sh :
 
+stow -vv bash
 stow -vv dunst
 stow -vv environment
 stow -vv foot
