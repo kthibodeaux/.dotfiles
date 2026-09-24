@@ -37,3 +37,10 @@ else
   chmod +x ~/.local/bin/papirus-folders
   ~/.local/bin/papirus-folders -C cat-mocha-mauve --theme Papirus-Dark
 fi
+
+# flatpaks read these through xdg-desktop-portal-gtk's settings portal -
+# color-scheme is what electron/libadwaita/qt apps use to pick dark mode.
+gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+gsettings set org.gnome.desktop.interface gtk-theme catppuccin-mocha-mauve-standard+default
+gsettings set org.gnome.desktop.interface icon-theme Papirus-Dark
+gsettings set org.gnome.desktop.interface cursor-theme catppuccin-mocha-dark-cursors
