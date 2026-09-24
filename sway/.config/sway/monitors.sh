@@ -11,5 +11,3 @@ if [ "$CURRENT_HOSTNAME" = "linux-kthibodeaux" ]; then
     wlr-randr --output "$laptop" --off
   fi
 fi
-
-swaymsg output "*" bg $HOME/Pictures/background.png fill
