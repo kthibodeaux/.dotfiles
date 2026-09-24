@@ -11,7 +11,8 @@ font pango:Hack Nerd Font 12
 floating_modifier $mod
 
 # {{{ background
-output * bg $HOME/Pictures/background.png fill
+set $wallpaper $HOME/Pictures/background.png
+output * bg $wallpaper fill
 # }}}
 # {{{ cursor
 seat seat0 xcursor_theme catppuccin-mocha-dark-cursors 24
@@ -23,9 +24,9 @@ bar {
 # }}}
 # {{{ idle / lock
 exec swayidle -w \
-    timeout 300 'swaylock -f' \
+    timeout 300 'swaylock -f -i $wallpaper -s fill' \
     timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-    before-sleep 'swaylock -f'
+    before-sleep 'swaylock -f -i $wallpaper -s fill'
 # }}}
 # {{{ startup
 # systemd --user and D-Bus service activation (e.g. dunst.service, started
@@ -145,7 +146,7 @@ bindsym $mod+Control+r restart
 bindsym $mod+Control+e mode "$sysmenu"
 set $sysmenu (m)onitors, (l)ock, (e)xit, (s)uspend, (r)eboot, (Shift+s)hutdown
 mode "$sysmenu" {
-    bindsym l exec swaylock -f, mode "default"
+    bindsym l exec swaylock -f -i $wallpaper -s fill, mode "default"
     bindsym s exec systemctl suspend, mode "default"
     bindsym e exec swaymsg exit, mode "default"
     bindsym r exec systemctl reboot, mode "default"
