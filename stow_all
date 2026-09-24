@@ -12,6 +12,7 @@ stow -vv readline
 stow -vv rofi
 stow -vv rspec
 stow -vv sway
+stow -vv systemd
 stow -vv tig
 stow -vv tmate
 stow -vv tmux

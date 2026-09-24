@@ -34,7 +34,12 @@ exec swayidle -w \
 # sway's runtime environment automatically - without this, WAYLAND_DISPLAY
 # is missing for anything they launch, so wayland-aware apps like dunst fall
 # back to trying X11 and crash.
-exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+#
+# sway-session.target (systemd/.config/systemd/user) binds
+# graphical-session.target, which xdg-desktop-portal requires - flatpaks
+# (e.g. Slack) need the portal to open links in the browser.
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP SWAYSOCK DISPLAY XDG_SESSION_TYPE \
+    && systemctl --user start sway-session.target
 
 # provides the XSettings (icon theme, gtk theme, cursor) that Thunar and
 # other xfce/gtk apps read - without it they fall back to GTK's built-in
@@ -148,7 +153,7 @@ set $sysmenu (m)onitors, (l)ock, (e)xit, (s)uspend, (r)eboot, (Shift+s)hutdown
 mode "$sysmenu" {
     bindsym l exec swaylock -f -i $wallpaper -s fill, mode "default"
     bindsym s exec systemctl suspend, mode "default"
-    bindsym e exec swaymsg exit, mode "default"
+    bindsym e exec "systemctl --user stop sway-session.target; swaymsg exit", mode "default"
     bindsym r exec systemctl reboot, mode "default"
     bindsym m exec ~/.config/sway/monitors.sh, mode "default"
     bindsym Shift+s exec systemctl poweroff, mode "default"

@@ -1,0 +1,8 @@
+# Started from the sway config. graphical-session.target can't be started
+# directly, so this binds it for the life of the sway session.
+[Unit]
+Description=sway compositor session
+Documentation=man:systemd.special(7)
+BindsTo=graphical-session.target
+Wants=graphical-session-pre.target
+After=graphical-session-pre.target
