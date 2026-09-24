@@ -24,8 +24,8 @@ bar {
 # }}}
 # {{{ idle / lock
 exec swayidle -w \
-    timeout 300 'swaylock -f -i $wallpaper -s fill' \
-    timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+    timeout 900 'swaylock -f -i $wallpaper -s fill' \
+    timeout 1200 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
     before-sleep 'swaylock -f -i $wallpaper -s fill'
 # }}}
 # {{{ startup
