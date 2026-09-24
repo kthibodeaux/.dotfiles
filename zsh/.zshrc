@@ -45,13 +45,13 @@ prompt filthy
 [[ -f ~/.aliases ]] && source ~/.aliases
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
-if [ -d "/home/linuxbrew" ]; then
-  source /home/linuxbrew/.linuxbrew/opt/fzf/shell/completion.zsh
-  source /home/linuxbrew/.linuxbrew/opt/fzf/shell/key-bindings.zsh
-else
-  source /usr/share/fzf/key-bindings.zsh
-  source /usr/share/fzf/completion.zsh
-fi
+for fzf_shell_dir in /home/linuxbrew/.linuxbrew/opt/fzf/shell /usr/share/fzf/shell /usr/share/fzf /usr/share/doc/fzf/examples; do
+  if [ -d "$fzf_shell_dir" ]; then
+    [[ -f "$fzf_shell_dir/key-bindings.zsh" ]] && source "$fzf_shell_dir/key-bindings.zsh"
+    [[ -f "$fzf_shell_dir/completion.zsh" ]] && source "$fzf_shell_dir/completion.zsh"
+    break
+  fi
+done
 
 source ~/.zsh/functions/chruby_auto.sh
 eval "$(direnv hook zsh)"

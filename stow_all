@@ -1,23 +1,20 @@
 # vi: set ft=sh :
 
-stow -vv alacritty
+stow -vv bash
+stow -vv dunst
+stow -vv environment
+stow -vv foot
 stow -vv gem
 stow -vv git
 stow -vv gtk
-stow -vv hyprland
-stow -vv lazydocker
-stow -vv less
-stow -vv mailcap
-stow -vv mako
 stow -vv neovim
-stow -vv ranger
 stow -vv readline
 stow -vv rofi
 stow -vv rspec
+stow -vv sway
 stow -vv tig
 stow -vv tmate
 stow -vv tmux
-stow -vv urlview
 stow -vv vim
 stow -vv waybar
 stow -vv zsh

@@ -25,6 +25,17 @@ export TIMEFMT=$'user\t%U\nsys\t%S\nreal\t%E\nmax mem\t%Mkb\ncpu\t%P\n'
 
 export COMPOSE_PROFILES="*"
 
+if command -v colima > /dev/null 2>&1; then
+  export DOCKER_HOST="unix://${HOME}/.config/colima/default/docker.sock"
+
+  # testcontainers/ryuk bind-mount the docker socket by literally reusing
+  # DOCKER_HOST's path - but that's the *client-side* forwarded path, and the
+  # daemon actually creating the bind mount runs inside the colima VM, where
+  # that path means nothing. this tells it to use the real in-VM socket path
+  # instead, which is what actually needs to land inside the container.
+  export TESTCONTAINERS_DOCKER_SOCKET_OVERRIDE=/var/run/docker.sock
+fi
+
 export WORK_DIR="$HOME/dev/prizepicks"
 
 [[ -f ~/.zshenv.local ]] && source ~/.zshenv.local

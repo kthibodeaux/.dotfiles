@@ -39,8 +39,6 @@ alias la="ls --color -pa"
 alias ls="ls --color -p"
 alias ll="ls --color -plh"
 
-alias ra="ranger"
-
 alias tree="tree -C"
 # }}}
 # {{{ git

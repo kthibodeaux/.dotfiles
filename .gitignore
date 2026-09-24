@@ -6,7 +6,6 @@ TAGS
 vim/.vim/tmp/*
 
 neovim/.config/pgcli
-neovim/.config/ranger
 
 neovim/.config/nvim/tmp/*
 neovim/.config/nvim/undodir/*
@@ -14,9 +13,5 @@ neovim/.config/nvim/plugged
 neovim/.config/nvim/.init.vim-rplugin~
 
 gtk/.config/gtk-3.0/bookmarks
-
-ranger/.config/ranger/bookmarks
-ranger/.config/ranger/history
-ranger/.config/ranger/tagged
 
 tmux/.tmux/plugins/tmux-fingers
