@@ -30,6 +30,20 @@ class ArduinoAction
   end
 end
 
+class ArduinoCompile < ArduinoAction
+  private
+
+  def argument
+    '--compile'
+  end
+
+  def commands
+    [
+      "arduino-cli compile --fqbn #{fqbn} --output-dir build"
+    ]
+  end
+end
+
 class ArduinoUpload < ArduinoAction
   private
 
@@ -59,5 +73,6 @@ class ArduinoMonitor < ArduinoAction
   end
 end
 
+ArduinoCompile.new.call
 ArduinoUpload.new.call
 ArduinoMonitor.new.call

@@ -2,6 +2,7 @@
 # vim:foldmethod=marker:foldlevel=0
 
 # {{{ arduino
+alias ac="arduino --compile"
 alias am="arduino --monitor"
 alias aum="arduino --upload --monitor"
 # }}}
