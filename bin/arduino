@@ -39,7 +39,9 @@ class ArduinoCompile < ArduinoAction
 
   def commands
     [
-      "arduino-cli compile --fqbn #{fqbn} --output-dir build"
+      # --port /dev/null overrides sketch.yaml's default_port, which
+      # arduino-cli otherwise requires to be plugged in even to compile.
+      "arduino-cli compile --fqbn #{fqbn} --port /dev/null --output-dir build"
     ]
   end
 end
