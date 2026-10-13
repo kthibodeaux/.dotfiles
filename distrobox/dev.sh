@@ -7,7 +7,7 @@ else
   # straight through without user-namespace remapping, needed for serial device
   # access (Arduino/esptool). Some distrobox/podman versions don't add this by
   # default, so it's made explicit here.
-  distrobox create --name dev --image archlinux:latest --additional-flags "--group-add keep-groups" --yes
+  distrobox create --name dev --image docker.io/library/archlinux:latest --additional-flags "--group-add keep-groups" --yes
 fi
 
 # fresh arch images can have a stale package-signing keyring, which fails
