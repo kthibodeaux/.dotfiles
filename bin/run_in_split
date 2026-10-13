@@ -18,6 +18,12 @@ CURRENT_PANE_ID=$($TMUX_COMMAND display-message -p '#{pane_id}')
 if [ -z "$TMUX_SPLIT_ID" ] || ! $TMUX_COMMAND list-panes | grep -q "$TMUX_SPLIT_ID" || [ "$CURRENT_PANE_ID" = "$TMUX_SPLIT_ID" ]; then
   TMUX_SPLIT_ID=$($TMUX_COMMAND split-window -d -v -l $TMUX_SPLIT_SIZE -P -F "#{pane_id}")
   $TMUX_COMMAND set-option -w @tmux-split-id "$TMUX_SPLIT_ID"
+
+  # Wait for the new shell to draw its prompt, otherwise send-keys is swallowed
+  for _ in $(seq 1 100); do
+    [ -n "$($TMUX_COMMAND capture-pane -p -t "$TMUX_SPLIT_ID" | tr -d '[:space:]')" ] && break
+    sleep 0.05
+  done
 fi
 
 if [ "$($TMUX_COMMAND display-message -p '#{window_zoomed_flag}')" = '1' ]; then
