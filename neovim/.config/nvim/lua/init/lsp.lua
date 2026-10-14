@@ -10,6 +10,7 @@ vim.lsp.enable('luals')
 vim.lsp.enable('rubocop')
 vim.lsp.enable('ruby_lsp')
 vim.lsp.enable('ts_ls')
+vim.lsp.enable('vue_ls')
 
 vim.fn.sign_define("DiagnosticSignError", {text = "", texthl = "DiagnosticSignError"})
 vim.fn.sign_define("DiagnosticSignWarn",  {text = "", texthl = "DiagnosticSignWarn"})
