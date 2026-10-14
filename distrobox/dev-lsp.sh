@@ -96,6 +96,14 @@ else
   distrobox enter dev -- go install github.com/arduino/arduino-language-server@latest
 fi
 
+# arduino-language-server requires an arduino-cli config file
+if distrobox enter dev -- bash -c 'test -f "$HOME/.arduino15/arduino-cli.yaml"' < /dev/null; then
+  echo "skipping arduino-cli config init: already exists"
+else
+  echo "initializing arduino-cli config..."
+  distrobox enter dev -- arduino-cli config init
+fi
+
 if have docker-langserver; then
   echo "skipping install dockerfile-language-server: already installed"
 else
