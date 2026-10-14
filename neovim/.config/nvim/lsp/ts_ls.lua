@@ -1,3 +1,7 @@
+-- resolve the globally installed (npm) vue language server
+local vue_ls = vim.fn.exepath('vue-language-server')
+local vue_ls_path = vue_ls ~= '' and (vim.uv.fs_realpath(vue_ls) or vue_ls) or nil
+
 return {
   cmd = { 'typescript-language-server', '--stdio' },
   init_options = {
@@ -5,7 +9,7 @@ return {
     plugins = {
       {
         name = '@vue/typescript-plugin',
-        location = vim.fn.stdpath 'data' .. '/mason/packages/vue-language-server/node_modules/@vue/language-server/bin/vue-language-server.js',
+        location = vue_ls_path,
         languages = { 'vue' },
       },
     },
