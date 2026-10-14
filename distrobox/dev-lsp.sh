@@ -52,11 +52,12 @@ else
   distrobox enter dev -- sudo npm install -g typescript@5
 fi
 
-if have vue-language-server; then
+# installed alone, npm nests its own typescript (latest, 7.x) under the server and it crashes
+if have vue-language-server && ! distrobox enter dev -- bash -c 'test -e "$(npm root -g)/@vue/language-server/node_modules/typescript"' < /dev/null; then
   echo "skipping install vue-language-server: already installed"
 else
   echo "installing vue-language-server..."
-  distrobox enter dev -- sudo npm install -g @vue/language-server
+  distrobox enter dev -- sudo npm install -g @vue/language-server typescript@5
 fi
 
 if have sql-formatter; then
