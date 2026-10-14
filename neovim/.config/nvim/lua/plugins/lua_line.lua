@@ -12,6 +12,8 @@ return {
       return sig.label .. " ➿" .. sig.hint
     end
 
+    require('lsp_progress').setup()
+
     require('lualine').setup({
       options = {
         theme = 'auto',
@@ -23,7 +25,7 @@ return {
         lualine_a = {'filename'},
         lualine_b = {},
         lualine_c = {current_signature},
-        lualine_x = {'filetype'},
+        lualine_x = {require('lsp_progress').status, 'filetype'},
         lualine_y = {},
         lualine_z = {'location'}
       },
