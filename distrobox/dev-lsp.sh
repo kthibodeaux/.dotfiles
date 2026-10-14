@@ -41,7 +41,15 @@ if have typescript-language-server; then
   echo "skipping install typescript-language-server: already installed"
 else
   echo "installing typescript-language-server..."
-  distrobox enter dev -- sudo npm install -g typescript-language-server typescript
+  distrobox enter dev -- sudo npm install -g typescript-language-server
+fi
+
+# typescript-language-server needs a tsserver-based typescript, which 7.x (native) dropped
+if [ "$update" -eq 0 ] && distrobox enter dev -- tsc --version < /dev/null 2>/dev/null | grep -q '^Version 5\.'; then
+  echo "skipping install typescript@5: already installed"
+else
+  echo "installing typescript@5..."
+  distrobox enter dev -- sudo npm install -g typescript@5
 fi
 
 if have vue-language-server; then
