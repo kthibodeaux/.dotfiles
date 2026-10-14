@@ -48,6 +48,7 @@ distrobox enter dev -- sudo pacman -S --noconfirm --needed \
   avr-libc \
   teensy_loader_cli \
   arduino-cli \
+  clang \
   libyaml
 
 # chsh goes through PAM, whose service files are stripped out of minimal

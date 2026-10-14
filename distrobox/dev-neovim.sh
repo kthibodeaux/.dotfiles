@@ -77,3 +77,34 @@ WRAPPER
 chmod +x ~/.local/bin/lua-language-server
 EOF
 fi
+
+if distrobox enter dev -- command -v arduino-language-server > /dev/null 2>&1; then
+  echo "skipping install arduino-language-server: already installed"
+else
+  distrobox enter dev -- go install github.com/arduino/arduino-language-server@latest
+fi
+
+if distrobox enter dev -- command -v docker-langserver > /dev/null 2>&1; then
+  echo "skipping install dockerfile-language-server: already installed"
+else
+  distrobox enter dev -- sudo npm install -g dockerfile-language-server-nodejs
+fi
+
+if distrobox enter dev -- command -v docker-compose-langserver > /dev/null 2>&1; then
+  echo "skipping install docker-compose-language-service: already installed"
+else
+  distrobox enter dev -- sudo npm install -g @microsoft/compose-language-service
+fi
+
+if distrobox enter dev -- command -v vscode-eslint-language-server > /dev/null 2>&1 \
+  && distrobox enter dev -- command -v vscode-json-language-server > /dev/null 2>&1; then
+  echo "skipping install vscode-langservers-extracted: already installed"
+else
+  distrobox enter dev -- sudo npm install -g vscode-langservers-extracted
+fi
+
+if distrobox enter dev -- command -v yaml-language-server > /dev/null 2>&1; then
+  echo "skipping install yaml-language-server: already installed"
+else
+  distrobox enter dev -- sudo npm install -g yaml-language-server
+fi
