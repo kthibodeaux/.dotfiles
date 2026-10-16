@@ -37,7 +37,6 @@ distrobox enter dev -- sudo pacman -S --noconfirm --needed \
   just \
   direnv \
   tig \
-  tmate \
   jq \
   go-yq \
   shellcheck \
@@ -49,7 +48,9 @@ distrobox enter dev -- sudo pacman -S --noconfirm --needed \
   teensy_loader_cli \
   arduino-cli \
   clang \
-  libyaml
+  libyaml \
+  upterm \
+  wl-clipboard
 
 # chsh goes through PAM, whose service files are stripped out of minimal
 # arch container images, so it denies the change even with a valid shell.

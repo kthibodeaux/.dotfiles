@@ -14,7 +14,6 @@ stow -vv rspec
 stow -vv sway
 stow -vv systemd
 stow -vv tig
-stow -vv tmate
 stow -vv tmux
 stow -vv vim
 stow -vv waybar
