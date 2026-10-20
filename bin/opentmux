@@ -36,10 +36,24 @@ function pair() {
   '
 }
 
+function pairro() {
+  tmux has-session -t pair 2>/dev/null || tmux new -s pair -d || return 1
+
+  # run inside upterm so UPTERM_ADMIN_SOCKET is set and `upterm session current` works
+  upterm host --force-command 'tmux attach -t pair -r' -- zsh -c '
+    upterm session current \
+      | sed "s/\x1b\[[0-9;]*m//g" \
+      | grep -m1 -oE "ssh [[:alnum:]_-]+@[^[:space:]]+" \
+      | tr -d "\n" \
+      | wl-copy
+    exec tmux attach -t pair\; display-message "Copied upterm SSH address to clipboard"
+  '
+}
+
 if [ "$TMUX" = "" ]; then
   tmux ls
   echo ""
-  echo "Enter a session number, p for new pair session (upterm), q to not launch tmux, n for a new session"
+  echo "Enter a session number, p for new pair session, r for new pair session (read only), q to not launch tmux, n for a new session"
   echo "Leave blank to use warptmux"
   read "response?[#/p/n/q] "
   case $response in
@@ -48,6 +62,9 @@ if [ "$TMUX" = "" ]; then
       ;;
     [pP])
       pair
+      ;;
+    [rR])
+      pairro
       ;;
     *)
       tmux attach -t $response || use_wt
