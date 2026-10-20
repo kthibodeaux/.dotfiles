@@ -23,31 +23,20 @@ function use_wt {
 }
 
 function pair() {
-  tmux has-session -t pair 2>/dev/null || tmux new -s pair -d || return 1
+  local session=${1:-pair}
+  local attach_flags=$2
+
+  tmux has-session -t $session 2>/dev/null || tmux new -s $session -d || return 1
 
   # run inside upterm so UPTERM_ADMIN_SOCKET is set and `upterm session current` works
-  upterm host --force-command 'tmux attach -t pair' -- zsh -c '
+  upterm host --force-command "tmux attach -t $session $attach_flags" -- zsh -c '
     upterm session current \
       | sed "s/\x1b\[[0-9;]*m//g" \
       | grep -m1 -oE "ssh [[:alnum:]_-]+@[^[:space:]]+" \
       | tr -d "\n" \
       | wl-copy
-    exec tmux attach -t pair \; display-message "Copied upterm SSH address to clipboard"
-  '
-}
-
-function pairro() {
-  tmux has-session -t pair 2>/dev/null || tmux new -s pair -d || return 1
-
-  # run inside upterm so UPTERM_ADMIN_SOCKET is set and `upterm session current` works
-  upterm host --force-command 'tmux attach -t pair -r' -- zsh -c '
-    upterm session current \
-      | sed "s/\x1b\[[0-9;]*m//g" \
-      | grep -m1 -oE "ssh [[:alnum:]_-]+@[^[:space:]]+" \
-      | tr -d "\n" \
-      | wl-copy
-    exec tmux attach -t pair\; display-message "Copied upterm SSH address to clipboard"
-  '
+    exec tmux attach -t $1 \; display-message "Copied upterm SSH address to clipboard"
+  ' _ $session
 }
 
 if [ "$TMUX" = "" ]; then
@@ -64,7 +53,7 @@ if [ "$TMUX" = "" ]; then
       pair
       ;;
     [rR])
-      pairro
+      pair pair-ro -r
       ;;
     *)
       tmux attach -t $response || use_wt
