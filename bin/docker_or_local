@@ -3,13 +3,16 @@
 
 ALL_FILES = Dir.entries(Dir.pwd).freeze
 COMMAND = ARGV.reject { |e| e == '--force-local' }.join(' ')
+WORK_NAME = ENV['WORK_NAME'].to_s
 
 def force_local?
   ARGV.include?('--force-local')
 end
 
 def work?
-  @is_work ||= Dir.pwd.include?(ENV['WORK_NAME'].to_s)
+  return false unless WORK_NAME
+
+  @is_work ||= Dir.pwd.include?(WORK_NAME)
 end
 
 def default_image
