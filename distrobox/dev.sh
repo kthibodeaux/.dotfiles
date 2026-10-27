@@ -50,7 +50,8 @@ distrobox enter dev -- sudo pacman -S --noconfirm --needed \
   clang \
   libyaml \
   upterm \
-  wl-clipboard
+  wl-clipboard \
+  tea
 
 # chsh goes through PAM, whose service files are stripped out of minimal
 # arch container images, so it denies the change even with a valid shell.
