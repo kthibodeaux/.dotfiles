@@ -36,6 +36,4 @@ if command -v colima > /dev/null 2>&1; then
   export TESTCONTAINERS_DOCKER_SOCKET_OVERRIDE=/var/run/docker.sock
 fi
 
-export WORK_DIR="$HOME/dev/prizepicks"
-
 [[ -f ~/.zshenv.local ]] && source ~/.zshenv.local
