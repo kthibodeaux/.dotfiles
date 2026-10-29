@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Screenshot Region (copy)
+Exec=spectacle -b -n -r -k -c
+Icon=spectacle
+NoDisplay=true

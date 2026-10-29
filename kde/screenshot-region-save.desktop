@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Screenshot Region (save and copy)
+Exec=sh -c "mkdir -p \\$HOME/Pictures/screenshots && spectacle -b -n -r -k -c -o \\$HOME/Pictures/screenshots/\\$(date +%%Y%%m%%d_%%H%%M%%S).png"
+Icon=spectacle
+NoDisplay=true
