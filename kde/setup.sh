@@ -21,9 +21,10 @@ elif [ "$PLASMA" = 5 ]; then
     || { echo "krohnkite build/install failed (kept $tmp)"; exit 1; }
   rm -rf "$tmp"
 else
-  KROHNKITE_VERSION=0.9.9.2
+  KROHNKITE_VERSION=$(curl -fsSL "https://codeberg.org/api/v1/repos/anametologin/Krohnkite/releases/latest" | sed -n 's/.*"tag_name":"\([^"]*\)".*/\1/p')
+  [ -n "$KROHNKITE_VERSION" ] || { echo "could not determine latest krohnkite release"; exit 1; }
   tmp=$(mktemp -d)
-  curl -fLo "$tmp/krohnkite.kwinscript" "https://github.com/anametologin/krohnkite/releases/download/$KROHNKITE_VERSION/krohnkite.kwinscript"
+  curl -fLo "$tmp/krohnkite.kwinscript" "https://codeberg.org/anametologin/Krohnkite/releases/download/$KROHNKITE_VERSION/krohnkite.kwinscript"
   kpackagetool6 --type KWin/Script --install "$tmp/krohnkite.kwinscript"
   rm -rf "$tmp"
 fi
