@@ -1,6 +1,6 @@
 # dotfiles
 
-Built to run on top of [Fedora Sway Atomic](https://fedoraproject.org/atomic-desktops/sway/) (rpm-ostree, image-based, Sway as the desktop). The `config` packages below are not tied to that image specifically, but the `host` bootstrap scripts assume it.
+Built to run on top of [Fedora Kinoite](https://fedoraproject.org/atomic-desktops/kinoite/) (rpm-ostree, image-based, KDE Plasma as the desktop). The `config` packages below are not tied to that image specifically, but the `host` and `kde` scripts assume it.
 
 ## setup
 
@@ -13,7 +13,15 @@ cd .dotfiles
 
 ### host (Fedora Atomic)
 
-`host/` holds one-off bootstrap scripts specific to a Fedora Sway Atomic install.
+`host/` holds one-off bootstrap scripts specific to a Fedora Kinoite install.
+
+### kde
+
+`kde/setup.sh` configures Plasma: krohnkite tiling, global shortcuts, focus follows mouse, region screenshots and the panel. Run it from inside a Plasma session, then log out and back in.
+
+```bash
+sh kde/setup.sh
+```
 
 ### distrobox
 
