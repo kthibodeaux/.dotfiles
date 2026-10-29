@@ -1,0 +1,13 @@
+{
+  "KPackageStructure": "KWin/Script",
+  "KPlugin": {
+    "Id": "move-and-follow",
+    "Name": "Move and Follow",
+    "Description": "Move the active window to a desktop and switch to it, like sway's move container to workspace",
+    "Version": "1.0",
+    "License": "MIT",
+    "EnabledByDefault": false
+  },
+  "X-Plasma-API": "javascript",
+  "X-Plasma-MainScript": "code/main.js"
+}

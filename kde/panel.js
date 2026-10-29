@@ -15,9 +15,12 @@ panel.hiding = "none";
 panel.addWidget("org.kde.plasma.kickoff");
 panel.addWidget("org.kde.plasma.pager");
 
+// the plasmoid is plasma 6 only, so it's missing on plasma 5
 const titleBar = panel.addWidget("com.github.antroids.application-title-bar");
-titleBar.currentConfigGroup = ["Appearance"];
-titleBar.writeConfig("widgetElements", ["windowTitle"]);
+if (titleBar) {
+  titleBar.currentConfigGroup = ["Appearance"];
+  titleBar.writeConfig("widgetElements", ["windowTitle"]);
+}
 panel.addWidget("org.kde.plasma.appmenu");
 
 panel.addWidget("org.kde.plasma.panelspacer");
