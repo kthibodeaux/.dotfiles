@@ -141,9 +141,12 @@ else
   sc kwin KrohnkiteTileLayout      'Meta+T,none,Krohnkite: Tile Layout'
   sc kwin KrohnkiteToggleFloat     'Meta+F,none,Krohnkite: Toggle Float'
   sc kwin KrohnkitegrowWidth       'Meta+Ctrl+L,none,Krohnkite: Grow Width'
+  # krohnkite's default for this is Meta+M, which is set master above
+  sc kwin KrohnkiteMonocleLayout   'none,none,Krohnkite: Monocle Layout'
 fi
 
 sc kwin 'Window Close'           'Meta+Q,Alt+F4,Close Window'
+sc kwin 'Window Fullscreen'      'Meta+Ctrl+F,none,Make Window Fullscreen'
 # krohnkite owns Meta+T and Meta+L
 sc kwin 'Edit Tiles'             'none,Meta+T,Toggle Tiles Editor'
 sc ksmserver 'Lock Session'      "$(printf 'Screensaver,Screensaver\tMeta+L,Lock Session')"
