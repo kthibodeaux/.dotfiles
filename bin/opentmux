@@ -34,7 +34,7 @@ function pair() {
       | sed "s/\x1b\[[0-9;]*m//g" \
       | grep -m1 -oE "ssh [[:alnum:]_-]+@[^[:space:]]+" \
       | tr -d "\n" \
-      | wl-copy
+      | "$HOME/.dotfiles/bin/clip"
     exec tmux attach -t $1 \; display-message "Copied upterm SSH address to clipboard"
   ' _ $session
 }
