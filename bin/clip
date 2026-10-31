@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# copy stdin to the system clipboard: wl-copy on wayland, xclip on x11
+
+if [ -n "$WAYLAND_DISPLAY" ] && command -v wl-copy > /dev/null 2>&1; then
+  exec wl-copy
+elif [ -n "$DISPLAY" ] && command -v xclip > /dev/null 2>&1; then
+  exec xclip -selection clipboard -in
+else
+  echo "clip: no clipboard tool found (need wl-copy on wayland or xclip on x11)" >&2
+  exit 1
+fi

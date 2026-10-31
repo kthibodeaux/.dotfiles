@@ -51,6 +51,7 @@ distrobox enter dev -- sudo pacman -S --noconfirm --needed \
   libyaml \
   upterm \
   wl-clipboard \
+  xclip \
   tea
 
 # chsh goes through PAM, whose service files are stripped out of minimal
