@@ -1,28 +1,34 @@
 // plasma desktop script - run via org.kde.PlasmaShell.evaluateScript.
-// replaces every panel with a single floating top panel.
+// replaces every panel with three top panels sized to their
+// content, so the desktops stay centered however wide the left side gets.
 panels().forEach(p => p.remove());
 
-const panel = new Panel;
-panel.location = "top";
-panel.height = 46;
-panel.floating = true;
-panel.alignment = "center";
-panel.lengthMode = "fill";
-panel.hiding = "none";
+function topPanel(alignment) {
+  const panel = new Panel;
+  panel.location = "top";
+  panel.height = 46;
+  panel.floating = false;
+  panel.alignment = alignment;
+  panel.lengthMode = "fit";
+  panel.hiding = "none";
+  return panel;
+}
 
-// launcher, desktops and the active window's title and menu bar on the left,
-// the spacer pushes tray and clock right
-panel.addWidget("org.kde.plasma.kickoff");
-panel.addWidget("org.kde.plasma.pager");
-
+// the active window's title and menu bar on the left
+const left = topPanel("left");
 // the plasmoid is plasma 6 only, so it's missing on plasma 5
-const titleBar = panel.addWidget("com.github.antroids.application-title-bar");
+const titleBar = left.addWidget("com.github.antroids.application-title-bar");
 if (titleBar) {
   titleBar.currentConfigGroup = ["Appearance"];
   titleBar.writeConfig("widgetElements", ["windowTitle"]);
 }
-panel.addWidget("org.kde.plasma.appmenu");
+left.addWidget("org.kde.plasma.appmenu");
 
-panel.addWidget("org.kde.plasma.panelspacer");
-panel.addWidget("org.kde.plasma.systemtray");
-panel.addWidget("org.kde.plasma.digitalclock");
+// desktops in the middle
+topPanel("center").addWidget("org.kde.plasma.pager");
+
+// tray, clock and launcher on the right
+const right = topPanel("right");
+right.addWidget("org.kde.plasma.systemtray");
+right.addWidget("org.kde.plasma.digitalclock");
+right.addWidget("org.kde.plasma.kickoff");
