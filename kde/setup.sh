@@ -69,6 +69,13 @@ kwin Desktops Rows 1
 kwin Plugins krohnkiteEnabled true
 kwin Plugins move-and-followEnabled true
 kwin Plugins slideEnabled false
+# virtual desktop switch animation: fade, not slide
+kwin Plugins fadedesktopEnabled true
+# global animation speed, lower is faster (1 is the default)
+kwriteconfig$PLASMA --file kdeglobals --group KDE --key AnimationDurationFactor 0.5
+# dim unfocused windows, strength is a percent from 10 to 90 (default 25)
+kwin Plugins diminactiveEnabled true
+kwin Effect-diminactive Strength 40
 kwin Windows FocusPolicy FocusFollowsMouse
 kwin Windows DelayFocusInterval 0
 kwin Script-krohnkite monocleMaximize false
