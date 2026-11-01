@@ -20,9 +20,10 @@ topPanel("left").addWidget("org.kde.plasma.pager");
 // the active window's menu bar in the middle
 topPanel("center").addWidget("org.kde.plasma.appmenu");
 
-// tray and clock on the right
+// tray, the fullscreen app launcher and clock on the right
 const right = topPanel("right");
 right.addWidget("org.kde.plasma.systemtray");
+right.addWidget("org.kde.plasma.kickerdash").globalShortcut = "Meta+D";
 const clock = right.addWidget("org.kde.plasma.digitalclock");
 clock.currentConfigGroup = ["Appearance"];
 clock.writeConfig("autoFontAndSize", false);

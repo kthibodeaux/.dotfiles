@@ -71,10 +71,20 @@ done
 
 # values are "current,default,friendly name" - kwriteconfig$PLASMA does the escaping,
 # so a literal comma key is written as "\," and backslash as "\\".
-sc() { kwriteconfig$PLASMA --file kglobalshortcutsrc --group "$1" --key "$2" "$3"; }
+sc() {
+  kwriteconfig$PLASMA --file kglobalshortcutsrc --group "$1" --key "$2" "$3"
+  live "$1" "$2" value "$3"
+}
 
 # kglobalaccel keeps the shortcuts in memory and rewrites the file, which drops
-# edits made while it runs. stop it for the writes, start it again at the end.
+# edits made while it runs. on plasma 5 stop it for the writes and start it
+# again at the end. plasma 6 runs it inside kwin, so record each shortcut and
+# hand them all to it over dbus at the end (apply-shortcuts.py).
+shortcuts=$(mktemp)
+live() {
+  [ "$PLASMA" = 6 ] && printf '%s\037%s\037%s\037%s\n' "$1" "$2" "$3" "$4" >> "$shortcuts"
+  return 0
+}
 if [ "$PLASMA" = 5 ]; then
   systemctl --user stop plasma-kglobalaccel.service
 fi
@@ -143,7 +153,8 @@ sc kwin 'Window Fullscreen'      'Meta+Ctrl+F,none,Make Window Fullscreen'
 # krohnkite owns Meta+T and Meta+L
 sc kwin 'Edit Tiles'             'none,Meta+T,Toggle Tiles Editor'
 sc ksmserver 'Lock Session'      "$(printf 'Screensaver,Screensaver\tMeta+L,Lock Session')"
-# Meta+D is the krunner launcher, like rofi drun in sway
+# Meta+D is the application dashboard (bound in panel.js), like rofi drun in
+# sway. krunner moves to Meta+Space
 sc kwin 'Show Desktop'           'none,Meta+D,Peek at Desktop'
 sc kwin view_actual_size         'none,Meta+0,Zoom to Actual Size'
 
@@ -178,6 +189,7 @@ sc_cmd() {
     kwriteconfig5 --file kglobalshortcutsrc --group "$1" --key _launch "$2,${3:-$2},$1"
   else
     kwriteconfig6 --file kglobalshortcutsrc --group services --group "$1" --key _launch "$2"
+    live "$1" _launch keys "$2"
   fi
 }
 sc_unlaunch() {
@@ -185,10 +197,11 @@ sc_unlaunch() {
     kwriteconfig5 --file kglobalshortcutsrc --group "$1" --key _launch --delete
   else
     kwriteconfig6 --file kglobalshortcutsrc --group services --group "$1" --key _launch --delete
+    live "$1" _launch keys ""
   fi
 }
 
-sc_cmd org.kde.krunner.desktop "$(printf 'Meta+D\tAlt+Space\tAlt+F2\tSearch')" "$(printf 'Alt+Space\tAlt+F2\tSearch')"
+sc_cmd org.kde.krunner.desktop "$(printf 'Meta+Space\tAlt+Space\tAlt+F2\tSearch')" "$(printf 'Alt+Space\tAlt+F2\tSearch')"
 # first terminal that's installed gets Meta+Return, preferring alacritty. the
 # desktop file id differs per distro/package. unbind the rest so they don't
 # fight over the key.
@@ -208,9 +221,26 @@ if [ "$PLASMA" = 5 ]; then
   systemctl --user start plasma-kglobalaccel.service
   sleep 1
   qdbus org.kde.KWin /KWin reconfigure
+else
+  python3 "$(dirname "$0")/apply-shortcuts.py" < "$shortcuts"
 fi
+rm -f "$shortcuts"
+
+# panel.js recreates every widget with a new id, but plasmashell leaves the
+# old widgets' shortcuts registered, so the old and new dashboard would both
+# hold Meta+D. drop them all first and let panel.js register its own.
+gdbus call --session --dest org.kde.kglobalaccel --object-path /kglobalaccel \
+  --method org.kde.KGlobalAccel.allActionsForComponent "['plasmashell', '', '', '']" \
+  | grep -o "'activate widget [0-9]*'" | tr -d "'" | while read -r action; do
+    gdbus call --session --dest org.kde.kglobalaccel --object-path /kglobalaccel \
+      --method org.kde.KGlobalAccel.unregister plasmashell "$action" >/dev/null
+  done
 
 gdbus call --session --dest org.kde.plasmashell --object-path /PlasmaShell \
   --method org.kde.PlasmaShell.evaluateScript "$(cat "$(dirname "$0")/panel.js")" >/dev/null
 
-echo "done - log out and back in to load the shortcuts and krohnkite"
+if [ "$PLASMA" = 5 ]; then
+  echo "done - log out and back in to load the shortcuts and krohnkite"
+else
+  echo "done - log out and back in to load krohnkite"
+fi
