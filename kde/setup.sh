@@ -7,8 +7,6 @@ case "$PLASMA" in
   *) echo "can't detect plasma version, set PLASMA=5 or PLASMA=6"; exit 1 ;;
 esac
 
-APPLICATION_TITLE_BAR_VERSION=v0.10.0
-
 if [ -d ~/.local/share/kwin/scripts/krohnkite ]; then
   echo "skipping install krohnkite: already installed"
 elif [ "$PLASMA" = 5 ]; then
@@ -26,19 +24,6 @@ else
   tmp=$(mktemp -d)
   curl -fLo "$tmp/krohnkite.kwinscript" "https://codeberg.org/anametologin/Krohnkite/releases/download/$KROHNKITE_VERSION/krohnkite.kwinscript"
   kpackagetool6 --type KWin/Script --install "$tmp/krohnkite.kwinscript"
-  rm -rf "$tmp"
-fi
-
-# active window's title and buttons on the panel, since tiled windows have no
-# titlebar (krohnkite noTileBorder). the plasmoid is qt6 only.
-if [ "$PLASMA" = 5 ]; then
-  echo "skipping install application-title-bar: needs plasma 6"
-elif [ -d ~/.local/share/plasma/plasmoids/com.github.antroids.application-title-bar ]; then
-  echo "skipping install application-title-bar: already installed"
-else
-  tmp=$(mktemp -d)
-  curl -fLo "$tmp/application-title-bar.plasmoid" "https://github.com/antroids/application-title-bar/releases/download/$APPLICATION_TITLE_BAR_VERSION/application-title-bar.plasmoid"
-  kpackagetool6 --type Plasma/Applet --install "$tmp/application-title-bar.plasmoid"
   rm -rf "$tmp"
 fi
 
