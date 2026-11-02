@@ -1,6 +1,6 @@
 # vi: set ft=sh :
 
-RUBY_VERSION="4.0.4"
+RUBY_VERSION="4.0.9"
 
 if distrobox enter dev -- command -v ruby-install > /dev/null 2>&1; then
   echo "skipping install ruby-install: already installed"

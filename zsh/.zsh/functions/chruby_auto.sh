@@ -1,6 +1,6 @@
 unset RUBY_AUTO_VERSION
 
-CHRUBY_DEFAULT_RUBY_VERSION="4.0.4"
+CHRUBY_DEFAULT_RUBY_VERSION="4.0.9"
 
 function chruby_auto() {
   # Source chruby if not already loaded
