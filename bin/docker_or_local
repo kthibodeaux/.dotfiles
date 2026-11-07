@@ -10,7 +10,7 @@ def force_local?
 end
 
 def work?
-  return false unless WORK_NAME
+  return false if WORK_NAME.empty?
 
   @is_work ||= Dir.pwd.include?(WORK_NAME)
 end
