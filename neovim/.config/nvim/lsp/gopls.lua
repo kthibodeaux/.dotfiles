@@ -2,7 +2,15 @@ return {
   cmd = { 'gopls' },
   filetypes = { 'go', 'gomod', 'gowork', 'gotmpl' },
   root_markers = { 'go.mod', '.git' },
+  settings = {
+    gopls = {
+      hints = {
+        parameterNames = true,
+      },
+    },
+  },
   on_attach = function(client, bufnr)
+    vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
     vim.api.nvim_create_autocmd("BufWritePre", {
       buffer = bufnr,
       callback = function()
